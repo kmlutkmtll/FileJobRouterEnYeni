@@ -1,0 +1,663 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container-fluid">
+    <!-- Page Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="h3 mb-0 text-aselsan-blue">
+                        <i class="fas fa-tachometer-alt me-2"></i>System Dashboard
+                    </h1>
+                    <p class="text-muted mb-0">Real-time monitoring and control</p>
+                </div>
+                <div>
+                    <span class="badge bg-aselsan-blue fs-6 px-3 py-2">
+                        <i class="fas fa-clock me-1"></i>
+                        <span id="currentTime"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Cards Row -->
+    <div class="row g-4 mb-4">
+        <!-- System Status -->
+        <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="card fade-in-up">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-server me-2"></i>System Status
+                    </h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="d-flex align-items-center justify-content-center mb-3">
+                        <div id="statusIndicator" class="status-indicator me-3"></div>
+                        <span id="systemStatus" class="h5 mb-0 fw-bold">@ViewBag.SystemStatus</span>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button id="startBtn" class="btn btn-success" onclick="startSystem()">
+                            <i class="fas fa-play me-2"></i>Start System
+                        </button>
+                        <button id="stopBtn" class="btn btn-danger" onclick="stopSystem()">
+                            <i class="fas fa-stop me-2"></i>Stop System
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Queue Stats -->
+        <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="card fade-in-up" style="animation-delay: 0.1s">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-list me-2"></i>Queue Status
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row g-2 text-center">
+                        <div class="col-3">
+                            <div class="stats-card">
+                                <div class="stats-number stats-pending" id="pendingCount">0</div>
+                                <div class="stats-label">Pending</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="stats-card">
+                                <div class="stats-number stats-processing" id="processingCount">0</div>
+                                <div class="stats-label">Processing</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="stats-card">
+                                <div class="stats-number stats-completed" id="completedCount">0</div>
+                                <div class="stats-label">Completed</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="stats-card">
+                                <div class="stats-number stats-failed" id="failedCount">0</div>
+                                <div class="stats-label">Failed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jobs Stats -->
+        <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="card fade-in-up" style="animation-delay: 0.2s">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-bar me-2"></i>Jobs Today
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row g-2 text-center">
+                        <div class="col-3">
+                            <div class="stats-card">
+                                <div class="stats-number stats-pending" id="jobsPending">0</div>
+                                <div class="stats-label">Pending</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="stats-card">
+                                <div class="stats-number stats-processing" id="jobsProcessing">0</div>
+                                <div class="stats-label">Processing</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="stats-card">
+                                <div class="stats-number stats-completed" id="totalJobs">0</div>
+                                <div class="stats-label">Completed</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="stats-card">
+                                <div class="stats-number stats-failed" id="failedJobs">0</div>
+                                <div class="stats-label">Failed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Connection Status -->
+        <div class="col-xl-3 col-lg-6 col-md-6">
+            <div class="card fade-in-up" style="animation-delay: 0.3s">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-wifi me-2"></i>Connection
+                    </h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="d-flex align-items-center justify-content-center mb-3">
+                        <div id="connectionStatus" class="connection-indicator me-3"></div>
+                        <span id="connectionText" class="h6 mb-0">Connecting...</span>
+                    </div>
+                    <div class="small text-muted">
+                        Last update: <span id="lastUpdate" class="fw-bold">-</span>
+                    </div>
+                    <div class="progress mt-3" style="height: 4px;">
+                        <div id="connectionProgress" class="progress-bar bg-aselsan-blue progress-bar-striped progress-bar-animated" role="progressbar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Row -->
+    <div class="row g-4">
+        <!-- Live Logs -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card slide-in-left">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-terminal me-2"></i>Live System Logs
+                    </h5>
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-outline-secondary btn-sm" onclick="clearLogs()">
+                            <i class="fas fa-trash me-1"></i>Clear
+                        </button>
+                        <button class="btn btn-outline-primary btn-sm" onclick="refreshLogs()">
+                            <i class="fas fa-sync-alt me-1"></i>Refresh
+                        </button>
+                        <button class="btn btn-outline-info btn-sm" onclick="toggleAutoScroll()">
+                            <i class="fas fa-arrows-alt-v me-1"></i>Auto-scroll
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div id="logsContainer" class="logs-container">
+                        <div class="logs-header px-3 py-2 bg-dark text-white d-flex justify-content-between align-items-center">
+                            <span class="small">
+                                <i class="fas fa-circle text-success me-2"></i>System Logs - Live Feed
+                            </span>
+                            <span class="small">
+                                <i class="fas fa-clock me-1"></i>Real-time
+                            </span>
+                        </div>
+                        <pre id="logsContent" class="logs-content">@ViewBag.Logs</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jobs Panel -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card slide-in-left" style="animation-delay: 0.2s">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-tasks me-2"></i>Recent Jobs
+                    </h5>
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button class="btn btn-outline-primary" onclick="refreshJobs()">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div id="jobsList" class="jobs-list">
+                        <div class="text-center py-4">
+                            <div class="loading-spinner mb-2"></div>
+                            <small class="text-muted">Loading jobs...</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Metrics -->
+            <div class="card mt-4 slide-in-left performance-card" style="animation-delay: 0.4s">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-chart-line me-2"></i>Performance
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="text-center p-2">
+                                <div class="h4 text-aselsan-blue mb-1" id="avgProcessingTime">-</div>
+                                <small class="text-muted">Avg. Time</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center p-2">
+                                <div class="h4 text-aselsan-orange mb-1" id="successRate">-</div>
+                                <small class="text-muted">Success Rate</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script>
+        let connection;
+        let isConnected = false;
+        let autoScroll = true;
+        let connectionProgress = 0;
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeConnection();
+            refreshJobs();
+            startClock();
+            
+            // Update stats every 5 seconds
+            setInterval(() => {
+                fetch('/Dashboard/GetQueueData')
+                    .then(response => response.json())
+                    .then(data => updateQueueStats(data.queueData));
+            }, 5000);
+
+            // Update connection progress
+            setInterval(updateConnectionProgress, 1000);
+        });
+
+        // Initialize SignalR connection
+        function initializeConnection() {
+            connection = new signalR.HubConnectionBuilder()
+                .withUrl("/fileJobRouterHub")
+                .withAutomaticReconnect([0, 2000, 10000, 30000])
+                .build();
+
+            // Event handlers
+            connection.on("ReceiveLogUpdate", function (logMessage) {
+                appendLog(logMessage);
+            });
+
+            connection.on("ReceiveJobUpdate", function (jobId, status, message) {
+                updateJobStatus(jobId, status, message);
+                showNotification(`Job ${jobId.substring(0, 8)} status: ${status}`, getStatusColor(status));
+            });
+
+            connection.on("ReceiveSystemStatusUpdate", function (status, message) {
+                updateSystemStatus(status, message);
+                showNotification(message, getStatusColor(status));
+            });
+
+            connection.on("ReceiveQueueUpdate", function (queueData) {
+                updateQueueStats(queueData);
+            });
+
+            // Connection events
+            connection.start().then(function () {
+                isConnected = true;
+                updateConnectionStatus(true);
+                showNotification("Connected to system", "success");
+                console.log("SignalR Connected");
+            }).catch(function (err) {
+                console.error(err.toString());
+                updateConnectionStatus(false);
+                showNotification("Failed to connect", "danger");
+            });
+
+            connection.onclose(function () {
+                isConnected = false;
+                updateConnectionStatus(false);
+                showNotification("Connection lost", "warning");
+                console.log("SignalR Disconnected");
+            });
+
+            connection.onreconnecting(function () {
+                updateConnectionStatus(false);
+                showNotification("Reconnecting...", "info");
+            });
+
+            connection.onreconnected(function () {
+                isConnected = true;
+                updateConnectionStatus(true);
+                showNotification("Reconnected successfully", "success");
+            });
+        }
+
+        // Connection status and progress
+        function updateConnectionStatus(connected) {
+            const indicator = document.getElementById('connectionStatus');
+            const text = document.getElementById('connectionText');
+            const progress = document.getElementById('connectionProgress');
+            
+            if (connected) {
+                indicator.className = 'connection-indicator connected';
+                text.textContent = 'Connected';
+                progress.style.width = '100%';
+                progress.className = 'progress-bar bg-success';
+                connectionProgress = 100;
+            } else {
+                indicator.className = 'connection-indicator disconnected';
+                text.textContent = 'Disconnected';
+                progress.style.width = '0%';
+                progress.className = 'progress-bar bg-danger progress-bar-striped progress-bar-animated';
+                connectionProgress = 0;
+            }
+        }
+
+        function updateConnectionProgress() {
+            const progress = document.getElementById('connectionProgress');
+            if (!isConnected && connectionProgress < 90) {
+                connectionProgress += Math.random() * 10;
+                progress.style.width = `${Math.min(connectionProgress, 90)}%`;
+            }
+        }
+
+        // Real-time clock
+        function startClock() {
+            function updateClock() {
+                const now = new Date();
+                document.getElementById('currentTime').textContent = now.toLocaleTimeString();
+            }
+            updateClock();
+            setInterval(updateClock, 1000);
+        }
+
+        // System status updates
+        function updateSystemStatus(status, message) {
+            const statusElement = document.getElementById('systemStatus');
+            const indicator = document.getElementById('statusIndicator');
+            
+            // Animate status change
+            statusElement.style.opacity = '0.5';
+            setTimeout(() => {
+                statusElement.textContent = status;
+                statusElement.style.opacity = '1';
+            }, 200);
+            
+            if (status === 'Running') {
+                indicator.className = 'status-indicator running';
+            } else if (status === 'Stopped') {
+                indicator.className = 'status-indicator stopped';
+            } else {
+                indicator.className = 'status-indicator unknown';
+            }
+            
+            updateLastUpdate();
+        }
+
+        // Enhanced log handling
+        function appendLog(logMessage) {
+            const logsContent = document.getElementById('logsContent');
+            const timestamp = new Date().toLocaleTimeString();
+            const formattedLog = `[${timestamp}] ${logMessage}`;
+            
+            logsContent.textContent += formattedLog + '\n';
+            
+            // Auto-scroll to bottom if enabled
+            if (autoScroll) {
+                const container = document.getElementById('logsContainer');
+                container.scrollTop = container.scrollHeight;
+            }
+            
+            updateLastUpdate();
+            
+            // Highlight new log entry briefly
+            logsContent.style.backgroundColor = 'rgba(0, 102, 204, 0.1)';
+            setTimeout(() => {
+                logsContent.style.backgroundColor = '';
+            }, 500);
+        }
+
+        function toggleAutoScroll() {
+            autoScroll = !autoScroll;
+            const btn = event.target;
+            if (autoScroll) {
+                btn.innerHTML = '<i class="fas fa-arrows-alt-v me-1"></i>Auto-scroll';
+                btn.classList.remove('btn-outline-info');
+                btn.classList.add('btn-info');
+            } else {
+                btn.innerHTML = '<i class="fas fa-pause me-1"></i>Manual';
+                btn.classList.remove('btn-info');
+                btn.classList.add('btn-outline-info');
+            }
+        }
+
+        // Queue and jobs updates
+        function updateJobStatus(jobId, status, message) {
+            refreshJobs();
+            updateLastUpdate();
+        }
+
+        function updateQueueStats(queueData) {
+            try {
+                const queue = JSON.parse(queueData);
+                const pending = queue.filter(job => job.Status === "Pending" || job.StatusValue === 0).length;
+                const processing = queue.filter(job => job.Status === "Processing" || job.StatusValue === 1).length;
+                const completed = queue.filter(job => job.Status === "Completed" || job.StatusValue === 2).length;
+                const failed = queue.filter(job => job.Status === "Failed" || job.StatusValue === 3).length;
+                const total = queue.length;
+                
+                // Animate counter changes for Queue Status
+                animateCounter('pendingCount', pending);
+                animateCounter('processingCount', processing);
+                animateCounter('completedCount', completed);
+                animateCounter('failedCount', failed);
+                
+                // Update Jobs Today stats from queue data
+                animateCounter('jobsPending', pending);
+                animateCounter('jobsProcessing', processing);
+                animateCounter('totalJobs', completed);
+                animateCounter('failedJobs', failed);
+                
+                // Calculate success rate
+                const successRate = total > 0 ? Math.round(((total - failed) / total) * 100) : 0;
+                document.getElementById('successRate').textContent = `${successRate}%`;
+                
+                updateLastUpdate();
+            } catch (e) {
+                console.error('Error parsing queue data:', e);
+            }
+        }
+
+        function animateCounter(elementId, newValue) {
+            const element = document.getElementById(elementId);
+            const currentValue = parseInt(element.textContent) || 0;
+            
+            if (currentValue !== newValue) {
+                let start = currentValue;
+                const duration = 500;
+                const startTime = performance.now();
+                
+                function updateValue(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const value = Math.round(start + (newValue - start) * progress);
+                    
+                    element.textContent = value;
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateValue);
+                    }
+                }
+                
+                requestAnimationFrame(updateValue);
+            }
+        }
+
+        // Utility functions
+        function updateLastUpdate() {
+            const now = new Date();
+            document.getElementById('lastUpdate').textContent = now.toLocaleTimeString();
+        }
+
+        // System control functions
+        function startSystem() {
+            const btn = document.getElementById('startBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<div class="loading-spinner"></div>Starting...';
+            
+            fetch('/Dashboard/StartSystem', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-play me-2"></i>Start System';
+                    if (data.success) {
+                        showNotification('System start command sent', 'success');
+                    } else {
+                        showNotification('Failed to start system', 'danger');
+                    }
+                })
+                .catch(error => {
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-play me-2"></i>Start System';
+                    showNotification('Error starting system', 'danger');
+                });
+        }
+
+        function stopSystem() {
+            const btn = document.getElementById('stopBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<div class="loading-spinner"></div>Stopping...';
+            
+            fetch('/Dashboard/StopSystem', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-stop me-2"></i>Stop System';
+                    if (data.success) {
+                        showNotification('System stop command sent', 'success');
+                    } else {
+                        showNotification('Failed to stop system', 'danger');
+                    }
+                })
+                .catch(error => {
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fas fa-stop me-2"></i>Stop System';
+                    showNotification('Error stopping system', 'danger');
+                });
+        }
+
+        // Data refresh functions
+        function refreshLogs() {
+            fetch('/Dashboard/GetLogs')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('logsContent').textContent = data.logs;
+                    if (autoScroll) {
+                        const container = document.getElementById('logsContainer');
+                        container.scrollTop = container.scrollHeight;
+                    }
+                });
+        }
+
+        function clearLogs() {
+            document.getElementById('logsContent').textContent = '';
+            showNotification('Logs cleared', 'info');
+        }
+
+        function refreshJobs() {
+            // Get both jobs and queue data
+            Promise.all([
+                fetch('/Dashboard/GetJobs').then(response => response.json()),
+                fetch('/Dashboard/GetQueueData').then(response => response.json())
+            ])
+            .then(([jobsData, queueData]) => {
+                displayJobs(jobsData.jobs);
+                updateQueueStats(queueData.queueData);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+        }
+
+        function displayJobs(jobsData) {
+            try {
+                const jobs = JSON.parse(jobsData);
+                const jobsList = document.getElementById('jobsList');
+                
+                if (jobs.length === 0) {
+                    jobsList.innerHTML = `
+                        <div class="text-center py-4 text-muted">
+                            <i class="fas fa-inbox fa-2x mb-2"></i>
+                            <p class="mb-0">No jobs found</p>
+                        </div>`;
+                    return;
+                }
+                
+                jobsList.innerHTML = '';
+                
+                jobs.slice(-10).reverse().forEach((job, index) => {
+                    const jobElement = document.createElement('div');
+                    jobElement.className = 'job-item fade-in-up';
+                    jobElement.style.animationDelay = `${index * 0.05}s`;
+                    jobElement.innerHTML = `
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <small class="text-muted fw-bold">#${job.Id ? job.Id.substring(0, 8) : 'Unknown'}</small>
+                            <span class="badge bg-${getStatusColor(job.Status)} px-2 py-1">${job.Status || 'Unknown'}</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="small"><i class="fas fa-cog me-1"></i>${job.TargetApp || 'Unknown'}</span>
+                            <small class="text-muted">${job.Timestamp ? new Date(job.Timestamp).toLocaleTimeString() : '-'}</small>
+                        </div>
+                    `;
+                    jobsList.appendChild(jobElement);
+                });
+                
+                // Stats are updated by updateQueueStats function from queue data
+                // Calculate average processing time (mock data)
+                document.getElementById('avgProcessingTime').textContent = '2.3s';
+                
+            } catch (e) {
+                console.error('Error parsing jobs data:', e);
+                document.getElementById('jobsList').innerHTML = `
+                    <div class="text-center py-4 text-danger">
+                        <i class="fas fa-exclamation-triangle fa-2x mb-2"></i>
+                        <p class="mb-0">Error loading jobs</p>
+                    </div>`;
+            }
+        }
+
+        function getStatusColor(status) {
+            switch (status) {
+                case 'Completed': return 'success';
+                case 'Processing': return 'warning';
+                case 'Failed': return 'danger';
+                default: return 'secondary';
+            }
+        }
+
+        // Notification system
+        function showNotification(message, type = 'info') {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+            notification.innerHTML = `
+                <i class="fas fa-${getNotificationIcon(type)} me-2"></i>
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Auto-remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 150);
+                }
+            }, 5000);
+        }
+
+        function getNotificationIcon(type) {
+            switch (type) {
+                case 'success': return 'check-circle';
+                case 'danger': return 'exclamation-circle';
+                case 'warning': return 'exclamation-triangle';
+                case 'info': return 'info-circle';
+                default: return 'bell';
+            }
+        }
+    </script>
+} 

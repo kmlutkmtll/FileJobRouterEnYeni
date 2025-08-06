@@ -1,0 +1,9 @@
+{
+  "Id": "e3262fa6-62d2-48c7-803f-0f090ddac712",
+  "InputPath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt",
+  "TargetApp": "abc",
+  "Status": "Failed",
+  "Timestamp": "2025-08-06T20:22:40.495439+03:00",
+  "ErrorMessage": "Worker process exited with code 1",
+  "Username": "kemalutkumutlu"
+}

@@ -1,0 +1,781 @@
+2025-08-06 16:02:41.301 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 16:02:41.400 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 16:02:41.440 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 16:02:41.442 [INF] Queue file not found, creating new queue
+2025-08-06 16:02:41.457 [INF] Added new job to queue: 4869611c-86d2-429f-8ff2-b4c55171c255 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/clean_test.txt
+2025-08-06 16:02:41.457 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/clean_test.txt -> abc
+2025-08-06 16:02:41.461 [INF] Added new job to queue: 7d3caeab-2324-4c4b-a6c6-efe08d740a40 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/clean_reverse.txt
+2025-08-06 16:02:41.461 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/clean_reverse.txt -> xyz
+2025-08-06 16:02:41.462 [INF] File in root directory, adding to queue for later worker selection: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 16:02:41.462 [INF] Added new job to queue: b77c06af-0b8a-4a3c-a323-4373583152b5 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 16:02:41.462 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store -> user_choice
+2025-08-06 16:02:41.463 [INF] File in root directory, adding to queue for later worker selection: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/root_clean.txt
+2025-08-06 16:02:41.463 [INF] Added new job to queue: ad58ee38-3827-4356-8cc3-1a5c6d4116eb - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/root_clean.txt
+2025-08-06 16:02:41.463 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/root_clean.txt -> user_choice
+2025-08-06 16:02:41.464 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 16:02:41.464 [INF] Job processor started
+2025-08-06 16:02:41.468 [INF] Processing job: 4869611c-86d2-429f-8ff2-b4c55171c255 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/clean_test.txt
+2025-08-06 16:02:41.469 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 16:02:41.470 [INF] Updated job in queue: 4869611c-86d2-429f-8ff2-b4c55171c255 - Status: "Processing"
+2025-08-06 16:02:41.472 [INF] Created jobs directory for user kemalutkumutlu on 2025-08-06: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06
+2025-08-06 16:02:41.487 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/4869611c-86d2-429f-8ff2-b4c55171c255.json
+2025-08-06 16:02:41.489 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/clean_test.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/clean_test.txt"
+2025-08-06 16:02:52.658 [INF] Worker output: [16:02:41 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/clean_test.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/clean_test.txt
+[16:02:41 INF] Simulating device usage for 11 seconds
+[16:02:52 INF] Read 88 characters from input file
+[16:02:52 INF] Converted content to uppercase
+[16:02:52 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/clean_test.txt
+[16:02:52 INF] WorkerAppABC completed successfully
+
+2025-08-06 16:02:52.660 [INF] Job completed successfully: 4869611c-86d2-429f-8ff2-b4c55171c255
+2025-08-06 16:02:52.663 [INF] Updated job status to Completed for job 4869611c-86d2-429f-8ff2-b4c55171c255
+2025-08-06 16:02:52.663 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/clean_test.txt
+2025-08-06 16:02:52.665 [INF] Updated job in queue: 4869611c-86d2-429f-8ff2-b4c55171c255 - Status: "Completed"
+2025-08-06 16:02:52.665 [INF] Device lock released successfully
+2025-08-06 16:02:52.666 [INF] Processing job: 7d3caeab-2324-4c4b-a6c6-efe08d740a40 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/clean_reverse.txt
+2025-08-06 16:02:52.666 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 16:02:52.666 [INF] Updated job in queue: 7d3caeab-2324-4c4b-a6c6-efe08d740a40 - Status: "Processing"
+2025-08-06 16:02:52.667 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/7d3caeab-2324-4c4b-a6c6-efe08d740a40.json
+2025-08-06 16:02:52.667 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/clean_reverse.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/xyz/clean_reverse.txt"
+2025-08-06 16:02:58.835 [INF] Worker output: [16:02:52 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/clean_reverse.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/xyz/clean_reverse.txt
+[16:02:52 INF] Simulating device usage for 6 seconds
+[16:02:58 INF] Read 90 characters from input file
+[16:02:58 INF] Reversed 3 lines
+[16:02:58 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/xyz/clean_reverse.txt
+[16:02:58 INF] WorkerAppXYZ completed successfully
+
+2025-08-06 16:02:58.837 [INF] Job completed successfully: 7d3caeab-2324-4c4b-a6c6-efe08d740a40
+2025-08-06 16:02:58.838 [INF] Updated job status to Completed for job 7d3caeab-2324-4c4b-a6c6-efe08d740a40
+2025-08-06 16:02:58.838 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/clean_reverse.txt
+2025-08-06 16:02:58.839 [INF] Updated job in queue: 7d3caeab-2324-4c4b-a6c6-efe08d740a40 - Status: "Completed"
+2025-08-06 16:02:58.839 [INF] Device lock released successfully
+2025-08-06 16:02:58.840 [INF] Processing job: b77c06af-0b8a-4a3c-a323-4373583152b5 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 16:02:58.840 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 16:02:58.841 [INF] Root file ready for processing: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 16:02:58.842 [INF] Available worker applications:
+2025-08-06 16:02:58.842 [INF]   1. abc
+2025-08-06 16:02:58.842 [INF]   2. xyz
+2025-08-06 16:02:58.842 [INF]   3. signer
+2025-08-06 16:03:18.314 [INF] User selected worker 'signer' for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 16:03:18.315 [INF] User selected worker 'signer' for root file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 16:03:18.316 [INF] Updated job in queue: b77c06af-0b8a-4a3c-a323-4373583152b5 - Status: "Processing"
+2025-08-06 16:03:18.317 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/b77c06af-0b8a-4a3c-a323-4373583152b5.json
+2025-08-06 16:03:18.317 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/.DS_Store"
+2025-08-06 16:03:28.636 [INF] Worker output: [16:03:18 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/.DS_Store
+[16:03:18 INF] Simulating device usage for 10 seconds
+[16:03:28 INF] Read 6148 bytes from input file
+[16:03:28 INF] Calculated SHA-256 hash: ddd0a310c1b54ea062fcf82c8da27f19ce1fbfe7f9cbdfa4bdd39567757480f4
+[16:03:28 INF] RSA signature generated with 2048 bit key
+[16:03:28 INF] Generated RSA signature
+[16:03:28 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/.DS_Store.sig
+[16:03:28 INF] WorkerAppSigner completed successfully
+
+2025-08-06 16:03:28.637 [INF] Job completed successfully: b77c06af-0b8a-4a3c-a323-4373583152b5
+2025-08-06 16:03:28.638 [INF] Updated job status to Completed for job b77c06af-0b8a-4a3c-a323-4373583152b5
+2025-08-06 16:03:28.638 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 16:03:28.639 [INF] Updated job in queue: b77c06af-0b8a-4a3c-a323-4373583152b5 - Status: "Completed"
+2025-08-06 16:03:28.639 [INF] Device lock released successfully
+2025-08-06 16:03:28.639 [INF] Processing job: ad58ee38-3827-4356-8cc3-1a5c6d4116eb - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/root_clean.txt
+2025-08-06 16:03:28.639 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 16:03:28.639 [INF] Root file ready for processing: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/root_clean.txt
+2025-08-06 16:03:28.639 [INF] Available worker applications:
+2025-08-06 16:03:28.639 [INF]   1. abc
+2025-08-06 16:03:28.640 [INF]   2. xyz
+2025-08-06 16:03:28.640 [INF]   3. signer
+2025-08-06 16:03:35.563 [INF] User selected worker 'abc' for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/root_clean.txt
+2025-08-06 16:03:35.564 [INF] User selected worker 'abc' for root file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/root_clean.txt
+2025-08-06 16:03:35.566 [INF] Updated job in queue: ad58ee38-3827-4356-8cc3-1a5c6d4116eb - Status: "Processing"
+2025-08-06 16:03:35.568 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/ad58ee38-3827-4356-8cc3-1a5c6d4116eb.json
+2025-08-06 16:03:35.569 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/root_clean.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/root_clean.txt"
+2025-08-06 16:03:42.719 [INF] Worker output: [16:03:35 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/root_clean.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/root_clean.txt
+[16:03:35 INF] Simulating device usage for 7 seconds
+[16:03:42 INF] Read 91 characters from input file
+[16:03:42 INF] Converted content to uppercase
+[16:03:42 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/root_clean.txt
+[16:03:42 INF] WorkerAppABC completed successfully
+
+2025-08-06 16:03:42.719 [INF] Job completed successfully: ad58ee38-3827-4356-8cc3-1a5c6d4116eb
+2025-08-06 16:03:42.721 [INF] Updated job status to Completed for job ad58ee38-3827-4356-8cc3-1a5c6d4116eb
+2025-08-06 16:03:42.721 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/root_clean.txt
+2025-08-06 16:03:42.721 [INF] Updated job in queue: ad58ee38-3827-4356-8cc3-1a5c6d4116eb - Status: "Completed"
+2025-08-06 16:03:42.722 [INF] Device lock released successfully
+2025-08-06 16:04:09.225 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 16:04:09.227 [INF] Shutting down FileJobRouter...
+2025-08-06 16:04:09.229 [INF] Stopped watching directory
+2025-08-06 16:04:09.231 [INF] Job processor stopped
+2025-08-06 16:04:09.231 [INF] Shutting down FileJobRouter...
+2025-08-06 16:04:10.231 [INF] FileJobRouter shutdown completed
+2025-08-06 16:04:10.232 [INF] FileJobRouter shutdown completed
+2025-08-06 16:09:43.569 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 16:09:43.728 [INF] Connected to WebUI SignalR Hub successfully
+2025-08-06 16:09:43.759 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 16:09:43.780 [INF] Added new job to queue: b341d7c6-f509-43df-8479-933bdb08e726 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_failed.txt
+2025-08-06 16:09:43.780 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_failed.txt -> abc
+2025-08-06 16:09:43.780 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 16:09:43.781 [INF] Job processor started
+2025-08-06 16:09:43.783 [INF] Processing job: b341d7c6-f509-43df-8479-933bdb08e726 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_failed.txt
+2025-08-06 16:09:43.817 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 16:09:43.818 [INF] Updated job in queue: b341d7c6-f509-43df-8479-933bdb08e726 - Status: "Processing"
+2025-08-06 16:09:43.824 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/b341d7c6-f509-43df-8479-933bdb08e726.json
+2025-08-06 16:09:43.825 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_failed.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/test_failed.txt"
+2025-08-06 16:09:58.951 [INF] Worker output: [16:09:43 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_failed.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/test_failed.txt
+[16:09:43 INF] Simulating device usage for 15 seconds
+[16:09:58 INF] Read 19 characters from input file
+[16:09:58 INF] Converted content to uppercase
+[16:09:58 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/test_failed.txt
+[16:09:58 INF] WorkerAppABC completed successfully
+
+2025-08-06 16:09:58.952 [INF] Job completed successfully: b341d7c6-f509-43df-8479-933bdb08e726
+2025-08-06 16:09:58.955 [INF] Updated job status to Completed for job b341d7c6-f509-43df-8479-933bdb08e726
+2025-08-06 16:09:58.961 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_failed.txt
+2025-08-06 16:09:58.963 [INF] Updated job in queue: b341d7c6-f509-43df-8479-933bdb08e726 - Status: "Completed"
+2025-08-06 16:09:58.964 [INF] Device lock released successfully
+2025-08-06 16:10:38.518 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 16:10:38.522 [INF] Shutting down FileJobRouter...
+2025-08-06 16:10:38.530 [INF] Stopped watching directory
+2025-08-06 16:10:38.539 [INF] Job processor stopped
+2025-08-06 16:10:38.543 [INF] Shutting down FileJobRouter...
+2025-08-06 16:10:39.531 [INF] FileJobRouter shutdown completed
+2025-08-06 16:10:39.544 [INF] FileJobRouter shutdown completed
+2025-08-06 16:28:13.971 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 16:28:14.300 [INF] Connected to WebUI SignalR Hub successfully
+2025-08-06 16:28:14.336 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 16:28:14.338 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 16:28:14.339 [INF] Job processor started
+2025-08-06 16:45:28.862 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 16:45:28.998 [INF] Connected to WebUI SignalR Hub successfully
+2025-08-06 16:45:29.028 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 16:45:29.029 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 16:45:29.030 [INF] Job processor started
+2025-08-06 16:46:45.327 [INF] Attempting to reconnect to WebUI...
+2025-08-06 16:47:26.260 [INF] Added new job to queue: 33e50c50-668e-4a66-9c1d-f9df89f6a935 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Ultimate C# Masterclass - The complete list of topics.pdf
+2025-08-06 16:47:26.260 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Ultimate C# Masterclass - The complete list of topics.pdf -> abc
+2025-08-06 16:47:27.420 [WRN] WebUI connection lost: Reconnect retries have been exhausted after 4 failed attempts and 00:00:42.0930330 elapsed. Disconnecting.
+2025-08-06 16:47:29.117 [INF] Processing job: 33e50c50-668e-4a66-9c1d-f9df89f6a935 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Ultimate C# Masterclass - The complete list of topics.pdf
+2025-08-06 16:47:29.122 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 16:47:29.129 [INF] Updated job in queue: 33e50c50-668e-4a66-9c1d-f9df89f6a935 - Status: "Processing"
+2025-08-06 16:47:29.154 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/33e50c50-668e-4a66-9c1d-f9df89f6a935.json
+2025-08-06 16:47:29.158 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Ultimate C# Masterclass - The complete list of topics.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/Ultimate C# Masterclass - The complete list of topics.pdf"
+2025-08-06 16:47:43.390 [INF] Worker output: [16:47:29 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Ultimate C# Masterclass - The complete list of topics.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/Ultimate C# Masterclass - The complete list of topics.pdf
+[16:47:29 INF] Simulating device usage for 14 seconds
+[16:47:43 INF] Read 780016 characters from input file
+[16:47:43 INF] Converted content to uppercase
+[16:47:43 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/Ultimate C# Masterclass - The complete list of topics.pdf
+[16:47:43 INF] WorkerAppABC completed successfully
+
+2025-08-06 16:47:43.391 [INF] Job completed successfully: 33e50c50-668e-4a66-9c1d-f9df89f6a935
+2025-08-06 16:47:43.393 [INF] Updated job status to Completed for job 33e50c50-668e-4a66-9c1d-f9df89f6a935
+2025-08-06 16:47:43.393 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Ultimate C# Masterclass - The complete list of topics.pdf
+2025-08-06 16:47:43.394 [INF] Updated job in queue: 33e50c50-668e-4a66-9c1d-f9df89f6a935 - Status: "Completed"
+2025-08-06 16:47:43.394 [INF] Device lock released successfully
+2025-08-06 18:48:44.389 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 18:48:44.394 [INF] Shutting down FileJobRouter...
+2025-08-06 18:48:44.396 [INF] Stopped watching directory
+2025-08-06 18:48:44.402 [INF] Job processor stopped
+2025-08-06 18:48:44.405 [INF] Shutting down FileJobRouter...
+2025-08-06 18:48:45.398 [INF] FileJobRouter shutdown completed
+2025-08-06 18:48:45.406 [INF] FileJobRouter shutdown completed
+ed
+2025-08-06 18:48:44.388 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 18:48:44.393 [INF] Shutting down FileJobRouter...
+2025-08-06 18:48:44.396 [INF] Stopped watching directory
+2025-08-06 18:48:44.402 [INF] Job processor stopped
+2025-08-06 18:48:44.405 [INF] Shutting down FileJobRouter...
+2025-08-06 18:48:45.398 [INF] FileJobRouter shutdown completed
+2025-08-06 18:48:45.406 [INF] FileJobRouter shutdown completed
+2025-08-06 19:12:48.176 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 19:12:48.254 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 19:12:48.279 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 19:12:48.296 [INF] Added new job to queue: 28f6d8f9-6644-493b-8313-53669b1b0c71 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf
+2025-08-06 19:12:48.296 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf -> signer
+2025-08-06 19:12:48.297 [INF] Added new job to queue: f5d0ed45-92c6-4362-9202-035df99adf15 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/00-Master.ppt
+2025-08-06 19:12:48.297 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/00-Master.ppt -> signer
+2025-08-06 19:12:48.297 [INF] Added new job to queue: ac450975-a184-44b1-99aa-0ad81d7ec9c4 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2_1.pdf
+2025-08-06 19:12:48.297 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2_1.pdf -> signer
+2025-08-06 19:12:48.298 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 19:12:48.298 [INF] Job processor started
+2025-08-06 19:12:48.300 [INF] Processing job: 28f6d8f9-6644-493b-8313-53669b1b0c71 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf
+2025-08-06 19:12:48.300 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 19:12:48.301 [INF] Updated job in queue: 28f6d8f9-6644-493b-8313-53669b1b0c71 - Status: "Processing"
+2025-08-06 19:12:48.312 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/28f6d8f9-6644-493b-8313-53669b1b0c71.json
+2025-08-06 19:12:48.313 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/0_syllabus-2.pdf"
+2025-08-06 19:13:03.563 [INF] Worker output: [19:12:48 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/0_syllabus-2.pdf
+[19:12:48 INF] Simulating device usage for 15 seconds
+[19:13:03 INF] Read 166214 bytes from input file
+[19:13:03 INF] Calculated SHA-256 hash: 057e37dc2836aa6a6293f955ace3bb6d5fb3f4e990f890a022e156fc79cad360
+[19:13:03 INF] RSA signature generated with 2048 bit key
+[19:13:03 INF] Generated RSA signature
+[19:13:03 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/0_syllabus-2.pdf.sig
+[19:13:03 INF] WorkerAppSigner completed successfully
+
+2025-08-06 19:13:03.564 [INF] Job completed successfully: 28f6d8f9-6644-493b-8313-53669b1b0c71
+2025-08-06 19:13:03.565 [INF] Updated job status to Completed for job 28f6d8f9-6644-493b-8313-53669b1b0c71
+2025-08-06 19:13:03.565 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf
+2025-08-06 19:13:03.566 [INF] Updated job in queue: 28f6d8f9-6644-493b-8313-53669b1b0c71 - Status: "Completed"
+2025-08-06 19:13:03.566 [INF] Device lock released successfully
+2025-08-06 19:13:03.567 [INF] Processing job: f5d0ed45-92c6-4362-9202-035df99adf15 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/00-Master.ppt
+2025-08-06 19:13:03.567 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 19:13:03.567 [INF] Updated job in queue: f5d0ed45-92c6-4362-9202-035df99adf15 - Status: "Processing"
+2025-08-06 19:13:03.567 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/f5d0ed45-92c6-4362-9202-035df99adf15.json
+2025-08-06 19:13:03.567 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/00-Master.ppt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/00-Master.ppt"
+2025-08-06 19:13:13.818 [INF] Worker output: [19:13:03 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/00-Master.ppt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/00-Master.ppt
+[19:13:03 INF] Simulating device usage for 10 seconds
+[19:13:13 INF] Read 45568 bytes from input file
+[19:13:13 INF] Calculated SHA-256 hash: ac153f7881b3924cdd70e909202abfd9d53b65d32eb44fe3ab69f95608b9ef7a
+[19:13:13 INF] RSA signature generated with 2048 bit key
+[19:13:13 INF] Generated RSA signature
+[19:13:13 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/00-Master.ppt.sig
+[19:13:13 INF] WorkerAppSigner completed successfully
+
+2025-08-06 19:13:13.819 [INF] Job completed successfully: f5d0ed45-92c6-4362-9202-035df99adf15
+2025-08-06 19:13:13.819 [INF] Updated job status to Completed for job f5d0ed45-92c6-4362-9202-035df99adf15
+2025-08-06 19:13:13.819 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/00-Master.ppt
+2025-08-06 19:13:13.820 [INF] Updated job in queue: f5d0ed45-92c6-4362-9202-035df99adf15 - Status: "Completed"
+2025-08-06 19:13:13.820 [INF] Device lock released successfully
+2025-08-06 19:13:13.820 [INF] Processing job: ac450975-a184-44b1-99aa-0ad81d7ec9c4 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2_1.pdf
+2025-08-06 19:13:13.820 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 19:13:13.821 [INF] Updated job in queue: ac450975-a184-44b1-99aa-0ad81d7ec9c4 - Status: "Processing"
+2025-08-06 19:13:13.821 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/ac450975-a184-44b1-99aa-0ad81d7ec9c4.json
+2025-08-06 19:13:13.821 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2_1.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/0_syllabus-2_1.pdf"
+2025-08-06 19:13:27.066 [INF] Worker output: [19:13:13 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2_1.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/0_syllabus-2_1.pdf
+[19:13:13 INF] Simulating device usage for 13 seconds
+[19:13:26 INF] Read 166214 bytes from input file
+[19:13:26 INF] Calculated SHA-256 hash: 057e37dc2836aa6a6293f955ace3bb6d5fb3f4e990f890a022e156fc79cad360
+[19:13:27 INF] RSA signature generated with 2048 bit key
+[19:13:27 INF] Generated RSA signature
+[19:13:27 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/0_syllabus-2_1.pdf.sig
+[19:13:27 INF] WorkerAppSigner completed successfully
+
+2025-08-06 19:13:27.066 [INF] Job completed successfully: ac450975-a184-44b1-99aa-0ad81d7ec9c4
+2025-08-2025-08-06 19:13:27.105 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 19:13:27.107 [INF] Updated job in queue: ac450975-a184-44b1-99aa-0ad81d7ec9c4 - Status: "Processing"
+2025-08-06 19:13:27.119 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/ac450975-a12025-08-06 19:14:16.590 [INF] Added new job to queue: 04a68504-6a88-499c-9abd-c18371bef0e1 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt
+2025-08-06 19:14:16.591 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt -> abc
+2025-08-06 19:14:17.098 [INF] Processing job: 04a68504-6a88-499c-9abd-c18371bef0e1 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt
+2025-08-06 19:14:17.099 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 19:14:17.100 [INF] Updated job in queue: 04a68504-6a88-499c-9abd-c18371bef0e1 - Status: "Processing"
+2025-08-06 19:14:17.101 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/04a68504-6a88-499c-9abd-c18371bef0e1.json
+2025-08-06 19:14:17.101 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/test_upload.txt"
+2025-08-06 19:14:26.375 [INF] Worker output: [19:14:17 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/test_upload.txt
+[19:14:17 INF] Simulating device usage for 9 seconds
+[19:14:26 INF] Read 17 characters from input file
+[19:14:26 INF] Converted content to uppercase
+[19:14:26 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/test_upload.txt
+[19:14:26 INF] WorkerAppABC completed successfully
+
+2025-08-06 19:14:26.376 [INF] Job completed successfully: 04a68504-6a88-499c-9abd-c18371bef0e1
+2025-08-06 19:14:26.377 [INF] Updated job status to Completed for job 04a68504-6a88-499c-9abd-c18371bef0e1
+2025-08-06 19:14:26.378 [INF] Deleted processed file: /Users/kemalutkumut2025-08-06 19:14:26.534 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 19:14:26.535 [INF] Updated job in queue: e3262fa6-62d2-48c7-803f-0f090ddac712 - Status: "Processing"
+2025-08-06 19:14:26.535 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/e3262fa6-62d2-48c7-803f-0f090ddac712.json
+2025-08-06 19:14:26.535 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/test_upload.txt"
+2025-08-06 19:14:26.619 [INF] Worker output: [19:14:26 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/test_upload.txt
+[19:14:26 ERR] Input file not found: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt
+
+2025-08-06 19:14:26.619 [ERR] Worker process failed for job e3262fa6-62d2-48c7-803f-0f090ddac712 with exit code 1: Worker process exited with code 1
+2025-08-06 19:14:26.619 [INF] Updated job status to Failed for job e3262fa6-62d2-48c7-803f-0f090ddac712
+2025-08-06 19:14:26.619 [ERR] Job failed: e3262fa6-62d2-48c7-803f-0f090ddac712 - Error: Worker process exited with code 1
+2025-08-06 19:14:26.619 [INF] Updated job in queue: e3262fa6-62d2-48c7-803f-0f090ddac712 - Status: "Failed"
+2025-08-06 19:14:26.619 [INF] Device lock released successfully
+2025-08-06 19:15:06.020 [INF] Added new job to queue: 20376473-73ed-4422-838a-22b534fa1f09 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/03Preprocessing-updated.pdf
+2025-08-06 19:15:06.021 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/03Preprocessing-updated.pdf -> signer
+2025-08-06 19:20:31.459 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 19:20:31.464 [INF] Shutting down FileJobRouter...
+2025-08-06 19:20:31.465 [INF] Stopped watching directory
+2025-08-06 19:20:31.467 [INF] Job processor stopped
+2025-08-06 19:20:31.468 [INF] Shutting down FileJobRouter...
+2025-08-06 19:20:32.467 [INF] FileJobRouter shutdown completed
+2025-08-06 19:20:32.469 [INF] FileJobRouter shutdown completed
+d97-1a2a-4d51-837c-71f26d841398 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/03Preprocessing-updated.pdf
+2025-08-06 19:15:06.520 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 19:15:06.521 [INF] Updated job in queue: 7450cd97-1a2a-4d51-837c-71f26d841398 - Status: "Processing"
+2025-08-06 19:15:06.523 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/7450cd97-1a2a-4d51-837c-71f26d841398.json
+2025-08-06 19:15:06.523 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/03Preprocessing-updated.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/03Preprocessing-updated.pdf"
+2025-08-06 19:15:20.911 [INF] Worker output: [19:15:06 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/03Preprocessing-updated.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/03Preprocessing-updated.pdf
+[19:15:06 INF] Simulating device usage for 14 seconds
+[19:15:20 INF] Read 954915 bytes from input file
+[19:15:20 INF] Calculated SHA-256 hash: 1cdd9e690d73d415016ba0377b2b434394d93f0f6c5f446a7a3922f14cbf37e6
+[19:15:20 INF] RSA signature generated with 2048 bit key
+[19:15:20 INF] Generated RSA signature
+[19:15:20 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/03Preprocessing-updated.pdf.sig
+[19:15:20 INF] WorkerAppSigner completed successfully
+
+2025-08-06 19:15:20.911 [INF] Job completed successfully: 7450cd97-1a2a-4d51-837c-71f26d841398
+2025-08-06 19:15:20.912 [INF] Updated job status to Completed for job 7450cd97-1a2a-4d51-837c-71f26d841398
+2025-08-06 19:15:20.912 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/03Preprocessing-updated.pdf
+2025-08-06 19:15:20.912 [INF] Updated job in queue: 7450cd97-1a2a-4d51-837c-71f26d841398 - Status: "Completed"
+2025-08-06 19:15:20.913 [INF] Device lock released successfully
+2025-08-06 19:20:31.459 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 19:20:31.463 [INF] Shutting down FileJobRouter...
+2025-08-06 19:20:31.466 [INF] Stopped watching directory
+2025-08-06 19:20:31.468 [INF] Job processor stopped
+2025-08-06 19:20:31.469 [INF] Shutting down FileJobRouter...
+2025-08-06 19:20:32.467 [INF] FileJobRouter shutdown completed
+2025-08-06 19:20:32.470 [INF] FileJobRouter shutdown completed
+2025-08-06 19:22:06.675 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 19:22:06.784 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 19:22:06.822 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 19:22:06.840 [INF] Added new job to queue: bc9aeab6-a792-4588-a5aa-93381310ef78 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/01intro (1)-2.pdf
+2025-08-06 19:22:06.840 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/01intro (1)-2.pdf -> signer
+2025-08-06 19:22:06.840 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 19:22:06.841 [INF] Job processor started
+2025-08-06 19:22:06.843 [INF] Processing job: bc9aeab6-a792-4588-a5aa-93381310ef78 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/01intro (1)-2.pdf
+2025-08-06 19:22:06.844 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 19:22:06.846 [INF] Updated job in queue: bc9aeab6-a792-4588-a5aa-93381310ef78 - Status: "Processing"
+2025-08-06 19:22:06.858 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/bc9aeab6-a792-4588-a5aa-93381310ef78.json
+2025-08-06 19:22:06.859 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/01intro (1)-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/01intro (1)-2.pdf"
+2025-08-06 19:22:17.117 [INF] Worker output: [19:22:06 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/01intro (1)-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/01intro (1)-2.pdf
+[19:22:06 INF] Simulating device usage for 10 seconds
+[19:22:16 INF] Read 4353111 bytes from input file
+[19:22:16 INF] Calculated SHA-256 hash: 33280ed8921053d99089a40d344fbdf92008de159c0527db90dd1c88efd94fba
+[19:22:17 INF] RSA signature generated with 2048 bit key
+[19:22:17 INF] Generated RSA signature
+[19:22:17 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/01intro (1)-2.pdf.sig
+[19:22:17 INF] WorkerAppSigner completed successfully
+
+2025-08-06 19:22:17.117 [INF] Job completed successfully: bc9aeab6-a792-4588-a5aa-93381310ef78
+2025-08-06 19:22:17.119 [INF] Updated job status to Completed for job bc9aeab6-a792-4588-a5aa-93381310ef78
+2025-08-06 19:22:17.120 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/01intro (1)-2.pdf
+2025-08-06 19:22:17.121 [INF] Updated job in queue: bc9aeab6-a792-4588-a5aa-93381310ef78 - Status: "Completed"
+2025-08-06 19:22:17.121 [INF] Device lock released successfully
+2025-08-06 19:23:16.704 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 19:23:16.707 [INF] Shutting down FileJobRouter...
+2025-08-06 19:23:16.711 [INF] Stopped watching directory
+2025-08-06 19:23:16.714 [INF] Job processor stopped
+2025-08-06 19:23:16.717 [INF] Shutting down FileJobRouter...
+2025-08-06 19:23:17.713 [INF] FileJobRouter shutdown completed
+2025-08-06 19:23:17.718 [INF] FileJobRouter shutdown completed
+2025-08-06 19:32:07.796 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 19:32:07.881 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 19:32:07.917 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 19:32:07.935 [INF] Added new job to queue: 8383f1c7-0ca6-40be-97f5-82b58c4aa129 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/env.yml
+2025-08-06 19:32:07.935 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/env.yml -> signer
+2025-08-06 19:32:07.936 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 19:32:07.936 [INF] Job processor started
+2025-08-06 19:32:07.938 [INF] Processing job: 8383f1c7-0ca6-40be-97f5-82b58c4aa129 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/env.yml
+2025-08-06 19:32:07.939 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 19:32:07.940 [INF] Updated job in queue: 8383f1c7-0ca6-40be-97f5-82b58c4aa129 - Status: "Processing"
+2025-08-06 19:32:07.953 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/8383f1c7-0ca6-40be-97f5-82b58c4aa129.json
+2025-08-06 19:32:07.955 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/env.yml" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/env.yml"
+2025-08-06 19:32:19.185 [INF] Worker output: [19:32:08 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/env.yml -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/env.yml
+[19:32:08 INF] Simulating device usage for 11 seconds
+[19:32:19 INF] Read 0 bytes from input file
+[19:32:19 INF] Calculated SHA-256 hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+[19:32:19 INF] RSA signature generated with 2048 bit key
+[19:32:19 INF] Generated RSA signature
+[19:32:19 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/env.yml.sig
+[19:32:19 INF] WorkerAppSigner completed successfully
+
+2025-08-06 19:32:19.185 [INF] Job completed successfully: 8383f1c7-0ca6-40be-97f5-82b58c4aa129
+2025-08-06 19:32:19.187 [INF] Updated job status to Completed for job 8383f1c7-0ca6-40be-97f5-82b58c4aa129
+2025-08-06 19:32:19.187 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/env.yml
+2025-08-06 19:32:19.188 [INF] Updated job in queue: 8383f1c7-0ca6-40be-97f5-82b58c4aa129 - Status: "Completed"
+2025-08-06 19:32:19.188 [INF] Device lock released successfully
+2025-08-06 19:32:39.624 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 19:32:39.631 [INF] Shutting down FileJobRouter...
+2025-08-06 19:32:39.632 [INF] Stopped watching directory
+2025-08-06 19:32:39.634 [INF] Job processor stopped
+2025-08-06 19:32:39.635 [INF] Shutting down FileJobRouter...
+2025-08-06 19:32:40.634 [INF] FileJobRouter shutdown completed
+2025-08-06 19:32:40.636 [INF] FileJobRouter shutdown completed
+2025-08-06 19:42:09.117 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 19:42:09.185 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 19:42:09.217 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 19:42:09.236 [INF] Added new job to queue: c0d04adb-c5d5-4ef0-afe1-3139282a9d8e - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/7_hafta_aldatma_teknikleri_.pdf
+2025-08-06 19:42:09.236 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/7_hafta_aldatma_teknikleri_.pdf -> signer
+2025-08-06 19:42:09.237 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 19:42:09.237 [INF] Job processor started
+2025-08-06 19:42:09.239 [INF] Processing job: c0d04adb-c5d5-4ef0-afe1-3139282a9d8e - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/7_hafta_aldatma_teknikleri_.pdf
+2025-08-06 19:42:09.240 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 19:42:09.241 [INF] Updated job in queue: c0d04adb-c5d5-4ef0-afe1-3139282a9d8e - Status: "Processing"
+2025-08-06 19:42:09.252 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/c0d04adb-c5d5-4ef0-afe1-3139282a9d8e.json
+2025-08-06 19:42:09.253 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/7_hafta_aldatma_teknikleri_.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/7_hafta_aldatma_teknikleri_.pdf"
+2025-08-06 19:42:21.623 [INF] Worker output: [19:42:09 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/7_hafta_aldatma_teknikleri_.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/7_hafta_aldatma_teknikleri_.pdf
+[19:42:09 INF] Simulating device usage for 12 seconds
+[19:42:21 INF] Read 1757599 bytes from input file
+[19:42:21 INF] Calculated SHA-256 hash: e662fc81b7b1fb5775f9cd7892b48a275f5ba0f90d5fe4346a185f78f803dad5
+[19:42:21 INF] RSA signature generated with 2048 bit key
+[19:42:21 INF] Generated RSA signature
+[19:42:21 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/7_hafta_aldatma_teknikleri_.pdf.sig
+[19:42:21 INF] WorkerAppSigner completed successfully
+
+2025-08-06 19:42:21.629 [INF] Job completed successfully: c0d04adb-c5d5-4ef0-afe1-3139282a9d8e
+2025-08-06 19:42:21.633 [INF] Updated job status to Completed for job c0d04adb-c5d5-4ef0-afe1-3139282a9d8e
+2025-08-06 19:42:21.635 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/7_hafta_aldatma_teknikleri_.pdf
+2025-08-06 19:42:21.637 [INF] Updated job in queue: c0d04adb-c5d5-4ef0-afe1-3139282a9d8e - Status: "Completed"
+2025-08-06 19:42:21.638 [INF] Device lock released successfully
+2025-08-06 19:42:42.628 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 19:42:42.630 [INF] Shutting down FileJobRouter...
+2025-08-06 19:42:42.632 [INF] Stopped watching directory
+2025-08-06 19:42:42.635 [INF] Job processor stopped
+2025-08-06 19:42:42.636 [INF] Shutting down FileJobRouter...
+2025-08-06 19:42:43.633 [INF] FileJobRouter shutdown completed
+2025-08-06 19:42:43.637 [INF] FileJobRouter shutdown completed
+2022025-08-06 19:43:05.718 [INF] Added new job to queue: 19a7642c-2c94-4f75-9d38-cad9283d9a7c - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/12.pdf
+2025-08-06 19:43:05.719 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/12.pdf -> xyz
+2025-08-06 19:43:09.721 [INF] Processing job: 19a7642c-2c94-4f75-9d38-cad9283d9a7c - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/12.pdf
+2025-08-06 19:43:09.727 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 19:43:09.730 [INF] Updated job in queue: 19a7642c-2c94-4f75-9d38-cad9283d9a7c - Status: "Processing"
+2025-08-06 19:43:09.763 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/19a7642c-2c94-4f75-9d38-cad9283d9a7c.json
+2025-08-06 19:43:09.769 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/12.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/xyz/12.pdf"
+2025-08-06 19:43:15.966 [INF] Worker output: [19:43:09 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/12.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/xyz/12.pdf
+[19:43:09 INF] Simulating device usage for 6 seconds
+[19:43:15 INF] Read 533486 characters from input file
+[19:43:15 INF] Reversed 7890 lines
+[19:43:15 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/xyz/12.pdf
+[19:43:15 INF] WorkerAppXYZ completed successfully
+
+2025-08-06 19:43:15.966 [INF] Job completed successfully: 19a7642c-2c94-4f75-9d38-cad9283d9a7c
+2025-08-06 19:43:15.969 [INF] Updated job status to Completed for job 19a7642c-2c94-4f75-9d38-cad9283d9a7c
+2025-08-06 19:43:15.969 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/12.pdf
+2025-08-06 19:43:15.970 [INF] Updated job in queue: 19a7642c-2c94-4f75-9d38-cad9283d9a7c - Status: "Completed"
+2025-08-06 19:43:15.971 [INF] Device lock released successfully
+2025-08-06 19:43:41.513 [INF] Added new job to queue: cc473241-4a7d-4bff-b8e8-a0f1975a0cf4 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/04841746215115.pdf
+2025-08-06 19:43:41.514 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/04841746215115.pdf -> abc
+2025-08-06 19:43:45.991 [INF] Processing job: cc473241-4a7d-4bff-b8e8-a0f1975a0cf4 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/04841746215115.pdf
+2025-08-06 19:43:45.992 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 19:43:45.994 [INF] Updated job in queue: cc473241-4a7d-4bff-b8e8-a0f1975a0cf4 - Status: "Processing"
+2025-08-06 19:43:45.996 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/cc473241-4a7d-4bff-b8e8-a0f1975a0cf4.json
+2025-08-06 19:43:45.997 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/04841746215115.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/04841746215115.pdf"
+2025-08-06 19:43:57.199 [INF] Worker output: [19:43:46 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/04841746215115.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/04841746215115.pdf
+[19:43:46 INF] Simulating device usage for 11 seconds
+[19:43:57 INF] Read 195029 characters from input file
+[19:43:57 INF] Converted content to uppercase
+[19:43:57 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/04841746215115.pdf
+[19:43:57 INF] WorkerAppABC completed successfully
+
+2025-08-06 19:43:57.200 [INF] Job completed successfully: cc473241-4a7d-4bff-b8e8-a0f1975a0cf4
+2025-08-06 19:43:57.202 [INF] Updated job status to Completed for job cc473241-4a7d-4bff-b8e8-a0f1975a0cf4
+2025-08-06 19:43:57.202 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/04841746215115.pdf
+2025-08-06 19:43:57.203 [INF] Updated job in queue: cc473241-4a7d-4bff-b8e8-a0f1975a0cf4 - Status: "Completed"
+2025-08-06 19:43:57.203 [INF] Device lock released successfully
+2025-08-06 19:46:50.019 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 19:46:50.034 [INF] Shutting down FileJobRouter...
+2025-08-06 19:46:50.044 [INF] Stopped watching directory
+2025-08-06 19:46:50.052 [INF] Job processor stopped
+2025-08-06 19:46:50.055 [INF] Shutting down FileJobRouter...
+2025-08-06 19:46:51.047 [INF] FileJobRouter shutdown completed
+2025-08-06 19:46:51.056 [INF] FileJobRouter shutdown completed
+2025-08-06 20:18:51.666 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 20:18:51.755 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 20:18:51.783 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 20:18:51.801 [INF] Added new job to queue: 34825a00-11fb-457f-a8ad-ae687150403c - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/15.pdf
+2025-08-06 20:18:51.801 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/15.pdf -> xyz
+2025-08-06 20:18:51.801 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 20:18:51.801 [INF] Job processor started
+2025-08-06 20:18:51.803 [INF] Processing job: 34825a00-11fb-457f-a8ad-ae687150403c - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/15.pdf
+2025-08-06 20:18:51.804 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 20:18:51.805 [INF] Updated job in queue: 34825a00-11fb-457f-a8ad-ae687150403c - Status: "Processing"
+2025-08-06 20:18:51.817 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/34825a00-11fb-457f-a8ad-ae687150403c.json
+2025-08-06 20:18:51.819 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/15.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/xyz/15.pdf"
+2025-08-06 20:19:04.978 [INF] Worker output: [20:18:51 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/15.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/xyz/15.pdf
+[20:18:51 INF] Simulating device usage for 13 seconds
+[20:19:04 INF] Read 123502 characters from input file
+[20:19:04 INF] Reversed 621 lines
+[20:19:04 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/xyz/15.pdf
+[20:19:04 INF] WorkerAppXYZ completed successfully
+
+2025-08-06 20:19:04.979 [INF] Job completed successfully: 34825a00-11fb-457f-a8ad-ae687150403c
+2025-08-06 20:19:04.982 [INF] Updated job status to Completed for job 34825a00-11fb-457f-a8ad-ae687150403c
+2025-08-06 20:19:04.982 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/15.pdf
+2025-08-06 20:19:04.984 [INF] Updated job in queue: 34825a00-11fb-457f-a8ad-ae687150403c - Status: "Completed"
+2025-08-06 20:19:04.985 [INF] Device lock released successfully
+2025-08-06 20:19:32.056 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 20:19:32.059 [INF] Shutting down FileJobRouter...
+2025-08-06 20:19:32.060 [INF] Stopped watching directory
+2025-08-06 20:19:32.062 [INF] Job processor stopped
+2025-08-06 20:19:32.062 [INF] Shutting down FileJobRouter...
+2025-08-06 20:19:33.062 [INF] FileJobRouter shutdown completed
+2025-08-06 20:19:33.064 [INF] FileJobRouter shutdown completed
+2025-08-06 20:22:40.224 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 20:22:40.320 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 20:22:40.354 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 20:22:40.356 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 20:22:40.356 [INF] Job processor started
+2025-08-06 20:22:40.366 [INF] Processing job: e3262fa6-62d2-48c7-803f-0f090ddac712 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt
+2025-08-06 20:22:40.367 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 20:22:40.377 [INF] Updated job in queue: e3262fa6-62d2-48c7-803f-0f090ddac712 - Status: "Processing"
+2025-08-06 20:22:40.390 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/e3262fa6-62d2-48c7-803f-0f090ddac712.json
+2025-08-06 20:22:40.391 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/test_upload.txt"
+2025-08-06 20:22:40.494 [INF] Worker output: [20:22:40 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/abc/test_upload.txt
+[20:22:40 ERR] Input file not found: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt
+
+2025-08-06 20:22:40.494 [ERR] Worker process failed for job e3262fa6-62d2-48c7-803f-0f090ddac712 with exit code 1: Worker process exited with code 1
+2025-08-06 20:22:40.495 [INF] Updated job status to Failed for job e3262fa6-62d2-48c7-803f-0f090ddac712
+2025-08-06 20:22:40.495 [ERR] Job failed: e3262fa6-62d2-48c7-803f-0f090ddac712 - Error: Worker process exited with code 1
+2025-08-06 20:22:40.496 [INF] Updated job in queue: e3262fa6-62d2-48c7-803f-0f090ddac712 - Status: "Failed"
+2025-08-06 20:22:40.496 [INF] Device lock released successfully
+2025-08-06 20:22:55.512 [INF] Processing job: ac450975-a184-44b1-99aa-0ad81d7ec9c4 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2_1.pdf
+2025-08-06 20:22:55.515 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 20:22:55.517 [INF] Updated job in queue: ac450975-a184-44b1-99aa-0ad81d7ec9c4 - Status: "Processing"
+2025-08-06 20:22:55.520 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/ac450975-a184-44b1-99aa-0ad81d7ec9c4.json
+2025-08-06 20:22:55.521 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2_1.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/0_syllabus-2_1.pdf"
+2025-08-06 20:22:55.647 [INF] Worker output: [20:22:55 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2_1.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/0_syllabus-2_1.pdf
+[20:22:55 ERR] Input file not found: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2_1.pdf
+
+2025-08-06 20:22:55.647 [ERR] Worker process failed for job ac450975-a184-44b1-99aa-0ad81d7ec9c4 with exit code 1: Worker process exited with code 1
+2025-08-06 20:22:55.648 [INF] Updated job status to Failed for job ac450975-a184-44b1-99aa-0ad81d7ec9c4
+2025-08-06 20:22:55.648 [ERR] Job failed: ac450975-a184-44b1-99aa-0ad81d7ec9c4 - Error: Worker process exited with code 1
+2025-08-06 20:22:55.649 [INF] Updated job in queue: ac450975-a184-44b1-99aa-0ad81d7ec9c4 - Status: "Failed"
+2025-08-06 20:22:55.649 [INF] Device lock released successfully
+2025-08-06 20:26:44.629 [INF] File in root directory, adding to queue for later worker selection: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:26:44.633 [INF] File already processed successfully, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:26:45.140 [INF] Added new job to queue: 63cd94a0-6a53-45f0-8662-f339ce03b20a - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/infer.py
+2025-08-06 20:26:45.141 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/infer.py -> signer
+2025-08-06 20:26:45.642 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/infer.py
+2025-08-06 20:26:45.831 [INF] Processing job: 63cd94a0-6a53-45f0-8662-f339ce03b20a - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/infer.py
+2025-08-06 20:26:45.832 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 20:26:45.832 [INF] Updated job in queue: 63cd94a0-6a53-45f0-8662-f339ce03b20a - Status: "Processing"
+2025-08-06 20:26:45.842 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/63cd94a0-6a53-45f0-8662-f339ce03b20a.json
+2025-08-06 20:26:45.843 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/infer.py" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/infer.py"
+2025-08-06 20:26:53.446 [INF] Worker output: [20:26:46 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/infer.py -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/infer.py
+[20:26:46 INF] Simulating device usage for 7 seconds
+[20:26:53 INF] Read 0 bytes from input file
+[20:26:53 INF] Calculated SHA-256 hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+[20:26:53 INF] RSA signature generated with 2048 bit key
+[20:26:53 INF] Generated RSA signature
+[20:26:53 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/infer.py.sig
+[20:26:53 INF] WorkerAppSigner completed successfully
+
+2025-08-06 20:26:53.447 [INF] Job completed successfully: 63cd94a0-6a53-45f0-8662-f339ce03b20a
+2025-08-06 20:26:53.448 [INF] Updated job status to Completed for job 63cd94a0-6a53-45f0-8662-f339ce03b20a
+2025-08-06 20:26:53.449 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/infer.py
+2025-08-06 20:26:53.449 [INF] Updated job in queue: 63cd94a0-6a53-45f0-8662-f339ce03b20a - Status: "Completed"
+2025-08-06 20:26:53.449 [INF] Device lock released successfully
+2025-08-06 20:28:31.941 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 20:28:32.028 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 20:28:32.059 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 20:28:32.061 [INF] File in root directory, adding to queue for later worker selection: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:28:32.069 [INF] File already processed successfully, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:28:32.070 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 20:28:32.070 [INF] Job processor started
+2025-08-06 20:28:49.547 [INF] Added new job to queue: e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/train.py
+2025-08-06 20:28:49.548 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/train.py -> signer
+2025-08-06 20:28:52.103 [INF] Processing job: e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/train.py
+2025-08-06 20:28:52.108 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 20:28:52.111 [INF] Updated job in queue: e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123 - Status: "Processing"
+2025-08-06 20:28:52.139 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123.json
+2025-08-06 20:28:52.142 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/train.py" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/train.py"
+2025-08-06 20:28:53.412 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 20:28:53.412 [INF] Shutting down FileJobRouter...
+2025-08-06 20:28:53.413 [INF] Stopped watching directory
+2025-08-06 20:28:53.414 [INF] Device lock released successfully
+2025-08-06 20:28:53.414 [INF] Worker output: [20:28:52 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/train.py -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/train.py
+[20:28:52 INF] Simulating device usage for 7 seconds
+
+2025-08-06 20:28:53.415 [ERR] Worker process failed for job e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123 with exit code 130: Worker process exited with code 130
+2025-08-06 20:28:53.417 [INF] Updated job status to Failed for job e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123
+2025-08-06 20:28:53.417 [ERR] Job failed: e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123 - Error: Worker process exited with code 130
+2025-08-06 20:28:53.418 [INF] Updated job in queue: e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123 - Status: "Failed"
+2025-08-06 20:28:53.418 [INF] Job processor stopped
+2025-08-06 20:28:53.419 [INF] Shutting down FileJobRouter...
+2025-08-06 20:28:54.415 [INF] FileJobRouter shutdown completed
+2025-08-06 20:28:54.420 [INF] FileJobRouter shutdown completed
+2025-08-06 20:29:46.839 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 20:29:46.920 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 20:29:46.950 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 20:29:46.958 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/train.py
+2025-08-06 20:29:46.958 [INF] File in root directory, adding to queue for later worker selection: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:29:46.959 [INF] File already processed successfully, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:29:46.959 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 20:29:46.959 [INF] Job processor started
+2025-08-06 20:29:46.962 [INF] Processing job: e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/train.py
+2025-08-06 20:29:46.962 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 20:29:46.972 [INF] Updated job in queue: e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123 - Status: "Processing"
+2025-08-06 20:29:46.983 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123.json
+2025-08-06 20:29:46.984 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/train.py" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/train.py"
+2025-08-06 20:30:02.239 [INF] Worker output: [20:29:47 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/train.py -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/train.py
+[20:29:47 INF] Simulating device usage for 15 seconds
+[20:30:02 INF] Read 0 bytes from input file
+[20:30:02 INF] Calculated SHA-256 hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+[20:30:02 INF] RSA signature generated with 2048 bit key
+[20:30:02 INF] Generated RSA signature
+[20:30:02 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/train.py.sig
+[20:30:02 INF] WorkerAppSigner completed successfully
+
+2025-08-06 20:30:02.240 [INF] Job completed successfully: e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123
+2025-08-06 20:30:02.241 [INF] Updated job status to Completed for job e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123
+2025-08-06 20:30:02.242 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/train.py
+2025-08-06 20:30:02.242 [INF] Updated job in queue: e92d5cd3-00f7-4a9d-91d4-dc4f9bea8123 - Status: "Completed"
+2025-08-06 20:30:02.243 [INF] Device lock released successfully
+2025-08-06 20:32:35.273 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 20:32:35.277 [INF] Shutting down FileJobRouter...
+2025-08-06 20:32:35.279 [INF] Stopped watching directory
+2025-08-06 20:32:35.289 [INF] Job processor stopped
+2025-08-06 20:32:35.291 [INF] Shutting down FileJobRouter...
+2025-08-06 20:32:36.281 [INF] FileJobRouter shutdown completed
+2025-08-06 20:32:36.292 [INF] FileJobRouter shutdown completed
+2025-08-06 20:33:34.510 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 20:33:34.596 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 20:33:34.669 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 20:33:34.670 [INF] File in root directory, adding to queue for later worker selection: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:33:34.678 [INF] File already processed successfully, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:33:34.678 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 20:33:34.679 [INF] Job processor started
+2025-08-06 20:33:50.477 [INF] Added new job to queue: 2e0d4ce2-6e1a-4c0f-a0c2-f0374675cf19 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ChatGPT Image Apr 24, 2025 at 04_53_11 PM.png
+2025-08-06 20:33:50.477 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ChatGPT Image Apr 24, 2025 at 04_53_11 PM.png -> signer
+2025-08-06 20:33:51.498 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 20:33:51.498 [INF] Shutting down FileJobRouter...
+2025-08-06 20:33:51.499 [INF] Stopped watching directory
+2025-08-06 20:33:51.500 [INF] Job processor stopped
+2025-08-06 20:33:51.502 [INF] Shutting down FileJobRouter...
+2025-08-06 20:33:51.670 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 20:33:51.670 [INF] Shutting down FileJobRouter...
+2025-08-06 20:33:51.891 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 20:33:51.891 [INF] Shutting down FileJobRouter...
+2025-08-06 20:33:52.500 [INF] FileJobRouter shutdown completed
+2025-08-06 20:33:52.503 [INF] FileJobRouter shutdown completed
+2025-08-06 20:33:52.671 [INF] FileJobRouter shutdown completed
+2025-08-06 20:33:52.893 [INF] FileJobRouter shutdown completed
+2025-08-06 20:34:28.730 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 20:34:28.812 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 20:34:28.858 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 20:34:28.866 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ChatGPT Image Apr 24, 2025 at 04_53_11 PM.png
+2025-08-06 20:34:28.866 [INF] File in root directory, adding to queue for later worker selection: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:34:28.867 [INF] File already processed successfully, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:34:28.867 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 20:34:28.867 [INF] Job processor started
+2025-08-06 20:34:28.870 [INF] Processing job: 2e0d4ce2-6e1a-4c0f-a0c2-f0374675cf19 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ChatGPT Image Apr 24, 2025 at 04_53_11 PM.png
+2025-08-06 20:34:28.870 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 20:34:28.880 [INF] Updated job in queue: 2e0d4ce2-6e1a-4c0f-a0c2-f0374675cf19 - Status: "Processing"
+2025-08-06 20:34:28.891 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/2e0d4ce2-6e1a-4c0f-a0c2-f0374675cf19.json
+2025-08-06 20:34:28.892 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ChatGPT Image Apr 24, 2025 at 04_53_11 PM.png" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/ChatGPT Image Apr 24, 2025 at 04_53_11 PM.png"
+2025-08-06 20:34:37.112 [INF] Worker output: [20:34:28 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ChatGPT Image Apr 24, 2025 at 04_53_11 PM.png -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/ChatGPT Image Apr 24, 2025 at 04_53_11 PM.png
+[20:34:28 INF] Simulating device usage for 8 seconds
+[20:34:37 INF] Read 2163778 bytes from input file
+[20:34:37 INF] Calculated SHA-256 hash: 96357ec790d1172a81ceec3576e1eb9f8c338160318dc79165c7cdd0c1dcefc4
+[20:34:37 INF] RSA signature generated with 2048 bit key
+[20:34:37 INF] Generated RSA signature
+[20:34:37 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/ChatGPT Image Apr 24, 2025 at 04_53_11 PM.png.sig
+[20:34:37 INF] WorkerAppSigner completed successfully
+
+2025-08-06 20:34:37.113 [INF] Job completed successfully: 2e0d4ce2-6e1a-4c0f-a0c2-f0374675cf19
+2025-08-06 20:34:37.114 [INF] Updated job status to Completed for job 2e0d4ce2-6e1a-4c0f-a0c2-f0374675cf19
+2025-08-06 20:34:37.115 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ChatGPT Image Apr 24, 2025 at 04_53_11 PM.png
+2025-08-06 20:34:37.116 [INF] Updated job in queue: 2e0d4ce2-6e1a-4c0f-a0c2-f0374675cf19 - Status: "Completed"
+2025-08-06 20:34:37.116 [INF] Device lock released successfully
+2025-08-06 20:35:11.854 [INF] Added new job to queue: 4c95ceb5-d397-4a41-90b5-faac948196d6 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/isgAns.pdf
+2025-08-06 20:35:11.855 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/isgAns.pdf -> signer
+2025-08-06 20:35:12.149 [INF] Processing job: b37bf2fc-43ff-4982-a9b3-282701401768 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/isgAns.pdf
+2025-08-06 20:35:12.149 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 20:35:12.149 [INF] Updated job in queue: b37bf2fc-43ff-4982-a9b3-282701401768 - Status: "Processing"
+2025-08-06 20:35:12.150 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/b37bf2fc-43ff-4982-a9b3-282701401768.json
+2025-08-06 20:35:12.150 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.d2025-08-06 20:35:49.813 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 20:35:49.816 [INF] Shutting down FileJobRouter...
+2025-08-06 20:35:49.821 [INF] Stopped watching directory
+2025-08-06 20:35:49.823 [INF] Job processor stopped
+2025-08-06 20:35:49.826 [INF] Shutting down FileJobRouter...
+2025-08-06 20:35:50.824 [INF] FileJobRouter shutdown completed
+2025-08-06 20:35:50.829 [INF] FileJobRouter shutdown completed
+2025-08-06 20:36:16.122 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 20:36:16.124 [INF] Shutting down FileJobRouter...
+2025-08-06 20:36:17.125 [INF] FileJobRouter shutdown completed
+2048 bit key
+[20:35:24 INF] Generated RSA signature
+[20:35:24 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/isgAns.pdf.sig
+[20:35:24 INF] WorkerAppSigner completed successfully
+
+2025-08-06 20:35:24.492 [INF] Job completed successfully: b37bf2fc-43ff-4982-a9b3-282701401768
+2025-08-06 20:35:24.492 [INF] Updated job status to Completed for job b37bf2fc-43ff-4982-a9b3-282701401768
+2025-08-06 20:35:24.493 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/isgAns.pdf
+2025-08-06 20:35:24.493 [INF] Updated job in queue: b37bf2fc-43ff-4982-a9b3-282701401768 - Status: "Completed"
+2025-08-06 20:35:24.493 [INF] Device lock released successfully
+2025-08-06 20:36:13.672 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 20:36:13.673 [INF] Shutting down FileJobRouter...
+2025-08-06 20:36:13.692 [INF] Stopped watching directory
+2025-08-06 20:36:13.696 [INF] Job processor stopped
+2025-08-06 20:36:13.698 [INF] Shutting down FileJobRouter...
+2025-08-06 20:36:14.695 [INF] FileJobRouter shutdown completed
+2025-08-06 20:36:14.699 [INF] FileJobRouter shutdown completed
+2025-08-06 20:36:29.445 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 20:36:29.526 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 20:36:29.569 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 20:36:29.571 [INF] File in root directory, adding to queue for later worker selection: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:36:29.578 [INF] File already processed successfully, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:36:29.579 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 20:36:29.579 [INF] Job processor started
+2025-08-06 20:36:45.444 [INF] Added new job to queue: 61c8763e-df04-490d-9cf9-3b8abc97b992 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf
+2025-08-06 20:36:45.445 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf -> signer
+2025-08-06 20:36:45.949 [INF] Added new job to queue: 04858154-fa01-4d80-bffc-adfd0a4cdda5 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/sgk-tescil-ve-hizmet-dokumu.pdf
+2025-08-06 20:36:45.949 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/sgk-tescil-ve-hizmet-dokumu.pdf -> signer
+2025-08-06 20:36:46.452 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf
+2025-08-06 20:36:46.957 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/sgk-tescil-ve-hizmet-dokumu.pdf
+2025-08-06 20:36:49.605 [INF] Processing job: 61c8763e-df04-490d-9cf9-3b8abc97b992 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf
+2025-08-06 20:36:49.610 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 20:36:49.613 [INF] Updated job in queue: 61c8763e-df04-490d-9cf9-3b8abc97b992 - Status: "Processing"
+2025-08-06 20:36:49.645 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/61c8763e-df04-490d-9cf9-3b8abc97b992.json
+2025-08-06 20:36:49.649 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf"
+2025-08-06 20:36:52.219 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 20:36:52.220 [INF] Shutting down FileJobRouter...
+2025-08-06 20:36:52.222 [INF] Stopped watching directory
+2025-08-06 20:36:52.223 [INF] Device lock released successfully
+2025-08-06 20:36:52.224 [INF] Worker output: [20:36:49 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf
+[20:36:49 INF] Simulating device usage for 8 seconds
+
+2025-08-06 20:36:52.225 [ERR] Worker process failed for job 61c8763e-df04-490d-9cf9-3b8abc97b992 with exit code 130: Worker process exited with code 130
+2025-08-06 20:36:52.228 [INF] Updated job status to Failed for job 61c8763e-df04-490d-9cf9-3b8abc97b992
+2025-08-06 20:36:52.229 [ERR] Job failed: 61c8763e-df04-490d-9cf9-3b8abc97b992 - Error: Worker process exited with code 130
+2025-08-06 20:36:52.230 [INF] Updated job in queue: 61c8763e-df04-490d-9cf9-3b8abc97b992 - Status: "Failed"
+2025-08-06 20:36:52.230 [INF] Job processor stopped
+2025-08-06 20:36:52.231 [INF] Shutting down FileJobRouter...
+2025-08-06 20:36:53.224 [INF] FileJobRouter shutdown completed
+2025-08-06 20:36:53.232 [INF] FileJobRouter shutdown completed
+2025-08-06 20:38:11.432 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-06 20:38:11.512 [WRN] Failed to connect to WebUI: Response status code does not indicate success: 403 (Forbidden).
+2025-08-06 20:38:11.561 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 20:38:11.569 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/sgk-tescil-ve-hizmet-dokumu.pdf
+2025-08-06 20:38:11.570 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf
+2025-08-06 20:38:11.570 [INF] File in root directory, adding to queue for later worker selection: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:38:11.570 [INF] File already processed successfully, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:38:11.570 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 20:38:11.571 [INF] Job processor started
+2025-08-06 20:38:11.573 [INF] Processing job: 61c8763e-df04-490d-9cf9-3b8abc97b992 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf
+2025-08-06 20:38:11.574 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 20:38:11.583 [INF] Updated job in queue: 61c8763e-df04-490d-9cf9-3b8abc97b992 - Status: "Processing"
+2025-08-06 20:38:11.594 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/61c8763e-df04-490d-9cf9-3b8abc97b992.json
+2025-08-06 20:38:11.595 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf"
+2025-08-06 20:38:22.845 [INF] Worker output: [20:38:11 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf
+[20:38:11 INF] Simulating device usage for 11 seconds
+[20:38:22 INF] Read 48377 bytes from input file
+[20:38:22 INF] Calculated SHA-256 hash: 6a590aaec4a04b8ab737e067d656b061f984ec8b98300b4df55d54c075cf2cf4
+[20:38:22 INF] RSA signature generated with 2048 bit key
+[20:38:22 INF] Generated RSA signature
+[20:38:22 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf.sig
+[20:38:22 INF] WorkerAppSigner completed successfully
+
+2025-08-06 20:38:22.845 [INF] Job completed successfully: 61c8763e-df04-490d-9cf9-3b8abc97b992
+2025-08-06 20:38:22.847 [INF] Updated job status to Completed for job 61c8763e-df04-490d-9cf9-3b8abc97b992
+2025-08-06 20:38:22.847 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Learn the Latest Tech Skills; Advance Your Career | Udacity.pdf
+2025-08-06 20:38:22.849 [INF] Updated job in queue: 61c8763e-df04-490d-9cf9-3b8abc97b992 - Status: "Completed"
+2025-08-06 20:38:22.849 [INF] Device lock released successfully
+2025-08-06 20:38:22.849 [INF] Processing job: 04858154-fa01-4d80-bffc-adfd0a4cdda5 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/sgk-tescil-ve-hizmet-dokumu.pdf
+2025-08-06 20:38:22.849 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-06 20:38:22.850 [INF] Updated job in queue: 04858154-fa01-4d80-bffc-adfd0a4cdda5 - Status: "Processing"
+2025-08-06 20:38:22.850 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-06/04858154-fa01-4d80-bffc-adfd0a4cdda5.json
+2025-08-06 20:38:22.850 [INF] Executing: dotnet "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner.dll" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/sgk-tescil-ve-hizmet-dokumu.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/sgk-tescil-ve-hizmet-dokumu.pdf"
+2025-08-06 20:38:37.281 [INF] Worker output: [20:38:23 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/sgk-tescil-ve-hizmet-dokumu.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/sgk-tescil-ve-hizmet-dokumu.pdf
+[20:38:23 INF] Simulating device usage for 14 seconds
+[20:38:37 INF] Read 45953 bytes from input file
+[20:38:37 INF] Calculated SHA-256 hash: 80a9571d78e1f3bafcfcd885ab6db88b7d56a6423b388a79d7bc5343836d2935
+[20:38:37 INF] RSA signature generated with 2048 bit key
+[20:38:37 INF] Generated RSA signature
+[20:38:37 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/signer/sgk-tescil-ve-hizmet-dokumu.pdf.sig
+[20:38:37 INF] WorkerAppSigner completed successfully
+
+2025-08-06 20:38:37.281 [INF] Job completed successfully: 04858154-fa01-4d80-bffc-adfd0a4cdda5
+2025-08-06 20:38:37.282 [INF] Updated job status to Completed for job 04858154-fa01-4d80-bffc-adfd0a4cdda5
+2025-08-06 20:38:37.282 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/sgk-tescil-ve-hizmet-dokumu.pdf
+2025-08-06 20:38:37.283 [INF] Updated job in queue: 04858154-fa01-4d80-bffc-adfd0a4cdda5 - Status: "Completed"
+2025-08-06 20:38:37.284 [INF] Device lock released successfully
+2025-08-06 20:43:44.204 [INF] Shutting down FileJobRouter...
+2025-08-06 20:43:44.208 [INF] Stopped watching directory
+2025-08-06 20:43:44.213 [INF] Job processor stopped
+2025-08-06 20:43:45.210 [INF] FileJobRouter shutdown completed
+2025-08-06 20:44:38.872 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-06 20:44:38.876 [INF] Shutting down FileJobRouter...
+2025-08-06 20:44:39.877 [INF] FileJobRouter shutdown completed
+-08-06 20:43:54.231 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-06 20:43:54.233 [INF] File in root directory, adding to queue for later worker selection: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:43:54.257 [INF] File already processed successfully, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-06 20:43:54.261 [INF] FileJobRouter is running. Press Ctrl+C to stop.
+2025-08-06 20:43:54.261 [INF] Job processor started

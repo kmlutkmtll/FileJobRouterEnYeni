@@ -1,0 +1,22 @@
+{
+  "WatchDirectory": "data/Test",
+  "TimeoutSeconds": 30,
+  "LogDirectory": "logs",
+  "JobsDirectory": "jobs",
+  "QueueFilePath": "queue.json",
+  "MutexName": "Global\\FileJobRouterDeviceMutex",
+  "Mappings": {
+    "abc": {
+      "ExecutablePath": "apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC",
+      "OutputDirectory": "data/Processed/abc"
+    },
+    "xyz": {
+      "ExecutablePath": "apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ",
+      "OutputDirectory": "data/Processed/xyz"
+    },
+    "signer": {
+      "ExecutablePath": "apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner",
+      "OutputDirectory": "data/Processed/signer"
+    }
+  }
+}

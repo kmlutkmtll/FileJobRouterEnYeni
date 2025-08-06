@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "5ACsKJddflI=",
+  "success": true,
+  "projectFilePath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/WorkerAppABC.csproj",
+  "expectedPackageFiles": [
+    "/Users/kemalutkumutlu/.nuget/packages/serilog/4.3.0/serilog.4.3.0.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/serilog.sinks.console/6.0.0/serilog.sinks.console.6.0.0.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/serilog.sinks.file/7.0.0/serilog.sinks.file.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

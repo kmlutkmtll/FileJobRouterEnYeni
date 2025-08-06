@@ -1,0 +1,9 @@
+{
+  "Id": "ac450975-a184-44b1-99aa-0ad81d7ec9c4",
+  "InputPath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2_1.pdf",
+  "TargetApp": "signer",
+  "Status": "Failed",
+  "Timestamp": "2025-08-06T20:22:55.648237+03:00",
+  "ErrorMessage": "Worker process exited with code 1",
+  "Username": "kemalutkumutlu"
+}

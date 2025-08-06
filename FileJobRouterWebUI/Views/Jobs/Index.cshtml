@@ -1,0 +1,562 @@
+@{
+    ViewData["Title"] = "Jobs History";
+}
+
+<div class="container-fluid">
+    <!-- Page Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="h3 mb-0 text-aselsan-blue">
+                        <i class="fas fa-history me-2"></i>Jobs History
+                    </h1>
+                    <p class="text-muted mb-0">View and analyze historical job processing data</p>
+                </div>
+                <div>
+                    <span class="badge bg-aselsan-orange fs-6 px-3 py-2">
+                        <i class="fas fa-archive me-1"></i>Historical Data
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row g-4 mb-4">
+        <div class="col-xl-2 col-lg-4 col-md-6">
+            <div class="card text-center fade-in-up">
+                <div class="card-body">
+                    <div class="stats-number text-aselsan-blue" id="totalJobsHistory">-</div>
+                    <div class="stats-label">Total Jobs</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6">
+            <div class="card text-center fade-in-up" style="animation-delay: 0.1s">
+                <div class="card-body">
+                    <div class="stats-number text-success" id="successfulJobs">-</div>
+                    <div class="stats-label">Successful</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6">
+            <div class="card text-center fade-in-up" style="animation-delay: 0.2s">
+                <div class="card-body">
+                    <div class="stats-number text-danger" id="failedJobsHistory">-</div>
+                    <div class="stats-label">Failed</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6">
+            <div class="card text-center fade-in-up" style="animation-delay: 0.3s">
+                <div class="card-body">
+                    <div class="stats-number text-warning" id="processingJobsHistory">-</div>
+                    <div class="stats-label">Processing</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6">
+            <div class="card text-center fade-in-up" style="animation-delay: 0.4s">
+                <div class="card-body">
+                    <div class="stats-number text-primary" id="pendingJobsHistory">-</div>
+                    <div class="stats-label">Pending</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6">
+            <div class="card text-center fade-in-up" style="animation-delay: 0.5s">
+                <div class="card-body">
+                    <div class="stats-number text-info" id="successRateHistory">-</div>
+                    <div class="stats-label">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filters and Controls -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row align-items-end">
+                        <div class="col-md-2">
+                            <label for="dateFilter" class="form-label small fw-bold">Filter by Date:</label>
+                            <select id="dateFilter" class="form-select">
+                                <option value="all">All Dates</option>
+                                <option value="today">Today</option>
+                                <option value="yesterday">Yesterday</option>
+                                <option value="week">This Week</option>
+                                <option value="month">This Month</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="statusFilterHistory" class="form-label small fw-bold">Filter by Status:</label>
+                            <select id="statusFilterHistory" class="form-select">
+                                <option value="all">All Status</option>
+                                <option value="pending">Pending</option>
+                                <option value="processing">Processing</option>
+                                <option value="completed">Completed</option>
+                                <option value="failed">Failed</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="searchInputHistory" class="form-label small fw-bold">Search:</label>
+                            <input type="text" id="searchInputHistory" class="form-control" placeholder="Search by file path, app, or job ID...">
+                        </div>
+                        <div class="col-md-2">
+                            <label for="pageSizeSelectHistory" class="form-label small fw-bold">Page Size:</label>
+                            <select id="pageSizeSelectHistory" class="form-select">
+                                <option value="25">25</option>
+                                <option value="50" selected>50</option>
+                                <option value="100">100</option>
+                                <option value="200">200</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary" onclick="loadJobsData()">
+                                    <i class="fas fa-search me-1"></i>Search
+                                </button>
+                                <button class="btn btn-outline-secondary" onclick="resetFilters()">
+                                    <i class="fas fa-undo me-1"></i>Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jobs Table -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-table me-2"></i>Historical Job Data
+                    </h5>
+                    <div>
+                        <button class="btn btn-outline-primary btn-sm" onclick="loadJobsData()">
+                            <i class="fas fa-sync-alt me-1"></i>Refresh
+                        </button>
+                        <button class="btn btn-outline-info btn-sm" onclick="exportJobsData()">
+                            <i class="fas fa-download me-1"></i>Export
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th width="100">Status</th>
+                                    <th width="120">Job ID</th>
+                                    <th>File Path</th>
+                                    <th width="100">Worker</th>
+                                    <th width="100">Date</th>
+                                    <th width="120">Timestamp</th>
+                                    <th width="100">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="jobsTableBody">
+                                <tr>
+                                    <td colspan="7" class="text-center py-4">
+                                        <div class="loading-spinner mb-2"></div>
+                                        <span class="text-muted">Loading historical jobs...</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="text-muted">
+                            <span id="recordInfoHistory">Loading...</span>
+                        </div>
+                        <nav>
+                            <ul class="pagination pagination-sm mb-0" id="paginationHistory">
+                                <!-- Pagination will be generated here -->
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Job Details Modal -->
+<div class="modal fade" id="jobDetailsModalHistory" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <i class="fas fa-info-circle me-2"></i>Job Details
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="jobDetailsContentHistory">
+                <!-- Job details will be loaded here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    console.log('Jobs page JavaScript loaded');
+    
+    let currentPageHistory = 1;
+    let currentJobIdHistory = null;
+    let totalPagesHistory = 1;
+
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Jobs page DOM loaded');
+        loadStatistics();
+        loadJobsData();
+        
+        // Auto-refresh every 60 seconds
+        setInterval(() => {
+            loadStatistics();
+            loadJobsData();
+        }, 60000);
+
+        // Search on Enter key
+        document.getElementById('searchInputHistory').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                loadJobsData();
+            }
+        });
+    });
+
+    function loadStatistics() {
+        console.log('Loading statistics...');
+        fetch('/Jobs/GetJobsStatistics')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Statistics response:', data);
+                if (data.success) {
+                    updateStatistics(data.stats);
+                }
+            })
+            .catch(error => console.error('Error loading statistics:', error));
+    }
+
+    function updateStatistics(stats) {
+        console.log('Jobs statistics received:', stats);
+        document.getElementById('totalJobsHistory').textContent = stats.total || 0;
+        document.getElementById('successfulJobs').textContent = stats.successful || 0;
+        document.getElementById('failedJobsHistory').textContent = stats.failed || 0;
+        document.getElementById('processingJobsHistory').textContent = stats.processing || 0;
+        document.getElementById('pendingJobsHistory').textContent = stats.pending || 0;
+        document.getElementById('successRateHistory').textContent = (stats.successRate || 0) + '%';
+    }
+
+    function loadJobsData(page = 1) {
+        console.log('Loading jobs data...');
+        const dateFilter = document.getElementById('dateFilter').value;
+        const status = document.getElementById('statusFilterHistory').value;
+        const search = document.getElementById('searchInputHistory').value;
+        const pageSize = document.getElementById('pageSizeSelectHistory').value;
+
+        const params = new URLSearchParams({
+            page: page,
+            pageSize: pageSize,
+            dateFilter: dateFilter,
+            status: status,
+            search: search
+        });
+
+        fetch(`/Jobs/GetJobsData?${params}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log('Jobs data response:', data);
+                if (data.success) {
+                    displayJobsData(data.data);
+                    updatePagination(data.page, Math.ceil(data.total / data.pageSize), data.total);
+                    currentPageHistory = data.page;
+                    totalPagesHistory = Math.ceil(data.total / data.pageSize);
+                } else {
+                    showError('Error loading jobs data: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Jobs data error:', error);
+                showError('Network error: ' + error.message);
+            });
+    }
+
+    function displayJobsData(jobs) {
+        console.log('Displaying jobs data:', jobs);
+        const tbody = document.getElementById('jobsTableBody');
+        
+        if (jobs.length === 0) {
+            tbody.innerHTML = `
+                <tr>
+                    <td colspan="7" class="text-center py-4">
+                        <i class="fas fa-inbox fa-2x text-muted mb-2"></i>
+                        <p class="text-muted mb-0">No historical jobs found</p>
+                    </td>
+                </tr>
+            `;
+            return;
+        }
+
+        tbody.innerHTML = jobs.map(job => `
+            <tr>
+                <td>
+                    <span class="badge bg-${getStatusColor(job.status || job.Status)}">${job.status || job.Status || 'Unknown'}</span>
+                </td>
+                <td>
+                    <code class="small">${(job.id || job.Id) ? (job.id || job.Id).substring(0, 8) : 'N/A'}...</code>
+                </td>
+                <td>
+                    <span class="text-truncate d-inline-block" style="max-width: 300px;" title="${job.inputPath || job.InputPath || ''}">
+                        ${getFileName(job.inputPath || job.InputPath || '')}
+                    </span>
+                    <br>
+                    <small class="text-muted">${getDirectoryPath(job.inputPath || job.InputPath || '')}</small>
+                </td>
+                <td>
+                    <span class="badge bg-secondary">${job.targetApp || job.TargetApp || 'Unknown'}</span>
+                </td>
+                <td>
+                    <small class="text-muted">${job.processingDate || job.ProcessingDate || ''}</small>
+                </td>
+                <td>
+                    <small>${formatDateTime(job.timestamp || job.Timestamp)}</small>
+                </td>
+                <td>
+                    <button class="btn btn-outline-info btn-sm" onclick="showJobDetails('${job.id || job.Id || ''}')" title="View Details">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </td>
+            </tr>
+        `).join('');
+    }
+
+    function updatePagination(currentPage, totalPages, totalRecords) {
+        const pagination = document.getElementById('paginationHistory');
+        const recordInfo = document.getElementById('recordInfoHistory');
+        
+        recordInfo.textContent = `Showing ${((currentPage - 1) * parseInt(document.getElementById('pageSizeSelectHistory').value)) + 1} to ${Math.min(currentPage * parseInt(document.getElementById('pageSizeSelectHistory').value), totalRecords)} of ${totalRecords} entries`;
+
+        if (totalPages <= 1) {
+            pagination.innerHTML = '';
+            return;
+        }
+
+        let paginationHtml = '';
+        
+        // Previous button
+        paginationHtml += `
+            <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+                <a class="page-link" href="#" onclick="loadJobsData(${currentPage - 1}); return false;">Previous</a>
+            </li>
+        `;
+
+        // Page numbers
+        const startPage = Math.max(1, currentPage - 2);
+        const endPage = Math.min(totalPages, currentPage + 2);
+
+        for (let i = startPage; i <= endPage; i++) {
+            paginationHtml += `
+                <li class="page-item ${i === currentPage ? 'active' : ''}">
+                    <a class="page-link" href="#" onclick="loadJobsData(${i}); return false;">${i}</a>
+                </li>
+            `;
+        }
+
+        // Next button
+        paginationHtml += `
+            <li class="page-item ${currentPage === totalPages ? 'disabled' : ''}">
+                <a class="page-link" href="#" onclick="loadJobsData(${currentPage + 1}); return false;">Next</a>
+            </li>
+        `;
+
+        pagination.innerHTML = paginationHtml;
+    }
+
+    function showJobDetails(jobId) {
+        fetch(`/Jobs/GetJobDetails?jobId=${jobId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    displayJobDetailsHistory(data.job);
+                    currentJobIdHistory = jobId;
+                    
+                    const modal = new bootstrap.Modal(document.getElementById('jobDetailsModalHistory'));
+                    modal.show();
+                } else {
+                    showError('Error loading job details: ' + data.message);
+                }
+            })
+            .catch(error => showError('Error loading job details: ' + error.message));
+    }
+
+    function displayJobDetailsHistory(job) {
+        const content = document.getElementById('jobDetailsContentHistory');
+        
+        content.innerHTML = `
+            <div class="row">
+                <div class="col-md-6">
+                    <h6 class="text-aselsan-blue">Basic Information</h6>
+                    <table class="table table-sm">
+                        <tr><td><strong>Job ID:</strong></td><td><code>${job.id || job.Id || 'N/A'}</code></td></tr>
+                        <tr><td><strong>Status:</strong></td><td><span class="badge bg-${getStatusColor(job.status || job.Status || 'Unknown')}">${job.status || job.Status || 'Unknown'}</span></td></tr>
+                        <tr><td><strong>Worker App:</strong></td><td><span class="badge bg-secondary">${job.targetApp || job.TargetApp || 'Unknown'}</span></td></tr>
+                        <tr><td><strong>User:</strong></td><td>${job.username || job.Username || 'Unknown'}</td></tr>
+                        <tr><td><strong>Processing Date:</strong></td><td>${job.processingDate || job.ProcessingDate || 'Unknown'}</td></tr>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="text-aselsan-blue">Timing Information</h6>
+                    <table class="table table-sm">
+                        <tr><td><strong>Timestamp:</strong></td><td>${formatDateTime(job.timestamp || job.Timestamp)}</td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <h6 class="text-aselsan-blue">File Information</h6>
+                    <div class="mb-2">
+                        <strong>Input Path:</strong><br>
+                        <code class="small">${job.inputPath || job.InputPath || 'N/A'}</code>
+                    </div>
+                    ${(job.errorMessage || job.ErrorMessage) ? `
+                        <div class="mt-3">
+                            <h6 class="text-danger">Error Message</h6>
+                            <div class="alert alert-danger">
+                                <code>${job.errorMessage || job.ErrorMessage}</code>
+                            </div>
+                        </div>
+                    ` : ''}
+                </div>
+            </div>
+        `;
+    }
+
+    function resetFilters() {
+        document.getElementById('dateFilter').value = 'all';
+        document.getElementById('statusFilterHistory').value = 'all';
+        document.getElementById('searchInputHistory').value = '';
+        document.getElementById('pageSizeSelectHistory').value = '50';
+        loadJobsData(1);
+    }
+
+    function exportJobsData() {
+        const params = new URLSearchParams({
+            page: 1,
+            pageSize: 10000,
+            dateFilter: document.getElementById('dateFilter').value,
+            status: document.getElementById('statusFilterHistory').value,
+            search: document.getElementById('searchInputHistory').value
+        });
+
+        fetch(`/Jobs/GetJobsData?${params}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const csv = convertToCSV(data.data);
+                    downloadCSV(csv, `jobs-history-export-${new Date().toISOString().split('T')[0]}.csv`);
+                    showNotification('Jobs history exported successfully', 'success');
+                }
+            })
+            .catch(error => showError('Error exporting data: ' + error.message));
+    }
+
+    function convertToCSV(data) {
+        if (data.length === 0) return '';
+        
+        const headers = ['Job ID', 'Status', 'Worker App', 'Input Path', 'Processing Date', 'Timestamp', 'Error Message', 'User'];
+        const rows = data.map(job => [
+            job.id || job.Id || '',
+            job.status || job.Status || '',
+            job.targetApp || job.TargetApp || '',
+            job.inputPath || job.InputPath || '',
+            job.processingDate || job.ProcessingDate || '',
+            job.timestamp || job.Timestamp || '',
+            job.errorMessage || job.ErrorMessage || '',
+            job.username || job.Username || ''
+        ]);
+
+        return [headers, ...rows].map(row => 
+            row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(',')
+        ).join('\n');
+    }
+
+    function downloadCSV(csv, filename) {
+        const blob = new Blob([csv], { type: 'text/csv' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+
+    function getStatusColor(status) {
+        switch (status) {
+            case 'Pending': return 'primary';
+            case 'Processing': return 'warning';
+            case 'Completed': return 'success';
+            case 'Failed': return 'danger';
+            default: return 'secondary';
+        }
+    }
+
+    function getFileName(path) {
+        return path.split('/').pop() || path.split('\\').pop() || path;
+    }
+
+    function getDirectoryPath(path) {
+        const parts = path.split('/');
+        return parts.length > 1 ? parts.slice(0, -1).join('/') : '';
+    }
+
+    function formatDateTime(dateTime) {
+        if (!dateTime) return '-';
+        return new Date(dateTime).toLocaleString();
+    }
+
+    function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+        notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+        notification.innerHTML = `
+            <i class="fas fa-${getNotificationIcon(type)} me-2"></i>
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        `;
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 150);
+            }
+        }, 5000);
+    }
+
+    function showError(message) {
+        showNotification(message, 'danger');
+    }
+
+    function getNotificationIcon(type) {
+        switch (type) {
+            case 'success': return 'check-circle';
+            case 'danger': return 'exclamation-circle';
+            case 'warning': return 'exclamation-triangle';
+            case 'info': return 'info-circle';
+            default: return 'bell';
+        }
+    }
+</script>

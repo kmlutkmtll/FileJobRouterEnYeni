@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "uKbbBg3L7BQ=",
+  "success": true,
+  "projectFilePath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/MainControllerApp.csproj",
+  "expectedPackageFiles": [
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.aspnetcore.connections.abstractions/9.0.8/microsoft.aspnetcore.connections.abstractions.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.aspnetcore.http.connections.client/9.0.8/microsoft.aspnetcore.http.connections.client.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.aspnetcore.http.connections.common/9.0.8/microsoft.aspnetcore.http.connections.common.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.aspnetcore.signalr.client/9.0.8/microsoft.aspnetcore.signalr.client.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.aspnetcore.signalr.client.core/9.0.8/microsoft.aspnetcore.signalr.client.core.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.aspnetcore.signalr.common/9.0.8/microsoft.aspnetcore.signalr.common.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.aspnetcore.signalr.protocols.json/9.0.8/microsoft.aspnetcore.signalr.protocols.json.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.8/microsoft.extensions.dependencyinjection.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.8/microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.extensions.features/9.0.8/microsoft.extensions.features.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.extensions.logging/9.0.8/microsoft.extensions.logging.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.8/microsoft.extensions.logging.abstractions.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.extensions.options/9.0.8/microsoft.extensions.options.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/microsoft.extensions.primitives/9.0.8/microsoft.extensions.primitives.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/serilog/4.3.0/serilog.4.3.0.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/serilog.sinks.console/6.0.0/serilog.sinks.console.6.0.0.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/serilog.sinks.file/7.0.0/serilog.sinks.file.7.0.0.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/system.net.serversentevents/9.0.8/system.net.serversentevents.9.0.8.nupkg.sha512",
+    "/Users/kemalutkumutlu/.nuget/packages/system.threading.channels/9.0.8/system.threading.channels.9.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,640 @@
+@{
+    ViewData["Title"] = "Upload Files";
+}
+
+<div class="container-fluid">
+    <!-- Page Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="h3 mb-0 text-aselsan-blue">
+                        <i class="fas fa-upload me-2"></i>File Upload Center
+                    </h1>
+                    <p class="text-muted mb-0">Upload files for processing by the FileJobRouter system</p>
+                </div>
+                <div>
+                    <span class="badge bg-aselsan-orange fs-6 px-3 py-2">
+                        <i class="fas fa-folder me-1"></i>Upload Zone
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Section -->
+    <div class="row g-4 mb-4">
+        <!-- File Selection -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card fade-in-up">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-file me-2"></i>Select Files
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="upload-zone" id="fileUploadZone">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt fa-3x text-aselsan-blue"></i>
+                        </div>
+                        <p class="mb-2 fw-bold">Drag & Drop Files or Click to Select</p>
+                        <p class="text-muted small">You can select multiple files at once</p>
+                        <input type="file" id="fileInput" class="d-none" multiple>
+                    </div>
+                    
+                    <!-- Selected Files List -->
+                    <div id="selectedFilesList" class="mt-3" style="display: none;">
+                        <h6 class="fw-bold mb-3">Selected Files:</h6>
+                        <div id="filesList" class="selected-files-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Target App Selection -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card fade-in-up" style="animation-delay: 0.1s">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-cogs me-2"></i>Target Application
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="targetApp" class="form-label fw-bold">Select Worker Application:</label>
+                        <select id="targetApp" class="form-select" required>
+                            <option value="">Choose a worker...</option>
+                            <option value="abc">ABC Worker - Convert to Uppercase</option>
+                            <option value="xyz">XYZ Worker - Reverse Text Lines</option>
+                            <option value="signer">Signer Worker - Digital Signing</option>
+                        </select>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <h6 class="alert-heading">
+                            <i class="fas fa-info-circle me-2"></i>Worker Functions:
+                        </h6>
+                        <ul class="mb-0 small">
+                            <li><strong>ABC:</strong> Converts text to uppercase</li>
+                            <li><strong>XYZ:</strong> Reverses text lines</li>
+                            <li><strong>Signer:</strong> Digitally signs files</li>
+                        </ul>
+                    </div>
+                    
+                    <button id="uploadBtn" class="btn btn-primary w-100" onclick="startUpload()" disabled>
+                        <i class="fas fa-upload me-2"></i>Start Upload & Processing
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Progress -->
+    <div class="row mb-4" id="uploadProgressSection" style="display: none;">
+        <div class="col-12">
+            <div class="card fade-in-up">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-tasks me-2"></i>Upload Progress
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div id="uploadProgress">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="loading-spinner me-3"></div>
+                                    <div>
+                                        <h6 class="mb-1" id="progressStatus">Uploading files...</h6>
+                                        <small class="text-muted" id="progressDetails">Preparing upload...</small>
+                                    </div>
+                                </div>
+                                <div class="progress mb-3" style="height: 8px;">
+                                    <div id="progressBar" class="progress-bar bg-aselsan-blue progress-bar-striped progress-bar-animated" 
+                                         role="progressbar" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <div class="h4 text-aselsan-blue mb-1" id="progressPercentage">0%</div>
+                                <small class="text-muted" id="progressCount">0 / 0 files</small>
+                            </div>
+                        </div>
+                        
+                        <!-- Live Progress Details -->
+                        <div id="progressDetailsList" class="mt-3">
+                            <h6 class="fw-bold mb-2">Processing Details:</h6>
+                            <div id="progressItems" class="progress-items-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Results -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card fade-in-up">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">
+                        <i class="fas fa-list me-2"></i>Upload Results
+                    </h5>
+                    <button class="btn btn-outline-secondary btn-sm" onclick="clearResults()">
+                        <i class="fas fa-trash me-1"></i>Clear
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div id="uploadResults">
+                        <div class="text-center py-4 text-muted">
+                            <i class="fas fa-inbox fa-2x mb-2"></i>
+                            <p class="mb-0">No uploads yet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let selectedFiles = [];
+        let uploadInProgress = false;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            setupUploadZone();
+            setupTargetAppValidation();
+        });
+
+        function setupUploadZone() {
+            const zone = document.getElementById('fileUploadZone');
+            const input = document.getElementById('fileInput');
+
+            zone.addEventListener('click', () => input.click());
+            zone.addEventListener('dragover', handleDragOver);
+            zone.addEventListener('drop', (e) => handleDrop(e, input));
+            input.addEventListener('change', (e) => handleFileSelection(e.target.files));
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.currentTarget.classList.add('dragover');
+        }
+
+        function handleDrop(e, input) {
+            e.preventDefault();
+            e.currentTarget.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            input.files = files;
+            handleFileSelection(files);
+        }
+
+        function handleFileSelection(files) {
+            if (files.length === 0) return;
+            
+            selectedFiles = Array.from(files);
+            displaySelectedFiles();
+            validateUploadButton();
+        }
+
+        function displaySelectedFiles() {
+            const container = document.getElementById('selectedFilesList');
+            const list = document.getElementById('filesList');
+            
+            if (selectedFiles.length === 0) {
+                container.style.display = 'none';
+                return;
+            }
+            
+            container.style.display = 'block';
+            
+            let html = '';
+            selectedFiles.forEach((file, index) => {
+                html += `
+                    <div class="selected-file-item">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-file text-aselsan-blue me-2"></i>
+                                <div>
+                                    <div class="fw-bold">${file.name}</div>
+                                    <small class="text-muted">${formatFileSize(file.size)}</small>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-danger btn-sm" onclick="removeFile(${index})">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>`;
+            });
+            
+            list.innerHTML = html;
+        }
+
+        function removeFile(index) {
+            selectedFiles.splice(index, 1);
+            displaySelectedFiles();
+            validateUploadButton();
+        }
+
+        function setupTargetAppValidation() {
+            const targetApp = document.getElementById('targetApp');
+            targetApp.addEventListener('change', validateUploadButton);
+        }
+
+        function validateUploadButton() {
+            const uploadBtn = document.getElementById('uploadBtn');
+            const targetApp = document.getElementById('targetApp').value;
+            
+            uploadBtn.disabled = selectedFiles.length === 0 || !targetApp || uploadInProgress;
+        }
+
+        function startUpload() {
+            if (uploadInProgress) return;
+            
+            const targetApp = document.getElementById('targetApp').value;
+            if (!targetApp) {
+                showNotification('Please select a target application', 'warning');
+                return;
+            }
+            
+            if (selectedFiles.length === 0) {
+                showNotification('Please select files to upload', 'warning');
+                return;
+            }
+            
+            uploadInProgress = true;
+            validateUploadButton();
+            showUploadProgress();
+            
+            // Create FormData
+            const formData = new FormData();
+            selectedFiles.forEach(file => {
+                formData.append('files', file);
+            });
+            formData.append('targetApp', targetApp);
+            
+            // Start upload with progress tracking
+            uploadFilesWithProgress(formData, targetApp);
+        }
+
+        function uploadFilesWithProgress(formData, targetApp) {
+            const xhr = new XMLHttpRequest();
+            
+            // Progress tracking
+            xhr.upload.addEventListener('progress', function(e) {
+                if (e.lengthComputable) {
+                    const percentComplete = (e.loaded / e.total) * 100;
+                    updateProgress(percentComplete, 'Uploading files...', `${Math.round(percentComplete)}%`);
+                }
+            });
+            
+            xhr.addEventListener('load', function() {
+                if (xhr.status === 200) {
+                    try {
+                        const response = JSON.parse(xhr.responseText);
+                        handleUploadSuccess(response, targetApp);
+                    } catch (e) {
+                        handleUploadError('Invalid response from server');
+                    }
+                } else {
+                    handleUploadError(`Upload failed with status: ${xhr.status}`);
+                }
+            });
+            
+            xhr.addEventListener('error', function() {
+                handleUploadError('Network error during upload');
+            });
+            
+            xhr.open('POST', '/Upload/UploadFiles');
+            xhr.send(formData);
+        }
+
+        function handleUploadSuccess(response, targetApp) {
+            if (response.success) {
+                updateProgress(100, 'Upload completed!', '100%');
+                
+                // Simulate processing progress
+                simulateProcessingProgress(response.uploadedFiles, targetApp);
+            } else {
+                handleUploadError(response.message || 'Upload failed');
+            }
+        }
+
+        function simulateProcessingProgress(files, targetApp) {
+            let processedCount = 0;
+            const totalFiles = files.length;
+            
+            updateProgress(100, 'Processing files...', `${processedCount}/${totalFiles} files`);
+            
+            // Simulate processing each file
+            files.forEach((file, index) => {
+                setTimeout(() => {
+                    processedCount++;
+                    const progress = 100 + (processedCount / totalFiles) * 50; // 100-150% range for processing
+                    
+                    updateProgress(progress, `Processing files...`, `${processedCount}/${totalFiles} files`);
+                    addProgressItem(file, 'Processing...', 'warning');
+                    
+                    // Simulate completion
+                    setTimeout(() => {
+                        addProgressItem(file, 'Completed', 'success');
+                        
+                        if (processedCount === totalFiles) {
+                            setTimeout(() => {
+                                hideUploadProgress();
+                                showUploadResults(files, targetApp);
+                                showNotification(`Successfully processed ${files.length} file(s)`, 'success');
+                                resetUpload();
+                                
+                                // Refresh Dashboard data
+                                refreshDashboardData();
+                            }, 1000);
+                        }
+                    }, 2000 + Math.random() * 3000); // Random processing time
+                    
+                }, index * 500); // Stagger processing
+            });
+        }
+
+        function handleUploadError(message) {
+            hideUploadProgress();
+            showNotification('Upload failed: ' + message, 'danger');
+            resetUpload();
+        }
+
+        function showUploadProgress() {
+            document.getElementById('uploadProgressSection').style.display = 'block';
+            updateProgress(0, 'Preparing upload...', '0%');
+        }
+
+        function updateProgress(percentage, status, details) {
+            document.getElementById('progressStatus').textContent = status;
+            document.getElementById('progressDetails').textContent = details;
+            document.getElementById('progressPercentage').textContent = Math.round(percentage) + '%';
+            document.getElementById('progressBar').style.width = Math.min(percentage, 100) + '%';
+        }
+
+        function addProgressItem(fileName, status, type) {
+            const container = document.getElementById('progressItems');
+            const item = document.createElement('div');
+            item.className = 'progress-item';
+            item.innerHTML = `
+                <div class="d-flex justify-content-between align-items-center py-2">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-file text-aselsan-blue me-2"></i>
+                        <span class="fw-bold">${fileName}</span>
+                    </div>
+                    <span class="badge bg-${type}">${status}</span>
+                </div>`;
+            container.appendChild(item);
+        }
+
+        function hideUploadProgress() {
+            document.getElementById('uploadProgressSection').style.display = 'none';
+        }
+
+        function showUploadResults(files, targetApp) {
+            const resultsDiv = document.getElementById('uploadResults');
+            let html = `
+                <div class="alert alert-info mb-3">
+                    <i class="fas fa-info-circle me-2"></i>
+                    Uploaded ${files.length} file(s) to ${targetApp.toUpperCase()} worker. Monitoring job status...
+                </div>
+                <div class="row g-3" id="uploadedFilesContainer">`;
+            
+            files.forEach((file, index) => {
+                html += `
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card border-warning" style="animation: fadeInUp 0.6s ease-out ${index * 0.1}s both" data-filename="${file}">
+                            <div class="card-body p-3">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h6 class="card-title text-truncate me-2" title="${file}">${file}</h6>
+                                    <span class="badge bg-warning job-status" data-filename="${file}">Pending</span>
+                                </div>
+                                <p class="card-text small text-muted mb-1">
+                                    <i class="fas fa-cog me-1"></i>${targetApp.toUpperCase()} Worker
+                                </p>
+                                <p class="card-text small text-muted mb-0">
+                                    <i class="fas fa-clock me-1"></i>${new Date().toLocaleTimeString()}
+                                </p>
+                            </div>
+                        </div>
+                    </div>`;
+            });
+            
+            html += `</div>`;
+            resultsDiv.innerHTML = html;
+            
+            // Start monitoring job status
+            startJobStatusMonitoring(files);
+        }
+
+        function resetUpload() {
+            uploadInProgress = false;
+            selectedFiles = [];
+            document.getElementById('fileInput').value = '';
+            document.getElementById('targetApp').value = '';
+            document.getElementById('selectedFilesList').style.display = 'none';
+            document.getElementById('progressItems').innerHTML = '';
+            validateUploadButton();
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        function clearResults() {
+            document.getElementById('uploadResults').innerHTML = `
+                <div class="text-center py-4 text-muted">
+                    <i class="fas fa-inbox fa-2x mb-2"></i>
+                    <p class="mb-0">No uploads yet</p>
+                </div>`;
+        }
+
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+            notification.innerHTML = `
+                <i class="fas fa-${getNotificationIcon(type)} me-2"></i>
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.classList.remove('show');
+                    setTimeout(() => notification.remove(), 150);
+                }
+            }, 5000);
+        }
+
+        function getNotificationIcon(type) {
+            switch (type) {
+                case 'success': return 'check-circle';
+                case 'danger': return 'exclamation-circle';
+                case 'warning': return 'exclamation-triangle';
+                case 'info': return 'info-circle';
+                default: return 'bell';
+            }
+        }
+
+        function refreshDashboardData() {
+            // Kullanıcıya Dashboard'ı yenilemesi için bildirim gönder
+            showNotification('Upload completed! Check Dashboard for updated queue and jobs.', 'success');
+        }
+
+        // Job status monitoring
+        function startJobStatusMonitoring(files) {
+            // Poll for job status every 2 seconds
+            const pollInterval = setInterval(() => {
+                fetch('/Upload/GetJobStatus?files=' + encodeURIComponent(JSON.stringify(files)))
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            updateJobStatuses(data.jobStatuses);
+                            
+                            // Check if all jobs are completed or failed
+                            const allCompleted = Object.values(data.jobStatuses).every(status => 
+                                status === 'Completed' || status === 'Failed'
+                            );
+                            
+                            if (allCompleted) {
+                                clearInterval(pollInterval);
+                                showNotification('All jobs completed!', 'success');
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching job status:', error);
+                    });
+            }, 2000);
+        }
+
+        function updateJobStatuses(jobStatuses) {
+            Object.keys(jobStatuses).forEach(filename => {
+                const statusElement = document.querySelector(`[data-filename="${filename}"].job-status`);
+                const cardElement = document.querySelector(`[data-filename="${filename}"]`);
+                
+                if (statusElement && cardElement) {
+                    const status = jobStatuses[filename];
+                    const statusClass = getStatusClass(status);
+                    const borderClass = getBorderClass(status);
+                    
+                    // Update status badge
+                    statusElement.className = `badge ${statusClass} job-status`;
+                    statusElement.textContent = status;
+                    statusElement.setAttribute('data-filename', filename);
+                    
+                    // Update card border
+                    cardElement.className = `card ${borderClass}`;
+                    cardElement.setAttribute('data-filename', filename);
+                }
+            });
+        }
+
+        function getStatusClass(status) {
+            switch (status) {
+                case 'Pending': return 'bg-warning';
+                case 'Processing': return 'bg-info';
+                case 'Completed': return 'bg-success';
+                case 'Failed': return 'bg-danger';
+                default: return 'bg-secondary';
+            }
+        }
+
+        function getBorderClass(status) {
+            switch (status) {
+                case 'Pending': return 'border-warning';
+                case 'Processing': return 'border-info';
+                case 'Completed': return 'border-success';
+                case 'Failed': return 'border-danger';
+                default: return 'border-secondary';
+            }
+        }
+    </script>
+}
+
+<style>
+    .upload-zone {
+        border: 2px dashed var(--aselsan-blue);
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(255, 102, 0, 0.05) 100%);
+    }
+
+    .upload-zone:hover {
+        border-color: var(--aselsan-orange);
+        background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(255, 102, 0, 0.1) 100%);
+        transform: translateY(-2px);
+    }
+
+    .upload-zone.dragover {
+        border-color: var(--aselsan-success);
+        background: rgba(40, 167, 69, 0.1);
+        transform: scale(1.02);
+    }
+
+    .upload-icon {
+        margin-bottom: 1rem;
+    }
+
+    .selected-files-container {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .selected-file-item {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        border: 1px solid #e9ecef;
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        margin-bottom: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .selected-file-item:hover {
+        background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+        transform: translateX(5px);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .progress-items-container {
+        max-height: 200px;
+        overflow-y: auto;
+        border: 1px solid #e9ecef;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        background: #f8f9fa;
+    }
+
+    .progress-item {
+        border-bottom: 1px solid #dee2e6;
+        padding: 0.5rem 0;
+    }
+
+    .progress-item:last-child {
+        border-bottom: none;
+    }
+
+    @@keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
