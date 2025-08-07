@@ -1,3 +1,37 @@
+.card-header {
+  min-height: 56px;
+}
+.stats-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 72px;
+}
+.logs-container {
+  overflow: auto;
+}
+.jobs-list {
+  overflow: auto;
+}
+.performance-card .card-body .row > [class^="col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right pane stacking: Recent Jobs on top, Performance sticks to bottom with equal gaps */
+.right-pane {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  row-gap: 1rem;
+}
+.right-pane > .card:first-child {
+  min-height: 420px;
+}
+.right-pane > .performance-card {
+  margin-top: 0 !important;
+}
 /* ASELSAN Corporate Theme */
 :root {
   --aselsan-navy: #003366;

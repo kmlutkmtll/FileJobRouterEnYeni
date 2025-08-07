@@ -58,3 +58,75 @@ System.NullReferenceException: Object reference not set to an instance of an obj
    at MainControllerApp.Services.FileWatcherService.StopWatching() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Services/FileWatcherService.cs:line 225
    at MainControllerApp.Program.Shutdown() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Program.cs:line 136
 2025-08-07 21:58:08.526 [INF] FileJobRouter shutdown completed
+2025-08-07 22:02:40.705 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-07 22:02:40.718 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-07 22:02:40.775 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-07 22:02:40.775 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-07 22:02:40.778 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-07 22:02:40.778 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-07 22:02:40.782 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-07 22:02:40.783 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-07 22:02:40.812 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-07 22:02:40.814 [INF] FileJobRouter is running.
+2025-08-07 22:02:40.814 [INF] Job processor started
+2025-08-07 22:05:42.514 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-07 22:05:42.517 [INF] Shutting down FileJobRouter...
+2025-08-07 22:05:42.520 [INF] Job processor stopped
+2025-08-07 22:05:42.522 [INF] Stopped watching directory
+2025-08-07 22:05:42.522 [INF] Shutting down FileJobRouter...
+2025-08-07 22:05:43.523 [INF] FileJobRouter shutdown completed
+2025-08-07 22:05:43.523 [INF] FileJobRouter shutdown completed
+2025-08-07 22:05:48.457 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-07 22:05:48.471 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-07 22:05:48.527 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-07 22:05:48.527 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-07 22:05:48.530 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-07 22:05:48.530 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-07 22:05:48.546 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-07 22:05:48.546 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-07 22:05:48.574 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-07 22:05:48.575 [INF] FileJobRouter is running.
+2025-08-07 22:05:48.576 [INF] Job processor started
+2025-08-07 22:07:51.219 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-07 22:07:51.220 [INF] Shutting down FileJobRouter...
+2025-08-07 22:07:51.222 [INF] Job processor stopped
+2025-08-07 22:07:51.222 [INF] Stopped watching directory
+2025-08-07 22:07:51.223 [INF] Shutting down FileJobRouter...
+2025-08-07 22:07:52.224 [INF] FileJobRouter shutdown completed
+2025-08-07 22:07:52.224 [INF] FileJobRouter shutdown completed
+2025-08-07 22:07:55.843 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-07 22:07:55.856 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-07 22:07:55.912 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-07 22:07:55.912 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-07 22:07:55.915 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-07 22:07:55.915 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-07 22:07:55.928 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-07 22:07:55.929 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-07 22:07:55.955 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-07 22:07:55.956 [INF] FileJobRouter is running.
+2025-08-07 22:07:55.956 [INF] Job processor started
+2025-08-07 22:09:42.009 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-07 22:09:42.010 [INF] Shutting down FileJobRouter...
+2025-08-07 22:09:42.014 [INF] Job processor stopped
+2025-08-07 22:09:42.015 [INF] Stopped watching directory
+2025-08-07 22:09:42.016 [INF] Shutting down FileJobRouter...
+2025-08-07 22:09:43.017 [INF] FileJobRouter shutdown completed
+2025-08-07 22:09:43.017 [INF] FileJobRouter shutdown completed
+2025-08-07 22:09:46.963 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-07 22:09:46.975 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-07 22:09:47.029 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-07 22:09:47.029 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-07 22:09:47.032 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-07 22:09:47.032 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-07 22:09:47.052 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-07 22:09:47.052 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-07 22:09:47.079 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-07 22:09:47.081 [INF] FileJobRouter is running.
+2025-08-07 22:09:47.081 [INF] Job processor started
+2025-08-07 22:09:57.550 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-07 22:09:57.551 [INF] Shutting down FileJobRouter...
+2025-08-07 22:09:57.556 [INF] Job processor stopped
+2025-08-07 22:09:57.557 [INF] Stopped watching directory
+2025-08-07 22:09:57.557 [INF] Shutting down FileJobRouter...
+2025-08-07 22:09:58.558 [INF] FileJobRouter shutdown completed
+2025-08-07 22:09:58.558 [INF] FileJobRouter shutdown completed
