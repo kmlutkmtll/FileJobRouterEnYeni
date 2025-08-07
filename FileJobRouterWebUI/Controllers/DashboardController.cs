@@ -17,7 +17,7 @@ namespace FileJobRouterWebUI.Controllers
 
         public async Task<IActionResult> Index()
         {
-            ViewBag.SystemStatus = await _systemControlService.GetSystemStatusAsync();
+            // SystemStatus removed from UI
             ViewBag.QueueData = await _fileJobRouterService.GetQueueDataAsync();
             ViewBag.Logs = await _fileJobRouterService.GetLogsAsync();
             ViewBag.Jobs = await _fileJobRouterService.GetJobsAsync();
@@ -25,26 +25,7 @@ namespace FileJobRouterWebUI.Controllers
             return View();
         }
 
-        [HttpPost]
-        public async Task<IActionResult> StartSystem()
-        {
-            try
-            {
-                var result = await _systemControlService.StartSystemAsync();
-                return Json(new { success = result, error = result ? null : _systemControlService.LastError });
-            }
-            catch (Exception ex)
-            {
-                return Json(new { success = false, error = ex.Message });
-            }
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> StopSystem()
-        {
-            var result = await _systemControlService.StopSystemAsync();
-            return Json(new { success = result });
-        }
+        // Start/Stop endpoints removed: system is always-on when main app runs
 
         [HttpGet]
         public async Task<IActionResult> GetSystemStatus()

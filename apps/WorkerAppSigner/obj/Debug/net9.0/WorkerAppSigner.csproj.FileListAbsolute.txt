@@ -17,3 +17,4 @@
 /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/obj/Debug/net9.0/WorkerAppSigner.pdb
 /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/obj/Debug/net9.0/WorkerAppSigner.genruntimeconfig.cache
 /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/obj/Debug/net9.0/ref/WorkerAppSigner.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/obj/Debug/net9.0/WorkerAppSigner.sourcelink.json

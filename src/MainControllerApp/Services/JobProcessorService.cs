@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using MainControllerApp.Models;
+using System.Runtime.InteropServices;
 using Serilog;
 
 namespace MainControllerApp.Services
@@ -13,6 +14,7 @@ namespace MainControllerApp.Services
         private readonly WebUINotificationService _webUINotificationService;
         private readonly ILogger _logger;
         private bool _isRunning = false;
+        private readonly System.Collections.Concurrent.ConcurrentDictionary<int, Process> _runningProcesses = new();
         private readonly CancellationTokenSource _cancellationTokenSource = new();
 
         public JobProcessorService(AppConfiguration config, QueueService queueService, 
@@ -181,13 +183,11 @@ namespace MainControllerApp.Services
             try
             {
                 var mapping = _config.Mappings[job.TargetApp];
-                var executablePath = mapping.ExecutablePath;
-                
-                // .exe uzantısını kaldır (cross-platform uyumluluk için)
-                if (executablePath.EndsWith(".exe"))
-                {
-                    executablePath = executablePath.Substring(0, executablePath.Length - 4);
-                }
+                var basePath = mapping.ExecutablePath;
+                var isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+                var isUnix = RuntimeInformation.IsOSPlatform(OSPlatform.OSX) || RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
+                var exeCandidate = isWindows ? (basePath.EndsWith(".exe") ? basePath : basePath + ".exe") : basePath;
+                var dllCandidate = basePath.EndsWith(".dll") ? basePath : basePath + ".dll";
 
                 // Çıkış dizinini oluştur
                 var outputDir = Path.GetDirectoryName(job.OutputPath);
@@ -196,22 +196,47 @@ namespace MainControllerApp.Services
                     Directory.CreateDirectory(outputDir);
                 }
 
-                var startInfo = new ProcessStartInfo
+                ProcessStartInfo startInfo;
+                if (File.Exists(exeCandidate))
                 {
-                    FileName = "dotnet",
-                    Arguments = $"\"{executablePath}.dll\" \"{job.InputPath}\" \"{job.OutputPath}\"",
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true,
-                    CreateNoWindow = true
-                };
+                    // Run native apphost (exe on Windows, no extension on Unix)
+                    startInfo = new ProcessStartInfo
+                    {
+                        FileName = exeCandidate,
+                        Arguments = $"\"{job.InputPath}\" \"{job.OutputPath}\"",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+                        RedirectStandardError = true,
+                        CreateNoWindow = true
+                    };
+                }
+                else if (File.Exists(dllCandidate))
+                {
+                    // Fallback to dotnet <dll>
+                    startInfo = new ProcessStartInfo
+                    {
+                        FileName = "dotnet",
+                        Arguments = $"\"{dllCandidate}\" \"{job.InputPath}\" \"{job.OutputPath}\"",
+                        UseShellExecute = false,
+                        RedirectStandardOutput = true,
+                        RedirectStandardError = true,
+                        CreateNoWindow = true
+                    };
+                }
+                else
+                {
+                    job.ErrorMessage = $"Worker binary not found (tried: {exeCandidate} and {dllCandidate})";
+                    _logger.Error(job.ErrorMessage);
+                    return false;
+                }
 
                 _logger.Information("Executing: {FileName} {Arguments}", startInfo.FileName, startInfo.Arguments);
 
-                using var process = new Process { StartInfo = startInfo };
+                using var process = new Process { StartInfo = startInfo, EnableRaisingEvents = true };
                 process.Start();
+                _runningProcesses[process.Id] = process;
 
-                var timeoutTask = Task.Delay(TimeSpan.FromSeconds(_config.TimeoutSeconds));
+                var timeoutTask = Task.Delay(TimeSpan.FromSeconds(_config.TimeoutSeconds), _cancellationTokenSource.Token);
                 var processTask = process.WaitForExitAsync();
 
                 var completedTask = await Task.WhenAny(processTask, timeoutTask);
@@ -228,6 +253,18 @@ namespace MainControllerApp.Services
                     
                     job.Status = JobStatus.Timeout;
                     job.ErrorMessage = "Process timed out";
+                    return false;
+                }
+
+                if (_cancellationTokenSource.IsCancellationRequested)
+                {
+                    if (!process.HasExited)
+                    {
+                        try { process.Kill(true); } catch { /* ignore */ }
+                    }
+                    job.Status = JobStatus.Failed;
+                    job.ErrorMessage = "Cancelled";
+                    _runningProcesses.TryRemove(process.Id, out _);
                     return false;
                 }
 
@@ -256,7 +293,9 @@ namespace MainControllerApp.Services
                         job.Id, process.ExitCode, job.ErrorMessage);
                 }
 
-                return process.ExitCode == 0;
+                var ok = process.ExitCode == 0;
+                _runningProcesses.TryRemove(process.Id, out _);
+                return ok;
             }
             catch (Exception ex)
             {
@@ -320,14 +359,34 @@ namespace MainControllerApp.Services
         private string GenerateOutputPathForWorker(string inputPath, string workerApp)
         {
             var fileName = Path.GetFileName(inputPath);
-            var outputDirectory = _config.Mappings[workerApp].OutputDirectory;
-            return Path.Combine(outputDirectory, fileName);
+            var outputDirectory = _config.Mappings[workerApp].OutputDirectory; // data/Processed/<app>
+            var today = DateTime.Now.ToString("yyyy-MM-dd");
+            var appName = Path.GetFileName(outputDirectory);
+            var processedRoot = Path.GetDirectoryName(outputDirectory) ?? outputDirectory;
+            var baseOutput = Path.Combine(processedRoot, today, appName);
+            return Path.Combine(baseOutput, fileName);
         }
 
         public void Stop()
         {
             _isRunning = false;
             _cancellationTokenSource.Cancel();
+            // Kill any running worker processes to ensure clean shutdown
+            foreach (var kvp in _runningProcesses.ToArray())
+            {
+                try
+                {
+                    if (!kvp.Value.HasExited)
+                    {
+                        kvp.Value.Kill(true);
+                    }
+                }
+                catch { /* ignore */ }
+                finally
+                {
+                    _runningProcesses.TryRemove(kvp.Key, out _);
+                }
+            }
         }
     }
 }

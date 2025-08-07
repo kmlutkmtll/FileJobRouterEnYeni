@@ -34,3 +34,4 @@
 /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/obj/Debug/net9.0/MainControllerApp.pdb
 /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/obj/Debug/net9.0/MainControllerApp.genruntimeconfig.cache
 /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/obj/Debug/net9.0/ref/MainControllerApp.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/obj/Debug/net9.0/MainControllerApp.sourcelink.json

@@ -39,7 +39,20 @@ namespace MainControllerApp.Services
                     }
                     catch (IOException)
                     {
-                        // File is locked by another process, wait and retry
+                        // File is locked by another process, check for stale lock and retry
+                        try
+                        {
+                            if (File.Exists(_lockFileName))
+                            {
+                                var age = DateTime.Now - File.GetLastWriteTime(_lockFileName);
+                                if (age > TimeSpan.FromMinutes(30))
+                                {
+                                    // Stale lock, try to delete
+                                    File.Delete(_lockFileName);
+                                }
+                            }
+                        }
+                        catch { /* ignore */ }
                         Thread.Sleep(100);
                     }
                 }

@@ -17,3 +17,4 @@
 /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/obj/Debug/net9.0/WorkerAppABC.pdb
 /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/obj/Debug/net9.0/WorkerAppABC.genruntimeconfig.cache
 /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/obj/Debug/net9.0/ref/WorkerAppABC.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/obj/Debug/net9.0/WorkerAppABC.sourcelink.json

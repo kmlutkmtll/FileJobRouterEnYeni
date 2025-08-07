@@ -1,9 +1,0 @@
-{
-  "Id": "04a68504-6a88-499c-9abd-c18371bef0e1",
-  "InputPath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/test_upload.txt",
-  "TargetApp": "abc",
-  "Status": "Completed",
-  "Timestamp": "2025-08-06T19:14:26.376747+03:00",
-  "ErrorMessage": null,
-  "Username": "kemalutkumutlu"
-}

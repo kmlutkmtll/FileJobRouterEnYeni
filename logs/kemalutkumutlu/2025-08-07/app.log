@@ -1,0 +1,60 @@
+2025-08-07 21:50:39.371 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-07 21:50:39.385 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-07 21:50:39.442 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-07 21:50:39.442 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-07 21:50:39.445 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-07 21:50:39.445 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-07 21:50:39.464 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-07 21:50:39.464 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-07 21:50:39.490 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-07 21:50:39.491 [INF] FileJobRouter is running.
+2025-08-07 21:50:39.491 [INF] Job processor started
+2025-08-07 21:50:39.492 [INF] Queue file not found, creating new queue
+2025-08-07 21:51:24.969 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-07 21:51:24.973 [INF] Shutting down FileJobRouter...
+2025-08-07 21:51:24.975 [INF] Job processor stopped
+2025-08-07 21:51:24.976 [INF] Stopped watching directory
+2025-08-07 21:51:24.978 [INF] Shutting down FileJobRouter...
+2025-08-07 21:51:25.978 [INF] FileJobRouter shutdown completed
+2025-08-07 21:51:25.979 [INF] FileJobRouter shutdown completed
+2025-08-07 21:54:24.892 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-07 21:54:24.906 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-07 21:54:24.964 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-07 21:54:24.964 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-07 21:54:24.968 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-07 21:54:24.968 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-07 21:54:24.972 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-07 21:54:24.972 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-07 21:54:25.005 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-07 21:54:25.006 [INF] FileJobRouter is running.
+2025-08-07 21:54:25.007 [INF] Job processor started
+2025-08-07 21:55:17.957 [INF] Added new job to queue: f37f7b48-db0f-445c-9453-ed064acb2f56 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf
+2025-08-07 21:55:17.958 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf -> xyz
+2025-08-07 21:55:20.072 [INF] Processing job: f37f7b48-db0f-445c-9453-ed064acb2f56 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf
+2025-08-07 21:55:20.077 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-07 21:55:20.080 [INF] Updated job in queue: f37f7b48-db0f-445c-9453-ed064acb2f56 - Status: "Processing"
+2025-08-07 21:55:20.087 [INF] Created jobs directory for user kemalutkumutlu on 2025-08-07: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-07
+2025-08-07 21:55:20.111 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-07/f37f7b48-db0f-445c-9453-ed064acb2f56.json
+2025-08-07 21:55:20.114 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-07/xyz/0_syllabus-2.pdf"
+2025-08-07 21:55:31.709 [INF] Worker output: [21:55:20 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-07/xyz/0_syllabus-2.pdf
+[21:55:20 INF] Simulating device usage for 11 seconds
+[21:55:31 INF] Read 158591 characters from input file
+[21:55:31 INF] Reversed 1185 lines
+[21:55:31 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-07/xyz/0_syllabus-2.pdf
+[21:55:31 INF] WorkerAppXYZ completed successfully
+
+2025-08-07 21:55:31.709 [INF] Job completed successfully: f37f7b48-db0f-445c-9453-ed064acb2f56
+2025-08-07 21:55:31.711 [INF] Updated job status to Completed for job f37f7b48-db0f-445c-9453-ed064acb2f56
+2025-08-07 21:55:31.711 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf
+2025-08-07 21:55:31.712 [INF] Updated job in queue: f37f7b48-db0f-445c-9453-ed064acb2f56 - Status: "Completed"
+2025-08-07 21:55:31.712 [INF] Device lock released successfully
+2025-08-07 21:58:07.519 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-07 21:58:07.521 [INF] Shutting down FileJobRouter...
+2025-08-07 21:58:07.524 [INF] Job processor stopped
+2025-08-07 21:58:07.525 [INF] Shutting down FileJobRouter...
+2025-08-07 21:58:07.525 [INF] Stopped watching directory
+2025-08-07 21:58:07.526 [ERR] Error during shutdown: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainControllerApp.Services.FileWatcherService.StopWatching() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Services/FileWatcherService.cs:line 225
+   at MainControllerApp.Program.Shutdown() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Program.cs:line 136
+2025-08-07 21:58:08.526 [INF] FileJobRouter shutdown completed

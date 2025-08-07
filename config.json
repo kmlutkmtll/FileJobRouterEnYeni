@@ -3,7 +3,7 @@
   "TimeoutSeconds": 30,
   "LogDirectory": "logs",
   "JobsDirectory": "jobs",
-  "QueueFilePath": "queue.json",
+  "QueueBaseDirectory": "queue",
   "MutexName": "Global\\FileJobRouterDeviceMutex",
   "Mappings": {
     "abc": {

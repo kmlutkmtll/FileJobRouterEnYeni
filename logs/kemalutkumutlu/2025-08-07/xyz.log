@@ -1,0 +1,6 @@
+2025-08-07 21:55:20.663 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-07/xyz/0_syllabus-2.pdf
+2025-08-07 21:55:20.680 +03:00 [INF] Simulating device usage for 11 seconds
+2025-08-07 21:55:31.698 +03:00 [INF] Read 158591 characters from input file
+2025-08-07 21:55:31.699 +03:00 [INF] Reversed 1185 lines
+2025-08-07 21:55:31.701 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-07/xyz/0_syllabus-2.pdf
+2025-08-07 21:55:31.702 +03:00 [INF] WorkerAppXYZ completed successfully

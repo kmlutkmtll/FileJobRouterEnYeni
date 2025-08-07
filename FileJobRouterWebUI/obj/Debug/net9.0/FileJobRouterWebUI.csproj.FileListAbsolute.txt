@@ -99,3 +99,14 @@
 /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/obj/Debug/net9.0/FileJobRouterWebUI.genruntimeconfig.cache
 /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/obj/Debug/net9.0/ref/FileJobRouterWebUI.dll
 /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/obj/Debug/net9.0/compressed/0tzdl34fph-8vl3sfdsds.gz
+/Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/bin/Debug/net9.0/Serilog.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/bin/Debug/net9.0/Serilog.AspNetCore.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/bin/Debug/net9.0/Serilog.Extensions.Hosting.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/bin/Debug/net9.0/Serilog.Extensions.Logging.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/bin/Debug/net9.0/Serilog.Formatting.Compact.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/bin/Debug/net9.0/Serilog.Settings.Configuration.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/bin/Debug/net9.0/Serilog.Sinks.Console.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/bin/Debug/net9.0/Serilog.Sinks.Debug.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/bin/Debug/net9.0/Serilog.Sinks.File.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/obj/Debug/net9.0/FileJobRouterWebUI.sourcelink.json

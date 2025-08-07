@@ -41,16 +41,11 @@ namespace MainControllerApp
                 Console.CancelKeyPress += OnCancelKeyPress;
                 AppDomain.CurrentDomain.ProcessExit += OnProcessExit;
                 
-                // Servisleri başlat
+                // Servisleri başlat (uygulama açılır açılmaz sürekli izlesin)
                 _fileWatcher.StartWatching();
-                
-                // Job processor'ı arka planda başlat
                 var processorTask = Task.Run(() => _jobProcessor.StartProcessingAsync());
-                
-                _logger.Information("FileJobRouter is running. Press Ctrl+C to stop.");
-                
-                // Ana loop - Ctrl+C'ye kadar çalış
-                await processorTask;
+                _logger.Information("FileJobRouter is running.");
+                await processorTask; // background task tamamlanana kadar bekle
             }
             catch (Exception ex)
             {
@@ -91,7 +86,16 @@ namespace MainControllerApp
                 config.WatchDirectory = Path.GetFullPath(Path.Combine(solutionRoot, config.WatchDirectory));
                 config.LogDirectory = Path.GetFullPath(Path.Combine(solutionRoot, config.LogDirectory));
                 config.JobsDirectory = Path.GetFullPath(Path.Combine(solutionRoot, config.JobsDirectory));
-                config.QueueFilePath = Path.GetFullPath(Path.Combine(solutionRoot, config.QueueFilePath));
+
+                // Queue dosyasını queue/day/queue.json yapısına çevir (QueueBaseDirectory üzerinden)
+                var today = DateTime.Now.ToString("yyyy-MM-dd");
+                var queueRoot = string.IsNullOrWhiteSpace(config.QueueBaseDirectory) ? "queue" : config.QueueBaseDirectory;
+                var queueBaseDir = Path.Combine(solutionRoot, queueRoot, today);
+                if (!Directory.Exists(queueBaseDir))
+                {
+                    Directory.CreateDirectory(queueBaseDir);
+                }
+                config.QueueFilePath = Path.Combine(queueBaseDir, "queue.json");
                 
                 foreach (var mapping in config.Mappings.Values)
                 {
@@ -125,8 +129,13 @@ namespace MainControllerApp
             
             try
             {
-                _fileWatcher?.StopWatching();
+                // İşlemciyi durdur
                 _jobProcessor?.Stop();
+                
+                // FileSystemWatcher'ı durdur
+                _fileWatcher?.StopWatching();
+                
+                // Mutex serbest bırak
                 _deviceMutex?.Dispose();
                 
                 // Biraz bekle ki background tasklar temizlensin
@@ -141,7 +150,9 @@ namespace MainControllerApp
             finally
             {
                 Log.CloseAndFlush();
-                Environment.Exit(0);
+                // macOS/Linux'ta prompt'un net dönmesi için process'i temiz şekilde sonlandır
+                Environment.ExitCode = 0;
+                // Not: Main tamamlanınca shell prompt görünür
             }
         }
     }

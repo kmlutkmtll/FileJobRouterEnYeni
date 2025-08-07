@@ -188,8 +188,8 @@ namespace FileJobRouterWebUI.Controllers
                 var fileList = System.Text.Json.JsonSerializer.Deserialize<List<string>>(files) ?? new List<string>();
                 var jobStatuses = new Dictionary<string, string>();
 
-                // Read queue.json to get job statuses
-                var queuePath = Path.Combine(_solutionRoot, "queue.json");
+                // Read dated queue.json to get job statuses
+                var queuePath = Path.Combine(_solutionRoot, "queue", DateTime.Now.ToString("yyyy-MM-dd"), "queue.json");
                 if (System.IO.File.Exists(queuePath))
                 {
                     var queueContent = System.IO.File.ReadAllText(queuePath);

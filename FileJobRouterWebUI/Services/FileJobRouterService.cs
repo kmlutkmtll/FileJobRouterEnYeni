@@ -60,7 +60,8 @@ namespace FileJobRouterWebUI.Services
         {
             try
             {
-                var queuePath = Path.Combine(_solutionRoot, "queue.json");
+                // queue/day/queue.json
+                var queuePath = Path.Combine(_solutionRoot, "queue", DateTime.Now.ToString("yyyy-MM-dd"), "queue.json");
                 if (File.Exists(queuePath))
                 {
                     var queueJson = await File.ReadAllTextAsync(queuePath);

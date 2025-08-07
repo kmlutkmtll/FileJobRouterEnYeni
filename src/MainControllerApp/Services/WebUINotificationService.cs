@@ -20,35 +20,60 @@ namespace MainControllerApp.Services
         {
             try
             {
-                _connection = new HubConnectionBuilder()
-                    .WithUrl("http://localhost:5000/fileJobRouterHub")
-                    .WithAutomaticReconnect(new[] { TimeSpan.Zero, TimeSpan.FromSeconds(2), TimeSpan.FromSeconds(10), TimeSpan.FromSeconds(30) })
-                    .Build();
-
-                _connection.Closed += (error) =>
+                var candidates = new[]
                 {
-                    _isConnected = false;
-                    _logger.Warning("WebUI connection lost: {Error}", error?.Message);
-                    return Task.CompletedTask;
+                    Environment.GetEnvironmentVariable("FILEJOBROUTER_WEBUI_URL")?.TrimEnd('/'),
+                    "https://localhost:7155",
+                    "http://localhost:5036",
+                    "http://localhost:5000"
                 };
 
-                _connection.Reconnecting += (error) =>
+                foreach (var baseUrl in candidates)
                 {
-                    _isConnected = false;
-                    _logger.Information("Attempting to reconnect to WebUI...");
-                    return Task.CompletedTask;
-                };
+                    if (string.IsNullOrWhiteSpace(baseUrl)) continue;
+                    var hubUrl = baseUrl + "/fileJobRouterHub";
+                    try
+                    {
+                        _logger.Information("Trying WebUI hub: {HubUrl}", hubUrl);
+                        _connection = new HubConnectionBuilder()
+                            .WithUrl(hubUrl)
+                            .WithAutomaticReconnect(new[] { TimeSpan.Zero, TimeSpan.FromSeconds(2), TimeSpan.FromSeconds(10), TimeSpan.FromSeconds(30) })
+                            .Build();
 
-                _connection.Reconnected += (connectionId) =>
-                {
-                    _isConnected = true;
-                    _logger.Information("Reconnected to WebUI successfully. Connection ID: {ConnectionId}", connectionId);
-                    return Task.CompletedTask;
-                };
+                        _connection.Closed += (error) =>
+                        {
+                            _isConnected = false;
+                            _logger.Warning("WebUI connection lost: {Error}", error?.Message);
+                            return Task.CompletedTask;
+                        };
 
-                await _connection.StartAsync();
-                _isConnected = true;
-                _logger.Information("Connected to WebUI SignalR Hub successfully");
+                        _connection.Reconnecting += (error) =>
+                        {
+                            _isConnected = false;
+                            _logger.Information("Attempting to reconnect to WebUI...");
+                            return Task.CompletedTask;
+                        };
+
+                        _connection.Reconnected += (connectionId) =>
+                        {
+                            _isConnected = true;
+                            _logger.Information("Reconnected to WebUI successfully. Connection ID: {ConnectionId}", connectionId);
+                            return Task.CompletedTask;
+                        };
+
+                        await _connection.StartAsync();
+                        _isConnected = true;
+                        _logger.Information("Connected to WebUI SignalR Hub successfully at {HubUrl}", hubUrl);
+                        return;
+                    }
+                    catch (Exception exCandidate)
+                    {
+                        _logger.Warning("Failed to connect to WebUI at {HubUrl}: {Error}", hubUrl, exCandidate.Message);
+                    }
+                }
+
+                // If we reach here, all candidates failed
+                throw new InvalidOperationException("Could not connect to any WebUI hub URL candidates");
             }
             catch (Exception ex)
             {

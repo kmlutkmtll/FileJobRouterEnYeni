@@ -149,17 +149,12 @@ namespace MainControllerApp.Services
                 
                 if (existingJob != null)
                 {
-                    if (existingJob.Status == JobStatus.Completed)
-                    {
-                        _logger.Information("File already processed successfully, skipping: {FilePath}", filePath);
-                        return;
-                    }
-                    else if (existingJob.Status == JobStatus.Pending || existingJob.Status == JobStatus.Processing)
+                    // Daha önce işlenmiş (Completed) dosyaları da tekrar işleyebilmek için skip etmiyoruz
+                    if (existingJob.Status == JobStatus.Pending || existingJob.Status == JobStatus.Processing)
                     {
                         _logger.Information("File already in queue for processing, skipping: {FilePath}", filePath);
                         return;
                     }
-                    // Failed joblar için yeniden işleme izin ver
                 }
 
                 string outputPath;
@@ -195,11 +190,18 @@ namespace MainControllerApp.Services
         private string GenerateOutputPath(string inputPath, string outputDirectory)
         {
             var fileName = Path.GetFileName(inputPath);
+            var today = DateTime.Now.ToString("yyyy-MM-dd");
             
             // Alt dizin yapısını koruma
             var watchDir = Path.GetFullPath(_watchDirectory);
             var inputDir = Path.GetFullPath(Path.GetDirectoryName(inputPath) ?? "");
             
+            // processed day yapısı: data/Processed/<day>/<app>/<subPath>
+            // mapping.OutputDirectory: data/Processed/<app>
+            var appName = Path.GetFileName(outputDirectory);
+            var processedRoot = Path.GetDirectoryName(outputDirectory) ?? outputDirectory;
+            var baseOutput = Path.Combine(processedRoot, today, appName);
+
             if (inputDir.StartsWith(watchDir))
             {
                 var relativePath = Path.GetRelativePath(watchDir, inputDir);
@@ -208,11 +210,11 @@ namespace MainControllerApp.Services
                 
                 if (!string.IsNullOrEmpty(subPath))
                 {
-                    outputDirectory = Path.Combine(outputDirectory, subPath);
+                    baseOutput = Path.Combine(baseOutput, subPath);
                 }
             }
             
-            return Path.Combine(outputDirectory, fileName);
+            return Path.Combine(baseOutput, fileName);
         }
 
         public void StopWatching()

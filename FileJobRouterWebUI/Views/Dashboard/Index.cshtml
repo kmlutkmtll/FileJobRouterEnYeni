@@ -25,30 +25,6 @@
 
     <!-- Status Cards Row -->
     <div class="row g-4 mb-4">
-        <!-- System Status -->
-        <div class="col-xl-3 col-lg-6 col-md-6">
-            <div class="card fade-in-up">
-                <div class="card-header">
-                    <h5 class="card-title mb-0">
-                        <i class="fas fa-server me-2"></i>System Status
-                    </h5>
-                </div>
-                <div class="card-body text-center">
-                    <div class="d-flex align-items-center justify-content-center mb-3">
-                        <div id="statusIndicator" class="status-indicator me-3"></div>
-                        <span id="systemStatus" class="h5 mb-0 fw-bold">@ViewBag.SystemStatus</span>
-                    </div>
-                    <div class="d-grid gap-2">
-                        <button id="startBtn" class="btn btn-success" onclick="startSystem()">
-                            <i class="fas fa-play me-2"></i>Start System
-                        </button>
-                        <button id="stopBtn" class="btn btn-danger" onclick="stopSystem()">
-                            <i class="fas fa-stop me-2"></i>Stop System
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Queue Stats -->
         <div class="col-xl-3 col-lg-6 col-md-6">
@@ -362,27 +338,7 @@
         }
 
         // System status updates
-        function updateSystemStatus(status, message) {
-            const statusElement = document.getElementById('systemStatus');
-            const indicator = document.getElementById('statusIndicator');
-            
-            // Animate status change
-            statusElement.style.opacity = '0.5';
-            setTimeout(() => {
-                statusElement.textContent = status;
-                statusElement.style.opacity = '1';
-            }, 200);
-            
-            if (status === 'Running') {
-                indicator.className = 'status-indicator running';
-            } else if (status === 'Stopped') {
-                indicator.className = 'status-indicator stopped';
-            } else {
-                indicator.className = 'status-indicator unknown';
-            }
-            
-            updateLastUpdate();
-        }
+        function updateSystemStatus(status, message) { /* removed - no-op */ }
 
         // Enhanced log handling
         function appendLog(logMessage) {
@@ -489,52 +445,7 @@
             document.getElementById('lastUpdate').textContent = now.toLocaleTimeString();
         }
 
-        // System control functions
-        function startSystem() {
-            const btn = document.getElementById('startBtn');
-            btn.disabled = true;
-            btn.innerHTML = '<div class="loading-spinner"></div>Starting...';
-            
-            fetch('/Dashboard/StartSystem', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    btn.disabled = false;
-                    btn.innerHTML = '<i class="fas fa-play me-2"></i>Start System';
-                    if (data.success) {
-                        showNotification('System start command sent', 'success');
-                    } else {
-                        showNotification('Failed to start system', 'danger');
-                    }
-                })
-                .catch(error => {
-                    btn.disabled = false;
-                    btn.innerHTML = '<i class="fas fa-play me-2"></i>Start System';
-                    showNotification('Error starting system', 'danger');
-                });
-        }
-
-        function stopSystem() {
-            const btn = document.getElementById('stopBtn');
-            btn.disabled = true;
-            btn.innerHTML = '<div class="loading-spinner"></div>Stopping...';
-            
-            fetch('/Dashboard/StopSystem', { method: 'POST' })
-                .then(response => response.json())
-                .then(data => {
-                    btn.disabled = false;
-                    btn.innerHTML = '<i class="fas fa-stop me-2"></i>Stop System';
-                    if (data.success) {
-                        showNotification('System stop command sent', 'success');
-                    } else {
-                        showNotification('Failed to stop system', 'danger');
-                    }
-                })
-                .catch(error => {
-                    btn.disabled = false;
-                    btn.innerHTML = '<i class="fas fa-stop me-2"></i>Stop System';
-                    showNotification('Error stopping system', 'danger');
-                });
-        }
+        // System control removed: Always-on mode
 
         // Data refresh functions
         function refreshLogs() {

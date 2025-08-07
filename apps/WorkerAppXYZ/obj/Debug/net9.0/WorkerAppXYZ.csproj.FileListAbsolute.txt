@@ -17,3 +17,4 @@
 /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/obj/Debug/net9.0/WorkerAppXYZ.pdb
 /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/obj/Debug/net9.0/WorkerAppXYZ.genruntimeconfig.cache
 /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/obj/Debug/net9.0/ref/WorkerAppXYZ.dll
+/Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/obj/Debug/net9.0/WorkerAppXYZ.sourcelink.json

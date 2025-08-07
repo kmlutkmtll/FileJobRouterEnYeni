@@ -61,6 +61,8 @@ namespace MainControllerApp.Services
         public void AddJob(JobItem job)
         {
             var jobs = LoadQueue();
+            // queue/day/ yapısına uygun olarak file path'i güncelleme üst seviye serviste yapılır;
+            // burada sadece ekleme yapıyoruz
             jobs.Add(job);
             SaveQueue(jobs);
             _logger.Information("Added new job to queue: {JobId} - {InputPath}", job.Id, job.InputPath);

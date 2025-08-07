@@ -1,0 +1,15 @@
+[
+  {
+    "Id": "f37f7b48-db0f-445c-9453-ed064acb2f56",
+    "InputPath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf",
+    "TargetApp": "xyz",
+    "Status": 2,
+    "CreatedAt": "2025-08-07T21:55:17.914903+03:00",
+    "StartedAt": "2025-08-07T21:55:20.077575+03:00",
+    "CompletedAt": "2025-08-07T21:55:31.709682+03:00",
+    "ErrorMessage": null,
+    "RetryCount": 0,
+    "OutputPath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-07/xyz/0_syllabus-2.pdf",
+    "UserName": "kemalutkumutlu"
+  }
+]

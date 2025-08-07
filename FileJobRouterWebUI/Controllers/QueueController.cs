@@ -28,7 +28,8 @@ namespace FileJobRouterWebUI.Controllers
                 _solutionRoot = currentDir;
             }
             
-            _queuePath = Path.Combine(_solutionRoot, "queue.json");
+            // queue/<day>/queue.json
+            _queuePath = Path.Combine(_solutionRoot, "queue", DateTime.Now.ToString("yyyy-MM-dd"), "queue.json");
         }
 
         public IActionResult Index()

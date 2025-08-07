@@ -17,6 +17,7 @@ namespace MainControllerApp.Services
                 Directory.CreateDirectory(dailyLogDirectory);
             }
 
+            // Main için app.log dışında web de web.log istiyor, burada ana app için app.log'u yazıyoruz
             var logPath = Path.Combine(dailyLogDirectory, "app.log");
 
             return new LoggerConfiguration()
