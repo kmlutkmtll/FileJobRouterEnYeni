@@ -1,0 +1,104 @@
+2025-08-14 01:51:59.290 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 01:51:59.307 +03:00 [INF] Simulating device usage for 10 seconds
+2025-08-14 01:52:09.346 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 01:52:09.347 +03:00 [INF] Calculated SHA-256 hash: b5e7a995083d6c13b397eed7b5fecf902fc561d4bbe6d7d7c7021567ca07eeb7
+2025-08-14 01:52:09.450 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 01:52:09.450 +03:00 [INF] Generated RSA signature
+2025-08-14 01:52:09.469 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf.sig
+2025-08-14 01:52:09.469 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-14 02:09:22.541 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:09:22.558 +03:00 [INF] Simulating device usage for 8 seconds
+2025-08-14 02:09:30.614 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 02:09:30.615 +03:00 [INF] Calculated SHA-256 hash: e53dcf8232754aef0eed74a3f65cca0306ac84bef888e9f209892c2618e3da21
+2025-08-14 02:09:30.857 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 02:09:30.858 +03:00 [INF] Generated RSA signature
+2025-08-14 02:09:30.880 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf.sig
+2025-08-14 02:09:30.880 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-14 02:09:31.030 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+2025-08-14 02:09:31.046 +03:00 [INF] Simulating device usage for 12 seconds
+2025-08-14 02:09:43.076 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 02:09:43.077 +03:00 [INF] Calculated SHA-256 hash: abd21aa0972b62ebe2ec9a6f8005b5dab11814e9299a46533592c2a9e519eefe
+2025-08-14 02:09:43.235 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 02:09:43.235 +03:00 [INF] Generated RSA signature
+2025-08-14 02:09:43.260 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx.sig
+2025-08-14 02:09:43.260 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-14 02:09:43.451 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:09:43.508 +03:00 [INF] Simulating device usage for 8 seconds
+2025-08-14 02:09:51.540 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 02:09:51.541 +03:00 [INF] Calculated SHA-256 hash: b5e7a995083d6c13b397eed7b5fecf902fc561d4bbe6d7d7c7021567ca07eeb7
+2025-08-14 02:09:51.650 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 02:09:51.650 +03:00 [INF] Generated RSA signature
+2025-08-14 02:09:51.666 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf.sig
+2025-08-14 02:09:51.666 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-14 02:09:51.750 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf
+2025-08-14 02:09:51.762 +03:00 [INF] Simulating device usage for 14 seconds
+2025-08-14 02:10:05.793 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 02:10:05.794 +03:00 [INF] Calculated SHA-256 hash: 057e37dc2836aa6a6293f955ace3bb6d5fb3f4e990f890a022e156fc79cad360
+2025-08-14 02:10:05.878 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 02:10:05.878 +03:00 [INF] Generated RSA signature
+2025-08-14 02:10:05.895 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf.sig
+2025-08-14 02:10:05.895 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-14 02:12:17.285 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:12:17.302 +03:00 [INF] Simulating device usage for 8 seconds
+2025-08-14 02:12:25.333 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 02:12:25.335 +03:00 [INF] Calculated SHA-256 hash: e53dcf8232754aef0eed74a3f65cca0306ac84bef888e9f209892c2618e3da21
+2025-08-14 02:12:25.408 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 02:12:25.409 +03:00 [INF] Generated RSA signature
+2025-08-14 02:12:25.425 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf.sig
+2025-08-14 02:12:25.425 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-14 02:12:25.511 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+2025-08-14 02:12:25.524 +03:00 [INF] Simulating device usage for 10 seconds
+2025-08-14 02:12:35.564 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 02:12:35.565 +03:00 [INF] Calculated SHA-256 hash: abd21aa0972b62ebe2ec9a6f8005b5dab11814e9299a46533592c2a9e519eefe
+2025-08-14 02:12:35.630 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 02:12:35.630 +03:00 [INF] Generated RSA signature
+2025-08-14 02:12:35.645 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx.sig
+2025-08-14 02:12:35.645 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-14 02:12:35.752 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:12:35.765 +03:00 [INF] Simulating device usage for 14 seconds
+2025-08-14 02:12:49.799 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 02:12:49.801 +03:00 [INF] Calculated SHA-256 hash: b5e7a995083d6c13b397eed7b5fecf902fc561d4bbe6d7d7c7021567ca07eeb7
+2025-08-14 02:12:49.845 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 02:12:49.845 +03:00 [INF] Generated RSA signature
+2025-08-14 02:12:49.864 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf.sig
+2025-08-14 02:12:49.864 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-14 02:12:49.947 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf
+2025-08-14 02:12:49.959 +03:00 [INF] Simulating device usage for 10 seconds
+2025-08-14 02:13:00.000 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 02:13:00.002 +03:00 [INF] Calculated SHA-256 hash: 057e37dc2836aa6a6293f955ace3bb6d5fb3f4e990f890a022e156fc79cad360
+2025-08-14 02:13:00.083 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 02:13:00.083 +03:00 [INF] Generated RSA signature
+2025-08-14 02:13:00.102 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf.sig
+2025-08-14 02:13:00.102 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-14 02:13:20.269 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:13:20.289 +03:00 [INF] Simulating device usage for 15 seconds
+2025-08-14 02:13:35.323 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 02:13:35.326 +03:00 [INF] Calculated SHA-256 hash: e53dcf8232754aef0eed74a3f65cca0306ac84bef888e9f209892c2618e3da21
+2025-08-14 02:13:35.388 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 02:13:35.388 +03:00 [INF] Generated RSA signature
+2025-08-14 02:13:35.405 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf.sig
+2025-08-14 02:13:35.405 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-14 02:13:35.497 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+2025-08-14 02:13:35.510 +03:00 [INF] Simulating device usage for 11 seconds
+2025-08-14 02:13:46.549 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 02:13:46.551 +03:00 [INF] Calculated SHA-256 hash: abd21aa0972b62ebe2ec9a6f8005b5dab11814e9299a46533592c2a9e519eefe
+2025-08-14 02:13:46.685 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 02:13:46.686 +03:00 [INF] Generated RSA signature
+2025-08-14 02:13:46.701 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx.sig
+2025-08-14 02:13:46.701 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-14 02:13:46.802 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:13:46.816 +03:00 [INF] Simulating device usage for 14 seconds
+2025-08-14 02:14:00.854 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 02:14:00.856 +03:00 [INF] Calculated SHA-256 hash: b5e7a995083d6c13b397eed7b5fecf902fc561d4bbe6d7d7c7021567ca07eeb7
+2025-08-14 02:14:00.919 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 02:14:00.919 +03:00 [INF] Generated RSA signature
+2025-08-14 02:14:00.937 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf.sig
+2025-08-14 02:14:00.937 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-14 02:14:01.023 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf
+2025-08-14 02:14:01.037 +03:00 [INF] Simulating device usage for 6 seconds
+2025-08-14 02:14:07.085 +03:00 [INF] Calculated SHA-256 hash for streamed input
+2025-08-14 02:14:07.087 +03:00 [INF] Calculated SHA-256 hash: 057e37dc2836aa6a6293f955ace3bb6d5fb3f4e990f890a022e156fc79cad360
+2025-08-14 02:14:07.199 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-14 02:14:07.199 +03:00 [INF] Generated RSA signature
+2025-08-14 02:14:07.219 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf.sig
+2025-08-14 02:14:07.219 +03:00 [INF] WorkerAppSigner completed successfully

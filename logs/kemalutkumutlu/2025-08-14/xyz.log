@@ -1,0 +1,118 @@
+2025-08-14 00:23:39.798 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/x1.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/x1.txt
+2025-08-14 00:23:39.811 +03:00 [INF] Simulating device usage for 14 seconds
+2025-08-14 00:23:53.825 +03:00 [INF] Read 2 characters from input file
+2025-08-14 00:23:53.826 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:23:53.828 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/x1.txt
+2025-08-14 00:23:53.830 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:27:41.780 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_1.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_1.txt
+2025-08-14 00:27:41.794 +03:00 [INF] Simulating device usage for 14 seconds
+2025-08-14 00:27:55.810 +03:00 [INF] Read 8 characters from input file
+2025-08-14 00:27:55.812 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:27:55.814 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_1.txt
+2025-08-14 00:27:55.815 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:27:55.966 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_2.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_2.txt
+2025-08-14 00:27:55.979 +03:00 [INF] Simulating device usage for 15 seconds
+2025-08-14 00:28:10.990 +03:00 [INF] Read 8 characters from input file
+2025-08-14 00:28:10.992 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:28:10.993 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_2.txt
+2025-08-14 00:28:10.994 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:28:11.096 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_3.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_3.txt
+2025-08-14 00:28:11.110 +03:00 [INF] Simulating device usage for 6 seconds
+2025-08-14 00:28:17.119 +03:00 [INF] Read 8 characters from input file
+2025-08-14 00:28:17.120 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:28:17.121 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_3.txt
+2025-08-14 00:28:17.121 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:28:17.232 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_4.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_4.txt
+2025-08-14 00:28:17.245 +03:00 [INF] Simulating device usage for 11 seconds
+2025-08-14 00:28:28.255 +03:00 [INF] Read 8 characters from input file
+2025-08-14 00:28:28.256 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:28:28.258 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_4.txt
+2025-08-14 00:28:28.259 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:28:28.357 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_5.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_5.txt
+2025-08-14 00:28:28.370 +03:00 [INF] Simulating device usage for 15 seconds
+2025-08-14 00:28:43.383 +03:00 [INF] Read 8 characters from input file
+2025-08-14 00:28:43.384 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:28:43.385 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_5.txt
+2025-08-14 00:28:43.386 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:28:43.511 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_1.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_1.txt
+2025-08-14 00:28:43.526 +03:00 [INF] Simulating device usage for 5 seconds
+2025-08-14 00:28:48.538 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:28:48.538 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:28:48.539 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_1.txt
+2025-08-14 00:28:48.539 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:29:10.115 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_10.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_10.txt
+2025-08-14 00:29:10.129 +03:00 [INF] Simulating device usage for 7 seconds
+2025-08-14 00:29:17.143 +03:00 [INF] Read 20 characters from input file
+2025-08-14 00:29:17.144 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:29:17.146 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_10.txt
+2025-08-14 00:29:17.147 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:29:30.396 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_2.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_2.txt
+2025-08-14 00:29:30.409 +03:00 [INF] Simulating device usage for 9 seconds
+2025-08-14 00:29:39.425 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:29:39.427 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:29:39.429 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_2.txt
+2025-08-14 00:29:39.430 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:29:53.686 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_3.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_3.txt
+2025-08-14 00:29:53.699 +03:00 [INF] Simulating device usage for 8 seconds
+2025-08-14 00:30:01.709 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:30:01.709 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:30:01.711 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_3.txt
+2025-08-14 00:30:01.712 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:30:14.953 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_4.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_4.txt
+2025-08-14 00:30:14.966 +03:00 [INF] Simulating device usage for 14 seconds
+2025-08-14 00:30:28.979 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:30:28.980 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:30:28.982 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_4.txt
+2025-08-14 00:30:28.983 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:30:29.087 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_5.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_5.txt
+2025-08-14 00:30:29.100 +03:00 [INF] Simulating device usage for 5 seconds
+2025-08-14 00:30:34.113 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:30:34.114 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:30:34.116 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_5.txt
+2025-08-14 00:30:34.117 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:30:45.377 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_6.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_6.txt
+2025-08-14 00:30:45.390 +03:00 [INF] Simulating device usage for 13 seconds
+2025-08-14 00:30:58.400 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:30:58.401 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:30:58.403 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_6.txt
+2025-08-14 00:30:58.404 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:31:16.795 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_7.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_7.txt
+2025-08-14 00:31:16.809 +03:00 [INF] Simulating device usage for 15 seconds
+2025-08-14 00:31:31.823 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:31:31.823 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:31:31.825 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_7.txt
+2025-08-14 00:31:31.827 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:31:37.059 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_8.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_8.txt
+2025-08-14 00:31:37.073 +03:00 [INF] Simulating device usage for 14 seconds
+2025-08-14 00:31:51.084 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:31:51.084 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:31:51.086 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_8.txt
+2025-08-14 00:31:51.087 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 00:32:00.357 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_9.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_9.txt
+2025-08-14 00:32:00.370 +03:00 [INF] Simulating device usage for 7 seconds
+2025-08-14 00:32:07.379 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:32:07.379 +03:00 [INF] Reversed 2 lines
+2025-08-14 00:32:07.381 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_9.txt
+2025-08-14 00:32:07.382 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 02:16:58.572 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/0_syllabus-2.pdf
+2025-08-14 02:16:58.586 +03:00 [INF] Simulating device usage for 8 seconds
+2025-08-14 02:17:06.603 +03:00 [INF] Read 158591 characters from input file
+2025-08-14 02:17:06.605 +03:00 [INF] Reversed 1185 lines
+2025-08-14 02:17:06.609 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/0_syllabus-2.pdf
+2025-08-14 02:17:06.610 +03:00 [INF] WorkerAppXYZ completed successfully
+2025-08-14 02:18:02.240 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf
+2025-08-14 02:18:02.253 +03:00 [INF] Simulating device usage for 5 seconds
+2025-08-14 02:21:37.824 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf
+2025-08-14 02:21:37.861 +03:00 [INF] Simulating device usage for 13 seconds
+2025-08-14 02:21:38.883 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf
+2025-08-14 02:21:38.897 +03:00 [INF] Simulating device usage for 8 seconds
+2025-08-14 02:21:39.922 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf
+2025-08-14 02:21:39.935 +03:00 [INF] Simulating device usage for 13 seconds
+2025-08-14 02:21:40.998 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf
+2025-08-14 02:21:41.010 +03:00 [INF] Simulating device usage for 13 seconds
+2025-08-14 02:21:57.059 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf
+2025-08-14 02:21:57.073 +03:00 [INF] Simulating device usage for 14 seconds
+2025-08-14 02:22:03.172 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf
+2025-08-14 02:22:03.186 +03:00 [INF] Simulating device usage for 14 seconds
+2025-08-14 02:22:19.241 +03:00 [INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf
+2025-08-14 02:22:19.253 +03:00 [INF] Simulating device usage for 14 seconds

@@ -1,0 +1,1365 @@
+2025-08-14 00:21:44.892 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 00:21:44.915 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 00:21:45.061 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 00:21:45.061 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 00:21:45.065 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 00:21:45.066 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 00:21:45.082 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 00:21:45.082 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 00:21:45.118 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 00:21:45.120 [INF] FileJobRouter is running.
+2025-08-14 00:21:45.120 [INF] Job processor started
+2025-08-14 00:21:45.120 [INF] Queue file not found, creating new queue
+2025-08-14 00:23:08.446 [INF] Added new job to queue: ffbccefd-25a0-4466-9dd9-c28c0f5314d3 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a1.txt
+2025-08-14 00:23:08.446 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a1.txt -> abc
+2025-08-14 00:23:08.962 [INF] Added new job to queue: 6e399236-3d75-41bc-be20-a536c7f29d39 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a2.txt
+2025-08-14 00:23:08.962 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a2.txt -> abc
+2025-08-14 00:23:09.469 [INF] Added new job to queue: a2dae4c5-b4f2-4278-b6c0-5dd2af89b458 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/x1.txt
+2025-08-14 00:23:09.469 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/x1.txt -> xyz
+2025-08-14 00:23:10.185 [INF] Processing job: ffbccefd-25a0-4466-9dd9-c28c0f5314d3 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a1.txt
+2025-08-14 00:23:10.191 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:23:10.199 [INF] Updated job in queue: ffbccefd-25a0-4466-9dd9-c28c0f5314d3 - Status: "Processing"
+2025-08-14 00:23:10.203 [INF] Created jobs directory for user kemalutkumutlu on 2025-08-14: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14
+2025-08-14 00:23:10.212 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/ffbccefd-25a0-4466-9dd9-c28c0f5314d3.json
+2025-08-14 00:23:10.216 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a1.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a1.txt"
+2025-08-14 00:23:24.485 [INF] Worker output: [00:23:10 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a1.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a1.txt
+[00:23:10 INF] Simulating device usage for 14 seconds
+[00:23:24 INF] Read 5 characters from input file
+[00:23:24 INF] Converted content to uppercase
+[00:23:24 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a1.txt
+[00:23:24 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:23:24.486 [INF] Job completed successfully: ffbccefd-25a0-4466-9dd9-c28c0f5314d3
+2025-08-14 00:23:24.489 [INF] Updated job status to Completed for job ffbccefd-25a0-4466-9dd9-c28c0f5314d3
+2025-08-14 00:23:24.490 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a1.txt
+2025-08-14 00:23:24.494 [INF] Updated job in queue: ffbccefd-25a0-4466-9dd9-c28c0f5314d3 - Status: "Completed"
+2025-08-14 00:23:24.495 [INF] Device lock released successfully
+2025-08-14 00:23:24.495 [INF] Processing job: 6e399236-3d75-41bc-be20-a536c7f29d39 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a2.txt
+2025-08-14 00:23:24.496 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:23:24.501 [INF] Updated job in queue: 6e399236-3d75-41bc-be20-a536c7f29d39 - Status: "Processing"
+2025-08-14 00:23:24.502 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/6e399236-3d75-41bc-be20-a536c7f29d39.json
+2025-08-14 00:23:24.502 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a2.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a2.txt"
+2025-08-14 00:23:39.641 [INF] Worker output: [00:23:24 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a2.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a2.txt
+[00:23:24 INF] Simulating device usage for 15 seconds
+[00:23:39 INF] Read 6 characters from input file
+[00:23:39 INF] Converted content to uppercase
+[00:23:39 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a2.txt
+[00:23:39 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:23:39.642 [INF] Job completed successfully: 6e399236-3d75-41bc-be20-a536c7f29d39
+2025-08-14 00:23:39.643 [INF] Updated job status to Completed for job 6e399236-3d75-41bc-be20-a536c7f29d39
+2025-08-14 00:23:39.643 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a2.txt
+2025-08-14 00:23:39.650 [INF] Updated job in queue: 6e399236-3d75-41bc-be20-a536c7f29d39 - Status: "Completed"
+2025-08-14 00:23:39.651 [INF] Device lock released successfully
+2025-08-14 00:23:39.651 [INF] Processing job: a2dae4c5-b4f2-4278-b6c0-5dd2af89b458 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/x1.txt
+2025-08-14 00:23:39.651 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:23:39.657 [INF] Updated job in queue: a2dae4c5-b4f2-4278-b6c0-5dd2af89b458 - Status: "Processing"
+2025-08-14 00:23:39.658 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/a2dae4c5-b4f2-4278-b6c0-5dd2af89b458.json
+2025-08-14 00:23:39.659 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/x1.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/x1.txt"
+2025-08-14 00:23:53.835 [INF] Worker output: [00:23:39 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/x1.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/x1.txt
+[00:23:39 INF] Simulating device usage for 14 seconds
+[00:23:53 INF] Read 2 characters from input file
+[00:23:53 INF] Reversed 2 lines
+[00:23:53 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/x1.txt
+[00:23:53 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:23:53.835 [INF] Job completed successfully: a2dae4c5-b4f2-4278-b6c0-5dd2af89b458
+2025-08-14 00:23:53.836 [INF] Updated job status to Completed for job a2dae4c5-b4f2-4278-b6c0-5dd2af89b458
+2025-08-14 00:23:53.837 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/x1.txt
+2025-08-14 00:23:53.844 [INF] Updated job in queue: a2dae4c5-b4f2-4278-b6c0-5dd2af89b458 - Status: "Completed"
+2025-08-14 00:23:53.844 [INF] Device lock released successfully
+2025-08-14 00:26:46.316 [INF] Added new job to queue: a8dd60e8-36f3-4058-adf0-e999781292d9 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_1.txt
+2025-08-14 00:26:46.316 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_1.txt -> abc
+2025-08-14 00:26:46.824 [INF] Added new job to queue: 1ecd02ce-ba90-42f9-bb90-957bff36c7cf - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_2.txt
+2025-08-14 00:26:46.824 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_2.txt -> abc
+2025-08-14 00:26:47.326 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_2.txt
+2025-08-14 00:26:47.834 [INF] Added new job to queue: f7b809b0-c8ac-4dc3-ab08-eebcbd3e3d27 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_3.txt
+2025-08-14 00:26:47.834 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_3.txt -> abc
+2025-08-14 00:26:48.336 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_3.txt
+2025-08-14 00:26:48.846 [INF] Added new job to queue: 4c75ba4d-d02d-4e18-a0c5-ba240556a986 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_4.txt
+2025-08-14 00:26:48.846 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_4.txt -> abc
+2025-08-14 00:26:48.900 [INF] Processing job: a8dd60e8-36f3-4058-adf0-e999781292d9 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_1.txt
+2025-08-14 00:26:48.902 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:26:48.906 [INF] Updated job in queue: a8dd60e8-36f3-4058-adf0-e999781292d9 - Status: "Processing"
+2025-08-14 00:26:48.907 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/a8dd60e8-36f3-4058-adf0-e999781292d9.json
+2025-08-14 00:26:48.907 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_1.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_1.txt"
+2025-08-14 00:26:49.355 [INF] Added new job to queue: 0bc45b3f-d001-4a76-9ff5-8f9c3777da51 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_5.txt
+2025-08-14 00:26:49.355 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_5.txt -> abc
+2025-08-14 00:26:49.862 [INF] Added new job to queue: ca718294-f8f6-484f-81d4-093c3f68e66f - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_1.txt
+2025-08-14 00:26:49.862 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_1.txt -> xyz
+2025-08-14 00:26:50.372 [INF] Added new job to queue: 706b007f-c0b2-4bd7-b353-4df2a2e28240 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_2.txt
+2025-08-14 00:26:50.372 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_2.txt -> xyz
+2025-08-14 00:26:50.873 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_2.txt
+2025-08-14 00:26:51.383 [INF] Added new job to queue: 1d82f033-6fc4-4a4c-b801-ffd7657c2a20 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_3.txt
+2025-08-14 00:26:51.383 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_3.txt -> xyz
+2025-08-14 00:26:51.891 [INF] Added new job to queue: a127a389-84ea-42e7-a778-408883081f7b - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_4.txt
+2025-08-14 00:26:51.891 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_4.txt -> xyz
+2025-08-14 00:26:52.393 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_4.txt
+2025-08-14 00:26:52.901 [INF] Added new job to queue: 764d73b2-cc91-442f-830b-97af9172d0d2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_5.txt
+2025-08-14 00:26:52.901 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_5.txt -> xyz
+2025-08-14 00:27:02.054 [INF] Worker output: [00:26:49 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_1.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_1.txt
+[00:26:49 INF] Simulating device usage for 13 seconds
+[00:27:02 INF] Read 8 characters from input file
+[00:27:02 INF] Converted content to uppercase
+[00:27:02 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_1.txt
+[00:27:02 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:27:02.054 [INF] Job completed successfully: a8dd60e8-36f3-4058-adf0-e999781292d9
+2025-08-14 00:27:02.055 [INF] Updated job status to Completed for job a8dd60e8-36f3-4058-adf0-e999781292d9
+2025-08-14 00:27:02.055 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_1.txt
+2025-08-14 00:27:02.060 [INF] Updated job in queue: a8dd60e8-36f3-4058-adf0-e999781292d9 - Status: "Completed"
+2025-08-14 00:27:02.060 [INF] Device lock released successfully
+2025-08-14 00:27:02.060 [INF] Processing job: 1ecd02ce-ba90-42f9-bb90-957bff36c7cf - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_2.txt
+2025-08-14 00:27:02.061 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:27:02.067 [INF] Updated job in queue: 1ecd02ce-ba90-42f9-bb90-957bff36c7cf - Status: "Processing"
+2025-08-14 00:27:02.067 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/1ecd02ce-ba90-42f9-bb90-957bff36c7cf.json
+2025-08-14 00:27:02.067 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_2.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_2.txt"
+2025-08-14 00:27:12.196 [INF] Worker output: [00:27:02 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_2.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_2.txt
+[00:27:02 INF] Simulating device usage for 10 seconds
+[00:27:12 INF] Read 8 characters from input file
+[00:27:12 INF] Converted content to uppercase
+[00:27:12 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_2.txt
+[00:27:12 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:27:12.197 [INF] Job completed successfully: 1ecd02ce-ba90-42f9-bb90-957bff36c7cf
+2025-08-14 00:27:12.198 [INF] Updated job status to Completed for job 1ecd02ce-ba90-42f9-bb90-957bff36c7cf
+2025-08-14 00:27:12.198 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_2.txt
+2025-08-14 00:27:12.206 [INF] Updated job in queue: 1ecd02ce-ba90-42f9-bb90-957bff36c7cf - Status: "Completed"
+2025-08-14 00:27:12.206 [INF] Device lock released successfully
+2025-08-14 00:27:12.206 [INF] Processing job: f7b809b0-c8ac-4dc3-ab08-eebcbd3e3d27 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_3.txt
+2025-08-14 00:27:12.207 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:27:12.213 [INF] Updated job in queue: f7b809b0-c8ac-4dc3-ab08-eebcbd3e3d27 - Status: "Processing"
+2025-08-14 00:27:12.213 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/f7b809b0-c8ac-4dc3-ab08-eebcbd3e3d27.json
+2025-08-14 00:27:12.213 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_3.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_3.txt"
+2025-08-14 00:27:22.358 [INF] Worker output: [00:27:12 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_3.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_3.txt
+[00:27:12 INF] Simulating device usage for 10 seconds
+[00:27:22 INF] Read 8 characters from input file
+[00:27:22 INF] Converted content to uppercase
+[00:27:22 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_3.txt
+[00:27:22 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:27:22.359 [INF] Job completed successfully: f7b809b0-c8ac-4dc3-ab08-eebcbd3e3d27
+2025-08-14 00:27:22.361 [INF] Updated job status to Completed for job f7b809b0-c8ac-4dc3-ab08-eebcbd3e3d27
+2025-08-14 00:27:22.361 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_3.txt
+2025-08-14 00:27:22.374 [INF] Updated job in queue: f7b809b0-c8ac-4dc3-ab08-eebcbd3e3d27 - Status: "Completed"
+2025-08-14 00:27:22.375 [INF] Device lock released successfully
+2025-08-14 00:27:22.376 [INF] Processing job: 4c75ba4d-d02d-4e18-a0c5-ba240556a986 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_4.txt
+2025-08-14 00:27:22.376 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:27:22.383 [INF] Updated job in queue: 4c75ba4d-d02d-4e18-a0c5-ba240556a986 - Status: "Processing"
+2025-08-14 00:27:22.384 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/4c75ba4d-d02d-4e18-a0c5-ba240556a986.json
+2025-08-14 00:27:22.384 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_4.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_4.txt"
+2025-08-14 00:27:29.524 [INF] Worker output: [00:27:22 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_4.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_4.txt
+[00:27:22 INF] Simulating device usage for 7 seconds
+[00:27:29 INF] Read 8 characters from input file
+[00:27:29 INF] Converted content to uppercase
+[00:27:29 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_4.txt
+[00:27:29 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:27:29.525 [INF] Job completed successfully: 4c75ba4d-d02d-4e18-a0c5-ba240556a986
+2025-08-14 00:27:29.525 [INF] Updated job status to Completed for job 4c75ba4d-d02d-4e18-a0c5-ba240556a986
+2025-08-14 00:27:29.525 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_4.txt
+2025-08-14 00:27:29.534 [INF] Updated job in queue: 4c75ba4d-d02d-4e18-a0c5-ba240556a986 - Status: "Completed"
+2025-08-14 00:27:29.534 [INF] Device lock released successfully
+2025-08-14 00:27:29.535 [INF] Processing job: 0bc45b3f-d001-4a76-9ff5-8f9c3777da51 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_5.txt
+2025-08-14 00:27:29.535 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:27:29.540 [INF] Updated job in queue: 0bc45b3f-d001-4a76-9ff5-8f9c3777da51 - Status: "Processing"
+2025-08-14 00:27:29.541 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/0bc45b3f-d001-4a76-9ff5-8f9c3777da51.json
+2025-08-14 00:27:29.541 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_5.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_5.txt"
+2025-08-14 00:27:41.671 [INF] Worker output: [00:27:29 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_5.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_5.txt
+[00:27:29 INF] Simulating device usage for 12 seconds
+[00:27:41 INF] Read 8 characters from input file
+[00:27:41 INF] Converted content to uppercase
+[00:27:41 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_5.txt
+[00:27:41 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:27:41.671 [INF] Job completed successfully: 0bc45b3f-d001-4a76-9ff5-8f9c3777da51
+2025-08-14 00:27:41.672 [INF] Updated job status to Completed for job 0bc45b3f-d001-4a76-9ff5-8f9c3777da51
+2025-08-14 00:27:41.672 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_5.txt
+2025-08-14 00:27:41.678 [INF] Updated job in queue: 0bc45b3f-d001-4a76-9ff5-8f9c3777da51 - Status: "Completed"
+2025-08-14 00:27:41.678 [INF] Device lock released successfully
+2025-08-14 00:27:41.678 [INF] Processing job: ca718294-f8f6-484f-81d4-093c3f68e66f - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_1.txt
+2025-08-14 00:27:41.679 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:27:41.684 [INF] Updated job in queue: ca718294-f8f6-484f-81d4-093c3f68e66f - Status: "Processing"
+2025-08-14 00:27:41.684 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/ca718294-f8f6-484f-81d4-093c3f68e66f.json
+2025-08-14 00:27:41.684 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_1.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_1.txt"
+2025-08-14 00:27:55.828 [INF] Worker output: [00:27:41 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_1.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_1.txt
+[00:27:41 INF] Simulating device usage for 14 seconds
+[00:27:55 INF] Read 8 characters from input file
+[00:27:55 INF] Reversed 2 lines
+[00:27:55 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_1.txt
+[00:27:55 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:27:55.828 [INF] Job completed successfully: ca718294-f8f6-484f-81d4-093c3f68e66f
+2025-08-14 00:27:55.830 [INF] Updated job status to Completed for job ca718294-f8f6-484f-81d4-093c3f68e66f
+2025-08-14 00:27:55.830 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_1.txt
+2025-08-14 00:27:55.834 [INF] Updated job in queue: ca718294-f8f6-484f-81d4-093c3f68e66f - Status: "Completed"
+2025-08-14 00:27:55.835 [INF] Device lock released successfully
+2025-08-14 00:27:55.842 [INF] Processing job: 706b007f-c0b2-4bd7-b353-4df2a2e28240 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_2.txt
+2025-08-14 00:27:55.842 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:27:55.850 [INF] Updated job in queue: 706b007f-c0b2-4bd7-b353-4df2a2e28240 - Status: "Processing"
+2025-08-14 00:27:55.851 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/706b007f-c0b2-4bd7-b353-4df2a2e28240.json
+2025-08-14 00:27:55.851 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_2.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_2.txt"
+2025-08-14 00:28:10.999 [INF] Worker output: [00:27:55 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_2.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_2.txt
+[00:27:55 INF] Simulating device usage for 15 seconds
+[00:28:10 INF] Read 8 characters from input file
+[00:28:10 INF] Reversed 2 lines
+[00:28:10 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_2.txt
+[00:28:10 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:28:11.000 [INF] Job completed successfully: 706b007f-c0b2-4bd7-b353-4df2a2e28240
+2025-08-14 00:28:11.000 [INF] Updated job status to Completed for job 706b007f-c0b2-4bd7-b353-4df2a2e28240
+2025-08-14 00:28:11.000 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_2.txt
+2025-08-14 00:28:11.007 [INF] Updated job in queue: 706b007f-c0b2-4bd7-b353-4df2a2e28240 - Status: "Completed"
+2025-08-14 00:28:11.007 [INF] Device lock released successfully
+2025-08-14 00:28:11.007 [INF] Processing job: 1d82f033-6fc4-4a4c-b801-ffd7657c2a20 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_3.txt
+2025-08-14 00:28:11.008 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:28:11.014 [INF] Updated job in queue: 1d82f033-6fc4-4a4c-b801-ffd7657c2a20 - Status: "Processing"
+2025-08-14 00:28:11.014 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/1d82f033-6fc4-4a4c-b801-ffd7657c2a20.json
+2025-08-14 00:28:11.015 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_3.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_3.txt"
+2025-08-14 00:28:17.125 [INF] Worker output: [00:28:11 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_3.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_3.txt
+[00:28:11 INF] Simulating device usage for 6 seconds
+[00:28:17 INF] Read 8 characters from input file
+[00:28:17 INF] Reversed 2 lines
+[00:28:17 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_3.txt
+[00:28:17 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:28:17.126 [INF] Job completed successfully: 1d82f033-6fc4-4a4c-b801-ffd7657c2a20
+2025-08-14 00:28:17.127 [INF] Updated job status to Completed for job 1d82f033-6fc4-4a4c-b801-ffd7657c2a20
+2025-08-14 00:28:17.127 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_3.txt
+2025-08-14 00:28:17.132 [INF] Updated job in queue: 1d82f033-6fc4-4a4c-b801-ffd7657c2a20 - Status: "Completed"
+2025-08-14 00:28:17.132 [INF] Device lock released successfully
+2025-08-14 00:28:17.132 [INF] Processing job: a127a389-84ea-42e7-a778-408883081f7b - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_4.txt
+2025-08-14 00:28:17.132 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:28:17.138 [INF] Updated job in queue: a127a389-84ea-42e7-a778-408883081f7b - Status: "Processing"
+2025-08-14 00:28:17.138 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/a127a389-84ea-42e7-a778-408883081f7b.json
+2025-08-14 00:28:17.138 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_4.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_4.txt"
+2025-08-14 00:28:28.263 [INF] Worker output: [00:28:17 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_4.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_4.txt
+[00:28:17 INF] Simulating device usage for 11 seconds
+[00:28:28 INF] Read 8 characters from input file
+[00:28:28 INF] Reversed 2 lines
+[00:28:28 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_4.txt
+[00:28:28 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:28:28.264 [INF] Job completed successfully: a127a389-84ea-42e7-a778-408883081f7b
+2025-08-14 00:28:28.264 [INF] Updated job status to Completed for job a127a389-84ea-42e7-a778-408883081f7b
+2025-08-14 00:28:28.264 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_4.txt
+2025-08-14 00:28:28.272 [INF] Updated job in queue: a127a389-84ea-42e7-a778-408883081f7b - Status: "Completed"
+2025-08-14 00:28:28.272 [INF] Device lock released successfully
+2025-08-14 00:28:28.272 [INF] Processing job: 764d73b2-cc91-442f-830b-97af9172d0d2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_5.txt
+2025-08-14 00:28:28.272 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:28:28.278 [INF] Updated job in queue: 764d73b2-cc91-442f-830b-97af9172d0d2 - Status: "Processing"
+2025-08-14 00:28:28.278 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/764d73b2-cc91-442f-830b-97af9172d0d2.json
+2025-08-14 00:28:28.278 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_5.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_5.txt"
+2025-08-14 00:28:29.017 [INF] Added new job to queue: d9013b4c-d10f-4d0d-af9c-9cbb7c94cb1f - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_1.txt
+2025-08-14 00:28:29.017 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_1.txt -> xyz
+2025-08-14 00:28:29.524 [INF] Added new job to queue: 6892377e-4d05-4e0a-be45-2ae8d5c523a6 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_1.txt
+2025-08-14 00:28:29.524 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_1.txt -> abc
+2025-08-14 00:28:30.026 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_1.txt
+2025-08-14 00:28:30.528 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_1.txt
+2025-08-14 00:28:31.034 [INF] Added new job to queue: 85dd4cdd-77fa-4c3d-8044-8358ef74014a - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_10.txt
+2025-08-14 00:28:31.034 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_10.txt -> abc
+2025-08-14 00:28:31.544 [INF] Added new job to queue: 2249d3d5-7f39-4dea-bd41-62fcc205dcb1 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_10.txt
+2025-08-14 00:28:31.544 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_10.txt -> xyz
+2025-08-14 00:28:32.046 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_10.txt
+2025-08-14 00:28:32.548 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_10.txt
+2025-08-14 00:28:33.058 [INF] Added new job to queue: ac8b10c3-dfe2-417d-8ca7-416d9c93142b - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_2.txt
+2025-08-14 00:28:33.058 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_2.txt -> abc
+2025-08-14 00:28:33.567 [INF] Added new job to queue: 36d7109c-e6c1-4507-aee7-38e5b8e60c1d - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_2.txt
+2025-08-14 00:28:33.567 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_2.txt -> xyz
+2025-08-14 00:28:34.070 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_2.txt
+2025-08-14 00:28:34.572 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_2.txt
+2025-08-14 00:28:35.073 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_2.txt
+2025-08-14 00:28:35.582 [INF] Added new job to queue: 10e46b30-4bf3-43eb-8b1f-29a1aca8d862 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_3.txt
+2025-08-14 00:28:35.582 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_3.txt -> abc
+2025-08-14 00:28:36.090 [INF] Added new job to queue: 64683302-b782-49d5-8523-af07124d45ca - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_3.txt
+2025-08-14 00:28:36.090 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_3.txt -> xyz
+2025-08-14 00:28:36.592 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_3.txt
+2025-08-14 00:28:37.094 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_3.txt
+2025-08-14 00:28:37.602 [INF] Added new job to queue: a9c4075b-be24-4d55-9bdf-16cd00614d84 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_4.txt
+2025-08-14 00:28:37.602 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_4.txt -> abc
+2025-08-14 00:28:38.112 [INF] Added new job to queue: ef4f961e-aa41-45d1-8931-b55a7b0a460e - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_4.txt
+2025-08-14 00:28:38.112 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_4.txt -> xyz
+2025-08-14 00:28:38.616 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_4.txt
+2025-08-14 00:28:39.121 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_4.txt
+2025-08-14 00:28:39.633 [INF] Added new job to queue: a787c227-5321-46bf-9fb9-546f2875dd68 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_5.txt
+2025-08-14 00:28:39.633 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_5.txt -> xyz
+2025-08-14 00:28:40.143 [INF] Added new job to queue: 0390f29a-3348-464b-b0f6-7c9d863cf14a - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_5.txt
+2025-08-14 00:28:40.143 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_5.txt -> abc
+2025-08-14 00:28:40.651 [INF] Added new job to queue: d45d2c26-15aa-46a1-9f37-2948b624b94c - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_6.txt
+2025-08-14 00:28:40.651 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_6.txt -> xyz
+2025-08-14 00:28:41.161 [INF] Added new job to queue: 594178e4-c735-4289-9ca3-c0986940de3d - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_6.txt
+2025-08-14 00:28:41.161 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_6.txt -> abc
+2025-08-14 00:28:41.670 [INF] Added new job to queue: 022bc839-387e-4f10-8abc-c8d13a95d618 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_7.txt
+2025-08-14 00:28:41.670 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_7.txt -> abc
+2025-08-14 00:28:42.179 [INF] Added new job to queue: 7357fd1d-2efc-4364-9c9f-84441b267cb3 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_7.txt
+2025-08-14 00:28:42.179 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_7.txt -> xyz
+2025-08-14 00:28:42.689 [INF] Added new job to queue: 6ad1ce14-ca39-49f5-b5f2-8374c2393dd2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_8.txt
+2025-08-14 00:28:42.689 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_8.txt -> abc
+2025-08-14 00:28:43.200 [INF] Added new job to queue: b752128f-ce14-497b-a580-d0cd8cff4872 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_8.txt
+2025-08-14 00:28:43.200 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_8.txt -> xyz
+2025-08-14 00:28:43.392 [INF] Worker output: [00:28:28 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_5.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_5.txt
+[00:28:28 INF] Simulating device usage for 15 seconds
+[00:28:43 INF] Read 8 characters from input file
+[00:28:43 INF] Reversed 2 lines
+[00:28:43 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/b_5.txt
+[00:28:43 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:28:43.392 [INF] Job completed successfully: 764d73b2-cc91-442f-830b-97af9172d0d2
+2025-08-14 00:28:43.392 [INF] Updated job status to Completed for job 764d73b2-cc91-442f-830b-97af9172d0d2
+2025-08-14 00:28:43.393 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/b_5.txt
+2025-08-14 00:28:43.397 [INF] Updated job in queue: 764d73b2-cc91-442f-830b-97af9172d0d2 - Status: "Completed"
+2025-08-14 00:28:43.398 [INF] Device lock released successfully
+2025-08-14 00:28:43.398 [INF] Processing job: d9013b4c-d10f-4d0d-af9c-9cbb7c94cb1f - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_1.txt
+2025-08-14 00:28:43.399 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:28:43.402 [INF] Updated job in queue: d9013b4c-d10f-4d0d-af9c-9cbb7c94cb1f - Status: "Processing"
+2025-08-14 00:28:43.402 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/d9013b4c-d10f-4d0d-af9c-9cbb7c94cb1f.json
+2025-08-14 00:28:43.403 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_1.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_1.txt"
+2025-08-14 00:28:43.712 [INF] Added new job to queue: 28b9e66e-1722-49f8-882b-fdd6b68e5286 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_9.txt
+2025-08-14 00:28:43.712 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_9.txt -> abc
+2025-08-14 00:28:44.220 [INF] Added new job to queue: 608fa88f-0538-44d0-ad44-ca7475199ba2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_9.txt
+2025-08-14 00:28:44.220 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_9.txt -> xyz
+2025-08-14 00:28:48.542 [INF] Worker output: [00:28:43 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_1.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_1.txt
+[00:28:43 INF] Simulating device usage for 5 seconds
+[00:28:48 INF] Read 19 characters from input file
+[00:28:48 INF] Reversed 2 lines
+[00:28:48 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_1.txt
+[00:28:48 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:28:48.542 [INF] Job completed successfully: d9013b4c-d10f-4d0d-af9c-9cbb7c94cb1f
+2025-08-14 00:28:48.543 [INF] Updated job status to Completed for job d9013b4c-d10f-4d0d-af9c-9cbb7c94cb1f
+2025-08-14 00:28:48.543 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_1.txt
+2025-08-14 00:28:48.555 [INF] Updated job in queue: d9013b4c-d10f-4d0d-af9c-9cbb7c94cb1f - Status: "Completed"
+2025-08-14 00:28:48.556 [INF] Device lock released successfully
+2025-08-14 00:28:48.556 [INF] Processing job: 6892377e-4d05-4e0a-be45-2ae8d5c523a6 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_1.txt
+2025-08-14 00:28:48.556 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:28:48.561 [INF] Updated job in queue: 6892377e-4d05-4e0a-be45-2ae8d5c523a6 - Status: "Processing"
+2025-08-14 00:28:48.562 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/6892377e-4d05-4e0a-be45-2ae8d5c523a6.json
+2025-08-14 00:28:48.562 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_1.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_1.txt"
+2025-08-14 00:28:54.701 [INF] Worker output: [00:28:48 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_1.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_1.txt
+[00:28:48 INF] Simulating device usage for 6 seconds
+[00:28:54 INF] Read 19 characters from input file
+[00:28:54 INF] Converted content to uppercase
+[00:28:54 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_1.txt
+[00:28:54 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:28:54.702 [INF] Job completed successfully: 6892377e-4d05-4e0a-be45-2ae8d5c523a6
+2025-08-14 00:28:54.703 [INF] Updated job status to Completed for job 6892377e-4d05-4e0a-be45-2ae8d5c523a6
+2025-08-14 00:28:54.703 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_1.txt
+2025-08-14 00:28:54.708 [INF] Updated job in queue: 6892377e-4d05-4e0a-be45-2ae8d5c523a6 - Status: "Completed"
+2025-08-14 00:28:54.708 [INF] Device lock released successfully
+2025-08-14 00:28:54.709 [INF] Processing job: 85dd4cdd-77fa-4c3d-8044-8358ef74014a - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_10.txt
+2025-08-14 00:28:54.709 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:28:54.714 [INF] Updated job in queue: 85dd4cdd-77fa-4c3d-8044-8358ef74014a - Status: "Processing"
+2025-08-14 00:28:54.715 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/85dd4cdd-77fa-4c3d-8044-8358ef74014a.json
+2025-08-14 00:28:54.715 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_10.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_10.txt"
+2025-08-14 00:29:09.961 [INF] Worker output: [00:28:54 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_10.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_10.txt
+[00:28:54 INF] Simulating device usage for 15 seconds
+[00:29:09 INF] Read 20 characters from input file
+[00:29:09 INF] Converted content to uppercase
+[00:29:09 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_10.txt
+[00:29:09 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:29:09.962 [INF] Job completed successfully: 85dd4cdd-77fa-4c3d-8044-8358ef74014a
+2025-08-14 00:29:09.963 [INF] Updated job status to Completed for job 85dd4cdd-77fa-4c3d-8044-8358ef74014a
+2025-08-14 00:29:09.963 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_10.txt
+2025-08-14 00:29:09.977 [INF] Updated job in queue: 85dd4cdd-77fa-4c3d-8044-8358ef74014a - Status: "Completed"
+2025-08-14 00:29:09.977 [INF] Device lock released successfully
+2025-08-14 00:29:09.978 [INF] Processing job: 2249d3d5-7f39-4dea-bd41-62fcc205dcb1 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_10.txt
+2025-08-14 00:29:09.978 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:29:09.985 [INF] Updated job in queue: 2249d3d5-7f39-4dea-bd41-62fcc205dcb1 - Status: "Processing"
+2025-08-14 00:29:09.985 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/2249d3d5-7f39-4dea-bd41-62fcc205dcb1.json
+2025-08-14 00:29:09.985 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_10.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_10.txt"
+2025-08-14 00:29:17.151 [INF] Worker output: [00:29:10 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_10.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_10.txt
+[00:29:10 INF] Simulating device usage for 7 seconds
+[00:29:17 INF] Read 20 characters from input file
+[00:29:17 INF] Reversed 2 lines
+[00:29:17 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_10.txt
+[00:29:17 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:29:17.151 [INF] Job completed successfully: 2249d3d5-7f39-4dea-bd41-62fcc205dcb1
+2025-08-14 00:29:17.152 [INF] Updated job status to Completed for job 2249d3d5-7f39-4dea-bd41-62fcc205dcb1
+2025-08-14 00:29:17.152 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_10.txt
+2025-08-14 00:29:17.160 [INF] Updated job in queue: 2249d3d5-7f39-4dea-bd41-62fcc205dcb1 - Status: "Completed"
+2025-08-14 00:29:17.161 [INF] Device lock released successfully
+2025-08-14 00:29:17.161 [INF] Processing job: ac8b10c3-dfe2-417d-8ca7-416d9c93142b - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_2.txt
+2025-08-14 00:29:17.162 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:29:17.168 [INF] Updated job in queue: ac8b10c3-dfe2-417d-8ca7-416d9c93142b - Status: "Processing"
+2025-08-14 00:29:17.168 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/ac8b10c3-dfe2-417d-8ca7-416d9c93142b.json
+2025-08-14 00:29:17.168 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_2.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_2.txt"
+2025-08-14 00:29:30.295 [INF] Worker output: [00:29:17 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_2.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_2.txt
+[00:29:17 INF] Simulating device usage for 13 seconds
+[00:29:30 INF] Read 19 characters from input file
+[00:29:30 INF] Converted content to uppercase
+[00:29:30 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_2.txt
+[00:29:30 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:29:30.295 [INF] Job completed successfully: ac8b10c3-dfe2-417d-8ca7-416d9c93142b
+2025-08-14 00:29:30.296 [INF] Updated job status to Completed for job ac8b10c3-dfe2-417d-8ca7-416d9c93142b
+2025-08-14 00:29:30.296 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_2.txt
+2025-08-14 00:29:30.302 [INF] Updated job in queue: ac8b10c3-dfe2-417d-8ca7-416d9c93142b - Status: "Completed"
+2025-08-14 00:29:30.302 [INF] Device lock released successfully
+2025-08-14 00:29:30.303 [INF] Processing job: 36d7109c-e6c1-4507-aee7-38e5b8e60c1d - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_2.txt
+2025-08-14 00:29:30.303 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:29:30.308 [INF] Updated job in queue: 36d7109c-e6c1-4507-aee7-38e5b8e60c1d - Status: "Processing"
+2025-08-14 00:29:30.308 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/36d7109c-e6c1-4507-aee7-38e5b8e60c1d.json
+2025-08-14 00:29:30.308 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_2.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_2.txt"
+2025-08-14 00:29:39.435 [INF] Worker output: [00:29:30 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_2.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_2.txt
+[00:29:30 INF] Simulating device usage for 9 seconds
+[00:29:39 INF] Read 19 characters from input file
+[00:29:39 INF] Reversed 2 lines
+[00:29:39 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_2.txt
+[00:29:39 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:29:39.435 [INF] Job completed successfully: 36d7109c-e6c1-4507-aee7-38e5b8e60c1d
+2025-08-14 00:29:39.436 [INF] Updated job status to Completed for job 36d7109c-e6c1-4507-aee7-38e5b8e60c1d
+2025-08-14 00:29:39.436 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_2.txt
+2025-08-14 00:29:39.444 [INF] Updated job in queue: 36d7109c-e6c1-4507-aee7-38e5b8e60c1d - Status: "Completed"
+2025-08-14 00:29:39.444 [INF] Device lock released successfully
+2025-08-14 00:29:39.445 [INF] Processing job: 10e46b30-4bf3-43eb-8b1f-29a1aca8d862 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_3.txt
+2025-08-14 00:29:39.445 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:29:39.451 [INF] Updated job in queue: 10e46b30-4bf3-43eb-8b1f-29a1aca8d862 - Status: "Processing"
+2025-08-14 00:29:39.451 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/10e46b30-4bf3-43eb-8b1f-29a1aca8d862.json
+2025-08-14 00:29:39.451 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_3.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_3.txt"
+2025-08-14 00:29:53.595 [INF] Worker output: [00:29:39 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_3.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_3.txt
+[00:29:39 INF] Simulating device usage for 14 seconds
+[00:29:53 INF] Read 19 characters from input file
+[00:29:53 INF] Converted content to uppercase
+[00:29:53 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_3.txt
+[00:29:53 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:29:53.596 [INF] Job completed successfully: 10e46b30-4bf3-43eb-8b1f-29a1aca8d862
+2025-08-14 00:29:53.596 [INF] Updated job status to Completed for job 10e46b30-4bf3-43eb-8b1f-29a1aca8d862
+2025-08-14 00:29:53.596 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_3.txt
+2025-08-14 00:29:53.603 [INF] Updated job in queue: 10e46b30-4bf3-43eb-8b1f-29a1aca8d862 - Status: "Completed"
+2025-08-14 00:29:53.603 [INF] Device lock released successfully
+2025-08-14 00:29:53.603 [INF] Processing job: 64683302-b782-49d5-8523-af07124d45ca - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_3.txt
+2025-08-14 00:29:53.604 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:29:53.608 [INF] Updated job in queue: 64683302-b782-49d5-8523-af07124d45ca - Status: "Processing"
+2025-08-14 00:29:53.608 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/64683302-b782-49d5-8523-af07124d45ca.json
+2025-08-14 00:29:53.608 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_3.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_3.txt"
+2025-08-14 00:30:01.714 [INF] Worker output: [00:29:53 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_3.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_3.txt
+[00:29:53 INF] Simulating device usage for 8 seconds
+[00:30:01 INF] Read 19 characters from input file
+[00:30:01 INF] Reversed 2 lines
+[00:30:01 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_3.txt
+[00:30:01 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:30:01.714 [INF] Job completed successfully: 64683302-b782-49d5-8523-af07124d45ca
+2025-08-14 00:30:01.714 [INF] Updated job status to Completed for job 64683302-b782-49d5-8523-af07124d45ca
+2025-08-14 00:30:01.714 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_3.txt
+2025-08-14 00:30:01.719 [INF] Updated job in queue: 64683302-b782-49d5-8523-af07124d45ca - Status: "Completed"
+2025-08-14 00:30:01.719 [INF] Device lock released successfully
+2025-08-14 00:30:01.719 [INF] Processing job: a9c4075b-be24-4d55-9bdf-16cd00614d84 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_4.txt
+2025-08-14 00:30:01.719 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:30:01.725 [INF] Updated job in queue: a9c4075b-be24-4d55-9bdf-16cd00614d84 - Status: "Processing"
+2025-08-14 00:30:01.725 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/a9c4075b-be24-4d55-9bdf-16cd00614d84.json
+2025-08-14 00:30:01.725 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_4.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_4.txt"
+2025-08-14 00:30:14.859 [INF] Worker output: [00:30:01 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_4.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_4.txt
+[00:30:01 INF] Simulating device usage for 13 seconds
+[00:30:14 INF] Read 19 characters from input file
+[00:30:14 INF] Converted content to uppercase
+[00:30:14 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_4.txt
+[00:30:14 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:30:14.860 [INF] Job completed successfully: a9c4075b-be24-4d55-9bdf-16cd00614d84
+2025-08-14 00:30:14.860 [INF] Updated job status to Completed for job a9c4075b-be24-4d55-9bdf-16cd00614d84
+2025-08-14 00:30:14.860 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_4.txt
+2025-08-14 00:30:14.865 [INF] Updated job in queue: a9c4075b-be24-4d55-9bdf-16cd00614d84 - Status: "Completed"
+2025-08-14 00:30:14.867 [INF] Device lock released successfully
+2025-08-14 00:30:14.867 [INF] Processing job: ef4f961e-aa41-45d1-8931-b55a7b0a460e - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_4.txt
+2025-08-14 00:30:14.867 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:30:14.872 [INF] Updated job in queue: ef4f961e-aa41-45d1-8931-b55a7b0a460e - Status: "Processing"
+2025-08-14 00:30:14.872 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/ef4f961e-aa41-45d1-8931-b55a7b0a460e.json
+2025-08-14 00:30:14.872 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_4.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_4.txt"
+2025-08-14 00:30:28.986 [INF] Worker output: [00:30:14 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_4.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_4.txt
+[00:30:14 INF] Simulating device usage for 14 seconds
+[00:30:28 INF] Read 19 characters from input file
+[00:30:28 INF] Reversed 2 lines
+[00:30:28 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_4.txt
+[00:30:28 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:30:28.987 [INF] Job completed successfully: ef4f961e-aa41-45d1-8931-b55a7b0a460e
+2025-08-14 00:30:28.987 [INF] Updated job status to Completed for job ef4f961e-aa41-45d1-8931-b55a7b0a460e
+2025-08-14 00:30:28.987 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_4.txt
+2025-08-14 00:30:28.994 [INF] Updated job in queue: ef4f961e-aa41-45d1-8931-b55a7b0a460e - Status: "Completed"
+2025-08-14 00:30:28.995 [INF] Device lock released successfully
+2025-08-14 00:30:28.998 [INF] Processing job: a787c227-5321-46bf-9fb9-546f2875dd68 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_5.txt
+2025-08-14 00:30:28.999 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:30:29.007 [INF] Updated job in queue: a787c227-5321-46bf-9fb9-546f2875dd68 - Status: "Processing"
+2025-08-14 00:30:29.009 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/a787c227-5321-46bf-9fb9-546f2875dd68.json
+2025-08-14 00:30:29.009 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_5.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_5.txt"
+2025-08-14 00:30:34.121 [INF] Worker output: [00:30:29 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_5.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_5.txt
+[00:30:29 INF] Simulating device usage for 5 seconds
+[00:30:34 INF] Read 19 characters from input file
+[00:30:34 INF] Reversed 2 lines
+[00:30:34 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_5.txt
+[00:30:34 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:30:34.121 [INF] Job completed successfully: a787c227-5321-46bf-9fb9-546f2875dd68
+2025-08-14 00:30:34.121 [INF] Updated job status to Completed for job a787c227-5321-46bf-9fb9-546f2875dd68
+2025-08-14 00:30:34.121 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_5.txt
+2025-08-14 00:30:34.128 [INF] Updated job in queue: a787c227-5321-46bf-9fb9-546f2875dd68 - Status: "Completed"
+2025-08-14 00:30:34.129 [INF] Device lock released successfully
+2025-08-14 00:30:34.129 [INF] Processing job: 0390f29a-3348-464b-b0f6-7c9d863cf14a - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_5.txt
+2025-08-14 00:30:34.129 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:30:34.135 [INF] Updated job in queue: 0390f29a-3348-464b-b0f6-7c9d863cf14a - Status: "Processing"
+2025-08-14 00:30:34.136 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/0390f29a-3348-464b-b0f6-7c9d863cf14a.json
+2025-08-14 00:30:34.136 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_5.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_5.txt"
+2025-08-14 00:30:45.280 [INF] Worker output: [00:30:34 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_5.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_5.txt
+[00:30:34 INF] Simulating device usage for 11 seconds
+[00:30:45 INF] Read 19 characters from input file
+[00:30:45 INF] Converted content to uppercase
+[00:30:45 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_5.txt
+[00:30:45 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:30:45.280 [INF] Job completed successfully: 0390f29a-3348-464b-b0f6-7c9d863cf14a
+2025-08-14 00:30:45.280 [INF] Updated job status to Completed for job 0390f29a-3348-464b-b0f6-7c9d863cf14a
+2025-08-14 00:30:45.281 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_5.txt
+2025-08-14 00:30:45.287 [INF] Updated job in queue: 0390f29a-3348-464b-b0f6-7c9d863cf14a - Status: "Completed"
+2025-08-14 00:30:45.288 [INF] Device lock released successfully
+2025-08-14 00:30:45.288 [INF] Processing job: d45d2c26-15aa-46a1-9f37-2948b624b94c - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_6.txt
+2025-08-14 00:30:45.288 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:30:45.297 [INF] Updated job in queue: d45d2c26-15aa-46a1-9f37-2948b624b94c - Status: "Processing"
+2025-08-14 00:30:45.297 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/d45d2c26-15aa-46a1-9f37-2948b624b94c.json
+2025-08-14 00:30:45.297 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_6.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_6.txt"
+2025-08-14 00:30:58.408 [INF] Worker output: [00:30:45 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_6.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_6.txt
+[00:30:45 INF] Simulating device usage for 13 seconds
+[00:30:58 INF] Read 19 characters from input file
+[00:30:58 INF] Reversed 2 lines
+[00:30:58 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_6.txt
+[00:30:58 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:30:58.409 [INF] Job completed successfully: d45d2c26-15aa-46a1-9f37-2948b624b94c
+2025-08-14 00:30:58.409 [INF] Updated job status to Completed for job d45d2c26-15aa-46a1-9f37-2948b624b94c
+2025-08-14 00:30:58.409 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_6.txt
+2025-08-14 00:30:58.416 [INF] Updated job in queue: d45d2c26-15aa-46a1-9f37-2948b624b94c - Status: "Completed"
+2025-08-14 00:30:58.416 [INF] Device lock released successfully
+2025-08-14 00:30:58.416 [INF] Processing job: 594178e4-c735-4289-9ca3-c0986940de3d - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_6.txt
+2025-08-14 00:30:58.417 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:30:58.423 [INF] Updated job in queue: 594178e4-c735-4289-9ca3-c0986940de3d - Status: "Processing"
+2025-08-14 00:30:58.423 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/594178e4-c735-4289-9ca3-c0986940de3d.json
+2025-08-14 00:30:58.423 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_6.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_6.txt"
+2025-08-14 00:31:08.574 [INF] Worker output: [00:30:58 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_6.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_6.txt
+[00:30:58 INF] Simulating device usage for 10 seconds
+[00:31:08 INF] Read 19 characters from input file
+[00:31:08 INF] Converted content to uppercase
+[00:31:08 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_6.txt
+[00:31:08 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:31:08.574 [INF] Job completed successfully: 594178e4-c735-4289-9ca3-c0986940de3d
+2025-08-14 00:31:08.574 [INF] Updated job status to Completed for job 594178e4-c735-4289-9ca3-c0986940de3d
+2025-08-14 00:31:08.575 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_6.txt
+2025-08-14 00:31:08.582 [INF] Updated job in queue: 594178e4-c735-4289-9ca3-c0986940de3d - Status: "Completed"
+2025-08-14 00:31:08.582 [INF] Device lock released successfully
+2025-08-14 00:31:08.582 [INF] Processing job: 022bc839-387e-4f10-8abc-c8d13a95d618 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_7.txt
+2025-08-14 00:31:08.582 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:31:08.587 [INF] Updated job in queue: 022bc839-387e-4f10-8abc-c8d13a95d618 - Status: "Processing"
+2025-08-14 00:31:08.588 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/022bc839-387e-4f10-8abc-c8d13a95d618.json
+2025-08-14 00:31:08.588 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_7.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_7.txt"
+2025-08-14 00:31:16.708 [INF] Worker output: [00:31:08 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_7.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_7.txt
+[00:31:08 INF] Simulating device usage for 8 seconds
+[00:31:16 INF] Read 19 characters from input file
+[00:31:16 INF] Converted content to uppercase
+[00:31:16 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_7.txt
+[00:31:16 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:31:16.708 [INF] Job completed successfully: 022bc839-387e-4f10-8abc-c8d13a95d618
+2025-08-14 00:31:16.709 [INF] Updated job status to Completed for job 022bc839-387e-4f10-8abc-c8d13a95d618
+2025-08-14 00:31:16.709 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_7.txt
+2025-08-14 00:31:16.716 [INF] Updated job in queue: 022bc839-387e-4f10-8abc-c8d13a95d618 - Status: "Completed"
+2025-08-14 00:31:16.717 [INF] Device lock released successfully
+2025-08-14 00:31:16.717 [INF] Processing job: 7357fd1d-2efc-4364-9c9f-84441b267cb3 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_7.txt
+2025-08-14 00:31:16.717 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:31:16.723 [INF] Updated job in queue: 7357fd1d-2efc-4364-9c9f-84441b267cb3 - Status: "Processing"
+2025-08-14 00:31:16.723 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/7357fd1d-2efc-4364-9c9f-84441b267cb3.json
+2025-08-14 00:31:16.723 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_7.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_7.txt"
+2025-08-14 00:31:31.831 [INF] Worker output: [00:31:16 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_7.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_7.txt
+[00:31:16 INF] Simulating device usage for 15 seconds
+[00:31:31 INF] Read 19 characters from input file
+[00:31:31 INF] Reversed 2 lines
+[00:31:31 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_7.txt
+[00:31:31 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:31:31.831 [INF] Job completed successfully: 7357fd1d-2efc-4364-9c9f-84441b267cb3
+2025-08-14 00:31:31.831 [INF] Updated job status to Completed for job 7357fd1d-2efc-4364-9c9f-84441b267cb3
+2025-08-14 00:31:31.832 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_7.txt
+2025-08-14 00:31:31.839 [INF] Updated job in queue: 7357fd1d-2efc-4364-9c9f-84441b267cb3 - Status: "Completed"
+2025-08-14 00:31:31.839 [INF] Device lock released successfully
+2025-08-14 00:31:31.840 [INF] Processing job: 6ad1ce14-ca39-49f5-b5f2-8374c2393dd2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_8.txt
+2025-08-14 00:31:31.840 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:31:31.846 [INF] Updated job in queue: 6ad1ce14-ca39-49f5-b5f2-8374c2393dd2 - Status: "Processing"
+2025-08-14 00:31:31.846 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/6ad1ce14-ca39-49f5-b5f2-8374c2393dd2.json
+2025-08-14 00:31:31.846 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_8.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_8.txt"
+2025-08-14 00:31:36.978 [INF] Worker output: [00:31:31 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_8.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_8.txt
+[00:31:31 INF] Simulating device usage for 5 seconds
+[00:31:36 INF] Read 19 characters from input file
+[00:31:36 INF] Converted content to uppercase
+[00:31:36 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_8.txt
+[00:31:36 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:31:36.978 [INF] Job completed successfully: 6ad1ce14-ca39-49f5-b5f2-8374c2393dd2
+2025-08-14 00:31:36.979 [INF] Updated job status to Completed for job 6ad1ce14-ca39-49f5-b5f2-8374c2393dd2
+2025-08-14 00:31:36.979 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_8.txt
+2025-08-14 00:31:36.986 [INF] Updated job in queue: 6ad1ce14-ca39-49f5-b5f2-8374c2393dd2 - Status: "Completed"
+2025-08-14 00:31:36.986 [INF] Device lock released successfully
+2025-08-14 00:31:36.986 [INF] Processing job: b752128f-ce14-497b-a580-d0cd8cff4872 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_8.txt
+2025-08-14 00:31:36.987 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:31:36.991 [INF] Updated job in queue: b752128f-ce14-497b-a580-d0cd8cff4872 - Status: "Processing"
+2025-08-14 00:31:36.991 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/b752128f-ce14-497b-a580-d0cd8cff4872.json
+2025-08-14 00:31:36.991 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_8.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_8.txt"
+2025-08-14 00:31:51.089 [INF] Worker output: [00:31:37 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_8.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_8.txt
+[00:31:37 INF] Simulating device usage for 14 seconds
+[00:31:51 INF] Read 19 characters from input file
+[00:31:51 INF] Reversed 2 lines
+[00:31:51 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_8.txt
+[00:31:51 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:31:51.089 [INF] Job completed successfully: b752128f-ce14-497b-a580-d0cd8cff4872
+2025-08-14 00:31:51.089 [INF] Updated job status to Completed for job b752128f-ce14-497b-a580-d0cd8cff4872
+2025-08-14 00:31:51.089 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_8.txt
+2025-08-14 00:31:51.097 [INF] Updated job in queue: b752128f-ce14-497b-a580-d0cd8cff4872 - Status: "Completed"
+2025-08-14 00:31:51.097 [INF] Device lock released successfully
+2025-08-14 00:31:51.097 [INF] Processing job: 28b9e66e-1722-49f8-882b-fdd6b68e5286 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_9.txt
+2025-08-14 00:31:51.097 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:31:51.102 [INF] Updated job in queue: 28b9e66e-1722-49f8-882b-fdd6b68e5286 - Status: "Processing"
+2025-08-14 00:31:51.103 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/28b9e66e-1722-49f8-882b-fdd6b68e5286.json
+2025-08-14 00:31:51.103 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_9.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_9.txt"
+2025-08-14 00:32:00.235 [INF] Worker output: [00:31:51 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_9.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_9.txt
+[00:31:51 INF] Simulating device usage for 9 seconds
+[00:32:00 INF] Read 19 characters from input file
+[00:32:00 INF] Converted content to uppercase
+[00:32:00 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_9.txt
+[00:32:00 INF] WorkerAppABC completed successfully
+
+2025-08-14 00:32:00.235 [INF] Job completed successfully: 28b9e66e-1722-49f8-882b-fdd6b68e5286
+2025-08-14 00:32:00.235 [INF] Updated job status to Completed for job 28b9e66e-1722-49f8-882b-fdd6b68e5286
+2025-08-14 00:32:00.235 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_9.txt
+2025-08-14 00:32:00.244 [INF] Updated job in queue: 28b9e66e-1722-49f8-882b-fdd6b68e5286 - Status: "Completed"
+2025-08-14 00:32:00.245 [INF] Device lock released successfully
+2025-08-14 00:32:00.245 [INF] Processing job: 608fa88f-0538-44d0-ad44-ca7475199ba2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_9.txt
+2025-08-14 00:32:00.245 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex_kemalutkumutlu.lock
+2025-08-14 00:32:00.252 [INF] Updated job in queue: 608fa88f-0538-44d0-ad44-ca7475199ba2 - Status: "Processing"
+2025-08-14 00:32:00.253 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/608fa88f-0538-44d0-ad44-ca7475199ba2.json
+2025-08-14 00:32:00.253 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_9.txt" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_9.txt"
+2025-08-14 00:32:07.385 [INF] Worker output: [00:32:00 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_9.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_9.txt
+[00:32:00 INF] Simulating device usage for 7 seconds
+[00:32:07 INF] Read 19 characters from input file
+[00:32:07 INF] Reversed 2 lines
+[00:32:07 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/xyz_9.txt
+[00:32:07 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 00:32:07.386 [INF] Job completed successfully: 608fa88f-0538-44d0-ad44-ca7475199ba2
+2025-08-14 00:32:07.386 [INF] Updated job status to Completed for job 608fa88f-0538-44d0-ad44-ca7475199ba2
+2025-08-14 00:32:07.386 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_9.txt
+2025-08-14 00:32:07.392 [INF] Updated job in queue: 608fa88f-0538-44d0-ad44-ca7475199ba2 - Status: "Completed"
+2025-08-14 00:32:07.392 [INF] Device lock released successfully
+2025-08-14 00:53:19.082 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 00:53:19.088 [INF] Shutting down FileJobRouter...
+2025-08-14 00:53:19.098 [INF] Job processor stopped
+2025-08-14 00:53:19.101 [INF] Stopped watching directory
+2025-08-14 00:53:19.101 [INF] Shutting down FileJobRouter...
+2025-08-14 00:53:20.102 [INF] FileJobRouter shutdown completed
+2025-08-14 00:53:20.102 [INF] FileJobRouter shutdown completed
+2025-08-14 01:05:12.509 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 01:05:12.523 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 01:05:12.584 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 01:05:12.584 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 01:05:12.588 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 01:05:12.588 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 01:05:12.606 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 01:05:12.606 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 01:05:12.642 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 01:05:12.644 [INF] FileJobRouter is running.
+2025-08-14 01:05:12.644 [INF] Job processor started
+2025-08-14 01:17:45.256 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 01:17:45.263 [INF] Shutting down FileJobRouter...
+2025-08-14 01:17:45.267 [INF] Job processor stopped
+2025-08-14 01:17:45.269 [INF] Shutting down FileJobRouter...
+2025-08-14 01:17:45.269 [INF] Stopped watching directory
+2025-08-14 01:17:45.271 [ERR] Error during shutdown: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainControllerApp.Services.FileWatcherService.StopWatching() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Services/FileWatcherService.cs:line 249
+   at MainControllerApp.Program.Shutdown() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Program.cs:line 186
+2025-08-14 01:17:46.271 [INF] FileJobRouter shutdown completed
+2025-08-14 01:17:53.670 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 01:17:53.685 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 01:17:53.746 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 01:17:53.746 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 01:17:53.749 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 01:17:53.749 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 01:17:53.772 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 01:17:53.773 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 01:17:53.806 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 01:17:53.807 [INF] FileJobRouter is running.
+2025-08-14 01:17:53.807 [INF] Job processor started
+2025-08-14 01:20:33.095 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 01:20:33.097 [INF] Shutting down FileJobRouter...
+2025-08-14 01:20:33.101 [INF] Job processor stopped
+2025-08-14 01:20:33.103 [INF] Stopped watching directory
+2025-08-14 01:20:33.104 [INF] Shutting down FileJobRouter...
+2025-08-14 01:20:34.104 [INF] FileJobRouter shutdown completed
+2025-08-14 01:20:34.105 [INF] FileJobRouter shutdown completed
+2025-08-14 01:22:40.256 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 01:22:40.269 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 01:22:40.324 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 01:22:40.324 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 01:22:40.327 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 01:22:40.327 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 01:22:40.347 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 01:22:40.347 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 01:22:40.377 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 01:22:40.378 [INF] FileJobRouter is running.
+2025-08-14 01:22:40.378 [INF] Job processor started
+2025-08-14 01:24:15.744 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 01:24:15.746 [INF] Shutting down FileJobRouter...
+2025-08-14 01:24:15.754 [INF] Job processor stopped
+2025-08-14 01:24:15.756 [INF] Stopped watching directory
+2025-08-14 01:24:15.757 [INF] Shutting down FileJobRouter...
+2025-08-14 01:24:16.758 [INF] FileJobRouter shutdown completed
+2025-08-14 01:24:16.758 [INF] FileJobRouter shutdown completed
+2025-08-14 01:24:21.310 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 01:24:21.325 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 01:24:21.384 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 01:24:21.384 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 01:24:21.388 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 01:24:21.388 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 01:24:21.405 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 01:24:21.405 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 01:24:21.434 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 01:24:21.435 [INF] FileJobRouter is running.
+2025-08-14 01:24:21.435 [INF] Job processor started
+2025-08-14 01:25:47.465 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 01:25:47.470 [INF] Shutting down FileJobRouter...
+2025-08-14 01:25:47.473 [INF] Job processor stopped
+2025-08-14 01:25:47.475 [INF] Shutting down FileJobRouter...
+2025-08-14 01:25:47.475 [INF] Stopped watching directory
+2025-08-14 01:25:47.475 [INF] Stopped watching directory
+2025-08-14 01:25:48.477 [INF] FileJobRouter shutdown completed
+2025-08-14 01:25:48.477 [INF] FileJobRouter shutdown completed
+2025-08-14 01:25:51.782 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 01:25:51.796 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 01:25:51.850 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 01:25:51.850 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 01:25:51.853 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 01:25:51.853 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 01:25:51.871 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 01:25:51.871 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 01:25:51.901 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 01:25:51.902 [INF] FileJobRouter is running.
+2025-08-14 01:25:51.902 [INF] Job processor started
+2025-08-14 01:27:38.006 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 01:27:38.009 [INF] Shutting down FileJobRouter...
+2025-08-14 01:27:38.011 [INF] Job processor stopped
+2025-08-14 01:27:38.013 [INF] Stopped watching directory
+2025-08-14 01:27:38.013 [INF] Shutting down FileJobRouter...
+2025-08-14 01:27:39.014 [INF] FileJobRouter shutdown completed
+2025-08-14 01:27:39.014 [INF] FileJobRouter shutdown completed
+2025-08-14 01:27:42.026 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 01:27:42.038 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 01:27:42.087 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 01:27:42.087 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 01:27:42.090 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 01:27:42.091 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 01:27:42.094 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 01:27:42.095 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 01:27:42.125 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 01:27:42.126 [INF] FileJobRouter is running.
+2025-08-14 01:27:42.127 [INF] Job processor started
+2025-08-14 01:31:44.717 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 01:31:44.720 [INF] Shutting down FileJobRouter...
+2025-08-14 01:31:44.726 [INF] Job processor stopped
+2025-08-14 01:31:44.730 [INF] Shutting down FileJobRouter...
+2025-08-14 01:31:44.730 [INF] Stopped watching directory
+2025-08-14 01:31:44.730 [INF] Stopped watching directory
+2025-08-14 01:31:45.731 [INF] FileJobRouter shutdown completed
+2025-08-14 01:31:45.731 [INF] FileJobRouter shutdown completed
+2025-08-14 01:31:56.924 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 01:31:56.937 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 01:31:56.992 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 01:31:56.992 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 01:31:56.995 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 01:31:56.995 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 01:31:57.015 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 01:31:57.015 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 01:31:57.043 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 01:31:57.046 [INF] FileJobRouter is running.
+2025-08-14 01:31:57.046 [INF] Job processor started
+2025-08-14 01:39:05.872 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 01:39:05.879 [INF] Shutting down FileJobRouter...
+2025-08-14 01:39:05.886 [INF] Job processor stopped
+2025-08-14 01:39:05.890 [INF] Shutting down FileJobRouter...
+2025-08-14 01:39:05.891 [INF] Stopped watching directory
+2025-08-14 01:39:05.903 [ERR] Error during shutdown: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainControllerApp.Services.FileWatcherService.StopWatching() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Services/FileWatcherService.cs:line 249
+   at MainControllerApp.Program.Shutdown() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Program.cs:line 205
+2025-08-14 01:39:06.892 [INF] FileJobRouter shutdown completed
+2025-08-14 01:39:11.378 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 01:39:11.390 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 01:39:11.443 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 01:39:11.443 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 01:39:11.446 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 01:39:11.446 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 01:39:11.463 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 01:39:11.463 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 01:39:11.494 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 01:39:11.495 [INF] FileJobRouter is running.
+2025-08-14 01:39:11.496 [INF] Job processor started
+2025-08-14 01:46:53.764 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 01:46:53.766 [INF] Shutting down FileJobRouter...
+2025-08-14 01:46:53.769 [INF] Job processor stopped
+2025-08-14 01:46:53.770 [INF] Shutting down FileJobRouter...
+2025-08-14 01:46:53.770 [INF] Stopped watching directory
+2025-08-14 01:46:53.770 [INF] Stopped watching directory
+2025-08-14 01:46:54.772 [INF] FileJobRouter shutdown completed
+2025-08-14 01:46:54.772 [INF] FileJobRouter shutdown completed
+2025-08-14 01:46:58.070 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 01:46:58.082 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 01:46:58.135 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 01:46:58.135 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 01:46:58.138 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 01:46:58.138 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 01:46:58.159 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 01:46:58.159 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 01:46:58.189 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 01:46:58.191 [INF] FileJobRouter is running.
+2025-08-14 01:46:58.191 [INF] Job processor started
+2025-08-14 01:51:22.021 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 01:51:22.024 [INF] Shutting down FileJobRouter...
+2025-08-14 01:51:22.027 [INF] Job processor stopped
+2025-08-14 01:51:22.029 [INF] Stopped watching directory
+2025-08-14 01:51:22.030 [INF] Shutting down FileJobRouter...
+2025-08-14 01:51:23.030 [INF] FileJobRouter shutdown completed
+2025-08-14 01:51:23.031 [INF] FileJobRouter shutdown completed
+2025-08-14 01:51:28.202 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 01:51:28.214 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 01:51:28.266 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 01:51:28.266 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 01:51:28.270 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 01:51:28.270 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 01:51:28.280 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 01:51:28.281 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 01:51:28.313 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 01:51:28.314 [INF] FileJobRouter is running.
+2025-08-14 01:51:28.314 [INF] Job processor started
+2025-08-14 01:51:55.600 [INF] Added new job to queue: 6b2d062e-fc58-4e19-804d-f71137b04698 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 01:51:55.600 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf -> signer
+2025-08-14 01:51:58.412 [INF] Processing job: 6b2d062e-fc58-4e19-804d-f71137b04698 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 01:51:58.417 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 01:51:58.437 [INF] Updated job in queue: 6b2d062e-fc58-4e19-804d-f71137b04698 - Status: "Processing"
+2025-08-14 01:51:58.453 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/6b2d062e-fc58-4e19-804d-f71137b04698.json
+2025-08-14 01:51:58.455 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf"
+2025-08-14 01:52:09.476 [INF] Worker output: [01:51:59 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+[01:51:59 INF] Simulating device usage for 10 seconds
+[01:52:09 INF] Calculated SHA-256 hash for streamed input
+[01:52:09 INF] Calculated SHA-256 hash: b5e7a995083d6c13b397eed7b5fecf902fc561d4bbe6d7d7c7021567ca07eeb7
+[01:52:09 INF] RSA signature generated with 2048 bit key
+[01:52:09 INF] Generated RSA signature
+[01:52:09 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf.sig
+[01:52:09 INF] WorkerAppSigner completed successfully
+
+2025-08-14 01:52:09.476 [INF] Job completed successfully: 6b2d062e-fc58-4e19-804d-f71137b04698
+2025-08-14 01:52:09.477 [INF] Updated job status to Completed for job 6b2d062e-fc58-4e19-804d-f71137b04698
+2025-08-14 01:52:09.477 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 01:52:09.483 [INF] Updated job in queue: 6b2d062e-fc58-4e19-804d-f71137b04698 - Status: "Completed"
+2025-08-14 01:52:09.483 [INF] Device lock released successfully
+2025-08-14 01:56:05.738 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 01:56:05.743 [INF] Shutting down FileJobRouter...
+2025-08-14 01:56:05.750 [INF] Job processor stopped
+2025-08-14 01:56:05.751 [INF] Stopped watching directory
+2025-08-14 01:56:05.753 [INF] Shutting down FileJobRouter...
+2025-08-14 01:56:06.752 [INF] FileJobRouter shutdown completed
+2025-08-14 01:56:06.754 [INF] FileJobRouter shutdown completed
+2025-08-14 02:06:18.430 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 02:06:18.443 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 02:06:18.501 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 02:06:18.501 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 02:06:18.504 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 02:06:18.504 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 02:06:18.522 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 02:06:18.522 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 02:06:18.551 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 02:06:18.553 [INF] FileJobRouter is running.
+2025-08-14 02:06:18.553 [INF] Job processor started
+2025-08-14 02:07:43.063 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 02:07:43.067 [INF] Shutting down FileJobRouter...
+2025-08-14 02:07:43.070 [INF] Job processor stopped
+2025-08-14 02:07:43.072 [INF] Shutting down FileJobRouter...
+2025-08-14 02:07:43.072 [INF] Stopped watching directory
+2025-08-14 02:07:43.073 [ERR] Error during shutdown: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainControllerApp.Services.FileWatcherService.StopWatching() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Services/FileWatcherService.cs:line 255
+   at MainControllerApp.Program.Shutdown() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Program.cs:line 232
+2025-08-14 02:07:44.073 [INF] FileJobRouter shutdown completed
+2025-08-14 02:08:51.826 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 02:08:51.838 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 02:08:51.890 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 02:08:51.890 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 02:08:51.893 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 02:08:51.893 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 02:08:51.909 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 02:08:51.909 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 02:08:51.939 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 02:08:51.940 [INF] FileJobRouter is running.
+2025-08-14 02:08:51.940 [INF] Job processor started
+2025-08-14 02:09:18.039 [INF] Added new job to queue: 3f0f32e6-26c6-4b5a-b05c-7e6dc26fe724 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:09:18.039 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> signer
+2025-08-14 02:09:18.548 [INF] Added new job to queue: 2258651b-0e7b-4647-ac98-f41b9236e13f - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+2025-08-14 02:09:18.548 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx -> signer
+2025-08-14 02:09:19.059 [INF] Added new job to queue: 34c8a55f-0824-42fe-af36-23ff879568bb - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:09:19.060 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf -> signer
+2025-08-14 02:09:19.572 [INF] Added new job to queue: acdb238e-6b65-4f97-8f33-074a80b3bd99 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf
+2025-08-14 02:09:19.573 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf -> signer
+2025-08-14 02:09:21.972 [INF] Processing job: 3f0f32e6-26c6-4b5a-b05c-7e6dc26fe724 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:09:21.979 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:09:21.988 [INF] Updated job in queue: 3f0f32e6-26c6-4b5a-b05c-7e6dc26fe724 - Status: "Processing"
+2025-08-14 02:09:22.006 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/3f0f32e6-26c6-4b5a-b05c-7e6dc26fe724.json
+2025-08-14 02:09:22.010 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf"
+2025-08-14 02:09:30.885 [INF] Worker output: [02:09:22 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+[02:09:22 INF] Simulating device usage for 8 seconds
+[02:09:30 INF] Calculated SHA-256 hash for streamed input
+[02:09:30 INF] Calculated SHA-256 hash: e53dcf8232754aef0eed74a3f65cca0306ac84bef888e9f209892c2618e3da21
+[02:09:30 INF] RSA signature generated with 2048 bit key
+[02:09:30 INF] Generated RSA signature
+[02:09:30 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf.sig
+[02:09:30 INF] WorkerAppSigner completed successfully
+
+2025-08-14 02:09:30.889 [INF] Job completed successfully: 3f0f32e6-26c6-4b5a-b05c-7e6dc26fe724
+2025-08-14 02:09:30.890 [INF] Updated job status to Completed for job 3f0f32e6-26c6-4b5a-b05c-7e6dc26fe724
+2025-08-14 02:09:30.890 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:09:30.904 [INF] Updated job in queue: 3f0f32e6-26c6-4b5a-b05c-7e6dc26fe724 - Status: "Completed"
+2025-08-14 02:09:30.904 [INF] Device lock released successfully
+2025-08-14 02:09:30.905 [INF] Processing job: 2258651b-0e7b-4647-ac98-f41b9236e13f - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+2025-08-14 02:09:30.905 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:09:30.910 [INF] Updated job in queue: 2258651b-0e7b-4647-ac98-f41b9236e13f - Status: "Processing"
+2025-08-14 02:09:30.910 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/2258651b-0e7b-4647-ac98-f41b9236e13f.json
+2025-08-14 02:09:30.910 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx"
+2025-08-14 02:09:43.264 [INF] Worker output: [02:09:31 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+[02:09:31 INF] Simulating device usage for 12 seconds
+[02:09:43 INF] Calculated SHA-256 hash for streamed input
+[02:09:43 INF] Calculated SHA-256 hash: abd21aa0972b62ebe2ec9a6f8005b5dab11814e9299a46533592c2a9e519eefe
+[02:09:43 INF] RSA signature generated with 2048 bit key
+[02:09:43 INF] Generated RSA signature
+[02:09:43 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx.sig
+[02:09:43 INF] WorkerAppSigner completed successfully
+
+2025-08-14 02:09:43.265 [INF] Job completed successfully: 2258651b-0e7b-4647-ac98-f41b9236e13f
+2025-08-14 02:09:43.266 [INF] Updated job status to Completed for job 2258651b-0e7b-4647-ac98-f41b9236e13f
+2025-08-14 02:09:43.267 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+2025-08-14 02:09:43.276 [INF] Updated job in queue: 2258651b-0e7b-4647-ac98-f41b9236e13f - Status: "Completed"
+2025-08-14 02:09:43.276 [INF] Device lock released successfully
+2025-08-14 02:09:43.277 [INF] Processing job: 34c8a55f-0824-42fe-af36-23ff879568bb - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:09:43.277 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:09:43.282 [INF] Updated job in queue: 34c8a55f-0824-42fe-af36-23ff879568bb - Status: "Processing"
+2025-08-14 02:09:43.283 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/34c8a55f-0824-42fe-af36-23ff879568bb.json
+2025-08-14 02:09:43.284 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf"
+2025-08-14 02:09:51.668 [INF] Worker output: [02:09:43 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+[02:09:43 INF] Simulating device usage for 8 seconds
+[02:09:51 INF] Calculated SHA-256 hash for streamed input
+[02:09:51 INF] Calculated SHA-256 hash: b5e7a995083d6c13b397eed7b5fecf902fc561d4bbe6d7d7c7021567ca07eeb7
+[02:09:51 INF] RSA signature generated with 2048 bit key
+[02:09:51 INF] Generated RSA signature
+[02:09:51 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf.sig
+[02:09:51 INF] WorkerAppSigner completed successfully
+
+2025-08-14 02:09:51.669 [INF] Job completed successfully: 34c8a55f-0824-42fe-af36-23ff879568bb
+2025-08-14 02:09:51.669 [INF] Updated job status to Completed for job 34c8a55f-0824-42fe-af36-23ff879568bb
+2025-08-14 02:09:51.669 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:09:51.676 [INF] Updated job in queue: 34c8a55f-0824-42fe-af36-23ff879568bb - Status: "Completed"
+2025-08-14 02:09:51.676 [INF] Device lock released successfully
+2025-08-14 02:09:51.676 [INF] Processing job: acdb238e-6b65-4f97-8f33-074a80b3bd99 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf
+2025-08-14 02:09:51.676 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:09:51.682 [INF] Updated job in queue: acdb238e-6b65-4f97-8f33-074a80b3bd99 - Status: "Processing"
+2025-08-14 02:09:51.682 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/acdb238e-6b65-4f97-8f33-074a80b3bd99.json
+2025-08-14 02:09:51.682 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf"
+2025-08-14 02:10:05.898 [INF] Worker output: [02:09:51 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf
+[02:09:51 INF] Simulating device usage for 14 seconds
+[02:10:05 INF] Calculated SHA-256 hash for streamed input
+[02:10:05 INF] Calculated SHA-256 hash: 057e37dc2836aa6a6293f955ace3bb6d5fb3f4e990f890a022e156fc79cad360
+[02:10:05 INF] RSA signature generated with 2048 bit key
+[02:10:05 INF] Generated RSA signature
+[02:10:05 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf.sig
+[02:10:05 INF] WorkerAppSigner completed successfully
+
+2025-08-14 02:10:05.898 [INF] Job completed successfully: acdb238e-6b65-4f97-8f33-074a80b3bd99
+2025-08-14 02:10:05.899 [INF] Updated job status to Completed for job acdb238e-6b65-4f97-8f33-074a80b3bd99
+2025-08-14 02:10:05.899 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf
+2025-08-14 02:10:05.907 [INF] Updated job in queue: acdb238e-6b65-4f97-8f33-074a80b3bd99 - Status: "Completed"
+2025-08-14 02:10:05.907 [INF] Device lock released successfully
+2025-08-14 02:11:45.683 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 02:11:45.690 [INF] Shutting down FileJobRouter...
+2025-08-14 02:11:45.695 [INF] Job processor stopped
+2025-08-14 02:11:45.697 [INF] Shutting down FileJobRouter...
+2025-08-14 02:11:45.697 [INF] Stopped watching directory
+2025-08-14 02:11:45.699 [ERR] Error during shutdown: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainControllerApp.Services.FileWatcherService.StopWatching() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Services/FileWatcherService.cs:line 255
+   at MainControllerApp.Program.Shutdown() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Program.cs:line 232
+2025-08-14 02:11:46.698 [INF] FileJobRouter shutdown completed
+2025-08-14 02:11:52.002 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 02:11:52.012 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 02:11:52.064 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 02:11:52.064 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 02:11:52.067 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 02:11:52.067 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 02:11:52.085 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 02:11:52.085 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 02:11:52.114 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 02:11:52.115 [INF] FileJobRouter is running.
+2025-08-14 02:11:52.115 [INF] Job processor started
+2025-08-14 02:12:14.918 [INF] Added new job to queue: f61b5124-f91d-4a91-98f2-9d3bdf4d9c90 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:12:14.919 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> signer
+2025-08-14 02:12:15.427 [INF] Added new job to queue: 85e5c91b-6499-49c4-abeb-8fcf94eb91be - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+2025-08-14 02:12:15.427 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx -> signer
+2025-08-14 02:12:15.939 [INF] Added new job to queue: f083b8d7-0693-4b79-a668-55b3d164e390 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:12:15.939 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf -> signer
+2025-08-14 02:12:16.451 [INF] Added new job to queue: 82c548e0-d611-48e3-974e-18ff3480ec1b - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf
+2025-08-14 02:12:16.451 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf -> signer
+2025-08-14 02:12:17.149 [INF] Processing job: f61b5124-f91d-4a91-98f2-9d3bdf4d9c90 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:12:17.154 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:12:17.163 [INF] Updated job in queue: f61b5124-f91d-4a91-98f2-9d3bdf4d9c90 - Status: "Processing"
+2025-08-14 02:12:17.182 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/f61b5124-f91d-4a91-98f2-9d3bdf4d9c90.json
+2025-08-14 02:12:17.186 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf"
+2025-08-14 02:12:25.431 [INF] Worker output: [02:12:17 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+[02:12:17 INF] Simulating device usage for 8 seconds
+[02:12:25 INF] Calculated SHA-256 hash for streamed input
+[02:12:25 INF] Calculated SHA-256 hash: e53dcf8232754aef0eed74a3f65cca0306ac84bef888e9f209892c2618e3da21
+[02:12:25 INF] RSA signature generated with 2048 bit key
+[02:12:25 INF] Generated RSA signature
+[02:12:25 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf.sig
+[02:12:25 INF] WorkerAppSigner completed successfully
+
+2025-08-14 02:12:25.432 [INF] Job completed successfully: f61b5124-f91d-4a91-98f2-9d3bdf4d9c90
+2025-08-14 02:12:25.433 [INF] Updated job status to Completed for job f61b5124-f91d-4a91-98f2-9d3bdf4d9c90
+2025-08-14 02:12:25.433 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:12:25.440 [INF] Updated job in queue: f61b5124-f91d-4a91-98f2-9d3bdf4d9c90 - Status: "Completed"
+2025-08-14 02:12:25.440 [INF] Device lock released successfully
+2025-08-14 02:12:25.441 [INF] Processing job: 85e5c91b-6499-49c4-abeb-8fcf94eb91be - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+2025-08-14 02:12:25.441 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:12:25.456 [INF] Updated job in queue: 85e5c91b-6499-49c4-abeb-8fcf94eb91be - Status: "Processing"
+2025-08-14 02:12:25.456 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/85e5c91b-6499-49c4-abeb-8fcf94eb91be.json
+2025-08-14 02:12:25.457 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx"
+2025-08-14 02:12:35.648 [INF] Worker output: [02:12:25 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+[02:12:25 INF] Simulating device usage for 10 seconds
+[02:12:35 INF] Calculated SHA-256 hash for streamed input
+[02:12:35 INF] Calculated SHA-256 hash: abd21aa0972b62ebe2ec9a6f8005b5dab11814e9299a46533592c2a9e519eefe
+[02:12:35 INF] RSA signature generated with 2048 bit key
+[02:12:35 INF] Generated RSA signature
+[02:12:35 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx.sig
+[02:12:35 INF] WorkerAppSigner completed successfully
+
+2025-08-14 02:12:35.649 [INF] Job completed successfully: 85e5c91b-6499-49c4-abeb-8fcf94eb91be
+2025-08-14 02:12:35.649 [INF] Updated job status to Completed for job 85e5c91b-6499-49c4-abeb-8fcf94eb91be
+2025-08-14 02:12:35.649 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+2025-08-14 02:12:35.662 [INF] Updated job in queue: 85e5c91b-6499-49c4-abeb-8fcf94eb91be - Status: "Completed"
+2025-08-14 02:12:35.663 [INF] Device lock released successfully
+2025-08-14 02:12:35.663 [INF] Processing job: f083b8d7-0693-4b79-a668-55b3d164e390 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:12:35.663 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:12:35.669 [INF] Updated job in queue: f083b8d7-0693-4b79-a668-55b3d164e390 - Status: "Processing"
+2025-08-14 02:12:35.670 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/f083b8d7-0693-4b79-a668-55b3d164e390.json
+2025-08-14 02:12:35.670 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf"
+2025-08-14 02:12:49.867 [INF] Worker output: [02:12:35 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+[02:12:35 INF] Simulating device usage for 14 seconds
+[02:12:49 INF] Calculated SHA-256 hash for streamed input
+[02:12:49 INF] Calculated SHA-256 hash: b5e7a995083d6c13b397eed7b5fecf902fc561d4bbe6d7d7c7021567ca07eeb7
+[02:12:49 INF] RSA signature generated with 2048 bit key
+[02:12:49 INF] Generated RSA signature
+[02:12:49 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf.sig
+[02:12:49 INF] WorkerAppSigner completed successfully
+
+2025-08-14 02:12:49.867 [INF] Job completed successfully: f083b8d7-0693-4b79-a668-55b3d164e390
+2025-08-14 02:12:49.868 [INF] Updated job status to Completed for job f083b8d7-0693-4b79-a668-55b3d164e390
+2025-08-14 02:12:49.868 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:12:49.882 [INF] Updated job in queue: f083b8d7-0693-4b79-a668-55b3d164e390 - Status: "Completed"
+2025-08-14 02:12:49.882 [INF] Device lock released successfully
+2025-08-14 02:12:49.882 [INF] Processing job: 82c548e0-d611-48e3-974e-18ff3480ec1b - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf
+2025-08-14 02:12:49.882 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:12:49.888 [INF] Updated job in queue: 82c548e0-d611-48e3-974e-18ff3480ec1b - Status: "Processing"
+2025-08-14 02:12:49.888 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/82c548e0-d611-48e3-974e-18ff3480ec1b.json
+2025-08-14 02:12:49.888 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf"
+2025-08-14 02:13:00.106 [INF] Worker output: [02:12:49 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf
+[02:12:49 INF] Simulating device usage for 10 seconds
+[02:13:00 INF] Calculated SHA-256 hash for streamed input
+[02:13:00 INF] Calculated SHA-256 hash: 057e37dc2836aa6a6293f955ace3bb6d5fb3f4e990f890a022e156fc79cad360
+[02:13:00 INF] RSA signature generated with 2048 bit key
+[02:13:00 INF] Generated RSA signature
+[02:13:00 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf.sig
+[02:13:00 INF] WorkerAppSigner completed successfully
+
+2025-08-14 02:13:00.107 [INF] Job completed successfully: 82c548e0-d611-48e3-974e-18ff3480ec1b
+2025-08-14 02:13:00.107 [INF] Updated job status to Completed for job 82c548e0-d611-48e3-974e-18ff3480ec1b
+2025-08-14 02:13:00.107 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf
+2025-08-14 02:13:00.122 [INF] Updated job in queue: 82c548e0-d611-48e3-974e-18ff3480ec1b - Status: "Completed"
+2025-08-14 02:13:00.122 [INF] Device lock released successfully
+2025-08-14 02:13:18.836 [INF] Added new job to queue: f1ff436d-6ece-47d0-979a-7822a6017d22 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:13:18.837 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> signer
+2025-08-14 02:13:19.343 [INF] Added new job to queue: 5a0ff507-2984-472b-bee5-de8f2c852cda - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+2025-08-14 02:13:19.344 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx -> signer
+2025-08-14 02:13:19.855 [INF] Added new job to queue: ac57a8e7-e247-4dc6-9555-696b63ffb6c6 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:13:19.855 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf -> signer
+2025-08-14 02:13:20.133 [INF] Processing job: f1ff436d-6ece-47d0-979a-7822a6017d22 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:13:20.135 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:13:20.142 [INF] Updated job in queue: f1ff436d-6ece-47d0-979a-7822a6017d22 - Status: "Processing"
+2025-08-14 02:13:20.143 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/f1ff436d-6ece-47d0-979a-7822a6017d22.json
+2025-08-14 02:13:20.143 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf"
+2025-08-14 02:13:20.357 [INF] File already in queue (active), skipping duplicate enqueue: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:13:20.866 [INF] Added new job to queue: 341eeca6-1634-418d-a8ff-384a52e07be2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf
+2025-08-14 02:13:20.866 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf -> signer
+2025-08-14 02:13:35.408 [INF] Worker output: [02:13:20 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+[02:13:20 INF] Simulating device usage for 15 seconds
+[02:13:35 INF] Calculated SHA-256 hash for streamed input
+[02:13:35 INF] Calculated SHA-256 hash: e53dcf8232754aef0eed74a3f65cca0306ac84bef888e9f209892c2618e3da21
+[02:13:35 INF] RSA signature generated with 2048 bit key
+[02:13:35 INF] Generated RSA signature
+[02:13:35 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf.sig
+[02:13:35 INF] WorkerAppSigner completed successfully
+
+2025-08-14 02:13:35.408 [INF] Job completed successfully: f1ff436d-6ece-47d0-979a-7822a6017d22
+2025-08-14 02:13:35.409 [INF] Updated job status to Completed for job f1ff436d-6ece-47d0-979a-7822a6017d22
+2025-08-14 02:13:35.409 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:13:35.417 [INF] Updated job in queue: f1ff436d-6ece-47d0-979a-7822a6017d22 - Status: "Completed"
+2025-08-14 02:13:35.418 [INF] Device lock released successfully
+2025-08-14 02:13:35.418 [INF] Processing job: 5a0ff507-2984-472b-bee5-de8f2c852cda - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+2025-08-14 02:13:35.418 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:13:35.424 [INF] Updated job in queue: 5a0ff507-2984-472b-bee5-de8f2c852cda - Status: "Processing"
+2025-08-14 02:13:35.425 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/5a0ff507-2984-472b-bee5-de8f2c852cda.json
+2025-08-14 02:13:35.425 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx"
+2025-08-14 02:13:46.704 [INF] Worker output: [02:13:35 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+[02:13:35 INF] Simulating device usage for 11 seconds
+[02:13:46 INF] Calculated SHA-256 hash for streamed input
+[02:13:46 INF] Calculated SHA-256 hash: abd21aa0972b62ebe2ec9a6f8005b5dab11814e9299a46533592c2a9e519eefe
+[02:13:46 INF] RSA signature generated with 2048 bit key
+[02:13:46 INF] Generated RSA signature
+[02:13:46 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx.sig
+[02:13:46 INF] WorkerAppSigner completed successfully
+
+2025-08-14 02:13:46.704 [INF] Job completed successfully: 5a0ff507-2984-472b-bee5-de8f2c852cda
+2025-08-14 02:13:46.705 [INF] Updated job status to Completed for job 5a0ff507-2984-472b-bee5-de8f2c852cda
+2025-08-14 02:13:46.705 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.docx
+2025-08-14 02:13:46.726 [INF] Updated job in queue: 5a0ff507-2984-472b-bee5-de8f2c852cda - Status: "Completed"
+2025-08-14 02:13:46.726 [INF] Device lock released successfully
+2025-08-14 02:13:46.726 [INF] Processing job: ac57a8e7-e247-4dc6-9555-696b63ffb6c6 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:13:46.726 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:13:46.732 [INF] Updated job in queue: ac57a8e7-e247-4dc6-9555-696b63ffb6c6 - Status: "Processing"
+2025-08-14 02:13:46.732 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/ac57a8e7-e247-4dc6-9555-696b63ffb6c6.json
+2025-08-14 02:13:46.732 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf"
+2025-08-14 02:14:00.939 [INF] Worker output: [02:13:46 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+[02:13:46 INF] Simulating device usage for 14 seconds
+[02:14:00 INF] Calculated SHA-256 hash for streamed input
+[02:14:00 INF] Calculated SHA-256 hash: b5e7a995083d6c13b397eed7b5fecf902fc561d4bbe6d7d7c7021567ca07eeb7
+[02:14:00 INF] RSA signature generated with 2048 bit key
+[02:14:00 INF] Generated RSA signature
+[02:14:00 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf.sig
+[02:14:00 INF] WorkerAppSigner completed successfully
+
+2025-08-14 02:14:00.940 [INF] Job completed successfully: ac57a8e7-e247-4dc6-9555-696b63ffb6c6
+2025-08-14 02:14:00.941 [INF] Updated job status to Completed for job ac57a8e7-e247-4dc6-9555-696b63ffb6c6
+2025-08-14 02:14:00.941 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/(25188364)Staj işyeri başvuru Yazısı (1).doc.pdf
+2025-08-14 02:14:00.949 [INF] Updated job in queue: ac57a8e7-e247-4dc6-9555-696b63ffb6c6 - Status: "Completed"
+2025-08-14 02:14:00.949 [INF] Device lock released successfully
+2025-08-14 02:14:00.950 [INF] Processing job: 341eeca6-1634-418d-a8ff-384a52e07be2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf
+2025-08-14 02:14:00.950 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:14:00.955 [INF] Updated job in queue: 341eeca6-1634-418d-a8ff-384a52e07be2 - Status: "Processing"
+2025-08-14 02:14:00.956 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/341eeca6-1634-418d-a8ff-384a52e07be2.json
+2025-08-14 02:14:00.956 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf"
+2025-08-14 02:14:07.222 [INF] Worker output: [02:14:01 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf
+[02:14:01 INF] Simulating device usage for 6 seconds
+[02:14:07 INF] Calculated SHA-256 hash for streamed input
+[02:14:07 INF] Calculated SHA-256 hash: 057e37dc2836aa6a6293f955ace3bb6d5fb3f4e990f890a022e156fc79cad360
+[02:14:07 INF] RSA signature generated with 2048 bit key
+[02:14:07 INF] Generated RSA signature
+[02:14:07 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/signer/0_syllabus-2.pdf.sig
+[02:14:07 INF] WorkerAppSigner completed successfully
+
+2025-08-14 02:14:07.222 [INF] Job completed successfully: 341eeca6-1634-418d-a8ff-384a52e07be2
+2025-08-14 02:14:07.223 [INF] Updated job status to Completed for job 341eeca6-1634-418d-a8ff-384a52e07be2
+2025-08-14 02:14:07.223 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/0_syllabus-2.pdf
+2025-08-14 02:14:07.231 [INF] Updated job in queue: 341eeca6-1634-418d-a8ff-384a52e07be2 - Status: "Completed"
+2025-08-14 02:14:07.232 [INF] Device lock released successfully
+2025-08-14 02:14:49.612 [INF] Added new job to queue: 7b00b4aa-fc07-456f-b1cd-a7d2dd2cfcd5 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:14:49.613 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> abc
+2025-08-14 02:14:52.268 [INF] Processing job: 7b00b4aa-fc07-456f-b1cd-a7d2dd2cfcd5 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:14:52.269 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:14:52.278 [INF] Updated job in queue: 7b00b4aa-fc07-456f-b1cd-a7d2dd2cfcd5 - Status: "Processing"
+2025-08-14 02:14:52.279 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/7b00b4aa-fc07-456f-b1cd-a7d2dd2cfcd5.json
+2025-08-14 02:14:52.279 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf"
+2025-08-14 02:15:00.860 [INF] Worker output: [02:14:52 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+[02:14:52 INF] Simulating device usage for 8 seconds
+[02:15:00 INF] Read 122610 characters from input file
+[02:15:00 INF] Converted content to uppercase
+[02:15:00 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+[02:15:00 INF] WorkerAppABC completed successfully
+
+2025-08-14 02:15:00.860 [INF] Job completed successfully: 7b00b4aa-fc07-456f-b1cd-a7d2dd2cfcd5
+2025-08-14 02:15:00.861 [INF] Updated job status to Completed for job 7b00b4aa-fc07-456f-b1cd-a7d2dd2cfcd5
+2025-08-14 02:15:00.862 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:15:00.868 [INF] Updated job in queue: 7b00b4aa-fc07-456f-b1cd-a7d2dd2cfcd5 - Status: "Completed"
+2025-08-14 02:15:00.868 [INF] Device lock released successfully
+2025-08-14 02:15:21.747 [INF] Added new job to queue: 855aa087-e78c-4a00-95f3-c546135f2597 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:15:21.747 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> abc
+2025-08-14 02:15:25.882 [INF] Processing job: 855aa087-e78c-4a00-95f3-c546135f2597 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:15:25.883 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:15:25.892 [INF] Updated job in queue: 855aa087-e78c-4a00-95f3-c546135f2597 - Status: "Processing"
+2025-08-14 02:15:25.893 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/855aa087-e78c-4a00-95f3-c546135f2597.json
+2025-08-14 02:15:25.893 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf"
+2025-08-14 02:15:38.056 [INF] Worker output: [02:15:25 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+[02:15:26 INF] Simulating device usage for 12 seconds
+[02:15:38 INF] Read 122610 characters from input file
+[02:15:38 INF] Converted content to uppercase
+[02:15:38 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+[02:15:38 INF] WorkerAppABC completed successfully
+
+2025-08-14 02:15:38.057 [INF] Job completed successfully: 855aa087-e78c-4a00-95f3-c546135f2597
+2025-08-14 02:15:38.057 [INF] Updated job status to Completed for job 855aa087-e78c-4a00-95f3-c546135f2597
+2025-08-14 02:15:38.057 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:15:38.064 [INF] Updated job in queue: 855aa087-e78c-4a00-95f3-c546135f2597 - Status: "Completed"
+2025-08-14 02:15:38.064 [INF] Device lock released successfully
+2025-08-14 02:16:53.981 [INF] Added new job to queue: f4981ad3-6f0b-4915-bb51-e3dea2251f7f - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf
+2025-08-14 02:16:53.981 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf -> xyz
+2025-08-14 02:16:58.105 [INF] Processing job: f4981ad3-6f0b-4915-bb51-e3dea2251f7f - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf
+2025-08-14 02:16:58.106 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:16:58.114 [INF] Updated job in queue: f4981ad3-6f0b-4915-bb51-e3dea2251f7f - Status: "Processing"
+2025-08-14 02:16:58.116 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/f4981ad3-6f0b-4915-bb51-e3dea2251f7f.json
+2025-08-14 02:16:58.116 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/0_syllabus-2.pdf"
+2025-08-14 02:17:06.616 [INF] Worker output: [02:16:58 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/0_syllabus-2.pdf
+[02:16:58 INF] Simulating device usage for 8 seconds
+[02:17:06 INF] Read 158591 characters from input file
+[02:17:06 INF] Reversed 1185 lines
+[02:17:06 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/0_syllabus-2.pdf
+[02:17:06 INF] WorkerAppXYZ completed successfully
+
+2025-08-14 02:17:06.616 [INF] Job completed successfully: f4981ad3-6f0b-4915-bb51-e3dea2251f7f
+2025-08-14 02:17:06.617 [INF] Updated job status to Completed for job f4981ad3-6f0b-4915-bb51-e3dea2251f7f
+2025-08-14 02:17:06.618 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/0_syllabus-2.pdf
+2025-08-14 02:17:06.625 [INF] Updated job in queue: f4981ad3-6f0b-4915-bb51-e3dea2251f7f - Status: "Completed"
+2025-08-14 02:17:06.625 [INF] Device lock released successfully
+2025-08-14 02:17:40.347 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 02:17:40.350 [INF] Shutting down FileJobRouter...
+2025-08-14 02:17:40.355 [INF] Job processor stopped
+2025-08-14 02:17:40.356 [INF] Shutting down FileJobRouter...
+2025-08-14 02:17:40.356 [INF] Stopped watching directory
+2025-08-14 02:17:40.358 [ERR] Error during shutdown: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainControllerApp.Services.FileWatcherService.StopWatching() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Services/FileWatcherService.cs:line 255
+   at MainControllerApp.Program.Shutdown() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Program.cs:line 232
+2025-08-14 02:17:41.358 [INF] FileJobRouter shutdown completed
+2025-08-14 02:17:47.012 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 02:17:47.024 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 02:17:47.075 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 02:17:47.075 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 02:17:47.078 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-14 02:17:47.078 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-14 02:17:47.098 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-14 02:17:47.098 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-14 02:17:47.128 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 02:17:47.130 [INF] FileJobRouter is running.
+2025-08-14 02:17:47.130 [INF] Job processor started
+2025-08-14 02:18:00.395 [INF] Added new job to queue: 27aa83e9-34a7-4e34-8be4-fb4ba352b6e0 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf
+2025-08-14 02:18:00.396 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf -> xyz
+2025-08-14 02:18:02.150 [INF] Processing job: 27aa83e9-34a7-4e34-8be4-fb4ba352b6e0 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf
+2025-08-14 02:18:02.151 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:18:02.161 [INF] Updated job in queue: 27aa83e9-34a7-4e34-8be4-fb4ba352b6e0 - Status: "Processing"
+2025-08-14 02:18:02.167 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/27aa83e9-34a7-4e34-8be4-fb4ba352b6e0.json
+2025-08-14 02:18:02.169 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf"
+2025-08-14 02:18:03.194 [WRN] Job timed out: 27aa83e9-34a7-4e34-8be4-fb4ba352b6e0
+2025-08-14 02:18:03.200 [INF] Updated job status to Failed for job 27aa83e9-34a7-4e34-8be4-fb4ba352b6e0
+2025-08-14 02:18:03.200 [ERR] Job failed: 27aa83e9-34a7-4e34-8be4-fb4ba352b6e0 - Error: Process timed out
+2025-08-14 02:18:03.210 [INF] Updated job in queue: 27aa83e9-34a7-4e34-8be4-fb4ba352b6e0 - Status: "Timeout"
+2025-08-14 02:18:03.212 [INF] Device lock released successfully
+2025-08-14 02:21:17.531 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 02:21:17.533 [INF] Shutting down FileJobRouter...
+2025-08-14 02:21:17.538 [INF] Job processor stopped
+2025-08-14 02:21:17.540 [INF] Shutting down FileJobRouter...
+2025-08-14 02:21:17.541 [INF] Stopped watching directory
+2025-08-14 02:21:17.544 [ERR] Error during shutdown: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainControllerApp.Services.FileWatcherService.StopWatching()
+   at MainControllerApp.Program.Shutdown()
+2025-08-14 02:21:36.838 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-14 02:21:36.859 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-14 02:21:36.994 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-14 02:21:36.994 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-14 02:21:37.094 [INF] Connected to WebUI SignalR Hub successfully at http://localhost:5036/fileJobRouterHub
+2025-08-14 02:21:37.131 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-14 02:21:37.658 [INF] Added new job to queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf
+2025-08-14 02:21:37.658 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf -> xyz
+2025-08-14 02:21:37.659 [INF] FileJobRouter is running.
+2025-08-14 02:21:37.660 [INF] Job processor started
+2025-08-14 02:21:37.663 [INF] Processing job: b1c3690f-16bb-424c-a019-8a010edfddc2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf
+2025-08-14 02:21:37.667 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:21:37.673 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Processing"
+2025-08-14 02:21:37.688 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/b1c3690f-16bb-424c-a019-8a010edfddc2.json
+2025-08-14 02:21:37.700 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf"
+2025-08-14 02:21:38.747 [WRN] Job timed out: b1c3690f-16bb-424c-a019-8a010edfddc2
+2025-08-14 02:21:38.762 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Pending"
+2025-08-14 02:21:38.767 [INF] Device lock released successfully
+2025-08-14 02:21:38.769 [INF] Processing job: b1c3690f-16bb-424c-a019-8a010edfddc2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf
+2025-08-14 02:21:38.771 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:21:38.789 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Processing"
+2025-08-14 02:21:38.790 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/b1c3690f-16bb-424c-a019-8a010edfddc2.json
+2025-08-14 02:21:38.790 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf"
+2025-08-14 02:21:39.834 [WRN] Job timed out: b1c3690f-16bb-424c-a019-8a010edfddc2
+2025-08-14 02:21:39.843 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Pending"
+2025-08-14 02:21:39.845 [INF] Device lock released successfully
+2025-08-14 02:21:39.845 [INF] Processing job: b1c3690f-16bb-424c-a019-8a010edfddc2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf
+2025-08-14 02:21:39.846 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:21:39.854 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Processing"
+2025-08-14 02:21:39.854 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/b1c3690f-16bb-424c-a019-8a010edfddc2.json
+2025-08-14 02:21:39.855 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf"
+2025-08-14 02:21:40.880 [WRN] Job timed out: b1c3690f-16bb-424c-a019-8a010edfddc2
+2025-08-14 02:21:40.888 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Pending"
+2025-08-14 02:21:40.893 [INF] Device lock released successfully
+2025-08-14 02:21:40.896 [INF] Processing job: b1c3690f-16bb-424c-a019-8a010edfddc2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf
+2025-08-14 02:21:40.898 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:21:40.905 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Processing"
+2025-08-14 02:21:40.905 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/b1c3690f-16bb-424c-a019-8a010edfddc2.json
+2025-08-14 02:21:40.905 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf"
+2025-08-14 02:21:41.945 [WRN] Job timed out: b1c3690f-16bb-424c-a019-8a010edfddc2
+2025-08-14 02:21:41.949 [INF] Updated job status to Failed for job b1c3690f-16bb-424c-a019-8a010edfddc2
+2025-08-14 02:21:41.952 [ERR] Job failed: b1c3690f-16bb-424c-a019-8a010edfddc2 - Error: Process timed out
+2025-08-14 02:21:41.959 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Failed"
+2025-08-14 02:21:41.959 [INF] Device lock released successfully
+2025-08-14 02:21:56.690 [INF] Retry command applied: {JobId}
+2025-08-14 02:21:56.965 [INF] Processing job: b1c3690f-16bb-424c-a019-8a010edfddc2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf
+2025-08-14 02:21:56.966 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:21:56.971 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Processing"
+2025-08-14 02:21:56.972 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/b1c3690f-16bb-424c-a019-8a010edfddc2.json
+2025-08-14 02:21:56.972 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf"
+2025-08-14 02:21:58.008 [WRN] Job timed out: b1c3690f-16bb-424c-a019-8a010edfddc2
+2025-08-14 02:21:58.011 [INF] Updated job status to Failed for job b1c3690f-16bb-424c-a019-8a010edfddc2
+2025-08-14 02:21:58.015 [ERR] Job failed: b1c3690f-16bb-424c-a019-8a010edfddc2 - Error: Process timed out
+2025-08-14 02:21:58.024 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Failed"
+2025-08-14 02:21:58.024 [INF] Device lock released successfully
+2025-08-14 02:22:01.763 [INF] Retry command applied: {JobId}
+2025-08-14 02:22:03.027 [INF] Processing job: b1c3690f-16bb-424c-a019-8a010edfddc2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf
+2025-08-14 02:22:03.030 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:22:03.036 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Processing"
+2025-08-14 02:22:03.037 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/b1c3690f-16bb-424c-a019-8a010edfddc2.json
+2025-08-14 02:22:03.043 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf"
+2025-08-14 02:22:04.109 [WRN] Job timed out: b1c3690f-16bb-424c-a019-8a010edfddc2
+2025-08-14 02:22:04.110 [INF] Updated job status to Failed for job b1c3690f-16bb-424c-a019-8a010edfddc2
+2025-08-14 02:22:04.112 [ERR] Job failed: b1c3690f-16bb-424c-a019-8a010edfddc2 - Error: Process timed out
+2025-08-14 02:22:04.120 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Failed"
+2025-08-14 02:22:04.121 [INF] Device lock released successfully
+2025-08-14 02:22:15.716 [INF] Retry command applied: {JobId}
+2025-08-14 02:22:19.128 [INF] Processing job: b1c3690f-16bb-424c-a019-8a010edfddc2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf
+2025-08-14 02:22:19.131 [INF] Device lock acquired successfully: /tmp/FileJobRouter/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-14 02:22:19.138 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Processing"
+2025-08-14 02:22:19.139 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-14/b1c3690f-16bb-424c-a019-8a010edfddc2.json
+2025-08-14 02:22:19.140 [INF] Reloading config: TimeoutSeconds 1 -> 5, MaxRetryCount 3 -> 3
+2025-08-14 02:22:19.141 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/xyz/1-2.pdf"
+2025-08-14 02:22:20.710 [INF] Retry command ignored; job not in Failed state: b1c3690f-16bb-424c-a019-8a010edfddc2 - "Processing"
+2025-08-14 02:22:24.187 [WRN] Job timed out: b1c3690f-16bb-424c-a019-8a010edfddc2
+2025-08-14 02:22:24.190 [INF] Updated job status to Failed for job b1c3690f-16bb-424c-a019-8a010edfddc2
+2025-08-14 02:22:24.192 [ERR] Job failed: b1c3690f-16bb-424c-a019-8a010edfddc2 - Error: Process timed out
+2025-08-14 02:22:24.200 [INF] Updated job in queue: b1c3690f-16bb-424c-a019-8a010edfddc2 - Status: "Failed"
+2025-08-14 02:22:24.201 [INF] Device lock released successfully
+2025-08-14 02:22:52.455 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-14 02:22:52.459 [INF] Shutting down FileJobRouter...
+2025-08-14 02:22:52.462 [INF] Job processor stopped
+2025-08-14 02:22:52.463 [INF] Shutting down FileJobRouter...
+2025-08-14 02:22:52.465 [INF] Stopped watching directory
+2025-08-14 02:22:52.467 [ERR] Error during shutdown: Object reference not set to an instance of an object.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MainControllerApp.Services.FileWatcherService.StopWatching() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Services/FileWatcherService.cs:line 255
+   at MainControllerApp.Program.Shutdown() in /Users/kemalutkumutlu/FileJobRouterEnYeni/src/MainControllerApp/Program.cs:line 232

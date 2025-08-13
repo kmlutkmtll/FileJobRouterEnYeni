@@ -97,3 +97,21 @@ dotnet run --project FileJobRouterWebUI -c Debug
 
 ## Lisans
 Bu depo iç kullanım içindir.
+
+## Cross-platform notes
+
+- Global lock directory
+  - Default: Windows -> %PROGRAMDATA%/FileJobRouter/locks, macOS/Linux -> /tmp/FileJobRouter
+  - Override: set environment variable `FILEJOBROUTER_LOCK_DIR`
+- Executable path tokens
+  - Supports `{username}`, `{day}`, and OS environment variables in `config.json` `ExecutablePath` values
+- Health
+  - Main sends SignalR heartbeat every 5s; WebUI infers Running/Disconnected via heartbeat with 15s threshold
+- Shutdown
+  - Ctrl+C/SIGTERM: Main performs graceful shutdown, cancels processing loop, kills child workers, releases mutex, removes PID file
+- Queue rotation
+  - Queue path computed dynamically per operation for the current day; atomic writes with tmp+replace
+- Concurrency guarantee
+  - Only one Processing at any time across users/instances
+- Retry
+  - WebUI dispatches retry via hub; queue writes are single-writer (Main)

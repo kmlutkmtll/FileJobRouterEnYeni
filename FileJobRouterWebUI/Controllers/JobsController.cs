@@ -37,7 +37,7 @@ namespace FileJobRouterWebUI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetJobsData(int page = 1, int pageSize = 50, string dateFilter = "all", string status = "all", string search = "")
+        public async Task<IActionResult> GetJobsData(int page = 1, int pageSize = 50, string dateFilter = "all", string status = "all", string search = "", string? day = null)
         {
             try
             {
@@ -55,11 +55,40 @@ namespace FileJobRouterWebUI.Controllers
                     .OrderByDescending(d => d.Name) // Most recent first
                     .ToList();
 
+                // Normalize day/dateFilter server-side to avoid client inconsistencies
+                DateTime? selectedDay = null;
+                if (!string.IsNullOrWhiteSpace(day))
+                {
+                    if (DateTime.TryParse(day, out var parsed)) selectedDay = parsed.Date;
+                }
+
                 foreach (var dateDir in dateDirs)
                 {
-                    // Filter by date if specified
-                    if (dateFilter != "all" && !dateDir.Name.Contains(dateFilter))
-                        continue;
+                    // Parse folder date (yyyy-MM-dd)
+                    var dirDateStr = dateDir.Name;
+                    if (!DateTime.TryParse(dirDateStr, out var dirDate))
+                    {
+                        continue; // skip unknown folders
+                    }
+
+                    // Filter by exact day if provided
+                    if (selectedDay.HasValue)
+                    {
+                        if (dirDate.Date != selectedDay.Value) continue;
+                    }
+                    else if (!string.Equals(dateFilter, "all", StringComparison.OrdinalIgnoreCase))
+                    {
+                        var today = DateTime.Today;
+                        var keep = dateFilter.ToLower() switch
+                        {
+                            "today" => dirDate.Date == today,
+                            "yesterday" => dirDate.Date == today.AddDays(-1),
+                            "week" => dirDate.Date >= startOfWeek(today) && dirDate.Date <= today,
+                            "month" => dirDate.Year == today.Year && dirDate.Month == today.Month,
+                            _ => true
+                        };
+                        if (!keep) continue;
+                    }
 
                     var jobFiles = Directory.GetFiles(dateDir.FullName, "*.json");
                     
@@ -84,16 +113,19 @@ namespace FileJobRouterWebUI.Controllers
                             };
 
                             // Apply filters
-                            if (status != "all" && jobData.Status?.ToLower() != status.ToLower())
+                            if (status != "all" && (jobData.Status ?? string.Empty).ToLower() != status.ToLower())
                                 continue;
 
                             if (!string.IsNullOrEmpty(search))
                             {
                                 var searchLower = search.ToLower();
-                                if (!jobData.InputPath?.ToLower().Contains(searchLower) == true &&
-                                    !jobData.TargetApp?.ToLower().Contains(searchLower) == true &&
-                                    !jobData.Id?.ToLower().Contains(searchLower) == true)
+                                bool ContainsCI(string? s, string term) => !string.IsNullOrEmpty(s) && s.Contains(term, StringComparison.OrdinalIgnoreCase);
+                                if (!(ContainsCI(jobData.InputPath, searchLower) ||
+                                      ContainsCI(jobData.TargetApp, searchLower) ||
+                                      ContainsCI(jobData.Id, searchLower)))
+                                {
                                     continue;
+                                }
                             }
 
                             jobsData.Add(jobData);
@@ -122,6 +154,12 @@ namespace FileJobRouterWebUI.Controllers
             {
                 return Json(new { success = false, message = ex.Message, data = new List<object>(), total = 0 });
             }
+        }
+
+        private static DateTime startOfWeek(DateTime date)
+        {
+            var diff = (7 + (date.DayOfWeek - DayOfWeek.Monday)) % 7;
+            return date.AddDays(-1 * diff).Date;
         }
 
         [HttpGet]
@@ -172,7 +210,7 @@ namespace FileJobRouterWebUI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetJobsStatistics()
+        public async Task<IActionResult> GetJobsStatistics(string? day = null)
         {
             try
             {
@@ -207,6 +245,10 @@ namespace FileJobRouterWebUI.Controllers
                 foreach (var dateDir in dateDirs)
                 {
                     var date = Path.GetFileName(dateDir);
+                    if (!string.IsNullOrWhiteSpace(day) && !string.Equals(date, day, StringComparison.OrdinalIgnoreCase))
+                    {
+                        continue;
+                    }
                     var dayJobCount = 0;
 
                     var jobFiles = Directory.GetFiles(dateDir, "*.json");
@@ -273,6 +315,53 @@ namespace FileJobRouterWebUI.Controllers
                 };
 
                 return Json(new { success = true, stats = statistics });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllDaysJobsStatistics()
+        {
+            try
+            {
+                var totalJobs = 0;
+                var successfulJobs = 0;
+                var failedJobs = 0;
+                var processingJobs = 0;
+                var pendingJobs = 0;
+
+                var jobsBaseDir = Path.Combine(_solutionRoot, "jobs", _username);
+                if (Directory.Exists(jobsBaseDir))
+                {
+                    foreach (var dateDir in Directory.GetDirectories(jobsBaseDir))
+                    {
+                        foreach (var jobFile in Directory.GetFiles(dateDir, "*.json"))
+                        {
+                            try
+                            {
+                                var jobJson = await IOFile.ReadAllTextAsync(jobFile);
+                                using var doc = JsonDocument.Parse(jobJson);
+                                var job = doc.RootElement;
+                                totalJobs++;
+                                var status = job.TryGetProperty("Status", out var stat) ? stat.GetString() : "";
+                                switch ((status ?? "").ToLower())
+                                {
+                                    case "completed": successfulJobs++; break;
+                                    case "failed": failedJobs++; break;
+                                    case "processing": processingJobs++; break;
+                                    case "pending": pendingJobs++; break;
+                                }
+                            }
+                            catch { }
+                        }
+                    }
+                }
+
+                var successRate = totalJobs > 0 ? Math.Round((double)successfulJobs / totalJobs * 100, 1) : 0;
+                return Json(new { success = true, stats = new { total = totalJobs, successful = successfulJobs, failed = failedJobs, processing = processingJobs, pending = pendingJobs, successRate } });
             }
             catch (Exception ex)
             {

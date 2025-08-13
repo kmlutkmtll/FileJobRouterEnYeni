@@ -80,7 +80,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row align-items-end">
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <label for="dateFilter" class="form-label small fw-bold">Filter by Date:</label>
                             <select id="dateFilter" class="form-select">
                                 <option value="all">All Dates</option>
@@ -89,6 +89,13 @@
                                 <option value="week">This Week</option>
                                 <option value="month">This Month</option>
                             </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label small fw-bold">Day:</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                <input type="date" id="dayPickerJobs" class="form-control" value="${new Date().toISOString().split('T')[0]}" />
+                            </div>
                         </div>
                         <div class="col-md-2">
                             <label for="statusFilterHistory" class="form-label small fw-bold">Filter by Status:</label>
@@ -215,9 +222,28 @@
     let currentJobIdHistory = null;
     let totalPagesHistory = 1;
 
+    function getLocalDateStr() {
+        const d = new Date();
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return `${y}-${m}-${day}`;
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
         console.log('Jobs page DOM loaded');
-        loadStatistics();
+        const today = getLocalDateStr();
+        const dayInput = document.getElementById('dayPickerJobs');
+        if (dayInput) {
+            dayInput.value = today;
+            dayInput.addEventListener('change', () => loadJobsData(1));
+        }
+        const dateFilterSel = document.getElementById('dateFilter');
+        if (dateFilterSel) {
+            dateFilterSel.value = 'today';
+            dateFilterSel.addEventListener('change', () => loadJobsData(1));
+        }
+        // Initial load for today
         loadJobsData();
         
         // Auto-refresh every 60 seconds
@@ -236,7 +262,10 @@
 
     function loadStatistics() {
         console.log('Loading statistics...');
-        fetch('/Jobs/GetJobsStatistics')
+        const dateFilter = document.getElementById('dateFilter').value;
+        const day = normalizeDay(document.getElementById('dayPickerJobs')?.value || getLocalDateStr());
+        const endpoint = (dateFilter === 'all') ? '/Jobs/GetAllDaysJobsStatistics' : (`/Jobs/GetJobsStatistics?day=${encodeURIComponent(day)}`);
+        fetch(endpoint)
             .then(response => response.json())
             .then(data => {
                 console.log('Statistics response:', data);
@@ -257,6 +286,9 @@
         document.getElementById('successRateHistory').textContent = (stats.successRate || 0) + '%';
     }
 
+    function normalizeDay(v){
+        try{ const d = new Date(v); if(!isNaN(d)) { const y=d.getFullYear(); const m=String(d.getMonth()+1).padStart(2,'0'); const day=String(d.getDate()).padStart(2,'0'); return `${y}-${m}-${day}`; } }catch{} return getLocalDateStr(); }
+
     function loadJobsData(page = 1) {
         console.log('Loading jobs data...');
         const dateFilter = document.getElementById('dateFilter').value;
@@ -264,12 +296,14 @@
         const search = document.getElementById('searchInputHistory').value;
         const pageSize = document.getElementById('pageSizeSelectHistory').value;
 
+        const day = normalizeDay(document.getElementById('dayPickerJobs')?.value || getLocalDateStr());
         const params = new URLSearchParams({
             page: page,
             pageSize: pageSize,
             dateFilter: dateFilter,
             status: status,
-            search: search
+            search: search,
+            day: day
         });
 
         fetch(`/Jobs/GetJobsData?${params}`)
@@ -289,6 +323,8 @@
                 console.error('Jobs data error:', error);
                 showError('Network error: ' + error.message);
             });
+        // Update statistics for selected day or all
+        loadStatistics();
     }
 
     function displayJobsData(jobs) {

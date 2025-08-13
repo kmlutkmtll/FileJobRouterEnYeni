@@ -10,10 +10,12 @@ namespace MainControllerApp.Services
         private readonly ILogger _logger;
         private HubConnection? _connection;
         private bool _isConnected = false;
+        private readonly QueueService? _queueService;
 
-        public WebUINotificationService(ILogger logger)
+        public WebUINotificationService(ILogger logger, QueueService? queueService = null)
         {
             _logger = logger;
+            _queueService = queueService;
         }
 
         public async Task InitializeAsync()
@@ -64,6 +66,62 @@ namespace MainControllerApp.Services
                         await _connection.StartAsync();
                         _isConnected = true;
                         _logger.Information("Connected to WebUI SignalR Hub successfully at {HubUrl}", hubUrl);
+
+                        // Register command handlers (from WebUI)
+                        try
+                        {
+                            _connection.On<string>("ReceiveRetryJobCommand", async (jobId) =>
+                            {
+                                try
+                                {
+                                    if (_queueService == null)
+                                    {
+                                        _logger.Warning("Retry command received but QueueService is not available");
+                                        return;
+                                    }
+
+                                    var jobs = _queueService.LoadQueue();
+                                    var job = jobs.FirstOrDefault(j => j.Id == jobId);
+                                    if (job == null)
+                                    {
+                                        _logger.Warning("Retry command: job not found: {JobId}", jobId);
+                                        return;
+                                    }
+                                    if (job.Status != MainControllerApp.Models.JobStatus.Failed)
+                                    {
+                                        _logger.Information("Retry command ignored; job not in Failed state: {JobId} - {Status}", jobId, job.Status);
+                                        return;
+                                    }
+                                    if (!System.IO.File.Exists(job.InputPath))
+                                    {
+                                        job.Status = MainControllerApp.Models.JobStatus.Failed;
+                                        job.ErrorMessage = "Input file not found";
+                                        job.CompletedAt = DateTime.Now;
+                                        _queueService.SaveQueue(jobs);
+                                        await NotifyQueueUpdateAsync("{}");
+                                        _logger.Warning("Retry command: input missing, marking failed: {JobId}");
+                                        return;
+                                    }
+
+                                    job.Status = MainControllerApp.Models.JobStatus.Pending;
+                                    job.StartedAt = null;
+                                    job.CompletedAt = null;
+                                    job.ErrorMessage = null;
+                                    job.RetryCount++;
+                                    _queueService.SaveQueue(jobs);
+                                    await NotifyQueueUpdateAsync("{}");
+                                    _logger.Information("Retry command applied: {JobId}");
+                                }
+                                catch (Exception exRetry)
+                                {
+                                    _logger.Error(exRetry, "Error handling retry command for {JobId}: {Error}", jobId, exRetry.Message);
+                                }
+                            });
+                        }
+                        catch (Exception exOn)
+                        {
+                            _logger.Warning("Failed to register command handlers: {Error}", exOn.Message);
+                        }
                         return;
                     }
                     catch (Exception exCandidate)

@@ -1,0 +1,19 @@
+2025-08-08 20:07:54.965 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-08 20:07:54.978 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-08 20:07:55.032 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-08 20:07:55.032 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-08 20:07:55.035 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-08 20:07:55.035 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-08 20:07:55.050 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-08 20:07:55.050 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-08 20:07:55.078 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-08 20:07:55.080 [INF] FileJobRouter is running.
+2025-08-08 20:07:55.080 [INF] Job processor started
+2025-08-08 20:07:55.080 [INF] Queue file not found, creating new queue
+2025-08-08 20:11:06.802 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-08 20:11:06.804 [INF] Shutting down FileJobRouter...
+2025-08-08 20:11:06.808 [INF] Job processor stopped
+2025-08-08 20:11:06.809 [INF] Stopped watching directory
+2025-08-08 20:11:06.811 [INF] Shutting down FileJobRouter...
+2025-08-08 20:11:07.810 [INF] FileJobRouter shutdown completed
+2025-08-08 20:11:07.812 [INF] FileJobRouter shutdown completed

@@ -104,6 +104,20 @@
                             </select>
                         </div>
                         <div class="col-md-3">
+                            <label class="form-label small fw-bold">Day:</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                <input type="date" id="dayPicker" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label small fw-bold">All Days Stats:</label>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="allDaysToggle" onchange="loadAllDaysStats(this.checked)">
+                                <label class="form-check-label small" for="allDaysToggle">Show all</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
                             <div class="d-flex gap-2">
                                 <button class="btn btn-primary" onclick="loadQueueData()">
                                     <i class="fas fa-search me-1"></i>Search
@@ -235,7 +249,22 @@
             });
         }
 
+        function getLocalDateStr() {
+            const d = new Date();
+            const y = d.getFullYear();
+            const m = String(d.getMonth() + 1).padStart(2, '0');
+            const day = String(d.getDate()).padStart(2, '0');
+            return `${y}-${m}-${day}`;
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
+            // set default day to today and hook change
+            const today = getLocalDateStr();
+            const dayInput = document.getElementById('dayPicker');
+            if (dayInput) {
+                dayInput.value = today;
+                dayInput.addEventListener('change', () => { loadStatistics(); loadQueueData(1); });
+            }
             loadStatistics();
             loadQueueData();
             
@@ -301,16 +330,28 @@
             console.log('Statistics updated successfully');
         }
 
+        function loadAllDaysStats(all) {
+            if (all) {
+                fetch('/Queue/GetAllDaysStatistics')
+                    .then(r => r.json())
+                    .then(d => { if (d.success) updateStatistics(d.stats); });
+            } else {
+                loadStatistics();
+            }
+        }
+
         function loadQueueData(page = 1) {
             const status = document.getElementById('statusFilter').value;
             const search = document.getElementById('searchInput').value;
             const pageSize = document.getElementById('pageSizeSelect').value;
+            const day = document.getElementById('dayPicker')?.value || getLocalDateStr();
 
             const params = new URLSearchParams({
                 page: page,
                 pageSize: pageSize,
                 status: status,
-                search: search
+                search: search,
+                day: day
             });
 
             fetch(`/Queue/GetQueueData?${params}`)
@@ -441,11 +482,13 @@
 
         function showJobDetails(jobId) {
             // Find job in current data
+            const day = document.getElementById('dayPicker')?.value || getLocalDateStr();
             const params = new URLSearchParams({
                 page: 1,
                 pageSize: 1000,
                 status: 'all',
-                search: jobId
+                search: jobId,
+                day: day
             });
 
             fetch(`/Queue/GetQueueData?${params}`)

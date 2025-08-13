@@ -10,13 +10,15 @@ namespace FileJobRouterWebUI.Services
     public class SystemControlService
     {
         private readonly IHubContext<FileJobRouterHub> _hubContext;
+        private readonly HeartbeatStore _heartbeatStore;
         private readonly string _solutionRoot;
         private Process? _mainProcess;
         public string? LastError { get; private set; }
 
-        public SystemControlService(IHubContext<FileJobRouterHub> hubContext)
+        public SystemControlService(IHubContext<FileJobRouterHub> hubContext, HeartbeatStore heartbeatStore)
         {
             _hubContext = hubContext;
+            _heartbeatStore = heartbeatStore;
             
             // Get solution root (1 level up from WebUI)
             var currentDir = Directory.GetCurrentDirectory();
@@ -32,6 +34,41 @@ namespace FileJobRouterWebUI.Services
                     await _hubContext.Clients.All.SendAsync("ReceiveSystemStatusUpdate", "Running", "System is already running");
                     return true;
                 }
+
+                // Check PID lock file (today and yesterday) to avoid duplicate instances
+                try
+                {
+                    var username = Environment.UserName;
+                    string TodayPidPath(string day) => Path.Combine(_solutionRoot, "logs", username, day, "main.pid");
+                    var today = DateTime.Now.ToString("yyyy-MM-dd");
+                    var yesterday = DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd");
+
+                    foreach (var pidPath in new[] { TodayPidPath(today), TodayPidPath(yesterday) })
+                    {
+                        if (File.Exists(pidPath))
+                        {
+                            try
+                            {
+                                var text = await File.ReadAllTextAsync(pidPath);
+                                if (int.TryParse(text.Trim(), out var pid))
+                                {
+                                    try
+                                    {
+                                        var proc = Process.GetProcessById(pid);
+                                        if (!proc.HasExited)
+                                        {
+                                            await _hubContext.Clients.All.SendAsync("ReceiveSystemStatusUpdate", "Running", $"MainController already running (pid {pid})");
+                                            return true;
+                                        }
+                                    }
+                                    catch { /* PID not alive */ }
+                                }
+                            }
+                            catch { }
+                        }
+                    }
+                }
+                catch { }
 
                 var mainAppPath = Path.Combine(_solutionRoot, "src", "MainControllerApp", "bin", "Debug", "net9.0", "MainControllerApp.dll");
                 
@@ -104,8 +141,12 @@ namespace FileJobRouterWebUI.Services
 
                 await _hubContext.Clients.All.SendAsync("ReceiveSystemStatusUpdate", "Stopping", "System is stopping...");
 
-                // Try graceful shutdown first
-                _mainProcess.Kill();
+                // Try graceful shutdown first by sending Ctrl+C on supported platforms (best-effort)
+                try
+                {
+                    _mainProcess.CloseMainWindow();
+                }
+                catch { }
                 
                 // Wait for process to exit
                 if (!_mainProcess.WaitForExit(5000))
@@ -133,6 +174,11 @@ namespace FileJobRouterWebUI.Services
 
         public async Task<string> GetSystemStatusAsync()
         {
+            // Prefer heartbeat over logs
+            if (_heartbeatStore.IsAlive(TimeSpan.FromSeconds(15)))
+            {
+                return "Running";
+            }
             if (IsSystemRunning())
             {
                 return "Running";

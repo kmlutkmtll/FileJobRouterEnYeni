@@ -1,0 +1,104 @@
+2025-08-11 20:56:23.816 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Receipt-2142-4919.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Receipt-2142-4919.pdf
+2025-08-11 20:56:23.829 +03:00 [INF] Simulating device usage for 14 seconds
+2025-08-11 20:56:37.848 +03:00 [INF] Read 309249 bytes from input file
+2025-08-11 20:56:37.885 +03:00 [INF] Calculated SHA-256 hash: aeaf33c332950f9299cc7f037c678f4857ee5338c1b105c1ad57363f1374ba8d
+2025-08-11 20:56:37.939 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:56:37.940 +03:00 [INF] Generated RSA signature
+2025-08-11 20:56:37.956 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Receipt-2142-4919.pdf.sig
+2025-08-11 20:56:37.957 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-11 20:56:38.066 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Digital Slip 2025-08-04 1956099164796341171701334.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+2025-08-11 20:56:38.082 +03:00 [INF] Simulating device usage for 9 seconds
+2025-08-11 20:56:47.095 +03:00 [INF] Read 35142 bytes from input file
+2025-08-11 20:56:47.121 +03:00 [INF] Calculated SHA-256 hash: 623feb0444d224b1c8291bc619993bbb6655bd20d9dcf82179852a5cd2f98b75
+2025-08-11 20:56:47.240 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:56:47.241 +03:00 [INF] Generated RSA signature
+2025-08-11 20:56:47.255 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Digital Slip 2025-08-04 1956099164796341171701334.pdf.sig
+2025-08-11 20:56:47.255 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-11 20:56:47.327 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katilim-Belgesi.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Katilim-Belgesi.pdf
+2025-08-11 20:56:47.340 +03:00 [INF] Simulating device usage for 6 seconds
+2025-08-11 20:56:53.348 +03:00 [INF] Read 47235 bytes from input file
+2025-08-11 20:56:53.370 +03:00 [INF] Calculated SHA-256 hash: f61bde88a7abf867bc2d915361ba8c6ec60d4388c37c1e048670dd73acfc0d32
+2025-08-11 20:56:53.468 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:56:53.469 +03:00 [INF] Generated RSA signature
+2025-08-11 20:56:53.482 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Katilim-Belgesi.pdf.sig
+2025-08-11 20:56:53.482 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-11 20:56:53.560 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katılım_KEMAL UTKU MUTLU.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Katılım_KEMAL UTKU MUTLU.pdf
+2025-08-11 20:56:53.573 +03:00 [INF] Simulating device usage for 12 seconds
+2025-08-11 20:57:05.585 +03:00 [INF] Read 1663811 bytes from input file
+2025-08-11 20:57:05.615 +03:00 [INF] Calculated SHA-256 hash: f0a2e9e3ea15de440fd90eddfe0b7e99e3938b67a6ce702f1cc7665d87df64b1
+2025-08-11 20:57:05.740 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:57:05.741 +03:00 [INF] Generated RSA signature
+2025-08-11 20:57:05.755 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Katılım_KEMAL UTKU MUTLU.pdf.sig
+2025-08-11 20:57:05.755 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-11 20:57:05.828 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1.pdf
+2025-08-11 20:57:05.840 +03:00 [INF] Simulating device usage for 13 seconds
+2025-08-11 20:57:18.855 +03:00 [INF] Read 54114 bytes from input file
+2025-08-11 20:57:18.883 +03:00 [INF] Calculated SHA-256 hash: 3b868b2c1426960679c612ef2a8a9bdae9479ff888581091911f58950a2362f9
+2025-08-11 20:57:18.975 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:57:18.976 +03:00 [INF] Generated RSA signature
+2025-08-11 20:57:18.990 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1.pdf.sig
+2025-08-11 20:57:18.990 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-11 20:57:19.084 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-2.pdf
+2025-08-11 20:57:19.096 +03:00 [INF] Simulating device usage for 7 seconds
+2025-08-11 20:57:26.105 +03:00 [INF] Read 54680 bytes from input file
+2025-08-11 20:57:26.132 +03:00 [INF] Calculated SHA-256 hash: 566f91999c423f1c51294cc0fe17f474ba7851e84631d0dbef4e44b711e8f3c3
+2025-08-11 20:57:26.241 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:57:26.242 +03:00 [INF] Generated RSA signature
+2025-08-11 20:57:26.258 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-2.pdf.sig
+2025-08-11 20:57:26.258 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-11 20:57:26.335 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+2025-08-11 20:57:26.347 +03:00 [INF] Simulating device usage for 12 seconds
+2025-08-11 20:57:38.361 +03:00 [INF] Read 3797 bytes from input file
+2025-08-11 20:57:38.384 +03:00 [INF] Calculated SHA-256 hash: 6c547c279de856af0a8000a2383501d8c481e1e41e927a90e83cd3655ef83884
+2025-08-11 20:57:38.549 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:57:38.549 +03:00 [INF] Generated RSA signature
+2025-08-11 20:57:38.563 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf.sig
+2025-08-11 20:57:38.563 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-11 20:57:38.646 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ATS_CV_Sablon.docx -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/ATS_CV_Sablon.docx
+2025-08-11 20:57:38.659 +03:00 [INF] Simulating device usage for 9 seconds
+2025-08-11 20:57:47.673 +03:00 [INF] Read 36964 bytes from input file
+2025-08-11 20:57:47.703 +03:00 [INF] Calculated SHA-256 hash: aa8a558003e6b631076742631759d593e670744c388026991fecbf73b6f26763
+2025-08-11 20:57:47.801 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:57:47.802 +03:00 [INF] Generated RSA signature
+2025-08-11 20:57:47.815 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/ATS_CV_Sablon.docx.sig
+2025-08-11 20:57:47.816 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-11 20:57:47.897 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-3.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-3.pdf
+2025-08-11 20:57:47.914 +03:00 [INF] Simulating device usage for 5 seconds
+2025-08-11 20:57:52.923 +03:00 [INF] Read 50209 bytes from input file
+2025-08-11 20:57:52.948 +03:00 [INF] Calculated SHA-256 hash: 799f697dc65137dfb5925532059b312887cfa9070fc0b22ab58b6f8717378fdd
+2025-08-11 20:57:53.131 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:57:53.132 +03:00 [INF] Generated RSA signature
+2025-08-11 20:57:53.145 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-3.pdf.sig
+2025-08-11 20:57:53.145 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-11 20:57:53.247 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/IMG_3652.jpg -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/IMG_3652.jpg
+2025-08-11 20:57:53.259 +03:00 [INF] Simulating device usage for 8 seconds
+2025-08-11 20:58:01.269 +03:00 [INF] Read 367075 bytes from input file
+2025-08-11 20:58:01.292 +03:00 [INF] Calculated SHA-256 hash: fdf3c48f7237e777439f5d4e9d23be2638223fd64703b0e8b04e6a9d6dd9dbea
+2025-08-11 20:58:01.368 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:58:01.368 +03:00 [INF] Generated RSA signature
+2025-08-11 20:58:01.385 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/IMG_3652.jpg.sig
+2025-08-11 20:58:01.385 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-11 20:58:01.497 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+2025-08-11 20:58:01.512 +03:00 [INF] Simulating device usage for 12 seconds
+2025-08-11 20:58:13.523 +03:00 [INF] Read 5523 bytes from input file
+2025-08-11 20:58:13.547 +03:00 [INF] Calculated SHA-256 hash: 3b71312dae5f2c127346bebbd2a6c77a77aa4548261bd7aa21f795ef6be6e59d
+2025-08-11 20:58:13.645 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:58:13.645 +03:00 [INF] Generated RSA signature
+2025-08-11 20:58:13.661 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf.sig
+2025-08-11 20:58:13.661 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-11 20:58:13.748 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-4.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-4.pdf
+2025-08-11 20:58:13.762 +03:00 [INF] Simulating device usage for 12 seconds
+2025-08-11 20:58:25.774 +03:00 [INF] Read 50519 bytes from input file
+2025-08-11 20:58:25.799 +03:00 [INF] Calculated SHA-256 hash: e76818d2c13fc7692ee8291533bdbd5575a384610d6d5d0dcb80f2bf0ed9c2af
+2025-08-11 20:58:25.881 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:58:25.881 +03:00 [INF] Generated RSA signature
+2025-08-11 20:58:25.895 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-4.pdf.sig
+2025-08-11 20:58:25.895 +03:00 [INF] WorkerAppSigner completed successfully
+2025-08-11 20:58:25.968 +03:00 [INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-5.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-5.pdf
+2025-08-11 20:58:25.981 +03:00 [INF] Simulating device usage for 10 seconds
+2025-08-11 20:58:35.992 +03:00 [INF] Read 58817 bytes from input file
+2025-08-11 20:58:36.018 +03:00 [INF] Calculated SHA-256 hash: 8dd4131aad4b2aab1a85c195cde91ca928d6b0d6616f2fe362a243a7dcb221f1
+2025-08-11 20:58:36.079 +03:00 [INF] RSA signature generated with 2048 bit key
+2025-08-11 20:58:36.080 +03:00 [INF] Generated RSA signature
+2025-08-11 20:58:36.094 +03:00 [INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-5.pdf.sig
+2025-08-11 20:58:36.094 +03:00 [INF] WorkerAppSigner completed successfully

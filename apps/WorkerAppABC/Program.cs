@@ -74,16 +74,20 @@ namespace WorkerAppABC
             }
             finally
             {
+                try { Console.Out.Flush(); Console.Error.Flush(); } catch { }
                 Log.CloseAndFlush();
             }
         }
 
         private static ILogger CreateLogger()
         {
-            // Get solution root (3 levels up from WorkerAppABC: apps/WorkerAppABC -> apps -> root)
-            var currentDir = Directory.GetCurrentDirectory();
-            var appsDir = Path.GetDirectoryName(currentDir);
-            var solutionRoot = Path.GetDirectoryName(appsDir);
+            // Resolve solution root by ascending from base directory until config.json is found
+            var dir = new DirectoryInfo(AppContext.BaseDirectory);
+            while (dir != null && !File.Exists(Path.Combine(dir.FullName, "config.json")))
+            {
+                dir = dir.Parent;
+            }
+            var solutionRoot = dir?.FullName ?? Directory.GetCurrentDirectory();
             
             // Kullanıcı ve günlük klasör oluştur
             var username = Environment.UserName;

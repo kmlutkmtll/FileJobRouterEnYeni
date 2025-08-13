@@ -313,48 +313,19 @@
         function handleUploadSuccess(response, targetApp) {
             if (response.success) {
                 updateProgress(100, 'Upload completed!', '100%');
-                
-                // Simulate processing progress
-                simulateProcessingProgress(response.uploadedFiles, targetApp);
+                // Stop progress UI and show results; actual statuses will be polled from server
+                hideUploadProgress();
+                const files = Array.isArray(response.uploadedFiles) ? response.uploadedFiles : [];
+                showUploadResults(files, targetApp);
+                // Show any per-file errors (e.g., size/extension)
+                if (Array.isArray(response.errors) && response.errors.length > 0) {
+                    showNotification('Some files were skipped:\n' + response.errors.join('\n'), 'warning');
+                }
+                resetUpload();
+                refreshDashboardData();
             } else {
                 handleUploadError(response.message || 'Upload failed');
             }
-        }
-
-        function simulateProcessingProgress(files, targetApp) {
-            let processedCount = 0;
-            const totalFiles = files.length;
-            
-            updateProgress(100, 'Processing files...', `${processedCount}/${totalFiles} files`);
-            
-            // Simulate processing each file
-            files.forEach((file, index) => {
-                setTimeout(() => {
-                    processedCount++;
-                    const progress = 100 + (processedCount / totalFiles) * 50; // 100-150% range for processing
-                    
-                    updateProgress(progress, `Processing files...`, `${processedCount}/${totalFiles} files`);
-                    addProgressItem(file, 'Processing...', 'warning');
-                    
-                    // Simulate completion
-                    setTimeout(() => {
-                        addProgressItem(file, 'Completed', 'success');
-                        
-                        if (processedCount === totalFiles) {
-                            setTimeout(() => {
-                                hideUploadProgress();
-                                showUploadResults(files, targetApp);
-                                showNotification(`Successfully processed ${files.length} file(s)`, 'success');
-                                resetUpload();
-                                
-                                // Refresh Dashboard data
-                                refreshDashboardData();
-                            }, 1000);
-                        }
-                    }, 2000 + Math.random() * 3000); // Random processing time
-                    
-                }, index * 500); // Stagger processing
-            });
         }
 
         function handleUploadError(message) {

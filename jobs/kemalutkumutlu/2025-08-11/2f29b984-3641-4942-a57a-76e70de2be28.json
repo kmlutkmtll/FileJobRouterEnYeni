@@ -1,0 +1,9 @@
+{
+  "Id": "2f29b984-3641-4942-a57a-76e70de2be28",
+  "InputPath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katilim-Belgesi.pdf",
+  "TargetApp": "signer",
+  "Status": "Completed",
+  "Timestamp": "2025-08-11T20:56:53.484559+03:00",
+  "ErrorMessage": null,
+  "Username": "kemalutkumutlu"
+}

@@ -4,10 +4,24 @@ using System.Linq;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure Serilog to logs/user/day/web.log
+// Configure Serilog to logs/user/day/web.log with robust root resolution
 var username = Environment.UserName;
 var today = DateTime.Now.ToString("yyyy-MM-dd");
-var solutionRoot = Directory.GetParent(Directory.GetCurrentDirectory())?.FullName ?? Directory.GetCurrentDirectory();
+var overrideLogRoot = Environment.GetEnvironmentVariable("FILEJOBROUTER_LOG_ROOT");
+string solutionRoot;
+if (!string.IsNullOrWhiteSpace(overrideLogRoot))
+{
+    solutionRoot = overrideLogRoot!;
+}
+else
+{
+    var dir = new DirectoryInfo(AppContext.BaseDirectory);
+    while (dir != null && !File.Exists(Path.Combine(dir.FullName, "config.json")))
+    {
+        dir = dir.Parent;
+    }
+    solutionRoot = dir?.FullName ?? Directory.GetCurrentDirectory();
+}
 var webDailyLogDir = Path.Combine(solutionRoot, "logs", username, today);
 Directory.CreateDirectory(webDailyLogDir);
 var webLogPath = Path.Combine(webDailyLogDir, "web.log");
@@ -27,6 +41,7 @@ builder.Host.UseSerilog();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSignalR();
+builder.Services.AddSingleton<FileJobRouterWebUI.Services.HeartbeatStore>();
 builder.Services.AddScoped<FileJobRouterWebUI.Services.FileJobRouterService>();
 builder.Services.AddScoped<FileJobRouterWebUI.Services.SystemControlService>();
 builder.Services.AddHostedService<FileJobRouterWebUI.Services.MainAutoStartHostedService>();
@@ -57,22 +72,32 @@ app.MapControllerRoute(
     .WithStaticAssets();
 
 
-// Log URLs and optionally open browser in Development
+// Log URLs
 var urls = app.Urls.Count > 0 ? string.Join(", ", app.Urls) : "(dynamic)";
 Log.Information("WebUI starting. URLs: {Urls}", urls);
 
+// Open browser only after server has fully started
 if (app.Environment.IsDevelopment())
 {
-    var defaultUrl = app.Urls.FirstOrDefault() ?? "http://localhost:5036";
-    try
+    var lifetime = app.Lifetime;
+    lifetime.ApplicationStarted.Register(() =>
     {
-        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+        try
         {
-            FileName = defaultUrl,
-            UseShellExecute = true
-        });
-    }
-    catch { }
+            var addressesFeature = app.Services
+                .GetService<Microsoft.AspNetCore.Hosting.Server.Features.IServerAddressesFeature>();
+            var address = addressesFeature?.Addresses?.FirstOrDefault()
+                          ?? Environment.GetEnvironmentVariable("ASPNETCORE_URLS")?.Split(';').FirstOrDefault()
+                          ?? "http://localhost:5036";
+
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = address,
+                UseShellExecute = true
+            });
+        }
+        catch { }
+    });
 }
 
 app.Run();

@@ -1,6 +1,6 @@
 {
   "WatchDirectory": "data/Test",
-  "TimeoutSeconds": 30,
+  "TimeoutSeconds": 5,
   "LogDirectory": "logs",
   "JobsDirectory": "jobs",
   "QueueBaseDirectory": "queue",

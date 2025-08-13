@@ -35,9 +35,9 @@ namespace FileJobRouterWebUI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetQueueData()
+        public async Task<IActionResult> GetQueueData(string? day = null)
         {
-            var queueData = await _fileJobRouterService.GetQueueDataAsync();
+            var queueData = await _fileJobRouterService.GetQueueDataAsync(day);
             return Json(new { queueData });
         }
 
@@ -49,9 +49,9 @@ namespace FileJobRouterWebUI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetJobs()
+        public async Task<IActionResult> GetJobs(string? day = null)
         {
-            var jobs = await _fileJobRouterService.GetJobsAsync();
+            var jobs = await _fileJobRouterService.GetJobsAsync(day);
             return Json(new { jobs });
         }
     }

@@ -1,0 +1,9 @@
+{
+  "Id": "022bc839-387e-4f10-8abc-c8d13a95d618",
+  "InputPath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_7.txt",
+  "TargetApp": "abc",
+  "Status": "Completed",
+  "Timestamp": "2025-08-14T00:31:16.709144+03:00",
+  "ErrorMessage": null,
+  "Username": "kemalutkumutlu"
+}

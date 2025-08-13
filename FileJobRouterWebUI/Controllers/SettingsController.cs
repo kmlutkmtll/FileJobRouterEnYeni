@@ -46,8 +46,21 @@ namespace FileJobRouterWebUI.Controllers
         {
             try
             {
-                // Validate JSON
-                var config = JsonSerializer.Deserialize<object>(configJson);
+                // Validate JSON shape (basic): required keys and types
+                using var doc = JsonDocument.Parse(configJson);
+                if (doc.RootElement.ValueKind != JsonValueKind.Object)
+                {
+                    return Json(new { success = false, message = "Invalid configuration JSON" });
+                }
+
+                string[] requiredProps = new[] { "WatchDirectory", "TimeoutSeconds", "LogDirectory", "JobsDirectory", "QueueBaseDirectory", "Mappings" };
+                foreach (var key in requiredProps)
+                {
+                    if (!doc.RootElement.TryGetProperty(key, out _))
+                    {
+                        return Json(new { success = false, message = $"Missing required property: {key}" });
+                    }
+                }
                 
                 var configPath = Path.Combine(_solutionRoot, "config.json");
                 await System.IO.File.WriteAllTextAsync(configPath, configJson);

@@ -110,3 +110,4 @@
 /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/bin/Debug/net9.0/Serilog.Sinks.File.dll
 /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/obj/Debug/net9.0/FileJobRouterWebUI.sourcelink.json
 /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/obj/Debug/net9.0/compressed/0tzdl34fph-k52yewgftv.gz
+/Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI/obj/Debug/net9.0/compressed/wsdvzsdp55-wjhuarmh55.gz

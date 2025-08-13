@@ -1,0 +1,9 @@
+{
+  "Id": "b1c3690f-16bb-424c-a019-8a010edfddc2",
+  "InputPath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/1-2.pdf",
+  "TargetApp": "xyz",
+  "Status": "Failed",
+  "Timestamp": "2025-08-14T02:22:24.189655+03:00",
+  "ErrorMessage": "Process timed out",
+  "Username": "kemalutkumutlu"
+}

@@ -54,16 +54,14 @@ namespace WorkerAppSigner
                     return 1;
                 }
 
-                // Read input file
-                byte[] fileBytes = await File.ReadAllBytesAsync(inputPath);
-                logger.Information("Read {FileSize} bytes from input file", fileBytes.Length);
-
-                // Calculate SHA-256 hash
+                // Streamed SHA-256 (memory efficient)
                 string fileHash;
                 using (var sha256 = SHA256.Create())
+                using (var fs = new FileStream(inputPath, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
-                    byte[] hashBytes = sha256.ComputeHash(fileBytes);
+                    byte[] hashBytes = sha256.ComputeHash(fs);
                     fileHash = Convert.ToHexString(hashBytes).ToLower();
+                    logger.Information("Calculated SHA-256 hash for streamed input");
                 }
                 logger.Information("Calculated SHA-256 hash: {FileHash}", fileHash);
 
@@ -92,8 +90,11 @@ namespace WorkerAppSigner
                 // Create signed file with original content + signature
                 using (var signedFile = File.Create(signedFilePath))
                 {
-                    // Write original file content
-                    await signedFile.WriteAsync(fileBytes, 0, fileBytes.Length);
+                    // Copy original content streamed
+                    using (var fsIn = new FileStream(inputPath, FileMode.Open, FileAccess.Read, FileShare.Read))
+                    {
+                        await fsIn.CopyToAsync(signedFile);
+                    }
                     
                     // Add separator and signature
                     string separator = "\n\n--- DIGITAL SIGNATURE ---\n";
@@ -117,6 +118,7 @@ namespace WorkerAppSigner
             }
             finally
             {
+                try { Console.Out.Flush(); Console.Error.Flush(); } catch { }
                 Log.CloseAndFlush();
             }
         }
@@ -141,10 +143,13 @@ namespace WorkerAppSigner
 
         private static ILogger CreateLogger()
         {
-            // Get solution root (3 levels up from WorkerAppSigner: apps/WorkerAppSigner -> apps -> root)
-            var currentDir = Directory.GetCurrentDirectory();
-            var appsDir = Path.GetDirectoryName(currentDir);
-            var solutionRoot = Path.GetDirectoryName(appsDir);
+            // Resolve solution root by ascending from base directory until config.json is found
+            var dir = new DirectoryInfo(AppContext.BaseDirectory);
+            while (dir != null && !File.Exists(Path.Combine(dir.FullName, "config.json")))
+            {
+                dir = dir.Parent;
+            }
+            var solutionRoot = dir?.FullName ?? Directory.GetCurrentDirectory();
             
             // Kullanıcı ve günlük klasör oluştur
             var username = Environment.UserName;

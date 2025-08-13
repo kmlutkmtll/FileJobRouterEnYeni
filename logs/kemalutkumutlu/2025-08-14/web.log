@@ -1,0 +1,161 @@
+2025-08-14 00:21:51.132 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 00:21:51.226 [INF] MainControllerApp auto-start result: true
+2025-08-14 00:21:51.344 [INF] Now listening on: http://localhost:5036
+2025-08-14 00:21:51.344 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 00:21:51.344 [INF] Hosting environment: Development
+2025-08-14 00:21:51.344 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 00:21:52.668 [WRN] Failed to determine the https port for redirect.
+2025-08-14 00:54:01.171 [INF] Application is shutting down...
+2025-08-14 00:21:59.112 [INF] MainControllerApp auto-start result: true
+2025-08-14 00:21:59.194 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5036: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (48): Address already in use
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-08-14 00:22:41.421 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 00:22:41.490 [INF] MainControllerApp auto-start result: true
+2025-08-14 00:22:41.633 [INF] Now listening on: http://localhost:5037
+2025-08-14 00:22:41.633 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 00:22:41.633 [INF] Hosting environment: Development
+2025-08-14 00:22:41.633 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 00:27:47.417 [WRN] Failed to determine the https port for redirect.
+2025-08-14 00:53:50.213 [INF] Application is shutting down...
+2025-08-14 01:05:11.009 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 01:05:13.165 [INF] MainControllerApp auto-start result: true
+2025-08-14 01:05:13.213 [INF] Now listening on: http://localhost:5036
+2025-08-14 01:05:13.214 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 01:05:13.214 [INF] Hosting environment: Development
+2025-08-14 01:05:13.214 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 01:05:17.077 [WRN] Failed to determine the https port for redirect.
+2025-08-14 01:17:45.257 [INF] Application is shutting down...
+2025-08-14 01:17:52.042 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 01:17:54.157 [INF] MainControllerApp auto-start result: true
+2025-08-14 01:17:54.207 [INF] Now listening on: http://localhost:5036
+2025-08-14 01:17:54.208 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 01:17:54.208 [INF] Hosting environment: Development
+2025-08-14 01:17:54.208 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 01:17:57.470 [WRN] Failed to determine the https port for redirect.
+2025-08-14 01:20:33.094 [INF] Application is shutting down...
+2025-08-14 01:22:39.392 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 01:22:41.472 [INF] MainControllerApp auto-start result: true
+2025-08-14 01:22:41.561 [INF] Now listening on: http://localhost:5036
+2025-08-14 01:22:41.561 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 01:22:41.561 [INF] Hosting environment: Development
+2025-08-14 01:22:41.561 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 01:22:42.161 [WRN] Failed to determine the https port for redirect.
+2025-08-14 01:24:15.741 [INF] Application is shutting down...
+2025-08-14 01:24:20.203 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 01:24:22.288 [INF] MainControllerApp auto-start result: true
+2025-08-14 01:24:22.336 [INF] Now listening on: http://localhost:5036
+2025-08-14 01:24:22.336 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 01:24:22.336 [INF] Hosting environment: Development
+2025-08-14 01:24:22.336 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 01:24:22.905 [WRN] Failed to determine the https port for redirect.
+2025-08-14 01:25:47.469 [INF] Application is shutting down...
+2025-08-14 01:25:50.698 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 01:25:52.773 [INF] MainControllerApp auto-start result: true
+2025-08-14 01:25:52.822 [INF] Now listening on: http://localhost:5036
+2025-08-14 01:25:52.822 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 01:25:52.822 [INF] Hosting environment: Development
+2025-08-14 01:25:52.822 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 01:25:53.026 [WRN] Failed to determine the https port for redirect.
+2025-08-14 01:27:38.001 [INF] Application is shutting down...
+2025-08-14 01:27:41.115 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 01:27:43.184 [INF] MainControllerApp auto-start result: true
+2025-08-14 01:27:43.261 [INF] Now listening on: http://localhost:5036
+2025-08-14 01:27:43.261 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 01:27:43.261 [INF] Hosting environment: Development
+2025-08-14 01:27:43.261 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 01:27:43.455 [WRN] Failed to determine the https port for redirect.
+2025-08-14 01:31:44.717 [INF] Application is shutting down...
+2025-08-14 01:31:55.887 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 01:31:57.972 [INF] MainControllerApp auto-start result: true
+2025-08-14 01:31:58.052 [INF] Now listening on: http://localhost:5036
+2025-08-14 01:31:58.053 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 01:31:58.053 [INF] Hosting environment: Development
+2025-08-14 01:31:58.053 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 01:31:58.328 [WRN] Failed to determine the https port for redirect.
+2025-08-14 01:39:05.877 [INF] Application is shutting down...
+2025-08-14 01:39:10.409 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 01:39:12.499 [INF] MainControllerApp auto-start result: true
+2025-08-14 01:39:12.562 [INF] Now listening on: http://localhost:5036
+2025-08-14 01:39:12.563 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 01:39:12.563 [INF] Hosting environment: Development
+2025-08-14 01:39:12.563 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 01:39:13.240 [WRN] Failed to determine the https port for redirect.
+2025-08-14 01:46:53.762 [INF] Application is shutting down...
+2025-08-14 01:46:57.238 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 01:46:59.311 [INF] MainControllerApp auto-start result: true
+2025-08-14 01:46:59.392 [INF] Now listening on: http://localhost:5036
+2025-08-14 01:46:59.392 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 01:46:59.392 [INF] Hosting environment: Development
+2025-08-14 01:46:59.392 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 01:47:00.092 [WRN] Failed to determine the https port for redirect.
+2025-08-14 01:51:22.021 [INF] Application is shutting down...
+2025-08-14 01:51:27.231 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 01:51:29.307 [INF] MainControllerApp auto-start result: true
+2025-08-14 01:51:29.363 [INF] Now listening on: http://localhost:5036
+2025-08-14 01:51:29.364 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 01:51:29.364 [INF] Hosting environment: Development
+2025-08-14 01:51:29.364 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 01:51:29.625 [WRN] Failed to determine the https port for redirect.
+2025-08-14 01:56:05.744 [INF] Application is shutting down...
+2025-08-14 02:06:17.203 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 02:06:19.269 [INF] MainControllerApp auto-start result: true
+2025-08-14 02:06:19.320 [INF] Now listening on: http://localhost:5036
+2025-08-14 02:06:19.321 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 02:06:19.321 [INF] Hosting environment: Development
+2025-08-14 02:06:19.321 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 02:06:19.835 [WRN] Failed to determine the https port for redirect.
+2025-08-14 02:07:43.066 [INF] Application is shutting down...
+2025-08-14 02:08:50.881 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 02:08:52.977 [INF] MainControllerApp auto-start result: true
+2025-08-14 02:08:53.052 [INF] Now listening on: http://localhost:5036
+2025-08-14 02:08:53.052 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 02:08:53.052 [INF] Hosting environment: Development
+2025-08-14 02:08:53.052 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 02:08:54.016 [WRN] Failed to determine the https port for redirect.
+2025-08-14 02:11:45.689 [INF] Application is shutting down...
+2025-08-14 02:11:51.056 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 02:11:53.142 [INF] MainControllerApp auto-start result: true
+2025-08-14 02:11:53.189 [INF] Now listening on: http://localhost:5036
+2025-08-14 02:11:53.190 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 02:11:53.190 [INF] Hosting environment: Development
+2025-08-14 02:11:53.190 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 02:11:53.436 [WRN] Failed to determine the https port for redirect.
+2025-08-14 02:17:40.346 [INF] Application is shutting down...
+2025-08-14 02:17:46.133 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 02:17:48.195 [INF] MainControllerApp auto-start result: true
+2025-08-14 02:17:48.274 [INF] Now listening on: http://localhost:5036
+2025-08-14 02:17:48.274 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 02:17:48.274 [INF] Hosting environment: Development
+2025-08-14 02:17:48.275 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 02:17:48.464 [WRN] Failed to determine the https port for redirect.
+2025-08-14 02:21:17.529 [INF] Application is shutting down...
+2025-08-14 02:21:34.253 [INF] WebUI starting. URLs: (dynamic)
+2025-08-14 02:21:36.321 [INF] MainControllerApp auto-start result: true
+2025-08-14 02:21:36.384 [INF] Now listening on: http://localhost:5036
+2025-08-14 02:21:36.385 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-14 02:21:36.385 [INF] Hosting environment: Development
+2025-08-14 02:21:36.385 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-14 02:21:37.018 [WRN] Failed to determine the https port for redirect.
+2025-08-14 02:22:52.461 [INF] Application is shutting down...

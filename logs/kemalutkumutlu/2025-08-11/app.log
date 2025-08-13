@@ -1,0 +1,785 @@
+2025-08-11 20:50:17.293 [INF] FileJobRouter started by user: kemalutkumutlu
+2025-08-11 20:50:17.305 [INF] Trying WebUI hub: https://localhost:7155/fileJobRouterHub
+2025-08-11 20:50:17.360 [WRN] Failed to connect to WebUI at https://localhost:7155/fileJobRouterHub: Connection refused (localhost:7155)
+2025-08-11 20:50:17.360 [INF] Trying WebUI hub: http://localhost:5036/fileJobRouterHub
+2025-08-11 20:50:17.363 [WRN] Failed to connect to WebUI at http://localhost:5036/fileJobRouterHub: Connection refused (localhost:5036)
+2025-08-11 20:50:17.363 [INF] Trying WebUI hub: http://localhost:5000/fileJobRouterHub
+2025-08-11 20:50:17.379 [WRN] Failed to connect to WebUI at http://localhost:5000/fileJobRouterHub: Response status code does not indicate success: 403 (Forbidden).
+2025-08-11 20:50:17.379 [WRN] Failed to connect to WebUI: Could not connect to any WebUI hub URL candidates
+2025-08-11 20:50:17.405 [INF] Started watching directory: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test
+2025-08-11 20:50:17.414 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-3.pdf
+2025-08-11 20:50:17.414 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-2.pdf
+2025-08-11 20:50:17.415 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+2025-08-11 20:50:17.415 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-5.pdf
+2025-08-11 20:50:17.416 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-4.pdf
+2025-08-11 20:50:17.416 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/IMG_3652.jpg
+2025-08-11 20:50:17.417 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1.pdf
+2025-08-11 20:50:17.417 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+2025-08-11 20:50:17.418 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Katılım_KEMAL UTKU MUTLU.pdf
+2025-08-11 20:50:17.418 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Katilim-Belgesi.pdf
+2025-08-11 20:50:17.418 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Receipt-2142-4919.pdf
+2025-08-11 20:50:17.419 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+2025-08-11 20:50:17.419 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/ATS_CV_Sablon.docx
+2025-08-11 20:50:17.420 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-3.pdf
+2025-08-11 20:50:17.420 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-2.pdf
+2025-08-11 20:50:17.421 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+2025-08-11 20:50:17.421 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-5.pdf
+2025-08-11 20:50:17.421 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-4.pdf
+2025-08-11 20:50:17.422 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/IMG_3652.jpg
+2025-08-11 20:50:17.422 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1.pdf
+2025-08-11 20:50:17.423 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+2025-08-11 20:50:17.423 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Katılım_KEMAL UTKU MUTLU.pdf
+2025-08-11 20:50:17.424 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Katilim-Belgesi.pdf
+2025-08-11 20:50:17.424 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Receipt-2142-4919.pdf
+2025-08-11 20:50:17.425 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+2025-08-11 20:50:17.425 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/ATS_CV_Sablon.docx
+2025-08-11 20:50:17.426 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-3.pdf
+2025-08-11 20:50:17.427 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-2.pdf
+2025-08-11 20:50:17.427 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+2025-08-11 20:50:17.427 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-5.pdf
+2025-08-11 20:50:17.428 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-4.pdf
+2025-08-11 20:50:17.428 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/IMG_3652.jpg
+2025-08-11 20:50:17.429 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1.pdf
+2025-08-11 20:50:17.431 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+2025-08-11 20:50:17.431 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katılım_KEMAL UTKU MUTLU.pdf
+2025-08-11 20:50:17.432 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katilim-Belgesi.pdf
+2025-08-11 20:50:17.432 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Receipt-2142-4919.pdf
+2025-08-11 20:50:17.433 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+2025-08-11 20:50:17.433 [INF] File already in queue for processing, skipping: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ATS_CV_Sablon.docx
+2025-08-11 20:50:17.433 [INF] File in root directory, adding to queue for later worker selection: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-11 20:50:17.443 [INF] Added new job to queue: c50bdc24-2764-4b69-bec3-5b351dd713da - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-11 20:50:17.443 [INF] Created job for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store -> user_choice
+2025-08-11 20:50:17.444 [INF] FileJobRouter is running.
+2025-08-11 20:50:17.444 [INF] Job processor started
+2025-08-11 20:50:17.446 [INF] Processing job: 080020d3-a4ea-4aa8-bd70-84f47922b09d - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Receipt-2142-4919.pdf
+2025-08-11 20:50:17.447 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:50:17.448 [INF] Updated job in queue: 080020d3-a4ea-4aa8-bd70-84f47922b09d - Status: "Processing"
+2025-08-11 20:50:17.450 [INF] Created jobs directory for user kemalutkumutlu on 2025-08-11: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11
+2025-08-11 20:50:17.459 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/080020d3-a4ea-4aa8-bd70-84f47922b09d.json
+2025-08-11 20:50:17.460 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Receipt-2142-4919.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/Receipt-2142-4919.pdf"
+2025-08-11 20:50:27.124 [INF] Worker output: [20:50:18 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Receipt-2142-4919.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/Receipt-2142-4919.pdf
+[20:50:18 INF] Simulating device usage for 9 seconds
+[20:50:27 INF] Read 290741 characters from input file
+[20:50:27 INF] Converted content to uppercase
+[20:50:27 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/Receipt-2142-4919.pdf
+[20:50:27 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:50:27.125 [INF] Job completed successfully: 080020d3-a4ea-4aa8-bd70-84f47922b09d
+2025-08-11 20:50:27.128 [INF] Updated job status to Completed for job 080020d3-a4ea-4aa8-bd70-84f47922b09d
+2025-08-11 20:50:27.128 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Receipt-2142-4919.pdf
+2025-08-11 20:50:27.130 [INF] Updated job in queue: 080020d3-a4ea-4aa8-bd70-84f47922b09d - Status: "Completed"
+2025-08-11 20:50:27.130 [INF] Device lock released successfully
+2025-08-11 20:50:27.131 [INF] Processing job: 9dccf897-496b-436f-adfe-0f44467a4641 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+2025-08-11 20:50:27.131 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:50:27.133 [INF] Updated job in queue: 9dccf897-496b-436f-adfe-0f44467a4641 - Status: "Processing"
+2025-08-11 20:50:27.133 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/9dccf897-496b-436f-adfe-0f44467a4641.json
+2025-08-11 20:50:27.133 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Digital Slip 2025-08-04 1956099164796341171701334.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/Digital Slip 2025-08-04 1956099164796341171701334.pdf"
+2025-08-11 20:50:42.267 [INF] Worker output: [20:50:27 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Digital Slip 2025-08-04 1956099164796341171701334.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+[20:50:27 INF] Simulating device usage for 15 seconds
+[20:50:42 INF] Read 33571 characters from input file
+[20:50:42 INF] Converted content to uppercase
+[20:50:42 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+[20:50:42 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:50:42.268 [INF] Job completed successfully: 9dccf897-496b-436f-adfe-0f44467a4641
+2025-08-11 20:50:42.269 [INF] Updated job status to Completed for job 9dccf897-496b-436f-adfe-0f44467a4641
+2025-08-11 20:50:42.269 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+2025-08-11 20:50:42.272 [INF] Updated job in queue: 9dccf897-496b-436f-adfe-0f44467a4641 - Status: "Completed"
+2025-08-11 20:50:42.273 [INF] Device lock released successfully
+2025-08-11 20:50:42.274 [INF] Processing job: 629f1ba3-c48d-4aae-a50b-132a16e3065b - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-11 20:50:42.274 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:50:42.275 [INF] Root file ready for processing: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-11 20:50:42.275 [INF] Available worker applications:
+2025-08-11 20:50:42.275 [INF]   1. abc
+2025-08-11 20:50:42.276 [INF]   2. xyz
+2025-08-11 20:50:42.276 [INF]   3. signer
+2025-08-11 20:54:05.585 [INF] User selected worker 'xyz' for file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-11 20:54:05.589 [INF] User selected worker 'xyz' for root file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-11 20:54:05.593 [INF] Updated job in queue: 629f1ba3-c48d-4aae-a50b-132a16e3065b - Status: "Processing"
+2025-08-11 20:54:05.595 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/629f1ba3-c48d-4aae-a50b-132a16e3065b.json
+2025-08-11 20:54:05.596 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/.DS_Store"
+2025-08-11 20:54:15.317 [INF] Worker output: [20:54:06 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/.DS_Store
+[20:54:06 INF] Simulating device usage for 9 seconds
+[20:54:15 INF] Read 6148 characters from input file
+[20:54:15 INF] Reversed 3 lines
+[20:54:15 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/.DS_Store
+[20:54:15 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 20:54:15.318 [INF] Job completed successfully: 629f1ba3-c48d-4aae-a50b-132a16e3065b
+2025-08-11 20:54:15.320 [INF] Updated job status to Completed for job 629f1ba3-c48d-4aae-a50b-132a16e3065b
+2025-08-11 20:54:15.321 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-11 20:54:15.323 [INF] Updated job in queue: 629f1ba3-c48d-4aae-a50b-132a16e3065b - Status: "Completed"
+2025-08-11 20:54:15.323 [INF] Device lock released successfully
+2025-08-11 20:54:15.324 [INF] Processing job: 0eb77ad3-6728-48f9-ade6-9270ff13f28f - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Katilim-Belgesi.pdf
+2025-08-11 20:54:15.324 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:54:15.325 [INF] Updated job in queue: 0eb77ad3-6728-48f9-ade6-9270ff13f28f - Status: "Processing"
+2025-08-11 20:54:15.325 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/0eb77ad3-6728-48f9-ade6-9270ff13f28f.json
+2025-08-11 20:54:15.325 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Katilim-Belgesi.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/Katilim-Belgesi.pdf"
+2025-08-11 20:54:25.555 [INF] Worker output: [20:54:15 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Katilim-Belgesi.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/Katilim-Belgesi.pdf
+[20:54:15 INF] Simulating device usage for 10 seconds
+[20:54:25 INF] Read 45200 characters from input file
+[20:54:25 INF] Converted content to uppercase
+[20:54:25 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/Katilim-Belgesi.pdf
+[20:54:25 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:54:25.556 [INF] Job completed successfully: 0eb77ad3-6728-48f9-ade6-9270ff13f28f
+2025-08-11 20:54:25.557 [INF] Updated job status to Completed for job 0eb77ad3-6728-48f9-ade6-9270ff13f28f
+2025-08-11 20:54:25.557 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Katilim-Belgesi.pdf
+2025-08-11 20:54:25.558 [INF] Updated job in queue: 0eb77ad3-6728-48f9-ade6-9270ff13f28f - Status: "Completed"
+2025-08-11 20:54:25.558 [INF] Device lock released successfully
+2025-08-11 20:54:25.558 [INF] Processing job: ec348824-f019-4ab7-9a4b-baa0862fe049 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Katılım_KEMAL UTKU MUTLU.pdf
+2025-08-11 20:54:25.559 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:54:25.559 [INF] Updated job in queue: ec348824-f019-4ab7-9a4b-baa0862fe049 - Status: "Processing"
+2025-08-11 20:54:25.560 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/ec348824-f019-4ab7-9a4b-baa0862fe049.json
+2025-08-11 20:54:25.560 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Katılım_KEMAL UTKU MUTLU.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/Katılım_KEMAL UTKU MUTLU.pdf"
+2025-08-11 20:54:35.741 [INF] Worker output: [20:54:25 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Katılım_KEMAL UTKU MUTLU.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/Katılım_KEMAL UTKU MUTLU.pdf
+[20:54:25 INF] Simulating device usage for 10 seconds
+[20:54:35 INF] Read 1603424 characters from input file
+[20:54:35 INF] Converted content to uppercase
+[20:54:35 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/Katılım_KEMAL UTKU MUTLU.pdf
+[20:54:35 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:54:35.741 [INF] Job completed successfully: ec348824-f019-4ab7-9a4b-baa0862fe049
+2025-08-11 20:54:35.742 [INF] Updated job status to Completed for job ec348824-f019-4ab7-9a4b-baa0862fe049
+2025-08-11 20:54:35.742 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/Katılım_KEMAL UTKU MUTLU.pdf
+2025-08-11 20:54:35.743 [INF] Updated job in queue: ec348824-f019-4ab7-9a4b-baa0862fe049 - Status: "Completed"
+2025-08-11 20:54:35.743 [INF] Device lock released successfully
+2025-08-11 20:54:35.743 [INF] Processing job: 0ba3e10c-ca44-4768-b096-ec7da3607b37 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1.pdf
+2025-08-11 20:54:35.743 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:54:35.743 [INF] Updated job in queue: 0ba3e10c-ca44-4768-b096-ec7da3607b37 - Status: "Processing"
+2025-08-11 20:54:35.744 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/0ba3e10c-ca44-4768-b096-ec7da3607b37.json
+2025-08-11 20:54:35.744 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1.pdf"
+2025-08-11 20:54:48.879 [INF] Worker output: [20:54:35 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1.pdf
+[20:54:35 INF] Simulating device usage for 13 seconds
+[20:54:48 INF] Read 52157 characters from input file
+[20:54:48 INF] Converted content to uppercase
+[20:54:48 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1.pdf
+[20:54:48 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:54:48.879 [INF] Job completed successfully: 0ba3e10c-ca44-4768-b096-ec7da3607b37
+2025-08-11 20:54:48.880 [INF] Updated job status to Completed for job 0ba3e10c-ca44-4768-b096-ec7da3607b37
+2025-08-11 20:54:48.880 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1.pdf
+2025-08-11 20:54:48.881 [INF] Updated job in queue: 0ba3e10c-ca44-4768-b096-ec7da3607b37 - Status: "Completed"
+2025-08-11 20:54:48.881 [INF] Device lock released successfully
+2025-08-11 20:54:48.882 [INF] Processing job: bf6027df-2761-499f-b67c-ddbd40a1e932 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-2.pdf
+2025-08-11 20:54:48.882 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:54:48.887 [INF] Updated job in queue: bf6027df-2761-499f-b67c-ddbd40a1e932 - Status: "Processing"
+2025-08-11 20:54:48.891 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/bf6027df-2761-499f-b67c-ddbd40a1e932.json
+2025-08-11 20:54:48.891 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1-2.pdf"
+2025-08-11 20:55:03.036 [INF] Worker output: [20:54:48 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1-2.pdf
+[20:54:48 INF] Simulating device usage for 14 seconds
+[20:55:03 INF] Read 52571 characters from input file
+[20:55:03 INF] Converted content to uppercase
+[20:55:03 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1-2.pdf
+[20:55:03 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:55:03.037 [INF] Job completed successfully: bf6027df-2761-499f-b67c-ddbd40a1e932
+2025-08-11 20:55:03.038 [INF] Updated job status to Completed for job bf6027df-2761-499f-b67c-ddbd40a1e932
+2025-08-11 20:55:03.038 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-2.pdf
+2025-08-11 20:55:03.039 [INF] Updated job in queue: bf6027df-2761-499f-b67c-ddbd40a1e932 - Status: "Completed"
+2025-08-11 20:55:03.039 [INF] Device lock released successfully
+2025-08-11 20:55:03.040 [INF] Processing job: 98c2ca71-bcbf-45cc-aa91-d7ff22ebb592 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+2025-08-11 20:55:03.040 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:55:03.040 [INF] Updated job in queue: 98c2ca71-bcbf-45cc-aa91-d7ff22ebb592 - Status: "Processing"
+2025-08-11 20:55:03.041 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/98c2ca71-bcbf-45cc-aa91-d7ff22ebb592.json
+2025-08-11 20:55:03.041 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf"
+2025-08-11 20:55:14.197 [INF] Worker output: [20:55:03 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+[20:55:03 INF] Simulating device usage for 11 seconds
+[20:55:14 INF] Read 3797 characters from input file
+[20:55:14 INF] Converted content to uppercase
+[20:55:14 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+[20:55:14 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:55:14.197 [INF] Job completed successfully: 98c2ca71-bcbf-45cc-aa91-d7ff22ebb592
+2025-08-11 20:55:14.198 [INF] Updated job status to Completed for job 98c2ca71-bcbf-45cc-aa91-d7ff22ebb592
+2025-08-11 20:55:14.198 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+2025-08-11 20:55:14.199 [INF] Updated job in queue: 98c2ca71-bcbf-45cc-aa91-d7ff22ebb592 - Status: "Completed"
+2025-08-11 20:55:14.200 [INF] Device lock released successfully
+2025-08-11 20:55:14.200 [INF] Processing job: 44660b8a-6e76-4ff7-9fb0-2db3aefb3fc0 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/ATS_CV_Sablon.docx
+2025-08-11 20:55:14.201 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:55:14.201 [INF] Updated job in queue: 44660b8a-6e76-4ff7-9fb0-2db3aefb3fc0 - Status: "Processing"
+2025-08-11 20:55:14.202 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/44660b8a-6e76-4ff7-9fb0-2db3aefb3fc0.json
+2025-08-11 20:55:14.202 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/ATS_CV_Sablon.docx" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/ATS_CV_Sablon.docx"
+2025-08-11 20:55:26.355 [INF] Worker output: [20:55:14 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/ATS_CV_Sablon.docx -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/ATS_CV_Sablon.docx
+[20:55:14 INF] Simulating device usage for 12 seconds
+[20:55:26 INF] Read 35214 characters from input file
+[20:55:26 INF] Converted content to uppercase
+[20:55:26 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/ATS_CV_Sablon.docx
+[20:55:26 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:55:26.355 [INF] Job completed successfully: 44660b8a-6e76-4ff7-9fb0-2db3aefb3fc0
+2025-08-11 20:55:26.357 [INF] Updated job status to Completed for job 44660b8a-6e76-4ff7-9fb0-2db3aefb3fc0
+2025-08-11 20:55:26.357 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/ATS_CV_Sablon.docx
+2025-08-11 20:55:26.358 [INF] Updated job in queue: 44660b8a-6e76-4ff7-9fb0-2db3aefb3fc0 - Status: "Completed"
+2025-08-11 20:55:26.358 [INF] Device lock released successfully
+2025-08-11 20:55:26.359 [INF] Processing job: f1b6f8e3-5931-42b1-abe3-4da1bbad3321 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-3.pdf
+2025-08-11 20:55:26.359 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:55:26.359 [INF] Updated job in queue: f1b6f8e3-5931-42b1-abe3-4da1bbad3321 - Status: "Processing"
+2025-08-11 20:55:26.360 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/f1b6f8e3-5931-42b1-abe3-4da1bbad3321.json
+2025-08-11 20:55:26.360 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-3.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1-3.pdf"
+2025-08-11 20:55:32.492 [INF] Worker output: [20:55:26 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-3.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1-3.pdf
+[20:55:26 INF] Simulating device usage for 6 seconds
+[20:55:32 INF] Read 48131 characters from input file
+[20:55:32 INF] Converted content to uppercase
+[20:55:32 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1-3.pdf
+[20:55:32 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:55:32.493 [INF] Job completed successfully: f1b6f8e3-5931-42b1-abe3-4da1bbad3321
+2025-08-11 20:55:32.494 [INF] Updated job status to Completed for job f1b6f8e3-5931-42b1-abe3-4da1bbad3321
+2025-08-11 20:55:32.494 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-3.pdf
+2025-08-11 20:55:32.495 [INF] Updated job in queue: f1b6f8e3-5931-42b1-abe3-4da1bbad3321 - Status: "Completed"
+2025-08-11 20:55:32.496 [INF] Device lock released successfully
+2025-08-11 20:55:32.496 [INF] Processing job: 893f7c7a-65ad-4fde-82ab-18cd556be95a - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/IMG_3652.jpg
+2025-08-11 20:55:32.496 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:55:32.497 [INF] Updated job in queue: 893f7c7a-65ad-4fde-82ab-18cd556be95a - Status: "Processing"
+2025-08-11 20:55:32.497 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/893f7c7a-65ad-4fde-82ab-18cd556be95a.json
+2025-08-11 20:55:32.498 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/IMG_3652.jpg" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/IMG_3652.jpg"
+2025-08-11 20:55:46.673 [INF] Worker output: [20:55:32 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/IMG_3652.jpg -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/IMG_3652.jpg
+[20:55:32 INF] Simulating device usage for 14 seconds
+[20:55:46 INF] Read 348919 characters from input file
+[20:55:46 INF] Converted content to uppercase
+[20:55:46 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/IMG_3652.jpg
+[20:55:46 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:55:46.674 [INF] Job completed successfully: 893f7c7a-65ad-4fde-82ab-18cd556be95a
+2025-08-11 20:55:46.674 [INF] Updated job status to Completed for job 893f7c7a-65ad-4fde-82ab-18cd556be95a
+2025-08-11 20:55:46.674 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/IMG_3652.jpg
+2025-08-11 20:55:46.675 [INF] Updated job in queue: 893f7c7a-65ad-4fde-82ab-18cd556be95a - Status: "Completed"
+2025-08-11 20:55:46.676 [INF] Device lock released successfully
+2025-08-11 20:55:46.676 [INF] Processing job: f61f94d4-4300-4991-b955-912b0c8f79bd - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+2025-08-11 20:55:46.676 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:55:46.677 [INF] Updated job in queue: f61f94d4-4300-4991-b955-912b0c8f79bd - Status: "Processing"
+2025-08-11 20:55:46.677 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/f61f94d4-4300-4991-b955-912b0c8f79bd.json
+2025-08-11 20:55:46.677 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf"
+2025-08-11 20:55:58.813 [INF] Worker output: [20:55:46 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+[20:55:46 INF] Simulating device usage for 12 seconds
+[20:55:58 INF] Read 5523 characters from input file
+[20:55:58 INF] Converted content to uppercase
+[20:55:58 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+[20:55:58 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:55:58.814 [INF] Job completed successfully: f61f94d4-4300-4991-b955-912b0c8f79bd
+2025-08-11 20:55:58.815 [INF] Updated job status to Completed for job f61f94d4-4300-4991-b955-912b0c8f79bd
+2025-08-11 20:55:58.815 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+2025-08-11 20:55:58.817 [INF] Updated job in queue: f61f94d4-4300-4991-b955-912b0c8f79bd - Status: "Completed"
+2025-08-11 20:55:58.817 [INF] Device lock released successfully
+2025-08-11 20:55:58.817 [INF] Processing job: a31b7863-c6ed-4ba4-b43c-59e0306aeede - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-4.pdf
+2025-08-11 20:55:58.818 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:55:58.819 [INF] Updated job in queue: a31b7863-c6ed-4ba4-b43c-59e0306aeede - Status: "Processing"
+2025-08-11 20:55:58.819 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/a31b7863-c6ed-4ba4-b43c-59e0306aeede.json
+2025-08-11 20:55:58.819 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-4.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1-4.pdf"
+2025-08-11 20:56:10.001 [INF] Worker output: [20:55:58 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-4.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1-4.pdf
+[20:55:58 INF] Simulating device usage for 11 seconds
+[20:56:09 INF] Read 48466 characters from input file
+[20:56:09 INF] Converted content to uppercase
+[20:56:09 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1-4.pdf
+[20:56:09 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:56:10.002 [INF] Job completed successfully: a31b7863-c6ed-4ba4-b43c-59e0306aeede
+2025-08-11 20:56:10.003 [INF] Updated job status to Completed for job a31b7863-c6ed-4ba4-b43c-59e0306aeede
+2025-08-11 20:56:10.003 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-4.pdf
+2025-08-11 20:56:10.004 [INF] Updated job in queue: a31b7863-c6ed-4ba4-b43c-59e0306aeede - Status: "Completed"
+2025-08-11 20:56:10.004 [INF] Device lock released successfully
+2025-08-11 20:56:10.005 [INF] Processing job: 030a5c76-5637-438c-8169-e74a497732c6 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-5.pdf
+2025-08-11 20:56:10.005 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:56:10.006 [INF] Updated job in queue: 030a5c76-5637-438c-8169-e74a497732c6 - Status: "Processing"
+2025-08-11 20:56:10.006 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/030a5c76-5637-438c-8169-e74a497732c6.json
+2025-08-11 20:56:10.007 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppABC/bin/Debug/net9.0/WorkerAppABC "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-5.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1-5.pdf"
+2025-08-11 20:56:23.164 [INF] Worker output: [20:56:10 INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-5.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1-5.pdf
+[20:56:10 INF] Simulating device usage for 13 seconds
+[20:56:23 INF] Read 56358 characters from input file
+[20:56:23 INF] Converted content to uppercase
+[20:56:23 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/abc/CV Kemal Utku Mutlu #1-5.pdf
+[20:56:23 INF] WorkerAppABC completed successfully
+
+2025-08-11 20:56:23.164 [INF] Job completed successfully: 030a5c76-5637-438c-8169-e74a497732c6
+2025-08-11 20:56:23.164 [INF] Updated job status to Completed for job 030a5c76-5637-438c-8169-e74a497732c6
+2025-08-11 20:56:23.165 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/CV Kemal Utku Mutlu #1-5.pdf
+2025-08-11 20:56:23.165 [INF] Updated job in queue: 030a5c76-5637-438c-8169-e74a497732c6 - Status: "Completed"
+2025-08-11 20:56:23.166 [INF] Device lock released successfully
+2025-08-11 20:56:23.166 [INF] Processing job: 26e59664-c95f-407a-b646-e50fbb9caaee - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Receipt-2142-4919.pdf
+2025-08-11 20:56:23.166 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:56:23.167 [INF] Updated job in queue: 26e59664-c95f-407a-b646-e50fbb9caaee - Status: "Processing"
+2025-08-11 20:56:23.167 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/26e59664-c95f-407a-b646-e50fbb9caaee.json
+2025-08-11 20:56:23.167 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Receipt-2142-4919.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Receipt-2142-4919.pdf"
+2025-08-11 20:56:37.960 [INF] Worker output: [20:56:23 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Receipt-2142-4919.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Receipt-2142-4919.pdf
+[20:56:23 INF] Simulating device usage for 14 seconds
+[20:56:37 INF] Read 309249 bytes from input file
+[20:56:37 INF] Calculated SHA-256 hash: aeaf33c332950f9299cc7f037c678f4857ee5338c1b105c1ad57363f1374ba8d
+[20:56:37 INF] RSA signature generated with 2048 bit key
+[20:56:37 INF] Generated RSA signature
+[20:56:37 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Receipt-2142-4919.pdf.sig
+[20:56:37 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:56:37.960 [INF] Job completed successfully: 26e59664-c95f-407a-b646-e50fbb9caaee
+2025-08-11 20:56:37.961 [INF] Updated job status to Completed for job 26e59664-c95f-407a-b646-e50fbb9caaee
+2025-08-11 20:56:37.961 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Receipt-2142-4919.pdf
+2025-08-11 20:56:37.962 [INF] Updated job in queue: 26e59664-c95f-407a-b646-e50fbb9caaee - Status: "Completed"
+2025-08-11 20:56:37.962 [INF] Device lock released successfully
+2025-08-11 20:56:37.965 [INF] Processing job: d1a7d1f1-5687-4561-8e76-576d4fa534da - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+2025-08-11 20:56:37.965 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:56:37.965 [INF] Updated job in queue: d1a7d1f1-5687-4561-8e76-576d4fa534da - Status: "Processing"
+2025-08-11 20:56:37.967 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/d1a7d1f1-5687-4561-8e76-576d4fa534da.json
+2025-08-11 20:56:37.967 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Digital Slip 2025-08-04 1956099164796341171701334.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Digital Slip 2025-08-04 1956099164796341171701334.pdf"
+2025-08-11 20:56:47.257 [INF] Worker output: [20:56:38 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Digital Slip 2025-08-04 1956099164796341171701334.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+[20:56:38 INF] Simulating device usage for 9 seconds
+[20:56:47 INF] Read 35142 bytes from input file
+[20:56:47 INF] Calculated SHA-256 hash: 623feb0444d224b1c8291bc619993bbb6655bd20d9dcf82179852a5cd2f98b75
+[20:56:47 INF] RSA signature generated with 2048 bit key
+[20:56:47 INF] Generated RSA signature
+[20:56:47 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Digital Slip 2025-08-04 1956099164796341171701334.pdf.sig
+[20:56:47 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:56:47.258 [INF] Job completed successfully: d1a7d1f1-5687-4561-8e76-576d4fa534da
+2025-08-11 20:56:47.258 [INF] Updated job status to Completed for job d1a7d1f1-5687-4561-8e76-576d4fa534da
+2025-08-11 20:56:47.258 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+2025-08-11 20:56:47.259 [INF] Updated job in queue: d1a7d1f1-5687-4561-8e76-576d4fa534da - Status: "Completed"
+2025-08-11 20:56:47.259 [INF] Device lock released successfully
+2025-08-11 20:56:47.259 [INF] Processing job: 2f29b984-3641-4942-a57a-76e70de2be28 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katilim-Belgesi.pdf
+2025-08-11 20:56:47.259 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:56:47.259 [INF] Updated job in queue: 2f29b984-3641-4942-a57a-76e70de2be28 - Status: "Processing"
+2025-08-11 20:56:47.259 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/2f29b984-3641-4942-a57a-76e70de2be28.json
+2025-08-11 20:56:47.259 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katilim-Belgesi.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Katilim-Belgesi.pdf"
+2025-08-11 20:56:53.484 [INF] Worker output: [20:56:47 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katilim-Belgesi.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Katilim-Belgesi.pdf
+[20:56:47 INF] Simulating device usage for 6 seconds
+[20:56:53 INF] Read 47235 bytes from input file
+[20:56:53 INF] Calculated SHA-256 hash: f61bde88a7abf867bc2d915361ba8c6ec60d4388c37c1e048670dd73acfc0d32
+[20:56:53 INF] RSA signature generated with 2048 bit key
+[20:56:53 INF] Generated RSA signature
+[20:56:53 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Katilim-Belgesi.pdf.sig
+[20:56:53 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:56:53.484 [INF] Job completed successfully: 2f29b984-3641-4942-a57a-76e70de2be28
+2025-08-11 20:56:53.484 [INF] Updated job status to Completed for job 2f29b984-3641-4942-a57a-76e70de2be28
+2025-08-11 20:56:53.484 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katilim-Belgesi.pdf
+2025-08-11 20:56:53.485 [INF] Updated job in queue: 2f29b984-3641-4942-a57a-76e70de2be28 - Status: "Completed"
+2025-08-11 20:56:53.485 [INF] Device lock released successfully
+2025-08-11 20:56:53.485 [INF] Processing job: ee1cb158-d5da-43f2-8c05-8caee34d2434 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katılım_KEMAL UTKU MUTLU.pdf
+2025-08-11 20:56:53.485 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:56:53.486 [INF] Updated job in queue: ee1cb158-d5da-43f2-8c05-8caee34d2434 - Status: "Processing"
+2025-08-11 20:56:53.486 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/ee1cb158-d5da-43f2-8c05-8caee34d2434.json
+2025-08-11 20:56:53.486 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katılım_KEMAL UTKU MUTLU.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Katılım_KEMAL UTKU MUTLU.pdf"
+2025-08-11 20:57:05.758 [INF] Worker output: [20:56:53 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katılım_KEMAL UTKU MUTLU.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Katılım_KEMAL UTKU MUTLU.pdf
+[20:56:53 INF] Simulating device usage for 12 seconds
+[20:57:05 INF] Read 1663811 bytes from input file
+[20:57:05 INF] Calculated SHA-256 hash: f0a2e9e3ea15de440fd90eddfe0b7e99e3938b67a6ce702f1cc7665d87df64b1
+[20:57:05 INF] RSA signature generated with 2048 bit key
+[20:57:05 INF] Generated RSA signature
+[20:57:05 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/Katılım_KEMAL UTKU MUTLU.pdf.sig
+[20:57:05 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:57:05.758 [INF] Job completed successfully: ee1cb158-d5da-43f2-8c05-8caee34d2434
+2025-08-11 20:57:05.759 [INF] Updated job status to Completed for job ee1cb158-d5da-43f2-8c05-8caee34d2434
+2025-08-11 20:57:05.759 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Katılım_KEMAL UTKU MUTLU.pdf
+2025-08-11 20:57:05.759 [INF] Updated job in queue: ee1cb158-d5da-43f2-8c05-8caee34d2434 - Status: "Completed"
+2025-08-11 20:57:05.759 [INF] Device lock released successfully
+2025-08-11 20:57:05.759 [INF] Processing job: a4f4445c-e824-46ad-af88-f4daf3d566b1 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1.pdf
+2025-08-11 20:57:05.760 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:57:05.760 [INF] Updated job in queue: a4f4445c-e824-46ad-af88-f4daf3d566b1 - Status: "Processing"
+2025-08-11 20:57:05.760 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/a4f4445c-e824-46ad-af88-f4daf3d566b1.json
+2025-08-11 20:57:05.760 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1.pdf"
+2025-08-11 20:57:18.992 [INF] Worker output: [20:57:05 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1.pdf
+[20:57:05 INF] Simulating device usage for 13 seconds
+[20:57:18 INF] Read 54114 bytes from input file
+[20:57:18 INF] Calculated SHA-256 hash: 3b868b2c1426960679c612ef2a8a9bdae9479ff888581091911f58950a2362f9
+[20:57:18 INF] RSA signature generated with 2048 bit key
+[20:57:18 INF] Generated RSA signature
+[20:57:18 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1.pdf.sig
+[20:57:18 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:57:18.993 [INF] Job completed successfully: a4f4445c-e824-46ad-af88-f4daf3d566b1
+2025-08-11 20:57:18.993 [INF] Updated job status to Completed for job a4f4445c-e824-46ad-af88-f4daf3d566b1
+2025-08-11 20:57:18.993 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1.pdf
+2025-08-11 20:57:18.994 [INF] Updated job in queue: a4f4445c-e824-46ad-af88-f4daf3d566b1 - Status: "Completed"
+2025-08-11 20:57:18.994 [INF] Device lock released successfully
+2025-08-11 20:57:18.995 [INF] Processing job: c1d5ad14-fb60-4eba-8f22-87e86a1da841 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-2.pdf
+2025-08-11 20:57:18.995 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:57:18.995 [INF] Updated job in queue: c1d5ad14-fb60-4eba-8f22-87e86a1da841 - Status: "Processing"
+2025-08-11 20:57:18.995 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/c1d5ad14-fb60-4eba-8f22-87e86a1da841.json
+2025-08-11 20:57:18.995 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-2.pdf"
+2025-08-11 20:57:26.264 [INF] Worker output: [20:57:19 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-2.pdf
+[20:57:19 INF] Simulating device usage for 7 seconds
+[20:57:26 INF] Read 54680 bytes from input file
+[20:57:26 INF] Calculated SHA-256 hash: 566f91999c423f1c51294cc0fe17f474ba7851e84631d0dbef4e44b711e8f3c3
+[20:57:26 INF] RSA signature generated with 2048 bit key
+[20:57:26 INF] Generated RSA signature
+[20:57:26 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-2.pdf.sig
+[20:57:26 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:57:26.264 [INF] Job completed successfully: c1d5ad14-fb60-4eba-8f22-87e86a1da841
+2025-08-11 20:57:26.265 [INF] Updated job status to Completed for job c1d5ad14-fb60-4eba-8f22-87e86a1da841
+2025-08-11 20:57:26.265 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-2.pdf
+2025-08-11 20:57:26.266 [INF] Updated job in queue: c1d5ad14-fb60-4eba-8f22-87e86a1da841 - Status: "Completed"
+2025-08-11 20:57:26.266 [INF] Device lock released successfully
+2025-08-11 20:57:26.266 [INF] Processing job: b02da496-95f3-4a53-bff6-14ffe7a24a29 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+2025-08-11 20:57:26.266 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:57:26.266 [INF] Updated job in queue: b02da496-95f3-4a53-bff6-14ffe7a24a29 - Status: "Processing"
+2025-08-11 20:57:26.267 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/b02da496-95f3-4a53-bff6-14ffe7a24a29.json
+2025-08-11 20:57:26.267 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf"
+2025-08-11 20:57:38.566 [INF] Worker output: [20:57:26 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+[20:57:26 INF] Simulating device usage for 12 seconds
+[20:57:38 INF] Read 3797 bytes from input file
+[20:57:38 INF] Calculated SHA-256 hash: 6c547c279de856af0a8000a2383501d8c481e1e41e927a90e83cd3655ef83884
+[20:57:38 INF] RSA signature generated with 2048 bit key
+[20:57:38 INF] Generated RSA signature
+[20:57:38 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf.sig
+[20:57:38 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:57:38.566 [INF] Job completed successfully: b02da496-95f3-4a53-bff6-14ffe7a24a29
+2025-08-11 20:57:38.566 [INF] Updated job status to Completed for job b02da496-95f3-4a53-bff6-14ffe7a24a29
+2025-08-11 20:57:38.566 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+2025-08-11 20:57:38.567 [INF] Updated job in queue: b02da496-95f3-4a53-bff6-14ffe7a24a29 - Status: "Completed"
+2025-08-11 20:57:38.567 [INF] Device lock released successfully
+2025-08-11 20:57:38.567 [INF] Processing job: 9615fcc2-b7b4-414a-9c1a-f3fec9a19260 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ATS_CV_Sablon.docx
+2025-08-11 20:57:38.567 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:57:38.567 [INF] Updated job in queue: 9615fcc2-b7b4-414a-9c1a-f3fec9a19260 - Status: "Processing"
+2025-08-11 20:57:38.568 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/9615fcc2-b7b4-414a-9c1a-f3fec9a19260.json
+2025-08-11 20:57:38.568 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ATS_CV_Sablon.docx" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/ATS_CV_Sablon.docx"
+2025-08-11 20:57:47.818 [INF] Worker output: [20:57:38 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ATS_CV_Sablon.docx -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/ATS_CV_Sablon.docx
+[20:57:38 INF] Simulating device usage for 9 seconds
+[20:57:47 INF] Read 36964 bytes from input file
+[20:57:47 INF] Calculated SHA-256 hash: aa8a558003e6b631076742631759d593e670744c388026991fecbf73b6f26763
+[20:57:47 INF] RSA signature generated with 2048 bit key
+[20:57:47 INF] Generated RSA signature
+[20:57:47 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/ATS_CV_Sablon.docx.sig
+[20:57:47 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:57:47.818 [INF] Job completed successfully: 9615fcc2-b7b4-414a-9c1a-f3fec9a19260
+2025-08-11 20:57:47.818 [INF] Updated job status to Completed for job 9615fcc2-b7b4-414a-9c1a-f3fec9a19260
+2025-08-11 20:57:47.818 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/ATS_CV_Sablon.docx
+2025-08-11 20:57:47.819 [INF] Updated job in queue: 9615fcc2-b7b4-414a-9c1a-f3fec9a19260 - Status: "Completed"
+2025-08-11 20:57:47.819 [INF] Device lock released successfully
+2025-08-11 20:57:47.819 [INF] Processing job: 8b2dd860-527f-4e81-8d64-94d13765f322 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-3.pdf
+2025-08-11 20:57:47.819 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:57:47.820 [INF] Updated job in queue: 8b2dd860-527f-4e81-8d64-94d13765f322 - Status: "Processing"
+2025-08-11 20:57:47.820 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/8b2dd860-527f-4e81-8d64-94d13765f322.json
+2025-08-11 20:57:47.820 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-3.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-3.pdf"
+2025-08-11 20:57:53.148 [INF] Worker output: [20:57:47 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-3.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-3.pdf
+[20:57:47 INF] Simulating device usage for 5 seconds
+[20:57:52 INF] Read 50209 bytes from input file
+[20:57:52 INF] Calculated SHA-256 hash: 799f697dc65137dfb5925532059b312887cfa9070fc0b22ab58b6f8717378fdd
+[20:57:53 INF] RSA signature generated with 2048 bit key
+[20:57:53 INF] Generated RSA signature
+[20:57:53 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-3.pdf.sig
+[20:57:53 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:57:53.148 [INF] Job completed successfully: 8b2dd860-527f-4e81-8d64-94d13765f322
+2025-08-11 20:57:53.149 [INF] Updated job status to Completed for job 8b2dd860-527f-4e81-8d64-94d13765f322
+2025-08-11 20:57:53.149 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-3.pdf
+2025-08-11 20:57:53.150 [INF] Updated job in queue: 8b2dd860-527f-4e81-8d64-94d13765f322 - Status: "Completed"
+2025-08-11 20:57:53.150 [INF] Device lock released successfully
+2025-08-11 20:57:53.150 [INF] Processing job: 6d6bf207-b85e-48fc-b291-06c213b5725d - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/IMG_3652.jpg
+2025-08-11 20:57:53.150 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:57:53.151 [INF] Updated job in queue: 6d6bf207-b85e-48fc-b291-06c213b5725d - Status: "Processing"
+2025-08-11 20:57:53.151 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/6d6bf207-b85e-48fc-b291-06c213b5725d.json
+2025-08-11 20:57:53.151 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/IMG_3652.jpg" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/IMG_3652.jpg"
+2025-08-11 20:58:01.390 [INF] Worker output: [20:57:53 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/IMG_3652.jpg -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/IMG_3652.jpg
+[20:57:53 INF] Simulating device usage for 8 seconds
+[20:58:01 INF] Read 367075 bytes from input file
+[20:58:01 INF] Calculated SHA-256 hash: fdf3c48f7237e777439f5d4e9d23be2638223fd64703b0e8b04e6a9d6dd9dbea
+[20:58:01 INF] RSA signature generated with 2048 bit key
+[20:58:01 INF] Generated RSA signature
+[20:58:01 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/IMG_3652.jpg.sig
+[20:58:01 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:58:01.390 [INF] Job completed successfully: 6d6bf207-b85e-48fc-b291-06c213b5725d
+2025-08-11 20:58:01.392 [INF] Updated job status to Completed for job 6d6bf207-b85e-48fc-b291-06c213b5725d
+2025-08-11 20:58:01.392 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/IMG_3652.jpg
+2025-08-11 20:58:01.393 [INF] Updated job in queue: 6d6bf207-b85e-48fc-b291-06c213b5725d - Status: "Completed"
+2025-08-11 20:58:01.393 [INF] Device lock released successfully
+2025-08-11 20:58:01.393 [INF] Processing job: 063651d1-8da4-4b31-b58b-5831f4248d93 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+2025-08-11 20:58:01.393 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:58:01.394 [INF] Updated job in queue: 063651d1-8da4-4b31-b58b-5831f4248d93 - Status: "Processing"
+2025-08-11 20:58:01.394 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/063651d1-8da4-4b31-b58b-5831f4248d93.json
+2025-08-11 20:58:01.394 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf"
+2025-08-11 20:58:13.664 [INF] Worker output: [20:58:01 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+[20:58:01 INF] Simulating device usage for 12 seconds
+[20:58:13 INF] Read 5523 bytes from input file
+[20:58:13 INF] Calculated SHA-256 hash: 3b71312dae5f2c127346bebbd2a6c77a77aa4548261bd7aa21f795ef6be6e59d
+[20:58:13 INF] RSA signature generated with 2048 bit key
+[20:58:13 INF] Generated RSA signature
+[20:58:13 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf.sig
+[20:58:13 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:58:13.664 [INF] Job completed successfully: 063651d1-8da4-4b31-b58b-5831f4248d93
+2025-08-11 20:58:13.664 [INF] Updated job status to Completed for job 063651d1-8da4-4b31-b58b-5831f4248d93
+2025-08-11 20:58:13.665 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+2025-08-11 20:58:13.665 [INF] Updated job in queue: 063651d1-8da4-4b31-b58b-5831f4248d93 - Status: "Completed"
+2025-08-11 20:58:13.665 [INF] Device lock released successfully
+2025-08-11 20:58:13.665 [INF] Processing job: bde1c843-e7cd-4f63-b2cb-c9e87742462e - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-4.pdf
+2025-08-11 20:58:13.665 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:58:13.666 [INF] Updated job in queue: bde1c843-e7cd-4f63-b2cb-c9e87742462e - Status: "Processing"
+2025-08-11 20:58:13.666 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/bde1c843-e7cd-4f63-b2cb-c9e87742462e.json
+2025-08-11 20:58:13.666 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-4.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-4.pdf"
+2025-08-11 20:58:25.897 [INF] Worker output: [20:58:13 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-4.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-4.pdf
+[20:58:13 INF] Simulating device usage for 12 seconds
+[20:58:25 INF] Read 50519 bytes from input file
+[20:58:25 INF] Calculated SHA-256 hash: e76818d2c13fc7692ee8291533bdbd5575a384610d6d5d0dcb80f2bf0ed9c2af
+[20:58:25 INF] RSA signature generated with 2048 bit key
+[20:58:25 INF] Generated RSA signature
+[20:58:25 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-4.pdf.sig
+[20:58:25 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:58:25.898 [INF] Job completed successfully: bde1c843-e7cd-4f63-b2cb-c9e87742462e
+2025-08-11 20:58:25.898 [INF] Updated job status to Completed for job bde1c843-e7cd-4f63-b2cb-c9e87742462e
+2025-08-11 20:58:25.898 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-4.pdf
+2025-08-11 20:58:25.898 [INF] Updated job in queue: bde1c843-e7cd-4f63-b2cb-c9e87742462e - Status: "Completed"
+2025-08-11 20:58:25.898 [INF] Device lock released successfully
+2025-08-11 20:58:25.899 [INF] Processing job: 3dd2a5c0-d8e8-48c6-bee2-2f0db090106c - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-5.pdf
+2025-08-11 20:58:25.899 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:58:25.899 [INF] Updated job in queue: 3dd2a5c0-d8e8-48c6-bee2-2f0db090106c - Status: "Processing"
+2025-08-11 20:58:25.899 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/3dd2a5c0-d8e8-48c6-bee2-2f0db090106c.json
+2025-08-11 20:58:25.899 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppSigner/bin/Debug/net9.0/WorkerAppSigner "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-5.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-5.pdf"
+2025-08-11 20:58:36.096 [INF] Worker output: [20:58:25 INF] WorkerAppSigner starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-5.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-5.pdf
+[20:58:25 INF] Simulating device usage for 10 seconds
+[20:58:35 INF] Read 58817 bytes from input file
+[20:58:36 INF] Calculated SHA-256 hash: 8dd4131aad4b2aab1a85c195cde91ca928d6b0d6616f2fe362a243a7dcb221f1
+[20:58:36 INF] RSA signature generated with 2048 bit key
+[20:58:36 INF] Generated RSA signature
+[20:58:36 INF] Created signed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/signer/CV Kemal Utku Mutlu #1-5.pdf.sig
+[20:58:36 INF] WorkerAppSigner completed successfully
+
+2025-08-11 20:58:36.096 [INF] Job completed successfully: 3dd2a5c0-d8e8-48c6-bee2-2f0db090106c
+2025-08-11 20:58:36.096 [INF] Updated job status to Completed for job 3dd2a5c0-d8e8-48c6-bee2-2f0db090106c
+2025-08-11 20:58:36.096 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/CV Kemal Utku Mutlu #1-5.pdf
+2025-08-11 20:58:36.097 [INF] Updated job in queue: 3dd2a5c0-d8e8-48c6-bee2-2f0db090106c - Status: "Completed"
+2025-08-11 20:58:36.097 [INF] Device lock released successfully
+2025-08-11 20:58:36.097 [INF] Processing job: ca6bf418-2a7d-4859-ae60-c290c4060e0a - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Receipt-2142-4919.pdf
+2025-08-11 20:58:36.097 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:58:36.097 [INF] Updated job in queue: ca6bf418-2a7d-4859-ae60-c290c4060e0a - Status: "Processing"
+2025-08-11 20:58:36.098 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/ca6bf418-2a7d-4859-ae60-c290c4060e0a.json
+2025-08-11 20:58:36.098 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Receipt-2142-4919.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/Receipt-2142-4919.pdf"
+2025-08-11 20:58:51.218 [INF] Worker output: [20:58:36 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Receipt-2142-4919.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/Receipt-2142-4919.pdf
+[20:58:36 INF] Simulating device usage for 15 seconds
+[20:58:51 INF] Read 290741 characters from input file
+[20:58:51 INF] Reversed 1213 lines
+[20:58:51 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/Receipt-2142-4919.pdf
+[20:58:51 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 20:58:51.219 [INF] Job completed successfully: ca6bf418-2a7d-4859-ae60-c290c4060e0a
+2025-08-11 20:58:51.219 [INF] Updated job status to Completed for job ca6bf418-2a7d-4859-ae60-c290c4060e0a
+2025-08-11 20:58:51.219 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Receipt-2142-4919.pdf
+2025-08-11 20:58:51.220 [INF] Updated job in queue: ca6bf418-2a7d-4859-ae60-c290c4060e0a - Status: "Completed"
+2025-08-11 20:58:51.220 [INF] Device lock released successfully
+2025-08-11 20:58:51.220 [INF] Processing job: 3f39ce0a-bdf8-4706-9962-9dcc5c4f7d6f - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+2025-08-11 20:58:51.220 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:58:51.220 [INF] Updated job in queue: 3f39ce0a-bdf8-4706-9962-9dcc5c4f7d6f - Status: "Processing"
+2025-08-11 20:58:51.220 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/3f39ce0a-bdf8-4706-9962-9dcc5c4f7d6f.json
+2025-08-11 20:58:51.220 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Digital Slip 2025-08-04 1956099164796341171701334.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/Digital Slip 2025-08-04 1956099164796341171701334.pdf"
+2025-08-11 20:59:06.324 [INF] Worker output: [20:58:51 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Digital Slip 2025-08-04 1956099164796341171701334.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+[20:58:51 INF] Simulating device usage for 15 seconds
+[20:59:06 INF] Read 33571 characters from input file
+[20:59:06 INF] Reversed 239 lines
+[20:59:06 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+[20:59:06 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 20:59:06.324 [INF] Job completed successfully: 3f39ce0a-bdf8-4706-9962-9dcc5c4f7d6f
+2025-08-11 20:59:06.325 [INF] Updated job status to Completed for job 3f39ce0a-bdf8-4706-9962-9dcc5c4f7d6f
+2025-08-11 20:59:06.325 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Digital Slip 2025-08-04 1956099164796341171701334.pdf
+2025-08-11 20:59:06.326 [INF] Updated job in queue: 3f39ce0a-bdf8-4706-9962-9dcc5c4f7d6f - Status: "Completed"
+2025-08-11 20:59:06.326 [INF] Device lock released successfully
+2025-08-11 20:59:06.327 [INF] Processing job: 9d7829e6-4afe-4a25-add8-cad70fd2b9c9 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Katilim-Belgesi.pdf
+2025-08-11 20:59:06.327 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 20:59:06.327 [INF] Updated job in queue: 9d7829e6-4afe-4a25-add8-cad70fd2b9c9 - Status: "Processing"
+2025-08-11 20:59:06.327 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/9d7829e6-4afe-4a25-add8-cad70fd2b9c9.json
+2025-08-11 21:02:44.789 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Katilim-Belgesi.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/Katilim-Belgesi.pdf"
+2025-08-11 21:02:54.984 [INF] Worker output: [21:02:44 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Katilim-Belgesi.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/Katilim-Belgesi.pdf
+[21:02:44 INF] Simulating device usage for 10 seconds
+[21:02:54 INF] Read 45200 characters from input file
+[21:02:54 INF] Reversed 546 lines
+[21:02:54 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/Katilim-Belgesi.pdf
+[21:02:54 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 21:02:54.984 [INF] Job completed successfully: 9d7829e6-4afe-4a25-add8-cad70fd2b9c9
+2025-08-11 21:02:54.985 [INF] Updated job status to Completed for job 9d7829e6-4afe-4a25-add8-cad70fd2b9c9
+2025-08-11 21:02:54.986 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Katilim-Belgesi.pdf
+2025-08-11 21:02:54.988 [INF] Updated job in queue: 9d7829e6-4afe-4a25-add8-cad70fd2b9c9 - Status: "Completed"
+2025-08-11 21:02:54.988 [INF] Device lock released successfully
+2025-08-11 21:02:54.988 [INF] Processing job: 5c0f83cb-c87f-48da-a94a-d2ab56cf2ea2 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Katılım_KEMAL UTKU MUTLU.pdf
+2025-08-11 21:02:54.989 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 21:02:54.990 [INF] Updated job in queue: 5c0f83cb-c87f-48da-a94a-d2ab56cf2ea2 - Status: "Processing"
+2025-08-11 21:02:54.990 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/5c0f83cb-c87f-48da-a94a-d2ab56cf2ea2.json
+2025-08-11 21:02:54.990 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Katılım_KEMAL UTKU MUTLU.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/Katılım_KEMAL UTKU MUTLU.pdf"
+2025-08-11 21:03:07.174 [INF] Worker output: [21:02:55 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Katılım_KEMAL UTKU MUTLU.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/Katılım_KEMAL UTKU MUTLU.pdf
+[21:02:55 INF] Simulating device usage for 12 seconds
+[21:03:07 INF] Read 1603424 characters from input file
+[21:03:07 INF] Reversed 26693 lines
+[21:03:07 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/Katılım_KEMAL UTKU MUTLU.pdf
+[21:03:07 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 21:03:07.175 [INF] Job completed successfully: 5c0f83cb-c87f-48da-a94a-d2ab56cf2ea2
+2025-08-11 21:03:07.175 [INF] Updated job status to Completed for job 5c0f83cb-c87f-48da-a94a-d2ab56cf2ea2
+2025-08-11 21:03:07.176 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Katılım_KEMAL UTKU MUTLU.pdf
+2025-08-11 21:03:07.177 [INF] Updated job in queue: 5c0f83cb-c87f-48da-a94a-d2ab56cf2ea2 - Status: "Completed"
+2025-08-11 21:03:07.177 [INF] Device lock released successfully
+2025-08-11 21:03:07.177 [INF] Processing job: f6c53a5f-8fb8-4b97-a5f4-d3e9656b80f8 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1.pdf
+2025-08-11 21:03:07.177 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 21:03:07.178 [INF] Updated job in queue: f6c53a5f-8fb8-4b97-a5f4-d3e9656b80f8 - Status: "Processing"
+2025-08-11 21:03:07.178 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/f6c53a5f-8fb8-4b97-a5f4-d3e9656b80f8.json
+2025-08-11 21:03:07.178 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1.pdf"
+2025-08-11 21:03:17.297 [INF] Worker output: [21:03:07 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1.pdf
+[21:03:07 INF] Simulating device usage for 10 seconds
+[21:03:17 INF] Read 52157 characters from input file
+[21:03:17 INF] Reversed 1089 lines
+[21:03:17 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1.pdf
+[21:03:17 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 21:03:17.298 [INF] Job completed successfully: f6c53a5f-8fb8-4b97-a5f4-d3e9656b80f8
+2025-08-11 21:03:17.299 [INF] Updated job status to Completed for job f6c53a5f-8fb8-4b97-a5f4-d3e9656b80f8
+2025-08-11 21:03:17.299 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1.pdf
+2025-08-11 21:03:17.303 [INF] Updated job in queue: f6c53a5f-8fb8-4b97-a5f4-d3e9656b80f8 - Status: "Completed"
+2025-08-11 21:03:17.303 [INF] Device lock released successfully
+2025-08-11 21:03:17.304 [INF] Processing job: 9b8c3cc5-5ea9-4ffc-9d14-48556aecd742 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-2.pdf
+2025-08-11 21:03:17.304 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 21:03:17.305 [INF] Updated job in queue: 9b8c3cc5-5ea9-4ffc-9d14-48556aecd742 - Status: "Processing"
+2025-08-11 21:03:17.308 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/9b8c3cc5-5ea9-4ffc-9d14-48556aecd742.json
+2025-08-11 21:03:17.308 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-2.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1-2.pdf"
+2025-08-11 21:03:29.435 [INF] Worker output: [21:03:17 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-2.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1-2.pdf
+[21:03:17 INF] Simulating device usage for 12 seconds
+[21:03:29 INF] Read 52571 characters from input file
+[21:03:29 INF] Reversed 1104 lines
+[21:03:29 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1-2.pdf
+[21:03:29 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 21:03:29.435 [INF] Job completed successfully: 9b8c3cc5-5ea9-4ffc-9d14-48556aecd742
+2025-08-11 21:03:29.436 [INF] Updated job status to Completed for job 9b8c3cc5-5ea9-4ffc-9d14-48556aecd742
+2025-08-11 21:03:29.436 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-2.pdf
+2025-08-11 21:03:29.437 [INF] Updated job in queue: 9b8c3cc5-5ea9-4ffc-9d14-48556aecd742 - Status: "Completed"
+2025-08-11 21:03:29.437 [INF] Device lock released successfully
+2025-08-11 21:03:29.438 [INF] Processing job: bcc35439-5bd0-4b5e-8556-00d2ce50dca4 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+2025-08-11 21:03:29.438 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 21:03:29.439 [INF] Updated job in queue: bcc35439-5bd0-4b5e-8556-00d2ce50dca4 - Status: "Processing"
+2025-08-11 21:03:29.439 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/bcc35439-5bd0-4b5e-8556-00d2ce50dca4.json
+2025-08-11 21:03:29.440 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf"
+2025-08-11 21:03:39.565 [INF] Worker output: [21:03:29 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+[21:03:29 INF] Simulating device usage for 10 seconds
+[21:03:39 INF] Read 3797 characters from input file
+[21:03:39 INF] Reversed 81 lines
+[21:03:39 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+[21:03:39 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 21:03:39.565 [INF] Job completed successfully: bcc35439-5bd0-4b5e-8556-00d2ce50dca4
+2025-08-11 21:03:39.566 [INF] Updated job status to Completed for job bcc35439-5bd0-4b5e-8556-00d2ce50dca4
+2025-08-11 21:03:39.566 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/ATS_Tek_Sayfa_CV_Kemal_Utku_Mutlu.pdf
+2025-08-11 21:03:39.567 [INF] Updated job in queue: bcc35439-5bd0-4b5e-8556-00d2ce50dca4 - Status: "Completed"
+2025-08-11 21:03:39.568 [INF] Device lock released successfully
+2025-08-11 21:03:39.568 [INF] Processing job: 00e9e5bf-1cb5-4954-b6d1-d36763b75124 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/ATS_CV_Sablon.docx
+2025-08-11 21:03:39.569 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 21:03:39.569 [INF] Updated job in queue: 00e9e5bf-1cb5-4954-b6d1-d36763b75124 - Status: "Processing"
+2025-08-11 21:03:39.569 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/00e9e5bf-1cb5-4954-b6d1-d36763b75124.json
+2025-08-11 21:03:39.569 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/ATS_CV_Sablon.docx" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/ATS_CV_Sablon.docx"
+2025-08-11 21:03:49.691 [INF] Worker output: [21:03:39 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/ATS_CV_Sablon.docx -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/ATS_CV_Sablon.docx
+[21:03:39 INF] Simulating device usage for 10 seconds
+[21:03:49 INF] Read 35214 characters from input file
+[21:03:49 INF] Reversed 186 lines
+[21:03:49 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/ATS_CV_Sablon.docx
+[21:03:49 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 21:03:49.691 [INF] Job completed successfully: 00e9e5bf-1cb5-4954-b6d1-d36763b75124
+2025-08-11 21:03:49.692 [INF] Updated job status to Completed for job 00e9e5bf-1cb5-4954-b6d1-d36763b75124
+2025-08-11 21:03:49.692 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/ATS_CV_Sablon.docx
+2025-08-11 21:03:49.693 [INF] Updated job in queue: 00e9e5bf-1cb5-4954-b6d1-d36763b75124 - Status: "Completed"
+2025-08-11 21:03:49.694 [INF] Device lock released successfully
+2025-08-11 21:03:49.694 [INF] Processing job: e514a049-7d4e-4af8-9270-f632286dd83e - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-3.pdf
+2025-08-11 21:03:49.694 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 21:03:49.695 [INF] Updated job in queue: e514a049-7d4e-4af8-9270-f632286dd83e - Status: "Processing"
+2025-08-11 21:03:49.696 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/e514a049-7d4e-4af8-9270-f632286dd83e.json
+2025-08-11 21:03:49.696 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-3.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1-3.pdf"
+2025-08-11 21:03:55.827 [INF] Worker output: [21:03:49 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-3.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1-3.pdf
+[21:03:49 INF] Simulating device usage for 6 seconds
+[21:03:55 INF] Read 48131 characters from input file
+[21:03:55 INF] Reversed 830 lines
+[21:03:55 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1-3.pdf
+[21:03:55 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 21:03:55.827 [INF] Job completed successfully: e514a049-7d4e-4af8-9270-f632286dd83e
+2025-08-11 21:03:55.828 [INF] Updated job status to Completed for job e514a049-7d4e-4af8-9270-f632286dd83e
+2025-08-11 21:03:55.828 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-3.pdf
+2025-08-11 21:03:55.830 [INF] Updated job in queue: e514a049-7d4e-4af8-9270-f632286dd83e - Status: "Completed"
+2025-08-11 21:03:55.831 [INF] Device lock released successfully
+2025-08-11 21:03:55.831 [INF] Processing job: d944d744-911b-4b1a-aaa8-1bc04be39953 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/IMG_3652.jpg
+2025-08-11 21:03:55.831 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 21:03:55.832 [INF] Updated job in queue: d944d744-911b-4b1a-aaa8-1bc04be39953 - Status: "Processing"
+2025-08-11 21:03:55.832 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/d944d744-911b-4b1a-aaa8-1bc04be39953.json
+2025-08-11 21:03:55.833 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/IMG_3652.jpg" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/IMG_3652.jpg"
+2025-08-11 21:04:10.987 [INF] Worker output: [21:03:55 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/IMG_3652.jpg -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/IMG_3652.jpg
+[21:03:55 INF] Simulating device usage for 15 seconds
+[21:04:10 INF] Read 348919 characters from input file
+[21:04:10 INF] Reversed 1630 lines
+[21:04:10 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/IMG_3652.jpg
+[21:04:10 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 21:04:10.987 [INF] Job completed successfully: d944d744-911b-4b1a-aaa8-1bc04be39953
+2025-08-11 21:04:10.988 [INF] Updated job status to Completed for job d944d744-911b-4b1a-aaa8-1bc04be39953
+2025-08-11 21:04:10.988 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/IMG_3652.jpg
+2025-08-11 21:04:10.989 [INF] Updated job in queue: d944d744-911b-4b1a-aaa8-1bc04be39953 - Status: "Completed"
+2025-08-11 21:04:10.989 [INF] Device lock released successfully
+2025-08-11 21:04:10.990 [INF] Processing job: a73e910a-8967-4a4f-9c93-70ecf79efc1f - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+2025-08-11 21:04:10.990 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 21:04:10.991 [INF] Updated job in queue: a73e910a-8967-4a4f-9c93-70ecf79efc1f - Status: "Processing"
+2025-08-11 21:04:10.991 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/a73e910a-8967-4a4f-9c93-70ecf79efc1f.json
+2025-08-11 21:04:10.991 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf"
+2025-08-11 21:04:16.124 [INF] Worker output: [21:04:11 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+[21:04:11 INF] Simulating device usage for 5 seconds
+[21:04:16 INF] Read 5523 characters from input file
+[21:04:16 INF] Reversed 75 lines
+[21:04:16 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+[21:04:16 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 21:04:16.125 [INF] Job completed successfully: a73e910a-8967-4a4f-9c93-70ecf79efc1f
+2025-08-11 21:04:16.125 [INF] Updated job status to Completed for job a73e910a-8967-4a4f-9c93-70ecf79efc1f
+2025-08-11 21:04:16.126 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV_Kemal_Utku_Mutlu_Tek_Sayfa.pdf
+2025-08-11 21:04:16.127 [INF] Updated job in queue: a73e910a-8967-4a4f-9c93-70ecf79efc1f - Status: "Completed"
+2025-08-11 21:04:16.127 [INF] Device lock released successfully
+2025-08-11 21:04:16.128 [INF] Processing job: 9945f929-2074-4a8c-b22e-fe5cb24308ad - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-4.pdf
+2025-08-11 21:04:16.129 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 21:04:16.130 [INF] Updated job in queue: 9945f929-2074-4a8c-b22e-fe5cb24308ad - Status: "Processing"
+2025-08-11 21:04:16.130 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/9945f929-2074-4a8c-b22e-fe5cb24308ad.json
+2025-08-11 21:04:16.131 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-4.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1-4.pdf"
+2025-08-11 21:04:22.264 [INF] Worker output: [21:04:16 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-4.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1-4.pdf
+[21:04:16 INF] Simulating device usage for 6 seconds
+[21:04:22 INF] Read 48466 characters from input file
+[21:04:22 INF] Reversed 871 lines
+[21:04:22 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1-4.pdf
+[21:04:22 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 21:04:22.264 [INF] Job completed successfully: 9945f929-2074-4a8c-b22e-fe5cb24308ad
+2025-08-11 21:04:22.265 [INF] Updated job status to Completed for job 9945f929-2074-4a8c-b22e-fe5cb24308ad
+2025-08-11 21:04:22.265 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-4.pdf
+2025-08-11 21:04:22.266 [INF] Updated job in queue: 9945f929-2074-4a8c-b22e-fe5cb24308ad - Status: "Completed"
+2025-08-11 21:04:22.267 [INF] Device lock released successfully
+2025-08-11 21:04:22.267 [INF] Processing job: 6d8024b0-5500-4758-96eb-73568ea8e2b4 - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-5.pdf
+2025-08-11 21:04:22.268 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 21:04:22.268 [INF] Updated job in queue: 6d8024b0-5500-4758-96eb-73568ea8e2b4 - Status: "Processing"
+2025-08-11 21:04:22.269 [INF] Saved job details to: /Users/kemalutkumutlu/FileJobRouterEnYeni/jobs/kemalutkumutlu/2025-08-11/6d8024b0-5500-4758-96eb-73568ea8e2b4.json
+2025-08-11 21:04:22.269 [INF] Executing: /Users/kemalutkumutlu/FileJobRouterEnYeni/apps/WorkerAppXYZ/bin/Debug/net9.0/WorkerAppXYZ "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-5.pdf" "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1-5.pdf"
+2025-08-11 21:04:33.408 [INF] Worker output: [21:04:22 INF] WorkerAppXYZ starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-5.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1-5.pdf
+[21:04:22 INF] Simulating device usage for 11 seconds
+[21:04:33 INF] Read 56358 characters from input file
+[21:04:33 INF] Reversed 892 lines
+[21:04:33 INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-11/xyz/CV Kemal Utku Mutlu #1-5.pdf
+[21:04:33 INF] WorkerAppXYZ completed successfully
+
+2025-08-11 21:04:33.408 [INF] Job completed successfully: 6d8024b0-5500-4758-96eb-73568ea8e2b4
+2025-08-11 21:04:33.409 [INF] Updated job status to Completed for job 6d8024b0-5500-4758-96eb-73568ea8e2b4
+2025-08-11 21:04:33.409 [INF] Deleted processed file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/CV Kemal Utku Mutlu #1-5.pdf
+2025-08-11 21:04:33.411 [INF] Updated job in queue: 6d8024b0-5500-4758-96eb-73568ea8e2b4 - Status: "Completed"
+2025-08-11 21:04:33.411 [INF] Device lock released successfully
+2025-08-11 21:04:33.411 [INF] Processing job: c50bdc24-2764-4b69-bec3-5b351dd713da - /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-11 21:04:33.412 [INF] Device lock acquired successfully: /var/folders/mk/wncy17wn7bb2kg5xlh2_9ych0000gn/T/FileJobRouter_FileJobRouterDeviceMutex.lock
+2025-08-11 21:04:33.412 [INF] Root file ready for processing: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-11 21:04:33.412 [INF] Available worker applications:
+2025-08-11 21:04:33.412 [INF]   1. abc
+2025-08-11 21:04:33.412 [INF]   2. xyz
+2025-08-11 21:04:33.412 [INF]   3. signer
+2025-08-11 21:04:33.413 [WRN] Invalid selection '3333', skipping file: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/.DS_Store
+2025-08-11 21:04:33.414 [WRN] No worker selected for root file, marking as failed: c50bdc24-2764-4b69-bec3-5b351dd713da
+2025-08-11 21:04:33.417 [INF] Updated job in queue: c50bdc24-2764-4b69-bec3-5b351dd713da - Status: "Failed"
+2025-08-11 21:04:33.417 [INF] Device lock released successfully
+2025-08-11 21:07:17.351 [INF] Ctrl+C received, initiating graceful shutdown...
+2025-08-11 21:07:17.354 [INF] Shutting down FileJobRouter...
+2025-08-11 21:07:17.365 [INF] Job processor stopped
+2025-08-11 21:07:17.367 [INF] Stopped watching directory
+2025-08-11 21:07:17.368 [INF] Shutting down FileJobRouter...
+2025-08-11 21:07:18.368 [INF] FileJobRouter shutdown completed
+2025-08-11 21:07:18.369 [INF] FileJobRouter shutdown completed

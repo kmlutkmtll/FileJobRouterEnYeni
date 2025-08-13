@@ -1,0 +1,9 @@
+{
+  "Id": "ca6bf418-2a7d-4859-ae60-c290c4060e0a",
+  "InputPath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/Receipt-2142-4919.pdf",
+  "TargetApp": "xyz",
+  "Status": "Completed",
+  "Timestamp": "2025-08-11T20:58:51.219122+03:00",
+  "ErrorMessage": null,
+  "Username": "kemalutkumutlu"
+}

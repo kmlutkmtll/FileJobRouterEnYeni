@@ -7,6 +7,7 @@ namespace MainControllerApp.Services
     {
         private readonly string _watchDirectory;
         private readonly Dictionary<string, WorkerMapping> _mappings;
+        private readonly AppConfiguration? _config;
         private readonly QueueService _queueService;
         private readonly WebUINotificationService _webUINotificationService;
         private readonly ILogger _logger;
@@ -14,13 +15,14 @@ namespace MainControllerApp.Services
         private bool _disposed = false;
 
         public FileWatcherService(string watchDirectory, Dictionary<string, WorkerMapping> mappings, 
-            QueueService queueService, WebUINotificationService webUINotificationService, ILogger logger)
+            QueueService queueService, WebUINotificationService webUINotificationService, ILogger logger, AppConfiguration? config = null)
         {
             _watchDirectory = watchDirectory;
             _mappings = mappings;
             _queueService = queueService;
             _webUINotificationService = webUINotificationService;
             _logger = logger;
+            _config = config;
         }
 
         public void StartWatching()
@@ -56,7 +58,7 @@ namespace MainControllerApp.Services
         {
             try
             {
-                // Process files in subdirectories (abc, xyz, signer)
+                // Process files in subdirectories (abc, xyz, signer) with stability checks
                 foreach (var mapping in _mappings.Keys)
                 {
                     var subdirectory = Path.Combine(_watchDirectory, mapping);
@@ -65,18 +67,24 @@ namespace MainControllerApp.Services
                         var files = Directory.GetFiles(subdirectory, "*", SearchOption.AllDirectories);
                         foreach (var file in files)
                         {
-                            ProcessFile(file);
+                            if (WaitForFileStability(file, maxAttempts: 10, delayMs: 500))
+                            {
+                                ProcessFile(file);
+                            }
                         }
                     }
                 }
                 
-                // Process files in root directory (data/Test/)
+                // Process files in root directory (data/Test/) with stability checks
                 if (Directory.Exists(_watchDirectory))
                 {
                     var rootFiles = Directory.GetFiles(_watchDirectory, "*", SearchOption.TopDirectoryOnly);
                     foreach (var file in rootFiles)
                     {
-                        ProcessFile(file);
+                        if (WaitForFileStability(file, maxAttempts: 10, delayMs: 500))
+                        {
+                            ProcessFile(file);
+                        }
                     }
                 }
             }
@@ -90,12 +98,13 @@ namespace MainControllerApp.Services
         {
             try
             {
-                // Biraz bekle, dosya yazımının tamamlanması için
-                Thread.Sleep(500);
-                
-                if (File.Exists(e.FullPath))
+                // Dosya yazımının tamamlanması için stabilize olana kadar bekle
+                if (WaitForFileStability(e.FullPath, maxAttempts: 10, delayMs: 500))
                 {
-                    ProcessFile(e.FullPath);
+                    if (File.Exists(e.FullPath))
+                    {
+                        ProcessFile(e.FullPath);
+                    }
                 }
             }
             catch (Exception ex)
@@ -111,11 +120,37 @@ namespace MainControllerApp.Services
                 var relativePath = Path.GetRelativePath(_watchDirectory, filePath);
                 var pathParts = relativePath.Split(Path.DirectorySeparatorChar);
                 
+                // Ignore hidden/system files if configured
+                if (_config?.IgnoreHiddenAndSystemFiles == true)
+                {
+                    var fileName = Path.GetFileName(filePath);
+                    if (fileName.StartsWith(".") || string.Equals(fileName, "Thumbs.db", StringComparison.OrdinalIgnoreCase))
+                    {
+                        _logger.Information("Ignoring hidden/system file: {FilePath}", filePath);
+                        return;
+                    }
+                }
+
                 if (pathParts.Length < 2)
                 {
-                    _logger.Information("File in root directory, adding to queue for later worker selection: {FilePath}", filePath);
-                    // Root'a gelen dosyalar için özel targetApp: "user_choice"
-                    CreateJob(filePath, "user_choice");
+                    // Root dosyaları: Eğer default worker tanımlıysa otomatik yönlendir, yoksa skip et
+                    if (!string.IsNullOrWhiteSpace(_config?.DefaultWorkerForRoot))
+                    {
+                        var defaultWorker = _config!.DefaultWorkerForRoot!;
+                        if (_mappings.ContainsKey(defaultWorker))
+                        {
+                            _logger.Information("Routing root file to default worker '{Worker}': {FilePath}", defaultWorker, filePath);
+                            CreateJob(filePath, defaultWorker);
+                        }
+                        else
+                        {
+                            _logger.Warning("Configured DefaultWorkerForRoot '{Worker}' not found in mappings. Skipping file: {File}", defaultWorker, filePath);
+                        }
+                    }
+                    else
+                    {
+                        _logger.Information("Skipping root file (no DefaultWorkerForRoot): {FilePath}", filePath);
+                    }
                     return;
                 }
 
@@ -145,16 +180,11 @@ namespace MainControllerApp.Services
             {
                 // Zaten işlenmiş veya işlemde olan dosyaları tekrar işleme alma
                 var existingJobs = _queueService.LoadQueue();
-                var existingJob = existingJobs.FirstOrDefault(j => j.InputPath == filePath);
-                
-                if (existingJob != null)
+                var hasActiveSamePath = existingJobs.Any(j => j.InputPath == filePath && (j.Status == JobStatus.Pending || j.Status == JobStatus.Processing));
+                if (hasActiveSamePath)
                 {
-                    // Daha önce işlenmiş (Completed) dosyaları da tekrar işleyebilmek için skip etmiyoruz
-                    if (existingJob.Status == JobStatus.Pending || existingJob.Status == JobStatus.Processing)
-                    {
-                        _logger.Information("File already in queue for processing, skipping: {FilePath}", filePath);
-                        return;
-                    }
+                    _logger.Information("File already in queue (active), skipping duplicate enqueue: {FilePath}", filePath);
+                    return;
                 }
 
                 string outputPath;
@@ -235,6 +265,40 @@ namespace MainControllerApp.Services
                 StopWatching();
                 _disposed = true;
             }
+        }
+
+        private static bool WaitForFileStability(string path, int maxAttempts = 5, int delayMs = 500)
+        {
+            try
+            {
+                long lastLength = -1;
+                for (int i = 0; i < maxAttempts; i++)
+                {
+                    if (!File.Exists(path)) return false;
+                    long length;
+                    try
+                    {
+                        var info = new FileInfo(path);
+                        length = info.Length;
+                        // Try open with read share to ensure no exclusive writer lock
+                        using var stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+                    }
+                    catch
+                    {
+                        length = -2; // indicate locked/unreadable
+                    }
+
+                    if (length >= 0 && length == lastLength)
+                    {
+                        return true; // stable
+                    }
+
+                    lastLength = length;
+                    Thread.Sleep(delayMs);
+                }
+            }
+            catch { }
+            return false;
         }
     }
 }

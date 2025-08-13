@@ -28,7 +28,7 @@ namespace FileJobRouterWebUI.Services
         {
             try
             {
-                // Check if main app is running by looking for recent log activity
+                // Prefer heartbeat via hub; fallback to logs
                 var logDir = Path.Combine(_solutionRoot, "logs", _username, DateTime.Now.ToString("yyyy-MM-dd"));
                 var appLogPath = Path.Combine(logDir, "app.log");
                 
@@ -56,12 +56,13 @@ namespace FileJobRouterWebUI.Services
             }
         }
 
-        public async Task<string> GetQueueDataAsync()
+        public async Task<string> GetQueueDataAsync(string? day = null)
         {
             try
             {
                 // queue/day/queue.json
-                var queuePath = Path.Combine(_solutionRoot, "queue", DateTime.Now.ToString("yyyy-MM-dd"), "queue.json");
+                var dayStr = string.IsNullOrWhiteSpace(day) ? DateTime.Now.ToString("yyyy-MM-dd") : day.Trim();
+                var queuePath = Path.Combine(_solutionRoot, "queue", dayStr, "queue.json");
                 if (File.Exists(queuePath))
                 {
                     var queueJson = await File.ReadAllTextAsync(queuePath);
@@ -131,11 +132,12 @@ namespace FileJobRouterWebUI.Services
             }
         }
 
-        public async Task<string> GetJobsAsync()
+        public async Task<string> GetJobsAsync(string? day = null)
         {
             try
             {
-                var jobsDir = Path.Combine(_solutionRoot, "jobs", _username, DateTime.Now.ToString("yyyy-MM-dd"));
+                var dayStr = string.IsNullOrWhiteSpace(day) ? DateTime.Now.ToString("yyyy-MM-dd") : day.Trim();
+                var jobsDir = Path.Combine(_solutionRoot, "jobs", _username, dayStr);
                 if (!Directory.Exists(jobsDir))
                 {
                     return "[]";

@@ -1,0 +1,9 @@
+{
+  "Id": "26e59664-c95f-407a-b646-e50fbb9caaee",
+  "InputPath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/signer/Receipt-2142-4919.pdf",
+  "TargetApp": "signer",
+  "Status": "Completed",
+  "Timestamp": "2025-08-11T20:56:37.961319+03:00",
+  "ErrorMessage": null,
+  "Username": "kemalutkumutlu"
+}

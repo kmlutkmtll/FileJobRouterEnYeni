@@ -1,0 +1,8 @@
+2025-08-08 20:07:53.645 [INF] WebUI starting. URLs: (dynamic)
+2025-08-08 20:07:55.803 [INF] MainControllerApp auto-start result: true
+2025-08-08 20:07:55.896 [INF] Now listening on: http://localhost:5036
+2025-08-08 20:07:55.896 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-08 20:07:55.896 [INF] Hosting environment: Development
+2025-08-08 20:07:55.896 [INF] Content root path: /Users/kemalutkumutlu/FileJobRouterEnYeni/FileJobRouterWebUI
+2025-08-08 20:07:56.679 [WRN] Failed to determine the https port for redirect.
+2025-08-08 20:11:06.801 [INF] Application is shutting down...

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WorkerAppSigner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ff9418c43a691c5a37e7d087f4882e5c232dd8d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+308046648152f9303c547d117b6f960f29884096")]
 [assembly: System.Reflection.AssemblyProductAttribute("WorkerAppSigner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WorkerAppSigner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

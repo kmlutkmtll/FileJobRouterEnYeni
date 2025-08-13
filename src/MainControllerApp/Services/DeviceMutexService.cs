@@ -11,7 +11,34 @@ namespace MainControllerApp.Services
 
         public DeviceMutexService(string mutexName, ILogger logger)
         {
-            _lockFileName = Path.Combine(Path.GetTempPath(), $"{mutexName.Replace("\\", "_").Replace("Global", "FileJobRouter")}.lock");
+            var baseName = mutexName.Replace("\\", "_").Replace("Global", "FileJobRouter");
+            // Global (machine-wide) lock directory (cross-user)
+            string lockDir;
+            try
+            {
+                // Allow override via environment variable
+                var overrideDir = Environment.GetEnvironmentVariable("FILEJOBROUTER_LOCK_DIR");
+                if (!string.IsNullOrWhiteSpace(overrideDir))
+                {
+                    lockDir = overrideDir;
+                }
+                else if (System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform.Windows))
+                {
+                    var commonData = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
+                    lockDir = Path.Combine(commonData, "FileJobRouter", "locks");
+                }
+                else
+                {
+                    lockDir = "/tmp/FileJobRouter";
+                }
+                if (!Directory.Exists(lockDir)) Directory.CreateDirectory(lockDir);
+            }
+            catch
+            {
+                // Fallback to temp path if anything fails
+                lockDir = Path.GetTempPath();
+            }
+            _lockFileName = Path.Combine(lockDir, $"{baseName}.lock");
             _logger = logger;
         }
 
@@ -44,12 +71,34 @@ namespace MainControllerApp.Services
                         {
                             if (File.Exists(_lockFileName))
                             {
-                                var age = DateTime.Now - File.GetLastWriteTime(_lockFileName);
-                                if (age > TimeSpan.FromMinutes(30))
+                                // Attempt to read PID from lock file and verify process
+                                try
                                 {
-                                    // Stale lock, try to delete
-                                    File.Delete(_lockFileName);
+                                    var text = File.ReadAllText(_lockFileName);
+                                    var lines = text.Split('\n');
+                                    var pidLine = lines.FirstOrDefault(l => l.StartsWith("Process:"));
+                                    if (!string.IsNullOrWhiteSpace(pidLine))
+                                    {
+                                        var pidStr = pidLine.Split(':').Last().Trim();
+                                        if (int.TryParse(pidStr, out var pid))
+                                        {
+                                            try
+                                            {
+                                                var proc = System.Diagnostics.Process.GetProcessById(pid);
+                                                if (proc.HasExited)
+                                                {
+                                                    File.Delete(_lockFileName);
+                                                }
+                                            }
+                                            catch
+                                            {
+                                                // Process does not exist -> stale lock
+                                                File.Delete(_lockFileName);
+                                            }
+                                        }
+                                    }
                                 }
+                                catch { }
                             }
                         }
                         catch { /* ignore */ }

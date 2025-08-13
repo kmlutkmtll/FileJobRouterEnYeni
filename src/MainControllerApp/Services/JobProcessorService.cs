@@ -2,6 +2,7 @@ using System.Diagnostics;
 using MainControllerApp.Models;
 using System.Runtime.InteropServices;
 using Serilog;
+using System.Text.Json;
 
 namespace MainControllerApp.Services
 {
@@ -16,6 +17,7 @@ namespace MainControllerApp.Services
         private bool _isRunning = false;
         private readonly System.Collections.Concurrent.ConcurrentDictionary<int, Process> _runningProcesses = new();
         private readonly CancellationTokenSource _cancellationTokenSource = new();
+        private DateTime _lastConfigReload = DateTime.MinValue;
 
         public JobProcessorService(AppConfiguration config, QueueService queueService, 
             JobsService jobsService, DeviceMutexService deviceMutex, 
@@ -84,26 +86,27 @@ namespace MainControllerApp.Services
 
                 try
                 {
-                    // Root dosyalar için kullanıcıya worker seçimi sor
+                    // Root dosyalar: user_choice artık interaktif istemez; DefaultWorkerForRoot varsa onu kullan, yoksa fail fast
                     if (job.TargetApp == "user_choice")
                     {
-                        var selectedWorker = AskUserForWorkerSelection(job.InputPath);
-                        if (string.IsNullOrEmpty(selectedWorker))
+                        var defaultWorker = _config.DefaultWorkerForRoot;
+                        if (!string.IsNullOrWhiteSpace(defaultWorker) && _config.Mappings.ContainsKey(defaultWorker))
                         {
-                            _logger.Warning("No worker selected for root file, marking as failed: {JobId}", job.Id);
+                            job.TargetApp = defaultWorker;
+                            job.OutputPath = GenerateOutputPathForWorker(job.InputPath, defaultWorker);
+                            _logger.Information("Auto-selected default worker '{SelectedWorker}' for root file: {InputPath}", defaultWorker, job.InputPath);
+                            await _webUINotificationService.NotifyJobUpdateAsync(job.Id, "Processing", $"Auto-selected default worker '{defaultWorker}'.");
+                        }
+                        else
+                        {
+                            _logger.Warning("No DefaultWorkerForRoot configured or mapping missing; marking job as Failed: {JobId}", job.Id);
                             job.Status = JobStatus.Failed;
                             job.CompletedAt = DateTime.Now;
-                            job.ErrorMessage = "No worker selected by user";
+                            job.ErrorMessage = "Root file requires worker selection but interactive mode is disabled";
                             _queueService.UpdateJob(job);
-                            await _webUINotificationService.NotifyJobUpdateAsync(job.Id, "Failed", "No worker selected by user.");
+                            await _webUINotificationService.NotifyJobUpdateAsync(job.Id, "Failed", job.ErrorMessage);
                             return;
                         }
-                        
-                        // Worker seçildikten sonra job'u güncelle
-                        job.TargetApp = selectedWorker;
-                        job.OutputPath = GenerateOutputPathForWorker(job.InputPath, selectedWorker);
-                        _logger.Information("User selected worker '{SelectedWorker}' for root file: {InputPath}", selectedWorker, job.InputPath);
-                        await _webUINotificationService.NotifyJobUpdateAsync(job.Id, "Processing", $"User selected worker '{selectedWorker}'.");
                     }
 
                     // Job'u processing olarak işaretle
@@ -115,6 +118,9 @@ namespace MainControllerApp.Services
                     _jobsService.SaveJobDetails(job.Id, job.InputPath, job.TargetApp, "Processing");
 
                     // Worker uygulamasını çalıştır
+                    // Hot-reload config if config.json changed (once per 2s window to avoid spam)
+                    TryReloadConfiguration();
+
                     var success = await ExecuteWorkerAppAsync(job);
 
                     if (success)
@@ -128,17 +134,44 @@ namespace MainControllerApp.Services
                         await _webUINotificationService.NotifyJobUpdateAsync(job.Id, "Completed", "Job completed successfully.");
 
                         // Başarıyla işlenen dosyayı sil
-                        if (File.Exists(job.InputPath))
+                        try
                         {
-                            File.Delete(job.InputPath);
-                            _logger.Information("Deleted processed file: {InputPath}", job.InputPath);
+                            if (File.Exists(job.InputPath))
+                            {
+                                File.Delete(job.InputPath);
+                                _logger.Information("Deleted processed file: {InputPath}", job.InputPath);
+                            }
+                        }
+                        catch (Exception delEx)
+                        {
+                            _logger.Warning("Could not delete processed file: {Path} - {Error}", job.InputPath, delEx.Message);
                         }
                     }
                     else
                     {
-                        job.Status = JobStatus.Failed;
+                        if (job.Status == JobStatus.Timeout)
+                        {
+                            job.RetryCount++;
+                            if (job.RetryCount > _config.MaxRetryCount)
+                            {
+                                job.Status = JobStatus.Failed;
+                            }
+                            else
+                            {
+                                job.Status = JobStatus.Pending; // retry
+                                job.StartedAt = null;
+                                job.CompletedAt = null;
+                                _queueService.UpdateJob(job);
+                                await _webUINotificationService.NotifyJobUpdateAsync(job.Id, "Pending", "Job timed out; retrying");
+                                return; // skip cleanup, loop will pick it again
+                            }
+                        }
+                        else
+                        {
+                            job.Status = JobStatus.Failed;
+                            job.RetryCount++;
+                        }
                         job.CompletedAt = DateTime.Now;
-                        job.RetryCount++;
                         
                         // Error mesajını job'a kaydet
                         if (string.IsNullOrEmpty(job.ErrorMessage))
@@ -175,6 +208,41 @@ namespace MainControllerApp.Services
                 await _webUINotificationService.NotifyJobUpdateAsync(job.Id, "Failed", $"Error processing job: {ex.Message}");
                 
                 _deviceMutex.ReleaseDevice();
+            }
+        }
+
+        private void TryReloadConfiguration()
+        {
+            try
+            {
+                if ((DateTime.Now - _lastConfigReload).TotalSeconds < 2) return;
+                _lastConfigReload = DateTime.Now;
+
+                // Resolve solution root (same logic as Program.LoadConfiguration)
+                var dir = new DirectoryInfo(AppContext.BaseDirectory);
+                while (dir != null && !File.Exists(Path.Combine(dir.FullName, "config.json")))
+                {
+                    dir = dir.Parent;
+                }
+                if (dir == null) return;
+
+                var configPath = Path.Combine(dir.FullName, "config.json");
+                var json = File.ReadAllText(configPath);
+                var fresh = JsonSerializer.Deserialize<MainControllerApp.Models.AppConfiguration>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+                if (fresh == null) return;
+
+                // Only reload live-tunable fields
+                if (fresh.TimeoutSeconds != _config.TimeoutSeconds || fresh.MaxRetryCount != _config.MaxRetryCount)
+                {
+                    _logger.Information("Reloading config: TimeoutSeconds {OldTimeout} -> {NewTimeout}, MaxRetryCount {OldRetry} -> {NewRetry}",
+                        _config.TimeoutSeconds, fresh.TimeoutSeconds, _config.MaxRetryCount, fresh.MaxRetryCount);
+                    _config.TimeoutSeconds = fresh.TimeoutSeconds;
+                    _config.MaxRetryCount = fresh.MaxRetryCount;
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.Warning("Config reload failed: {Error}", ex.Message);
             }
         }
 
@@ -236,6 +304,10 @@ namespace MainControllerApp.Services
                 process.Start();
                 _runningProcesses[process.Id] = process;
 
+                // Start reading stdout/stderr immediately to avoid potential deadlocks on full buffers
+                var stdoutTask = process.StandardOutput.ReadToEndAsync();
+                var stderrTask = process.StandardError.ReadToEndAsync();
+
                 var timeoutTask = Task.Delay(TimeSpan.FromSeconds(_config.TimeoutSeconds), _cancellationTokenSource.Token);
                 var processTask = process.WaitForExitAsync();
 
@@ -268,8 +340,8 @@ namespace MainControllerApp.Services
                     return false;
                 }
 
-                var output = await process.StandardOutput.ReadToEndAsync();
-                var error = await process.StandardError.ReadToEndAsync();
+                var output = await stdoutTask;
+                var error = await stderrTask;
 
                 if (!string.IsNullOrEmpty(output))
                 {
@@ -304,57 +376,6 @@ namespace MainControllerApp.Services
                 return false;
             }
         }
-
-        private string AskUserForWorkerSelection(string filePath)
-        {
-            try
-            {
-                var apps = _config.Mappings.Keys.ToList();
-                _logger.Information("Root file ready for processing: {FilePath}", filePath);
-                _logger.Information("Available worker applications:");
-                for (int i = 0; i < apps.Count; i++)
-                {
-                    _logger.Information("  {Index}. {AppName}", i + 1, apps[i]);
-                }
-                
-                System.Console.WriteLine($"\n=== WORKER SELECTION REQUIRED ===");
-                System.Console.WriteLine($"File: {Path.GetFileName(filePath)}");
-                System.Console.WriteLine("Available workers:");
-                for (int i = 0; i < apps.Count; i++)
-                {
-                    System.Console.WriteLine($"  {i + 1}. {apps[i]}");
-                }
-                System.Console.Write($"Select worker (1-{apps.Count}, 0=skip): ");
-                
-                var input = System.Console.ReadLine();
-                
-                if (int.TryParse(input, out int selection))
-                {
-                    if (selection == 0)
-                    {
-                        _logger.Information("User chose to skip file: {FilePath}", filePath);
-                        return string.Empty;
-                    }
-                    
-                    if (selection > 0 && selection <= apps.Count)
-                    {
-                        var selectedApp = apps[selection - 1];
-                        _logger.Information("User selected worker '{SelectedApp}' for file: {FilePath}", selectedApp, filePath);
-                        return selectedApp;
-                    }
-                }
-                
-                _logger.Warning("Invalid selection '{Input}', skipping file: {FilePath}", input, filePath);
-                return string.Empty;
-            }
-            catch (Exception ex)
-            {
-                _logger.Error(ex, "Error asking user for worker selection: {ErrorMessage}", ex.Message);
-                return string.Empty;
-            }
-        }
-
-
 
         private string GenerateOutputPathForWorker(string inputPath, string workerApp)
         {

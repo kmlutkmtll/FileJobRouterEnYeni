@@ -1,0 +1,9 @@
+{
+  "Id": "d9013b4c-d10f-4d0d-af9c-9cbb7c94cb1f",
+  "InputPath": "/Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/xyz/xyz_1.txt",
+  "TargetApp": "xyz",
+  "Status": "Completed",
+  "Timestamp": "2025-08-14T00:28:48.542533+03:00",
+  "ErrorMessage": null,
+  "Username": "kemalutkumutlu"
+}

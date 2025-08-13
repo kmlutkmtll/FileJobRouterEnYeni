@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using System.IO;
 using System.Threading.Tasks;
 using System;
@@ -12,9 +13,11 @@ namespace FileJobRouterWebUI.Controllers
     {
         private readonly string _solutionRoot;
         private readonly string _queuePath;
+        private readonly Microsoft.AspNetCore.SignalR.IHubContext<FileJobRouterWebUI.Hubs.FileJobRouterHub>? _hubContext;
 
-        public QueueController()
+        public QueueController(Microsoft.AspNetCore.SignalR.IHubContext<FileJobRouterWebUI.Hubs.FileJobRouterHub>? hubContext = null)
         {
+            _hubContext = hubContext;
             var currentDir = Directory.GetCurrentDirectory();
             
             // If running from FileJobRouterWebUI directory, go up one level
@@ -38,21 +41,21 @@ namespace FileJobRouterWebUI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetQueueData(int page = 1, int pageSize = 50, string status = "all", string search = "")
+        public async Task<IActionResult> GetQueueData(int page = 1, int pageSize = 50, string status = "all", string search = "", string? day = null)
         {
             try
             {
-                if (!System.IO.File.Exists(_queuePath))
+                var dayStr = string.IsNullOrWhiteSpace(day) ? DateTime.Now.ToString("yyyy-MM-dd") : day;
+                var queuePath = Path.Combine(_solutionRoot, "queue", dayStr, "queue.json");
+                if (!System.IO.File.Exists(queuePath))
                 {
-                    return Json(new { success = false, message = $"Queue file not found at: {_queuePath}", data = new List<object>(), total = 0 });
+                    return Json(new { success = true, data = new List<object>(), total = 0, page, pageSize, stats = new { Total = 0, Pending = 0, Processing = 0, Completed = 0, Failed = 0, SuccessRate = 0.0 } });
                 }
 
-                var queueJson = await System.IO.File.ReadAllTextAsync(_queuePath);
+                var queueJson = await System.IO.File.ReadAllTextAsync(queuePath);
                 var queueItems = JsonSerializer.Deserialize<List<QueueItem>>(queueJson) ?? new List<QueueItem>();
                 
-                Console.WriteLine($"Queue items loaded: {queueItems.Count}");
-                Console.WriteLine($"Queue path: {_queuePath}");
-                Console.WriteLine($"Queue JSON length: {queueJson.Length}");
+                // Debug logs removed in production; consider using ILogger if needed
 
                 // Filter by status
                 if (status != "all")
@@ -102,12 +105,11 @@ namespace FileJobRouterWebUI.Controllers
                     Processing = queueItems.Count(q => q.Status == 1),
                     Completed = queueItems.Count(q => q.Status == 2),
                     Failed = queueItems.Count(q => q.Status == 3),
-                    SuccessRate = queueItems.Count > 0 ? 
-                        Math.Round((double)queueItems.Count(q => q.Status == 2) / queueItems.Count * 100, 1) : 0
+                    SuccessRate = queueItems.Count(q => q.Status == 0 || q.Status == 1 || q.Status == 2 || q.Status == 3) > 0 ?
+                        Math.Round((double)queueItems.Count(q => q.Status == 2) / queueItems.Count(q => q.Status == 0 || q.Status == 1 || q.Status == 2 || q.Status == 3) * 100, 1) : 0
                 };
                 
-                Console.WriteLine($"Stats calculated: Total={stats.Total}, Pending={stats.Pending}, Processing={stats.Processing}, Completed={stats.Completed}, Failed={stats.Failed}, SuccessRate={stats.SuccessRate}%");
-                Console.WriteLine($"Returning data: {result.Count} items, total={total}, page={page}, pageSize={pageSize}");
+                // Debug logs removed in production
 
                 return Json(new { success = true, data = result, total, page, pageSize, stats });
             }
@@ -155,11 +157,64 @@ namespace FileJobRouterWebUI.Controllers
             }
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetAllDaysStatistics()
+        {
+            try
+            {
+                var queueRoot = Path.Combine(_solutionRoot, "queue");
+                if (!Directory.Exists(queueRoot))
+                {
+                    return Json(new { success = true, stats = new { Total = 0, Pending = 0, Processing = 0, Completed = 0, Failed = 0, SuccessRate = 0.0 } });
+                }
+
+                var allItems = new List<QueueItem>();
+                foreach (var dayDir in Directory.GetDirectories(queueRoot))
+                {
+                    var qp = Path.Combine(dayDir, "queue.json");
+                    if (System.IO.File.Exists(qp))
+                    {
+                        try
+                        {
+                            var qjson = await System.IO.File.ReadAllTextAsync(qp);
+                            var items = JsonSerializer.Deserialize<List<QueueItem>>(qjson) ?? new List<QueueItem>();
+                            allItems.AddRange(items);
+                        }
+                        catch { }
+                    }
+                }
+
+                var stats = new
+                {
+                    Total = allItems.Count,
+                    Pending = allItems.Count(q => q.Status == 0),
+                    Processing = allItems.Count(q => q.Status == 1),
+                    Completed = allItems.Count(q => q.Status == 2),
+                    Failed = allItems.Count(q => q.Status == 3),
+                    SuccessRate = allItems.Count > 0 ? Math.Round((double)allItems.Count(q => q.Status == 2) / allItems.Count * 100, 1) : 0
+                };
+
+                return Json(new { success = true, stats });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+
         [HttpPost]
         public async Task<IActionResult> RetryJob([FromBody] string jobId)
         {
             try
             {
+                // Prefer single-writer model: instruct MainController via SignalR to retry the job
+                if (_hubContext != null)
+                {
+                    await _hubContext.Clients.All.SendAsync("ReceiveRetryJobCommand", jobId);
+                    return Json(new { success = true, message = "Retry command dispatched" });
+                }
+
+                // Fallback: legacy direct file update (atomic)
                 if (!System.IO.File.Exists(_queuePath))
                 {
                     return Json(new { success = false, message = "Queue file not found" });
@@ -174,34 +229,51 @@ namespace FileJobRouterWebUI.Controllers
                     return Json(new { success = false, message = "Job not found" });
                 }
 
-                if (job.Status != 3) // Not failed
+                if (job.Status != 3)
                 {
                     return Json(new { success = false, message = "Only failed jobs can be retried" });
                 }
 
-                // Check if input file still exists
                 if (!System.IO.File.Exists(job.InputPath))
                 {
-                    // Mark job as failed if file doesn't exist
-                    job.Status = 3; // Failed
+                    job.Status = 3;
                     job.ErrorMessage = "Input file not found";
                     job.CompletedAt = DateTime.Now;
                     var failedJson = JsonSerializer.Serialize(queueItems, new JsonSerializerOptions { WriteIndented = true });
-                    await System.IO.File.WriteAllTextAsync(_queuePath, failedJson);
+                    var tmpPath1 = _queuePath + ".tmp";
+                    await System.IO.File.WriteAllTextAsync(tmpPath1, failedJson);
+                    if (System.IO.File.Exists(_queuePath))
+                    {
+                        try { System.IO.File.Replace(tmpPath1, _queuePath, null); }
+                        catch { System.IO.File.Copy(tmpPath1, _queuePath, true); System.IO.File.Delete(tmpPath1); }
+                    }
+                    else
+                    {
+                        System.IO.File.Move(tmpPath1, _queuePath);
+                    }
                     return Json(new { success = false, message = "Input file not found, job marked as failed" });
                 }
 
-                // Reset job to pending (system will automatically process it)
-                job.Status = 0; // Pending
+                job.Status = 0;
                 job.StartedAt = null;
                 job.CompletedAt = null;
                 job.ErrorMessage = null;
                 job.RetryCount++;
 
                 var updatedJson = JsonSerializer.Serialize(queueItems, new JsonSerializerOptions { WriteIndented = true });
-                await System.IO.File.WriteAllTextAsync(_queuePath, updatedJson);
+                var tmpPath = _queuePath + ".tmp";
+                await System.IO.File.WriteAllTextAsync(tmpPath, updatedJson);
+                if (System.IO.File.Exists(_queuePath))
+                {
+                    try { System.IO.File.Replace(tmpPath, _queuePath, null); }
+                    catch { System.IO.File.Copy(tmpPath, _queuePath, true); System.IO.File.Delete(tmpPath); }
+                }
+                else
+                {
+                    System.IO.File.Move(tmpPath, _queuePath);
+                }
 
-                return Json(new { success = true, message = "Job queued for retry" });
+                return Json(new { success = true, message = "Job queued for retry (legacy path)" });
             }
             catch (Exception ex)
             {

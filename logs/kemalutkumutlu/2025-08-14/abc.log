@@ -1,0 +1,114 @@
+2025-08-14 00:23:10.428 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a1.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a1.txt
+2025-08-14 00:23:10.449 +03:00 [INF] Simulating device usage for 14 seconds
+2025-08-14 00:23:24.463 +03:00 [INF] Read 5 characters from input file
+2025-08-14 00:23:24.476 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:23:24.478 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a1.txt
+2025-08-14 00:23:24.478 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:23:24.589 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a2.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a2.txt
+2025-08-14 00:23:24.602 +03:00 [INF] Simulating device usage for 15 seconds
+2025-08-14 00:23:39.616 +03:00 [INF] Read 6 characters from input file
+2025-08-14 00:23:39.634 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:23:39.636 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a2.txt
+2025-08-14 00:23:39.636 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:26:49.006 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_1.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_1.txt
+2025-08-14 00:26:49.021 +03:00 [INF] Simulating device usage for 13 seconds
+2025-08-14 00:27:02.032 +03:00 [INF] Read 8 characters from input file
+2025-08-14 00:27:02.049 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:27:02.051 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_1.txt
+2025-08-14 00:27:02.051 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:27:02.141 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_2.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_2.txt
+2025-08-14 00:27:02.156 +03:00 [INF] Simulating device usage for 10 seconds
+2025-08-14 00:27:12.171 +03:00 [INF] Read 8 characters from input file
+2025-08-14 00:27:12.189 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:27:12.191 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_2.txt
+2025-08-14 00:27:12.191 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:27:12.301 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_3.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_3.txt
+2025-08-14 00:27:12.316 +03:00 [INF] Simulating device usage for 10 seconds
+2025-08-14 00:27:22.330 +03:00 [INF] Read 8 characters from input file
+2025-08-14 00:27:22.350 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:27:22.352 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_3.txt
+2025-08-14 00:27:22.352 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:27:22.474 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_4.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_4.txt
+2025-08-14 00:27:22.487 +03:00 [INF] Simulating device usage for 7 seconds
+2025-08-14 00:27:29.500 +03:00 [INF] Read 8 characters from input file
+2025-08-14 00:27:29.519 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:27:29.521 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_4.txt
+2025-08-14 00:27:29.521 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:27:29.621 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/a_5.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_5.txt
+2025-08-14 00:27:29.634 +03:00 [INF] Simulating device usage for 12 seconds
+2025-08-14 00:27:41.649 +03:00 [INF] Read 8 characters from input file
+2025-08-14 00:27:41.665 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:27:41.667 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/a_5.txt
+2025-08-14 00:27:41.667 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:28:48.638 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_1.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_1.txt
+2025-08-14 00:28:48.656 +03:00 [INF] Simulating device usage for 6 seconds
+2025-08-14 00:28:54.674 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:28:54.689 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:28:54.691 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_1.txt
+2025-08-14 00:28:54.691 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:28:54.882 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_10.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_10.txt
+2025-08-14 00:28:54.899 +03:00 [INF] Simulating device usage for 15 seconds
+2025-08-14 00:29:09.929 +03:00 [INF] Read 20 characters from input file
+2025-08-14 00:29:09.951 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:29:09.953 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_10.txt
+2025-08-14 00:29:09.953 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:29:17.263 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_2.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_2.txt
+2025-08-14 00:29:17.276 +03:00 [INF] Simulating device usage for 13 seconds
+2025-08-14 00:29:30.282 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:29:30.291 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:29:30.292 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_2.txt
+2025-08-14 00:29:30.292 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:29:39.546 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_3.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_3.txt
+2025-08-14 00:29:39.560 +03:00 [INF] Simulating device usage for 14 seconds
+2025-08-14 00:29:53.571 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:29:53.590 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:29:53.592 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_3.txt
+2025-08-14 00:29:53.592 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:30:01.810 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_4.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_4.txt
+2025-08-14 00:30:01.824 +03:00 [INF] Simulating device usage for 13 seconds
+2025-08-14 00:30:14.837 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:30:14.855 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:30:14.856 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_4.txt
+2025-08-14 00:30:14.856 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:30:34.226 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_5.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_5.txt
+2025-08-14 00:30:34.244 +03:00 [INF] Simulating device usage for 11 seconds
+2025-08-14 00:30:45.256 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:30:45.275 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:30:45.277 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_5.txt
+2025-08-14 00:30:45.277 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:30:58.522 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_6.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_6.txt
+2025-08-14 00:30:58.536 +03:00 [INF] Simulating device usage for 10 seconds
+2025-08-14 00:31:08.550 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:31:08.568 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:31:08.570 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_6.txt
+2025-08-14 00:31:08.570 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:31:08.663 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_7.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_7.txt
+2025-08-14 00:31:08.677 +03:00 [INF] Simulating device usage for 8 seconds
+2025-08-14 00:31:16.686 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:31:16.704 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:31:16.705 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_7.txt
+2025-08-14 00:31:16.705 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:31:31.932 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_8.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_8.txt
+2025-08-14 00:31:31.945 +03:00 [INF] Simulating device usage for 5 seconds
+2025-08-14 00:31:36.956 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:31:36.973 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:31:36.975 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_8.txt
+2025-08-14 00:31:36.975 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 00:31:51.188 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/abc_9.txt -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_9.txt
+2025-08-14 00:31:51.204 +03:00 [INF] Simulating device usage for 9 seconds
+2025-08-14 00:32:00.213 +03:00 [INF] Read 19 characters from input file
+2025-08-14 00:32:00.230 +03:00 [INF] Converted content to uppercase
+2025-08-14 00:32:00.232 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/abc_9.txt
+2025-08-14 00:32:00.232 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 02:14:52.803 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:14:52.818 +03:00 [INF] Simulating device usage for 8 seconds
+2025-08-14 02:15:00.835 +03:00 [INF] Read 122610 characters from input file
+2025-08-14 02:15:00.853 +03:00 [INF] Converted content to uppercase
+2025-08-14 02:15:00.855 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:15:00.855 +03:00 [INF] WorkerAppABC completed successfully
+2025-08-14 02:15:25.995 +03:00 [INF] WorkerAppABC starting: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Test/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf -> /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:15:26.008 +03:00 [INF] Simulating device usage for 12 seconds
+2025-08-14 02:15:38.028 +03:00 [INF] Read 122610 characters from input file
+2025-08-14 02:15:38.049 +03:00 [INF] Converted content to uppercase
+2025-08-14 02:15:38.052 +03:00 [INF] Wrote processed content to: /Users/kemalutkumutlu/FileJobRouterEnYeni/data/Processed/2025-08-14/abc/(25188363)STAJ bürosuna başvuru formu 2..doc.pdf
+2025-08-14 02:15:38.052 +03:00 [INF] WorkerAppABC completed successfully

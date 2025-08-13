@@ -14,6 +14,31 @@ namespace FileJobRouterWebUI.Controllers
     {
         private readonly string _solutionRoot;
         private readonly string _uploadDirectory;
+        private static string MapStatus(System.Text.Json.JsonElement statusElement)
+        {
+            try
+            {
+                if (statusElement.ValueKind == System.Text.Json.JsonValueKind.Number)
+                {
+                    var s = statusElement.GetInt32();
+                    return s switch
+                    {
+                        0 => "Pending",
+                        1 => "Processing",
+                        2 => "Completed",
+                        3 => "Failed",
+                        4 => "Timeout",
+                        _ => "Unknown"
+                    };
+                }
+                if (statusElement.ValueKind == System.Text.Json.JsonValueKind.String)
+                {
+                    return statusElement.GetString() ?? "Unknown";
+                }
+            }
+            catch { }
+            return "Unknown";
+        }
 
         public UploadController()
         {
@@ -69,13 +94,31 @@ namespace FileJobRouterWebUI.Controllers
                     Directory.CreateDirectory(targetDir);
                 }
 
+                // Basic limits and whitelist
+                var allowedExtensions = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { 
+                    ".txt", ".pdf", ".doc", ".docx", ".jpg", ".jpeg", ".png" 
+                };
+                const long maxFileSizeBytes = 50L * 1024 * 1024; // 50 MB
+
                 foreach (var file in files)
                 {
                     try
                     {
                         if (file.Length > 0)
                         {
+                            if (file.Length > maxFileSizeBytes)
+                            {
+                                errors.Add($"{file.FileName}: exceeds max file size 50MB");
+                                continue;
+                            }
+
                             var fileName = Path.GetFileName(file.FileName);
+                            var ext = Path.GetExtension(fileName);
+                            if (!allowedExtensions.Contains(ext))
+                            {
+                                errors.Add($"{fileName}: extension not allowed");
+                                continue;
+                            }
                             var filePath = Path.Combine(targetDir, fileName);
 
                             // Handle duplicate files
@@ -83,7 +126,6 @@ namespace FileJobRouterWebUI.Controllers
                             while (System.IO.File.Exists(filePath))
                             {
                                 var nameWithoutExt = Path.GetFileNameWithoutExtension(fileName);
-                                var ext = Path.GetExtension(fileName);
                                 fileName = $"{nameWithoutExt}_{counter}{ext}";
                                 filePath = Path.Combine(targetDir, fileName);
                                 counter++;
@@ -188,8 +230,31 @@ namespace FileJobRouterWebUI.Controllers
                 var fileList = System.Text.Json.JsonSerializer.Deserialize<List<string>>(files) ?? new List<string>();
                 var jobStatuses = new Dictionary<string, string>();
 
-                // Read dated queue.json to get job statuses
-                var queuePath = Path.Combine(_solutionRoot, "queue", DateTime.Now.ToString("yyyy-MM-dd"), "queue.json");
+                // Read dated queue.json to get job statuses (fallback to latest day if today's not found)
+                var queueRoot = Path.Combine(_solutionRoot, "queue");
+                var todayDir = Path.Combine(queueRoot, DateTime.Now.ToString("yyyy-MM-dd"));
+                var queuePath = Path.Combine(todayDir, "queue.json");
+                if (!System.IO.File.Exists(queuePath))
+                {
+                    try
+                    {
+                        if (Directory.Exists(queueRoot))
+                        {
+                            var latestDir = Directory.GetDirectories(queueRoot)
+                                .OrderByDescending(d => d)
+                                .FirstOrDefault();
+                            if (!string.IsNullOrEmpty(latestDir))
+                            {
+                                var candidate = Path.Combine(latestDir, "queue.json");
+                                if (System.IO.File.Exists(candidate))
+                                {
+                                    queuePath = candidate;
+                                }
+                            }
+                        }
+                    }
+                    catch { }
+                }
                 if (System.IO.File.Exists(queuePath))
                 {
                     var queueContent = System.IO.File.ReadAllText(queuePath);
@@ -226,7 +291,7 @@ namespace FileJobRouterWebUI.Controllers
                                 string status = "Unknown";
                                 if (job.TryGetProperty("Status", out var statusElement))
                                 {
-                                    status = statusElement.GetString() ?? "Unknown";
+                                    status = MapStatus(statusElement);
                                 }
                                 jobStatuses[file] = status;
                             }
@@ -237,38 +302,8 @@ namespace FileJobRouterWebUI.Controllers
                         }
                         else
                         {
-                            // If job not found in queue, check if it's in jobs folder
-                            var jobsPath = Path.Combine(_solutionRoot, "jobs", Environment.UserName, DateTime.Now.ToString("yyyy-MM-dd"));
-                            if (Directory.Exists(jobsPath))
-                            {
-                                var jobFiles = Directory.GetFiles(jobsPath, "*.json");
-                                var foundJob = jobFiles.FirstOrDefault(f => 
-                                {
-                                    try
-                                    {
-                                        if (string.IsNullOrEmpty(f)) return false;
-                                        var jobContent = System.IO.File.ReadAllText(f);
-                                        return jobContent.Contains(file);
-                                    }
-                                    catch
-                                    {
-                                        return false;
-                                    }
-                                });
-                                
-                                if (!string.IsNullOrEmpty(foundJob))
-                                {
-                                    jobStatuses[file] = "Completed"; // Assume completed if in jobs folder
-                                }
-                                else
-                                {
-                                    jobStatuses[file] = "Pending";
-                                }
-                            }
-                            else
-                            {
-                                jobStatuses[file] = "Pending";
-                            }
+                            // If job not found in queue, don't guess; mark as Pending (will be updated in next poll)
+                            jobStatuses[file] = "Pending";
                         }
                     }
                 }
